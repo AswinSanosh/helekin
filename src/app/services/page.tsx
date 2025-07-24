@@ -5,6 +5,13 @@ import serviceData from './ServiceList.json';
 import React, { useEffect, useState } from 'react';
 import Link from 'next/link';
 
+interface Service {
+  title: string;
+  desc: string;
+  icon: string;
+  background: string;
+  link?: string;
+}
 export default function Services() {
     const Softservices = serviceData.servicesList.software;
     const Hardservices = serviceData.servicesList.electronics_and_hardware;
@@ -38,7 +45,7 @@ export default function Services() {
         setHovering(false);
     };
 
-    const renderServiceCards = (services: any[], section: string) =>
+    const renderServiceCards = (services: Service[], section: string) =>
         services.map((service, i) => {
             const isHovered = hoveredIndex?.section === section && hoveredIndex.index === i;
 

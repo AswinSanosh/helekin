@@ -15,7 +15,7 @@ export default function Aboutbanner() {
     >
       {/* Logo */}
       <div className="flex-shrink-0 text-center">
-        <Image 
+        <Image
           width={60}
           height={100}
           unoptimized
@@ -43,13 +43,14 @@ export default function Aboutbanner() {
           Empowering Global Growth Through Smart Digital Solutions
         </h1>
         <p className="text-white text-base md:text-lg font-poppins">
-          At Helekin, we're passionate about helping businesses thrive in the digital age.
+          At Helekin, we&#39;re passionate about helping businesses thrive in the digital age.
           As a startup driven by innovation and agility, we craft tailored digital solutions
           that solve real problems and unlock new opportunities. From building powerful digital
-          experiences to scaling your ideas, we're here to support your journey every step of
+          experiences to scaling your ideas, we&#39;re here to support your journey every step of
           the way. Our mission is simple — to empower businesses worldwide with the tools,
           technology, and creativity they need to grow.
         </p>
+
         <Link
           href="/about"
           className="

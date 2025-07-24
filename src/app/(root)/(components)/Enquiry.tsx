@@ -9,7 +9,7 @@ export default function Enquiry() {
           Enquiry
         </h1>
         <h1 className="text-xl font-poppins font-semibold text-white mb-2">
-          Let's Get in Touch
+          Let&#39;s Get in Touch
         </h1>
         <div className="absolute right-20 -top-30 h-[500px] w-[500px] flex flex-col md:flex-row items-start md:items-center justify-between mt-2 gap-4 bg-white/10 backdrop-blur-lg shadow-lg shadow-black/30 p-6 rounded-xl">
 
