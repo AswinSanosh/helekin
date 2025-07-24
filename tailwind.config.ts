@@ -1,5 +1,7 @@
 import type {Config} from "tailwindcss";
 import { Poppins } from 'next/font/google'
+import tailwindcssAnimate from "tailwindcss-animate";
+import typography from "@tailwindcss/typography";
 
 const config: Config = {
     content: [
@@ -49,8 +51,8 @@ const config: Config = {
         },
     },
     plugins: [
-        import("tailwindcss-animate"),
-        import("@tailwindcss/typography"),
+        tailwindcssAnimate,
+        typography,
     ],
 };
 
