@@ -1,3 +1,5 @@
+
+
 import Link from 'next/link';
 import SoftwareServicesCarousel from '../../services/SoftwareCar';
 
@@ -12,8 +14,8 @@ export default function Products() {
         <div className="flex flex-col md:flex-row items-start md:items-center justify-between mt-2 gap-4">
           <div className='flex flex-col items-start w-1/2'>
             <p className="text-lg font-extralight font-poppins text-white/80">
-            Browse our collection of high-quality, custom-built tech solutions designed for everyday use and professional applications. From software applications to hardware devices, we offer a range of products that enhance productivity and streamline your workflow.
-          </p>
+              Browse our collection of high-quality, custom-built tech solutions designed for everyday use and professional applications. From software applications to hardware devices, we offer a range of products that enhance productivity and streamline your workflow.
+            </p>
           </div>
           <Link
             href="/services"
@@ -22,8 +24,13 @@ export default function Products() {
             View All
           </Link>
         </div>
+        <div className='mt-20 flex flex-row items-center justify-center'>
+          <div className="bg-[url('/images/product2.png')] bg-no-repeat bg-center bg-cover h-[400px] w-[400px] rounded-3xl flex items-center justify-center -right-10 relative z-30"></div>
+          <div className="bg-[url('/images/product1.png')] bg-no-repeat bg-center bg-cover h-[500px] w-[500px] rounded-3xl flex items-center justify-center drop-shadow-3xl shadow-black z-40"></div>
+          <div className="bg-[url('/images/product4.png')] bg-no-repeat bg-center bg-cover h-[400px] w-[400px] rounded-3xl flex items-center justify-center -left-10 relative z-30"></div>
+        </div>
       </div>
-      
+
     </div>
   );
 }

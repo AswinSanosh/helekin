@@ -3,6 +3,7 @@ import AboutBanner from "./(components)/Aboutbanner";
 import Services from "./(components)/Services";
 import Products from "./(components)/Products";
 import Enquiry from "./(components)/Enquiry"; // Assuming you have an enquiry component
+import FAQ from "./(components)/FAQ"; // Assuming you have a FAQ component
 
 export default function Home() {
   return (
@@ -13,6 +14,7 @@ export default function Home() {
       <AboutBanner />
       <Services />
       <Products />
+      <FAQ />
       <Enquiry />
     </main>
   );
