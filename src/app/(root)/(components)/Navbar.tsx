@@ -76,7 +76,7 @@ export default function Navbar() {
               <Link
                 key={href}
                 href={href}
-                className={`no-underline transition hover:text-pink-700 ${
+                className={`no-underline transition hover:text-white/60 ${
                   pathname === href ? 'text-red-500 font-medium font-poppins' : 'text-white'
                 }`}
               >
@@ -115,7 +115,7 @@ export default function Navbar() {
               href={href}
               onClick={() => setIsSidebarOpen(false)}
               className={`no-underline transition ${
-                pathname === href ? 'text-red-500 font-medium' : 'text-black'
+                pathname === href ? 'text-red-700 font-medium' : 'text-black'
               }`}
             >
               {label}

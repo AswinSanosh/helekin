@@ -1,7 +1,6 @@
 'use client'
 
 import { useEffect, useState } from 'react'
-import Link from 'next/link';
 
 export default function Hero() {
   const fullText = 'business growth.'
@@ -19,7 +18,6 @@ export default function Hero() {
   }, [index, fullText])
 
   return (
-
     <div className="w-full h-full bg-[url('/svg/hero.svg')] bg-cover bg-center bg-no-repeat">
       <div className="text-left p-10 text-white bottom-10 absolute left-10 ">
         {/*---------------------------*/}
@@ -49,39 +47,6 @@ export default function Hero() {
         </div>
         <button className=' bg-red-800 rounded-xl w-60 p-5 text-3xl mt-10 hover:cursor-pointer hover:bg-white hover:text-red-700 duration-300 font-poppins'>Get Quote</button>
         {/*--------------------------*/}
-      </div>
-      <div className="fixed bottom-10 right-10 group z-50">
-        <div className="flex flex-col-reverse gap-0.5">
-          
-          {/* Contact (hover trigger) */}
-          <Link href="/contact">
-            <img src="/svg/contact.svg" alt="Contact" />
-          </Link>
-
-          {/* Icons that appear when hovering the group (including Contact or others) */}
-          <Link href="/Whatsapp">
-            <img
-              src="/svg/Whatsapp.svg"
-              alt="Whatsapp"
-              className="transition-all duration-200 translate-y-8 opacity-0 group-hover:translate-y-0 group-hover:opacity-100"
-            />
-          </Link>
-          <Link href="/Linkedin">
-            <img
-              src="/svg/LinkedIn.svg"
-              alt="LinkedIn"
-              className="transition-all duration-400 translate-y-12 opacity-0 group-hover:translate-y-0 group-hover:opacity-100"
-            />
-          </Link>
-          <Link href="/instagram">
-            <img
-              src="/svg/Instagram.svg"
-              alt="Instagram"
-              className="transition-all duration-600 translate-y-16 opacity-0 group-hover:translate-y-0 group-hover:opacity-100"
-            />
-          </Link>
-          
-        </div>
       </div>
     </div>
   );
