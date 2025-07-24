@@ -3,6 +3,7 @@
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import { useEffect, useState, useRef } from 'react'
+import Image from 'next/image'
 
 export default function Navbar() {
   const pathname = usePathname()
@@ -49,8 +50,8 @@ export default function Navbar() {
       {/* Main Nav Bar */}
       <div className="flex justify-between absolute top-0 left-0 w-full z-50">
         <Link href="/" className="flex gap-3 left-10 z-20 relative items-center">
-          <img src="/images/logo.png" alt="logo" className="z-20 relative top-8 left-5 h-auto w-9" />
-          <img src="/svg/helekinlogo.svg" alt="logo-text" className="z-20 relative top-8 left-5 h-auto w-32" />
+          <Image width={100} height={100} loading='lazy' src="/images/logo.png" alt="logo" className="z-20 relative top-8 left-5 h-auto w-9" />
+          <Image width={100} height={100} loading='lazy' src="/svg/helekinlogo.svg" alt="logo-text" className="z-20 relative top-8 left-5 h-auto w-32" />
         </Link>
 
         {/* Desktop Navigation */}
@@ -87,9 +88,9 @@ export default function Navbar() {
         </nav>
 
         {/* Mobile Menu Icon */}
-        <div className="xl:hidden z-30 absolute right-5 top-8">
+        <div className="xl:hidden z-30 fixed right-5 top-8">
           <button onClick={() => setIsSidebarOpen(true)}>
-            <img src="/images/menu.svg" alt="menu" className="w-12" />
+            <Image width={20} height={20} loading='lazy' src="/images/menu.svg" alt="menu" className="w-12 h-auto" />
           </button>
         </div>
       </div>
@@ -101,9 +102,9 @@ export default function Navbar() {
         `}
       >
         {/* Close Icon */}
-        <div className="absolute top-8 right-5 z-50">
+        <div className="fixed top-8 right-5 z-50">
           <button onClick={() => setIsSidebarOpen(false)}>
-            <img src="/images/close.svg" alt="close" className="w-12" />
+            <Image width={20} height={20} loading='lazy' src="/images/close.svg" alt="close" className="w-12 h-auto" />
           </button>
         </div>
 

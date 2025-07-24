@@ -1,5 +1,5 @@
-/* eslint-disable @next/next/no-img-element */
 import Link from 'next/link';
+import Image from 'next/image';
 
 export default function Aboutbanner() {
   return (
@@ -15,12 +15,16 @@ export default function Aboutbanner() {
     >
       {/* Logo */}
       <div className="flex-shrink-0 text-center">
-        <img
+        <Image 
+          width={60}
+          height={100}
+          unoptimized
+          loading='lazy'
           src="/images/logo.png"
           alt="Helekin Logo"
           className="
             /* responsive heights */
-            h-24 xl:h-120 h-60 md:h-48 md:mt-0 mt-10
+            xl:h-120 h-60 w-auto md:h-48 md:mt-0 mt-10
 
             /* smooth resizing */
             transition-all duration-200 ease-in-out

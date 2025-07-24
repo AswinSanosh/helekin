@@ -1,0 +1,94 @@
+{
+  "servicesList": {
+    "software": [
+      {
+        "title": "Web Dev",
+        "desc": "We build responsive websites and mobile apps with powerful backends and smooth user experiences, optimized for performance and scalability.",
+        "background": "/images/fafa.png",
+        "icon": "/svg/servicesvgs/Webdev.svg",
+        "link": "/services/web-development"
+      },
+      {
+        "title": "Mobile",
+        "desc": "We build responsive websites and mobile apps with powerful backends and smooth user experiences, optimized for performance and scalability.",
+        "background": "/images/hero.png",
+        "icon": "/svg/servicesvgs/app dev.svg",
+        "link": "/services/mobile-app-development"
+      },
+      {
+        "title": "AI",
+        "desc": "We build responsive websites and mobile apps with powerful backends and smooth user experiences, optimized for performance and scalability.",
+        "background": "/images/hero.png",
+        "icon": "/svg/servicesvgs/iot.svg",
+        "link": "/services/ai-solutions"
+      },
+      {
+        "title": "UI/UX",
+        "desc": "We build responsive websites and mobile apps with powerful backends and smooth user experiences, optimized for performance and scalability.",
+        "background": "/images/fafa.png",
+        "icon": "/svg/servicesvgs/app dev.svg",
+        "link": "/services/ui-ux-design"
+      },
+      {
+        "title": "Cloud",
+        "desc": "We build responsive websites and mobile apps with powerful backends and smooth user experiences, optimized for performance and scalability.",
+        "background": "/images/fafa.png",
+        "icon": "/svg/servicesvgs/app dev.svg",
+        "link": "/services/cloud-computing"
+      },
+      {
+        "title": "DevOps",
+        "desc": "We build responsive websites and mobile apps with powerful backends and smooth user experiences, optimized for performance and scalability.",
+        "background": "/images/fafa.png",
+        "icon": "/svg/servicesvgs/app dev.svg",
+        "link": "/services/devops"
+      }
+    ],
+    "electronics_and_hardware": [
+      {
+        "title": "IoT Integration",
+        "desc": "We develop embedded systems with seamless IoT connectivity, enabling remote monitoring and control through scalable cloud platforms.",
+        "background": "/images/iot-bg.png",
+        "icon": "/svg/servicesvgs/iot.svg",
+        "link": "/services/iot-integration"
+      },
+      {
+        "title": "Embedded Systems",
+        "desc": "Custom firmware and hardware integration solutions tailored for smart devices and edge computing.",
+        "background": "/images/embedded.png",
+        "icon": "/svg/servicesvgs/embedded.svg",
+        "link": "/services/embedded-systems"
+      },
+      {
+        "title": "PCB Design",
+        "desc": "Design and prototyping of PCBs using industry-grade tools for commercial and industrial applications.",
+        "background": "/images/pcb.png",
+        "icon": "/svg/servicesvgs/pcb.svg",
+        "link": "/services/pcb-design"
+      }
+    ],
+    "threed": [
+      {
+        "title": "3D Modeling",
+        "desc": "High-quality 3D models for visualization, animation, and real-time rendering across industries.",
+        "background": "/images/3dmodel.png",
+        "icon": "/svg/servicesvgs/3dmodel.svg",
+        "link": "/services/3d-modeling"
+      },
+      {
+        "title": "3D Printing",
+        "desc": "Rapid prototyping and small-batch production using FDM, SLA, and SLS 3D printing technologies.",
+        "background": "/images/3dprint.png",
+        "icon": "/svg/servicesvgs/3dprint.svg",
+        "link": "/services/3d-printing"
+      },
+      {
+        "title": "Product Design",
+        "desc": "From concept sketches to full product design with CAD modeling and prototyping.",
+        "background": "/images/productdesign.png",
+        "icon": "/svg/servicesvgs/productdesign.svg",
+        "link": "/services/product-design"
+      }
+    ]
+  }
+}
