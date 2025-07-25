@@ -6,7 +6,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import serviceData from './ServiceList.json';
 import ServiceModal from './Modal';
-import { Service } from '../types/Service'
+import { Service } from '@/types/Service';
 
 const CARD_WIDTH = 300;
 const CARD_GAP = 40;
@@ -33,6 +33,7 @@ export default function SoftwareServicesCarousel() {
   const services: Service[] = serviceData.servicesList.software;
   const allCards: Service[] = [...services, ...services];
   const [selectedService, setSelectedService] = useState<Service | null>(null);
+
 
   useEffect(() => {
     const handleResize = () => {

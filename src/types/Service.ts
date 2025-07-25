@@ -1,7 +1,7 @@
-// types/Service.ts
-export interface Service {
+export type Service = {
   title: string;
   desc: string;
-  icon: string;
   background: string;
-}
+  icon: string;
+  link: string;
+};

@@ -4,14 +4,7 @@ import { Dialog } from '@headlessui/react';
 import { AiOutlineClose } from 'react-icons/ai';
 import Image from 'next/image';
 import Link from 'next/link';
-
-type Service = {
-    title: string;
-    desc: string;
-    background: string;
-    icon: string;
-    link: string;
-};
+import { Service } from '../types/Service'; // ✅ Use your actual import path
 
 interface Props {
     isOpen: boolean;
