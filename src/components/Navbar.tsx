@@ -57,7 +57,7 @@ export default function Navbar() {
         {/* Desktop Navigation */}
         <nav
           className={`
-            hidden xl:flex fixed top-8 left-1/2 -translate-x-1/2 backdrop-blur-xl rounded-lg
+            hidden xl:flex fixed top-8 left-1/2 -translate-x-1/2 rounded-lg
             text-white text-lg font-poppins font-light z-50
             transition-transform duration-300 ease-in-out
             ${hidden ? '-translate-y-50 ' : 'translate-y-0'}
