@@ -26,7 +26,8 @@ export default function SoftwareServicesCarousel() {
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
 
   // ✅ Modal state
-  const [selectedService, setSelectedService] = useState(null);
+  const [selectedService, setSelectedService] = useState<Service | null>(null);
+
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   const controls = useAnimation();
