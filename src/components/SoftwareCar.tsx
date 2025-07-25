@@ -3,8 +3,9 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { motion, useAnimation } from 'framer-motion';
 import Image from 'next/image';
-import Link from 'next/link'; // ✅ Import Link
+import Link from 'next/link';
 import serviceData from './ServiceList.json';
+import ServiceModal from './Modal';
 
 const CARD_WIDTH = 300;
 const CARD_GAP = 40;
@@ -15,6 +16,11 @@ export default function SoftwareServicesCarousel() {
   const [index, setIndex] = useState(0);
   const [hovering, setHovering] = useState(false);
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
+
+  // ✅ Modal state
+  const [selectedService, setSelectedService] = useState(null);
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
   const controls = useAnimation();
   const containerRef = useRef(null);
 
@@ -62,9 +68,20 @@ export default function SoftwareServicesCarousel() {
     shift();
   };
 
+  // ✅ Open modal on card click
+  const handleCardClick = (service: any) => {
+    setSelectedService(service);
+    setIsModalOpen(true);
+  };
+
+  const handleModalClose = () => {
+    setIsModalOpen(false);
+    setSelectedService(null);
+  };
+
   return (
     <div
-      className="relative w-full mt-10 overflow-hidden px-10"
+      className="relative w-full mt-10 overflow-hidden px-10 m-auto"
       onMouseEnter={() => setHovering(true)}
       onMouseLeave={() => setHovering(false)}
     >
@@ -78,11 +95,15 @@ export default function SoftwareServicesCarousel() {
         {allCards.map((service, idx) => {
           const isHovered = hoveredIndex === idx;
           return (
-            <Link href={service.link || '#'} key={idx} className="w-full">
+            <div
+              key={idx}
+              className="w-full cursor-pointer"
+              onClick={() => handleCardClick(service)}
+            >
               <div
                 onMouseEnter={() => setHoveredIndex(idx)}
                 onMouseLeave={() => setHoveredIndex(null)}
-                className="w-[300px] h-[300px] bg-black text-white rounded-xl text-center text-sm mr-10 flex-shrink-0 hover:w-[500px] transition-all duration-300"
+                className="w-[300px] h-[300px] bg-black text-white rounded-xl text-center text-sm mr-10 flex-shrink-0 hover:w-[500px] transition-all duration-300 "
                 style={
                   isHovered
                     ? {
@@ -133,7 +154,7 @@ export default function SoftwareServicesCarousel() {
                   </div>
                 </div>
               </div>
-            </Link>
+            </div>
           );
         })}
       </motion.div>
@@ -142,14 +163,33 @@ export default function SoftwareServicesCarousel() {
         onClick={handlePrev}
         className="absolute top-1/2 left-0 -translate-y-1/2 bg-transparent p-2 h-[300px] w-[50px] transition duration-300"
       >
-        <Image src={"/svg/arrow-left.svg"} alt='<' width={16} height={16} unoptimized loading='lazy' className='hover:scale-[1.2] transition-all duration-300'/>
+        <Image
+          src={'/svg/arrow-left.svg'}
+          alt="<"
+          width={16}
+          height={16}
+          unoptimized
+          loading="lazy"
+          className="hover:scale-[1.2] transition-all duration-300"
+        />
       </button>
       <button
         onClick={handleNext}
         className="absolute top-1/2 right-0 -translate-y-1/2 bg-transparent p-2 h-[300px] w-[50px] transition duration-300"
       >
-        <Image src={"/svg/arrow-right.svg"} alt='>' width={16} height={16} unoptimized loading='lazy' className='hover:scale-[1.2] transition-all duration-300'/>
+        <Image
+          src={'/svg/arrow-right.svg'}
+          alt=">"
+          width={16}
+          height={16}
+          unoptimized
+          loading="lazy"
+          className="hover:scale-[1.2] transition-all duration-300"
+        />
       </button>
+
+      {/* ✅ Modal rendered at end of DOM */}
+      <ServiceModal isOpen={isModalOpen} onClose={handleModalClose} service={selectedService} />
     </div>
   );
 }

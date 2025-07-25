@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@headlessui/react": "^2.2.6",
     "@heroicons/react": "^2.2.0",
     "@react-spring/three": "^10.0.1",
     "@react-three/drei": "^10.5.2",
