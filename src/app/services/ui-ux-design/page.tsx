@@ -211,7 +211,7 @@ export default function Services() {
           Ready to Elevate Your Design?
         </h1>
         <p className="text-white/80 mb-8 max-w-2xl mx-auto">
-          Let's craft a user experience that delights your audience and sets
+          Let&#39;s craft a user experience that delights your audience and sets
           your product apart from the competition.
         </p>
         <Link href="/contact">

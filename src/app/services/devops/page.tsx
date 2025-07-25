@@ -223,7 +223,7 @@ export default function Services() {
         </h1>
         <p className="text-white/80 mb-8 max-w-2xl mx-auto">
           Streamline your development, reduce deployment friction, and
-          accelerate your innovation cycle. Let's build your DevOps foundation.
+          accelerate your innovation cycle. Let&#39;s build your DevOps foundation.
         </p>
         <Link href="/contact">
           <button className="bg-red-700 text-white font-semibold py-3 px-8 rounded-lg hover:bg-red-800 transition-colors duration-300 text-lg cursor-pointer">
