@@ -4,6 +4,8 @@ import "./globals.css";
 import Navbar from "./(root)/(components)/Navbar";
 import Footer from "./(root)/(components)/footer";
 import Contact from "./(root)/(components)/Contact";
+import Forms from "./(root)/(components)/forms";
+
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -19,9 +21,9 @@ export const metadata: Metadata = {
   title: 'Helekin',
   description: 'Grow your business with Helekin',
   icons: {
-    icon: '/images/logo.png', 
-    shortcut: '/images/logo.png',  
-    apple: '/images/logo.png',   
+    icon: '/images/logo.png',
+    shortcut: '/images/logo.png',
+    apple: '/images/logo.png',
   },
 }
 
@@ -36,8 +38,9 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         <Navbar />
-          {children}
-          <Contact />
+        {children}
+        <Contact />
+        <Forms />
         <Footer />
       </body>
     </html>

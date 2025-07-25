@@ -64,7 +64,7 @@ export default function SoftwareServicesCarousel() {
 
   return (
     <div
-      className="relative w-full mt-10 overflow-hidden"
+      className="relative w-full mt-10 overflow-hidden px-10"
       onMouseEnter={() => setHovering(true)}
       onMouseLeave={() => setHovering(false)}
     >
@@ -140,15 +140,15 @@ export default function SoftwareServicesCarousel() {
 
       <button
         onClick={handlePrev}
-        className="absolute top-1/2 left-0 -translate-y-1/2 bg-gradient-to-l from-black/10 to-black text-white p-2 h-[300px] w-[50px] hover:to-white/80 transition duration-300"
+        className="absolute top-1/2 left-0 -translate-y-1/2 bg-transparent p-2 h-[300px] w-[50px] transition duration-300"
       >
-        ←
+        <Image src={"/svg/arrow-left.svg"} alt='<' width={16} height={16} unoptimized loading='lazy' className='hover:scale-[1.2] transition-all duration-300'/>
       </button>
       <button
         onClick={handleNext}
-        className="absolute top-1/2 right-0 -translate-y-1/2 bg-gradient-to-r from-black/10 to-black text-white p-2 h-[300px] w-[50px] hover:to-white/80 transition duration-300"
+        className="absolute top-1/2 right-0 -translate-y-1/2 bg-transparent p-2 h-[300px] w-[50px] transition duration-300"
       >
-        →
+        <Image src={"/svg/arrow-right.svg"} alt='>' width={16} height={16} unoptimized loading='lazy' className='hover:scale-[1.2] transition-all duration-300'/>
       </button>
     </div>
   );

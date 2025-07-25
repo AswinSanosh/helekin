@@ -15,7 +15,6 @@ export default function Home() {
       <Services />
       <Products />
       <FAQ />
-      <Enquiry />
     </main>
   );
 }

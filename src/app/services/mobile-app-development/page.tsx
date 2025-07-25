@@ -132,7 +132,7 @@ export default function Services() {
         </h2>
         <p className="text-white/80 text-base md:text-xl font-poppins font-light mt-10 text-center">
           At Helekin, we specialize in turning your ideas into powerful mobile
-          applications. Whether it's a native iOS, Android, or cross-platform
+          applications. Whether it&#39;s a native iOS, Android, or cross-platform
           app, we leverage cutting-edge technology to build fast, secure, and
           user-friendly mobile experiences that keep your audience connected,
           wherever they are.
@@ -222,7 +222,7 @@ export default function Services() {
           Ready to build your app?
         </h1>
         <p className="text-white/80 mb-8 max-w-2xl mx-auto">
-          Let's bring your mobile app idea to life with a beautiful interface
+          Let&#39;s bring your mobile app idea to life with a beautiful interface
           and powerful functionality that captivates users.
         </p>
         <Link href="/contact">

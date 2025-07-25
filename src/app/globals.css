@@ -24,9 +24,6 @@ body {
   color: var(--foreground);
   font-family: 'Poppins', sans-serif;
   cursor: url('/images/cursor.png') 5 5, auto;
-  box-shadow: #111111;
-  transition-duration: 300ms;
-;
 }
 
 a,

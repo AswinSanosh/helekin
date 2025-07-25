@@ -130,7 +130,7 @@ export default function Services() {
         </h2>
         <p className="text-white/80 text-base md:text-xl font-poppins font-light mt-10 text-center">
           At Helekin, our web development services are designed to establish
-          your brand's authority online. From stunning landing pages to complex
+          your brand&#39;s authority online. From stunning landing pages to complex
           web applications, we leverage the latest technologies to build fast,
           secure, and scalable websites. We focus on clean code, intuitive
           UI/UX, and robust backend architecture to create a digital experience
@@ -221,7 +221,7 @@ export default function Services() {
           Ready to build your website?
         </h1>
         <p className="text-white/80 mb-8 max-w-2xl mx-auto">
-          Let's turn your vision into a stunning, high-performing website that
+          Let&#39;s turn your vision into a stunning, high-performing website that
           grows with your business.
         </p>
         <Link href="/contact">
