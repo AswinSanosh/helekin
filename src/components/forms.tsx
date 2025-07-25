@@ -13,7 +13,7 @@ export default function Form() {
                         Get in touch with our <span className="text-red-500">Experts</span>
                     </h2>
                     <p className="text-sm text-gray-400">
-                        Let's see how we can help enhance your user journey.
+                        Let&#39;s see how we can help enhance your user journey.
                     </p>
 
                     {/* Name */}
@@ -58,7 +58,7 @@ export default function Form() {
                             Tell us more about your project*
                         </label>
                         <textarea
-                            rows="4"
+                            rows={4}
                             className="w-full rounded-lg bg-zinc-800 text-white px-4 py-3 outline-none resize-none"
                         ></textarea>
                     </div>
