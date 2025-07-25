@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import SoftwareServicesCarousel from './SoftwareCar';
-
+import HardwareServicesCarousel from './HardwareCar';
+import ThreedServicesCarousel from './ThreedCar';
 
 export default function Services() {
   return (
@@ -47,7 +48,7 @@ export default function Services() {
         </div>
         <div>
           {/* Add your software service cards or items here */}
-          <SoftwareServicesCarousel />
+          <HardwareServicesCarousel />
         </div>
       </div>
 
@@ -58,7 +59,7 @@ export default function Services() {
         </div>
         <div>
           {/* Add your software service cards or items here */}
-          <SoftwareServicesCarousel />
+          <ThreedServicesCarousel />
         </div>
       </div>
       </div>
