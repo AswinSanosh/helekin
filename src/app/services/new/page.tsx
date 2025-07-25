@@ -17,7 +17,7 @@ export default function Services() {
     const Softservices = serviceData.servicesList.software;
     const Hardservices = serviceData.servicesList.electronics_and_hardware;
     const ThreeDservices = serviceData.servicesList.threed;
-    
+
     const [searchTerm, setSearchTerm] = useState('');
 
     const [hovering, setHovering] = useState(false);
@@ -114,7 +114,7 @@ export default function Services() {
             </div>
 
             {/* Services Section */}
-            <div className="relative z-0 w-full flex flex-col bg-[url('/images/fafa.png')] bg-cover bg-center bg-no-repeat px-6 pb-30">
+            <div className="">
                 <div className="absolute inset-0 bg-black/50 backdrop-blur-sm z-0" />
 
                 <div className='flex justify-between items-baseline z-20'>
