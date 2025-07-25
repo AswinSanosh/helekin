@@ -19,6 +19,7 @@ export default function Hero() {
 
   return (
     <div className="w-full min-h-[500px] sm:h-screen bg-[url('/svg/hero.svg')] bg-cover bg-center bg-no-repeat">
+      {/*<div className="absolute inset-0 bg-gradient-to-l from-transparent via-black/30 to-black/50 z-0 h-full/4" />*/}
       <div className="text-left p-6 md:p-10 text-white absolute bottom-0 md:bottom-10 left-0 md:left-10 max-w-full">
         <h1 className="text-white text-4xl md:text-6xl font-extralight mb-4 font-poppins">
           Digital acceleration service
