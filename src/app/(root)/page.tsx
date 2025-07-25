@@ -1,8 +1,8 @@
-import Hero from "../(components)/Herobanner";
-import AboutBanner from "../(components)/Aboutbanner";
-import Services from "../(components)/Services";
-import Products from "../(components)/Products";
-import FAQ from "../(components)/FAQ"; // Assuming you have a FAQ component
+import Hero from "../../components/Herobanner";
+import AboutBanner from "../../components/Aboutbanner";
+import Services from "../../components/Services";
+import Products from "../../components/Products";
+import FAQ from "../../components/FAQ"; // Assuming you have a FAQ component
 
 export default function Home() {
   return (

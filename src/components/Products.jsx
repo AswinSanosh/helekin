@@ -1,7 +1,6 @@
 
 
 import Link from 'next/link';
-import SoftwareServicesCarousel from '../(root)/services/SoftwareCar';
 
 export default function Products() {
   return (
