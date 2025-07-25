@@ -10,10 +10,12 @@ export default function Home() {
       <div className="relative w-full h-screen">
         <Hero />
       </div>
-      <AboutBanner />
-      <Services />
-      <Products />
-      <FAQ />
+      <div>
+        <AboutBanner />
+        <Services />
+        <Products />
+        <FAQ />
+      </div>
     </main>
   );
 }
