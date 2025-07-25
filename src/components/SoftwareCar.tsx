@@ -6,16 +6,16 @@ import Image from 'next/image';
 import Link from 'next/link';
 import serviceData from './ServiceList.json';
 import ServiceModal from './Modal';
+import { Service } from '../types/Service'
 
 const CARD_WIDTH = 300;
 const CARD_GAP = 40;
 const VISIBLE_CARDS = 3;
 
-interface Service {
-  title: string;
-  desc: string;
-  icon: string;
-  background: string;
+interface ServiceModalProps {
+  isOpen: boolean;
+  onClose: () => void;
+  service: Service | null;
 }
 
 
@@ -25,9 +25,6 @@ export default function SoftwareServicesCarousel() {
   const [hovering, setHovering] = useState(false);
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
 
-  // ✅ Modal state
-  const [selectedService, setSelectedService] = useState<Service | null>(null);
-
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   const controls = useAnimation();
@@ -35,6 +32,7 @@ export default function SoftwareServicesCarousel() {
 
   const services: Service[] = serviceData.servicesList.software;
   const allCards: Service[] = [...services, ...services];
+  const [selectedService, setSelectedService] = useState<Service | null>(null);
 
   useEffect(() => {
     const handleResize = () => {
