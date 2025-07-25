@@ -1,9 +1,9 @@
-"use client";
+'use client';
 
-import Image from "next/image";
-import serviceData from "../ServiceList.json";
-import React, { useEffect, useState } from "react";
-import Link from "next/link";
+import Image from 'next/image';
+import serviceData from '../ServiceList.json';
+import React, { useEffect, useState } from 'react';
+import Link from 'next/link';
 
 interface Service {
   title: string;
@@ -18,12 +18,9 @@ export default function Services() {
   const Hardservices = serviceData.servicesList.electronics_and_hardware;
   const ThreeDservices = serviceData.servicesList.threed;
 
-  const [searchTerm, setSearchTerm] = useState("");
+  const [searchTerm, setSearchTerm] = useState('');
   const [hovering, setHovering] = useState(false);
-  const [hoveredIndex, setHoveredIndex] = useState<{
-    section: string;
-    index: number;
-  } | null>(null);
+  const [hoveredIndex, setHoveredIndex] = useState<{ section: string; index: number } | null>(null);
   const [index, setIndex] = useState(0);
 
   useEffect(() => {
@@ -50,11 +47,10 @@ export default function Services() {
 
   const renderServiceCards = (services: Service[], section: string) =>
     services.map((service, i) => {
-      const isHovered =
-        hoveredIndex?.section === section && hoveredIndex.index === i;
+      const isHovered = hoveredIndex?.section === section && hoveredIndex.index === i;
 
       return (
-        <Link href={service.link || "#"} key={i} className="w-full">
+        <Link href={service.link || '#'} key={i} className="w-full">
           <div
             onMouseEnter={() => handleMouseEnter(section, i)}
             onMouseLeave={handleMouseLeave}
@@ -63,11 +59,11 @@ export default function Services() {
               ...(isHovered
                 ? {
                     backgroundImage: `linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(${service.background})`,
-                    backgroundSize: "cover",
-                    backgroundPosition: "center",
+                    backgroundSize: 'cover',
+                    backgroundPosition: 'center',
                   }
                 : {
-                    backgroundColor: "rgba(255,255,255,0.05)",
+                    backgroundColor: 'rgba(255,255,255,0.05)',
                   }),
             }}
           >
@@ -76,23 +72,18 @@ export default function Services() {
               style={
                 isHovered
                   ? {
-                      backgroundColor: "#A50424",
-                      backdropFilter: "blur(10px)",
+                      backgroundColor: '#A50424',
+                      backdropFilter: 'blur(10px)',
                     }
                   : {}
               }
             >
-              <Image
-                src={service.icon}
-                alt={service.title}
-                width={40}
-                height={40}
-              />
+              <Image src={service.icon} alt={service.title} width={40} height={40} />
             </div>
             <h2
               className="text-white text-2xl font-semibold mb-2"
               style={{
-                color: isHovered ? "#A50424" : "white",
+                color: isHovered ? '#A50424' : 'white',
               }}
             >
               {service.title}
@@ -111,17 +102,16 @@ export default function Services() {
         <div className="absolute h-150 bottom-5 left-20">
           <div className="flex mb-4">
             <h1 className="text-white text-6xl font-light font-poppins">
-              Mobile App
+              User-Centric
             </h1>
             <h1 className="text-red-700 text-6xl font-light font-poppins px-4">
-              Development
+              Design
             </h1>
           </div>
           <div className="w-2/5">
             <p className="text-white/80 text-xl font-light font-poppins mt-10">
-              We craft high-performance, intuitive mobile applications for iOS
-              and Android that engage users and deliver exceptional value for
-              your business.
+              We design intuitive, engaging, and visually stunning interfaces
+              that create seamless user experiences and elevate your brand.
             </p>
           </div>
         </div>
@@ -131,11 +121,10 @@ export default function Services() {
           Transforming Ideas into Intelligent Solutions
         </h2>
         <p className="text-white/80 text-base md:text-xl font-poppins font-light mt-10 text-center">
-          At Helekin, we specialize in turning your ideas into powerful mobile
-          applications. Whether it's a native iOS, Android, or cross-platform
-          app, we leverage cutting-edge technology to build fast, secure, and
-          user-friendly mobile experiences that keep your audience connected,
-          wherever they are.
+          At Helekin, our UI/UX design process is rooted in deep user
+          understanding. We blend aesthetic appeal with functional clarity,
+          transforming complex challenges into simple, elegant solutions that
+          are both a joy to use and effective at driving business outcomes.
         </p>
       </div>
       <div className="relative z-0 w-full flex flex-col bg-[url('/images/fafa.png')] bg-cover bg-center bg-no-repeat px-6 pb-30">
@@ -157,11 +146,11 @@ export default function Services() {
       </div>
       <div className="relative z-10 w-full mx-auto text-center bg-black pt-24">
         <h1 className="text-3xl font-poppins font-semibold text-red-700 mb-2 text-start ml-10">
-          Featured Mobile Apps
+          Featured Design Projects
         </h1>
         <p className="text-white/80 text-base md:text-xl font-poppins font-light mt-5 mb-10 max-w-2xl text-start ml-10">
-          Our portfolio highlights our expertise in mobile app innovation and
-          creating seamless, user-centric designs.
+          Our portfolio showcases our dedication to creating beautiful,
+          functional, and memorable user experiences.
         </p>
         <div className="mt-5 flex sm:flex-row flex-col items-center justify-center gap-5 px-10">
           <div className="flex flex-col items-start h-[300px] w-full bg-white/10 backdrop-blur-lg shadow-xl shadow-black/30 p-6 rounded-3xl transition-all hover:scale-[1.02] duration-300"></div>
@@ -174,18 +163,18 @@ export default function Services() {
               Transforming Ideas into Intelligent Solutions
             </h2>
             <p className="text-white/80 text-base md:text-xl font-poppins font-light mt-10 text-left">
-              We design and develop with a mobile-first mindset, focusing on
-              performance, usability across diverse devices, and optimizing for
-              the unique challenges of the mobile ecosystem. Our process
-              includes rigorous testing, performance tuning, and navigating the
-              app store submission process for you.
+              Our iterative design process ensures a final product that truly
+              resonates with your audience. We move from discovery and user
+              research to wireframing, prototyping, and user testing, refining
+              every detail to ensure a seamless and intuitive flow from start to
+              finish.
             </p>
           </div>
           <div className="w-2/3 flex flex-col items-start">
             <div className="flex flex-col items-center justify-center md:items-center mt-2 gap-8 w-full">
               <div className="flex items-center justify-between bg-white/10 backdrop-blur-lg shadow-lg shadow-black/30 p-6 md:w-3/4 w-full">
                 <h1 className="font-poppins text-2xl font-medium text-white">
-                  Native or Cross-Platform: Which is right for me?
+                  What is the difference between UI and UX?
                 </h1>
                 <h1 className="font-poppins text-3xl font-medium text-white">
                   +
@@ -193,7 +182,7 @@ export default function Services() {
               </div>
               <div className="flex items-center justify-between bg-white/10 backdrop-blur-lg shadow-lg shadow-black/30 p-6 md:w-3/4 w-full">
                 <h1 className="font-poppins text-2xl font-medium text-white">
-                  How do you handle app store submissions?
+                  How do you conduct user research?
                 </h1>
                 <h1 className="font-poppins text-3xl font-medium text-white">
                   +
@@ -201,7 +190,7 @@ export default function Services() {
               </div>
               <div className="flex items-center justify-between bg-white/10 backdrop-blur-lg shadow-lg shadow-black/30 p-6 md:w-3/4 w-full">
                 <h1 className="font-poppins text-2xl font-medium text-white">
-                  What is your process for testing mobile apps?
+                  What design tools do you use?
                 </h1>
                 <h1 className="font-poppins text-3xl font-medium text-white">
                   +
@@ -209,7 +198,7 @@ export default function Services() {
               </div>
               <div className="flex items-center justify-between bg-white/10 backdrop-blur-lg shadow-lg shadow-black/30 p-6 md:w-3/4 w-full">
                 <h1 className="font-poppins text-2xl font-medium text-white">
-                  Can you integrate my app with existing systems?
+                  Do you create design systems and style guides?
                 </h1>
                 <h1 className="font-poppins text-3xl font-medium text-white">
                   +
@@ -219,15 +208,15 @@ export default function Services() {
           </div>
         </div>
         <h1 className="font-poppins text-4xl text-white mb-4 mt-50">
-          Ready to build your app?
+          Ready to Elevate Your Design?
         </h1>
         <p className="text-white/80 mb-8 max-w-2xl mx-auto">
-          Let's bring your mobile app idea to life with a beautiful interface
-          and powerful functionality that captivates users.
+          Let's craft a user experience that delights your audience and sets
+          your product apart from the competition.
         </p>
         <Link href="/contact">
           <button className="bg-red-700 text-white font-semibold py-3 px-8 rounded-lg hover:bg-red-800 transition-colors duration-300 text-lg cursor-pointer">
-            Schedule a Consultation
+            Start a Design Project
           </button>
         </Link>
       </div>

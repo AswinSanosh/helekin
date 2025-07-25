@@ -111,17 +111,17 @@ export default function Services() {
         <div className="absolute h-150 bottom-5 left-20">
           <div className="flex mb-4">
             <h1 className="text-white text-6xl font-light font-poppins">
-              Mobile App
+              DevOps &
             </h1>
             <h1 className="text-red-700 text-6xl font-light font-poppins px-4">
-              Development
+              Automation
             </h1>
           </div>
           <div className="w-2/5">
             <p className="text-white/80 text-xl font-light font-poppins mt-10">
-              We craft high-performance, intuitive mobile applications for iOS
-              and Android that engage users and deliver exceptional value for
-              your business.
+              We bridge the gap between development and operations, implementing
+              CI/CD pipelines and automation to accelerate your software
+              delivery lifecycle.
             </p>
           </div>
         </div>
@@ -131,11 +131,11 @@ export default function Services() {
           Transforming Ideas into Intelligent Solutions
         </h2>
         <p className="text-white/80 text-base md:text-xl font-poppins font-light mt-10 text-center">
-          At Helekin, we specialize in turning your ideas into powerful mobile
-          applications. Whether it's a native iOS, Android, or cross-platform
-          app, we leverage cutting-edge technology to build fast, secure, and
-          user-friendly mobile experiences that keep your audience connected,
-          wherever they are.
+          At Helekin, we implement robust DevOps strategies to streamline your
+          development process. By automating builds, testing, and deployments,
+          we reduce manual errors, improve collaboration, and enable your teams
+          to release high-quality software faster and more reliably than ever
+          before.
         </p>
       </div>
       <div className="relative z-0 w-full flex flex-col bg-[url('/images/fafa.png')] bg-cover bg-center bg-no-repeat px-6 pb-30">
@@ -157,11 +157,11 @@ export default function Services() {
       </div>
       <div className="relative z-10 w-full mx-auto text-center bg-black pt-24">
         <h1 className="text-3xl font-poppins font-semibold text-red-700 mb-2 text-start ml-10">
-          Featured Mobile Apps
+          Featured CI/CD Pipelines
         </h1>
         <p className="text-white/80 text-base md:text-xl font-poppins font-light mt-5 mb-10 max-w-2xl text-start ml-10">
-          Our portfolio highlights our expertise in mobile app innovation and
-          creating seamless, user-centric designs.
+          Our work showcases our success in creating efficient, automated
+          workflows that enhance productivity and system stability.
         </p>
         <div className="mt-5 flex sm:flex-row flex-col items-center justify-center gap-5 px-10">
           <div className="flex flex-col items-start h-[300px] w-full bg-white/10 backdrop-blur-lg shadow-xl shadow-black/30 p-6 rounded-3xl transition-all hover:scale-[1.02] duration-300"></div>
@@ -174,18 +174,18 @@ export default function Services() {
               Transforming Ideas into Intelligent Solutions
             </h2>
             <p className="text-white/80 text-base md:text-xl font-poppins font-light mt-10 text-left">
-              We design and develop with a mobile-first mindset, focusing on
-              performance, usability across diverse devices, and optimizing for
-              the unique challenges of the mobile ecosystem. Our process
-              includes rigorous testing, performance tuning, and navigating the
-              app store submission process for you.
+              We analyze your existing workflows to design a tailored CI/CD
+              strategy. By implementing Infrastructure as Code (IaC) and the
+              right automation tools, we establish robust monitoring and
+              feedback loops to foster a culture of continuous improvement and
+              operational excellence.
             </p>
           </div>
           <div className="w-2/3 flex flex-col items-start">
             <div className="flex flex-col items-center justify-center md:items-center mt-2 gap-8 w-full">
               <div className="flex items-center justify-between bg-white/10 backdrop-blur-lg shadow-lg shadow-black/30 p-6 md:w-3/4 w-full">
                 <h1 className="font-poppins text-2xl font-medium text-white">
-                  Native or Cross-Platform: Which is right for me?
+                  What is CI/CD and why is it important?
                 </h1>
                 <h1 className="font-poppins text-3xl font-medium text-white">
                   +
@@ -193,7 +193,7 @@ export default function Services() {
               </div>
               <div className="flex items-center justify-between bg-white/10 backdrop-blur-lg shadow-lg shadow-black/30 p-6 md:w-3/4 w-full">
                 <h1 className="font-poppins text-2xl font-medium text-white">
-                  How do you handle app store submissions?
+                  What is Infrastructure as Code (IaC)?
                 </h1>
                 <h1 className="font-poppins text-3xl font-medium text-white">
                   +
@@ -201,7 +201,7 @@ export default function Services() {
               </div>
               <div className="flex items-center justify-between bg-white/10 backdrop-blur-lg shadow-lg shadow-black/30 p-6 md:w-3/4 w-full">
                 <h1 className="font-poppins text-2xl font-medium text-white">
-                  What is your process for testing mobile apps?
+                  Which DevOps tools do you work with?
                 </h1>
                 <h1 className="font-poppins text-3xl font-medium text-white">
                   +
@@ -209,7 +209,7 @@ export default function Services() {
               </div>
               <div className="flex items-center justify-between bg-white/10 backdrop-blur-lg shadow-lg shadow-black/30 p-6 md:w-3/4 w-full">
                 <h1 className="font-poppins text-2xl font-medium text-white">
-                  Can you integrate my app with existing systems?
+                  How does DevOps improve software quality?
                 </h1>
                 <h1 className="font-poppins text-3xl font-medium text-white">
                   +
@@ -219,11 +219,11 @@ export default function Services() {
           </div>
         </div>
         <h1 className="font-poppins text-4xl text-white mb-4 mt-50">
-          Ready to build your app?
+          Ready to Automate Your Workflow?
         </h1>
         <p className="text-white/80 mb-8 max-w-2xl mx-auto">
-          Let's bring your mobile app idea to life with a beautiful interface
-          and powerful functionality that captivates users.
+          Streamline your development, reduce deployment friction, and
+          accelerate your innovation cycle. Let's build your DevOps foundation.
         </p>
         <Link href="/contact">
           <button className="bg-red-700 text-white font-semibold py-3 px-8 rounded-lg hover:bg-red-800 transition-colors duration-300 text-lg cursor-pointer">
