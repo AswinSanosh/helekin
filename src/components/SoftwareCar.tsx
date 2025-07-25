@@ -11,6 +11,14 @@ const CARD_WIDTH = 300;
 const CARD_GAP = 40;
 const VISIBLE_CARDS = 3;
 
+interface Service {
+  title: string;
+  desc: string;
+  icon: string;
+  background: string;
+}
+
+
 export default function SoftwareServicesCarousel() {
   const [visibleCards, setVisibleCards] = useState(VISIBLE_CARDS);
   const [index, setIndex] = useState(0);
@@ -24,8 +32,8 @@ export default function SoftwareServicesCarousel() {
   const controls = useAnimation();
   const containerRef = useRef(null);
 
-  const services = serviceData.servicesList.software;
-  const allCards = [...services, ...services];
+  const services: Service[] = serviceData.servicesList.software;
+  const allCards: Service[] = [...services, ...services];
 
   useEffect(() => {
     const handleResize = () => {
@@ -69,7 +77,7 @@ export default function SoftwareServicesCarousel() {
   };
 
   // ✅ Open modal on card click
-  const handleCardClick = (service: any) => {
+  const handleCardClick = (service: Service) => {
     setSelectedService(service);
     setIsModalOpen(true);
   };
@@ -107,12 +115,12 @@ export default function SoftwareServicesCarousel() {
                 style={
                   isHovered
                     ? {
-                        backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(${service.background})`,
-                        backgroundSize: 'cover',
-                        backgroundPosition: 'center',
-                        backgroundRepeat: 'no-repeat',
-                        backdropFilter: 'blur(10px)',
-                      }
+                      backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(${service.background})`,
+                      backgroundSize: 'cover',
+                      backgroundPosition: 'center',
+                      backgroundRepeat: 'no-repeat',
+                      backdropFilter: 'blur(10px)',
+                    }
                     : {}
                 }
               >
@@ -122,9 +130,9 @@ export default function SoftwareServicesCarousel() {
                     style={
                       isHovered
                         ? {
-                            backgroundColor: '#A50424',
-                            backdropFilter: 'blur(10px)',
-                          }
+                          backgroundColor: '#A50424',
+                          backdropFilter: 'blur(10px)',
+                        }
                         : {}
                     }
                   >
@@ -138,16 +146,14 @@ export default function SoftwareServicesCarousel() {
                   </div>
                   <div className="text-left relative m-5 top-5 transition-all duration-300">
                     <h2
-                      className={`transition-all duration-300 text-2xl font-poppins font-semibold ${
-                        isHovered ? 'text-red-700' : 'text-white'
-                      }`}
+                      className={`transition-all duration-300 text-2xl font-poppins font-semibold ${isHovered ? 'text-red-700' : 'text-white'
+                        }`}
                     >
                       {service.title}
                     </h2>
                     <p
-                      className={`transition-all duration-300 font-poppins font-light ${
-                        isHovered ? 'text-lg' : 'text-md'
-                      }`}
+                      className={`transition-all duration-300 font-poppins font-light ${isHovered ? 'text-lg' : 'text-md'
+                        }`}
                     >
                       {service.desc}
                     </p>
