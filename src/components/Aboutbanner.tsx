@@ -47,7 +47,7 @@ export default function Aboutbanner() {
           As a startup driven by innovation and agility, we craft tailored digital solutions
           that solve real problems and unlock new opportunities. From building powerful digital
           experiences to scaling your ideas, we&#39;re here to support your journey every step of
-          the way. Our mission is simple — to empower businesses worldwide with the tools,
+          the way. Our mission is simple to empower businesses worldwide with the tools,
           technology, and creativity they need to grow.
         </p>
 
