@@ -1,7 +1,12 @@
 import type { Metadata } from "next";
+<<<<<<< HEAD
+import { Geist, Geist_Mono, Poppins } from "next/font/google";
+import "../../utils/styles/globals.css";
+=======
 // Removed unused Poppins font import
 import { Geist, Geist_Mono } from "next/font/google";
 import "../globals.css";
+>>>>>>> origin/develop
 import Navbar from "../../components/Navbar";
 import Footer from "../../components/footer";
 import Contact from "../../components/Contact";
