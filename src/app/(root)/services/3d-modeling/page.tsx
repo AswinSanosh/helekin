@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import serviceData from "@/components/ServiceList.json";
+import serviceData from "../../../../components/ServiceList.json";
 import React, { useEffect, useState } from "react";
 import Link from "next/link";
 
@@ -110,15 +110,15 @@ export default function Services() {
         <div className="absolute inset-0 bg-black/70 backdrop-blur-sm z-0 h-full" />
         <div className="absolute h-150 bottom-5 left-20">
           <div className="flex mb-4">
-            <h1 className="text-white text-6xl font-light font-poppins">PCB</h1>
+            <h1 className="text-white text-6xl font-light font-poppins">3D</h1>
             <h1 className="text-red-700 text-6xl font-light font-poppins px-4">
-              Designing
+              Modeling
             </h1>
           </div>
           <div className="w-2/5">
             <p className="text-white/80 text-xl font-light font-poppins mt-10">
-              Designing and prototyping of PCBs using industry-grade tools for
-              commercial and industrial applications.
+              High-quality 3D models for visualization, animation, and real-time
+              rendering across industries.
             </p>
           </div>
         </div>
@@ -128,11 +128,10 @@ export default function Services() {
           Transforming Ideas into Intelligent Solutions
         </h2>
         <p className="text-white/80 text-base md:text-xl font-poppins font-light mt-10 text-center">
-          At Helekin, we translate your complex schematics into robust,
-          manufacturable Printed Circuit Boards. Our expertise covers everything
-          from high-speed digital designs to sensitive analog layouts, ensuring
-          optimal performance, signal integrity, and reliability for your
-          electronic products.
+          At Helekin, we bring your concepts to life in three dimensions. Our
+          artists and technicians create detailed, photorealistic 3D models
+          suitable for product visualization, architectural walkthroughs,
+          animation, and integration into real-time game engines.
         </p>
       </div>
       <div className="relative z-0 w-full flex flex-col bg-[url('/images/fafa.png')] bg-cover bg-center bg-no-repeat px-6 pb-30">
@@ -154,11 +153,11 @@ export default function Services() {
       </div>
       <div className="relative z-10 w-full mx-auto text-center bg-black pt-24">
         <h1 className="text-3xl font-poppins font-semibold text-red-700 mb-2 text-start ml-10">
-          Featured PCB Layouts
+          Featured 3D Renders
         </h1>
         <p className="text-white/80 text-base md:text-xl font-poppins font-light mt-5 mb-10 max-w-2xl text-start ml-10">
-          Our portfolio showcases our precision and attention to detail in
-          creating complex, high-performance circuit boards.
+          Our portfolio demonstrates our commitment to artistic excellence and
+          technical precision in every model we create.
         </p>
         <div className="mt-5 flex sm:flex-row flex-col items-center justify-center gap-5 px-10">
           <div className="flex flex-col items-start h-[300px] w-full bg-white/10 backdrop-blur-lg shadow-xl shadow-black/30 p-6 rounded-3xl transition-all hover:scale-[1.02] duration-300"></div>
@@ -171,18 +170,18 @@ export default function Services() {
               Transforming Ideas into Intelligent Solutions
             </h2>
             <p className="text-white/80 text-base md:text-xl font-poppins font-light mt-10 text-left">
-              Our workflow ensures a seamless transition from concept to
-              reality. We begin with requirement analysis and schematic capture,
-              followed by component selection, layout and routing, and finally,
-              comprehensive Design for Manufacturability (DFM) checks to
-              guarantee a flawless production run.
+              Our process begins with understanding your vision and gathering
+              references. We then proceed through block-out, high-poly
+              sculpting, retopology for optimization, and finally, texturing and
+              material creation to achieve the perfect look for your project's
+              needs.
             </p>
           </div>
           <div className="w-2/3 flex flex-col items-start">
             <div className="flex flex-col items-center justify-center md:items-center mt-2 gap-8 w-full">
               <div className="flex items-center justify-between bg-white/10 backdrop-blur-lg shadow-lg shadow-black/30 p-6 md:w-3/4 w-full">
                 <h1 className="font-poppins text-2xl font-medium text-white">
-                  What design software do you use?
+                  What 3D modeling software do you specialize in?
                 </h1>
                 <h1 className="font-poppins text-3xl font-medium text-white">
                   +
@@ -190,7 +189,7 @@ export default function Services() {
               </div>
               <div className="flex items-center justify-between bg-white/10 backdrop-blur-lg shadow-lg shadow-black/30 p-6 md:w-3/4 w-full">
                 <h1 className="font-poppins text-2xl font-medium text-white">
-                  What is the difference between schematic and layout?
+                  What file formats can you deliver the models in?
                 </h1>
                 <h1 className="font-poppins text-3xl font-medium text-white">
                   +
@@ -198,7 +197,7 @@ export default function Services() {
               </div>
               <div className="flex items-center justify-between bg-white/10 backdrop-blur-lg shadow-lg shadow-black/30 p-6 md:w-3/4 w-full">
                 <h1 className="font-poppins text-2xl font-medium text-white">
-                  How do you handle high-speed signal routing?
+                  Can you create low-poly models for games?
                 </h1>
                 <h1 className="font-poppins text-3xl font-medium text-white">
                   +
@@ -206,7 +205,7 @@ export default function Services() {
               </div>
               <div className="flex items-center justify-between bg-white/10 backdrop-blur-lg shadow-lg shadow-black/30 p-6 md:w-3/4 w-full">
                 <h1 className="font-poppins text-2xl font-medium text-white">
-                  Can you manage the prototyping process?
+                  Do you also provide animation and rigging services?
                 </h1>
                 <h1 className="font-poppins text-3xl font-medium text-white">
                   +
@@ -216,11 +215,11 @@ export default function Services() {
           </div>
         </div>
         <h1 className="font-poppins text-4xl text-white mb-4 mt-50">
-          Ready to Bring Your Circuit to Life?
+          Ready to Visualize Your Project?
         </h1>
         <p className="text-white/80 mb-8 max-w-2xl mx-auto">
-          From concept to a fully realized board, let our experts engineer the
-          electronic foundation for your next great product.
+          From initial concept to final render, let our team build the stunning
+          3D assets your project deserves.
         </p>
         <Link href="/contact">
           <button className="bg-red-700 text-white font-semibold py-3 px-8 rounded-lg hover:bg-red-800 transition-colors duration-300 text-lg cursor-pointer">
