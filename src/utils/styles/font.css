@@ -20,16 +20,16 @@
 
 /* 👑 Typography scale — default (mobile-first) */
 .heading-extralight, .heading-light, .heading-regular, .heading-base, .heading-semibold, .heading-bold {
-  font-size: 1.875rem;
+  font-size: 1.675rem; /* -0.2rem */
 }
 .title-extralight, .title-light, .title-regular, .title-base, .title-semibold, .title-bold {
-  font-size: 1.5rem;
+  font-size: 1.3rem; /* -0.2rem */
 }
 .subtitle-extralight, .subtitle-light, .subtitle-regular, .subtitle-base, .subtitle-semibold, .subtitle-bold {
-  font-size: 1.375rem;
+  font-size: 1.175rem; /* -0.2rem */
 }
 .subheading-extralight, .subheading-light, .subheading-regular, .subheading-base, .subheading-semibold, .subheading-bold {
-  font-size: 1.125rem;
+  font-size: 0.925rem; /* -0.2rem */
 }
 .para-extralight, .para-light, .para-regular, .para-base, .para-semibold, .para-bold {
   font-size: 1rem;
@@ -44,16 +44,16 @@
 /* 📱 SM (min-width: 640px) */
 @media (min-width: 640px) {
   .heading-extralight, .heading-light, .heading-regular, .heading-base, .heading-semibold, .heading-bold {
-    font-size: 2.25rem;
+    font-size: 2.05rem; /* -0.2rem */
   }
   .title-extralight, .title-light, .title-regular, .title-base, .title-semibold, .title-bold {
-    font-size: 1.875rem;
+    font-size: 1.675rem; /* -0.2rem */
   }
   .subtitle-extralight, .subtitle-light, .subtitle-regular, .subtitle-base, .subtitle-semibold, .subtitle-bold {
-    font-size: 1.5rem;
+    font-size: 1.3rem; /* -0.2rem */
   }
   .subheading-extralight, .subheading-light, .subheading-regular, .subheading-base, .subheading-semibold, .subheading-bold {
-    font-size: 1.25rem;
+    font-size: 1.05rem; /* -0.2rem */
   }
   .para-extralight, .para-light, .para-regular, .para-base, .para-semibold, .para-bold {
     font-size: 1.125rem;
@@ -66,16 +66,16 @@
 /* 💻 MD (min-width: 768px) */
 @media (min-width: 768px) {
   .heading-extralight, .heading-light, .heading-regular, .heading-base, .heading-semibold, .heading-bold {
-    font-size: 3rem;
+    font-size: 2.8rem; /* -0.2rem */
   }
   .title-extralight, .title-light, .title-regular, .title-base, .title-semibold, .title-bold {
-    font-size: 2.25rem;
+    font-size: 2.05rem; /* -0.2rem */
   }
   .subtitle-extralight, .subtitle-light, .subtitle-regular, .subtitle-base, .subtitle-semibold, .subtitle-bold {
-    font-size: 1.875rem;
+    font-size: 1.675rem; /* -0.2rem */
   }
   .subheading-extralight, .subheading-light, .subheading-regular, .subheading-base, .subheading-semibold, .subheading-bold {
-    font-size: 1.5rem;
+    font-size: 1.3rem; /* -0.2rem */
   }
   .para-extralight, .para-light, .para-regular, .para-base, .para-semibold, .para-bold {
     font-size: 1.1875rem;
@@ -91,16 +91,16 @@
 /* 🖥️ LG (min-width: 1024px) */
 @media (min-width: 1024px) {
   .heading-extralight, .heading-light, .heading-regular, .heading-base, .heading-semibold, .heading-bold {
-    font-size: 3.75rem;
+    font-size: 3.55rem; /* -0.2rem */
   }
   .title-extralight, .title-light, .title-regular, .title-base, .title-semibold, .title-bold {
-    font-size: 3rem;
+    font-size: 2.8rem; /* -0.2rem */
   }
   .subtitle-extralight, .subtitle-light, .subtitle-regular, .subtitle-base, .subtitle-semibold, .subtitle-bold {
-    font-size: 2.25rem;
+    font-size: 2.05rem; /* -0.2rem */
   }
   .subheading-extralight, .subheading-light, .subheading-regular, .subheading-base, .subheading-semibold, .subheading-bold {
-    font-size: 1.875rem;
+    font-size: 1.675rem; /* -0.2rem */
   }
   .para-extralight, .para-light, .para-regular, .para-base, .para-semibold, .para-bold {
     font-size: 1.25rem;
@@ -110,5 +110,331 @@
   }
   .specialpara-extralight, .specialpara-light, .specialpara-regular, .specialpara-base, .specialpara-semibold, .specialpara-bold {
     font-size: 1.125rem;
+  }
+}
+
+/* 🔐 Lock font sizes regardless of screen size */
+
+/* Headings */
+.heading-extralight-sm { font-size: 1.675rem; }
+.heading-extralight-md { font-size: 2.05rem; }
+.heading-extralight-lg { font-size: 2.8rem; }
+.heading-extralight-xl { font-size: 3.55rem; }
+
+.heading-light-sm { font-size: 1.675rem; }
+.heading-light-md { font-size: 2.05rem; }
+.heading-light-lg { font-size: 2.8rem; }
+.heading-light-xl { font-size: 3.55rem; }
+
+.heading-regular-sm { font-size: 1.675rem; }
+.heading-regular-md { font-size: 2.05rem; }
+.heading-regular-lg { font-size: 2.8rem; }
+.heading-regular-xl { font-size: 3.55rem; }
+
+.heading-base-sm { font-size: 1.675rem; }
+.heading-base-md { font-size: 2.05rem; }
+.heading-base-lg { font-size: 2.8rem; }
+.heading-base-xl { font-size: 3.55rem; }
+
+.heading-semibold-sm { font-size: 1.675rem; }
+.heading-semibold-md { font-size: 2.05rem; }
+.heading-semibold-lg { font-size: 2.8rem; }
+.heading-semibold-xl { font-size: 3.55rem; }
+
+.heading-bold-sm { font-size: 1.675rem; }
+.heading-bold-md { font-size: 2.05rem; }
+.heading-bold-lg { font-size: 2.8rem; }
+.heading-bold-xl { font-size: 3.55rem; }
+
+/* Titles */
+.title-extralight-sm { font-size: 1.3rem; }
+.title-extralight-md { font-size: 1.675rem; }
+.title-extralight-lg { font-size: 2.05rem; }
+.title-extralight-xl { font-size: 2.8rem; }
+
+title-light-sm { font-size: 1.3rem; }
+title-light-md { font-size: 1.675rem; }
+title-light-lg { font-size: 2.05rem; }
+title-light-xl { font-size: 2.8rem; }
+
+title-regular-sm { font-size: 1.3rem; }
+title-regular-md { font-size: 1.675rem; }
+title-regular-lg { font-size: 2.05rem; }
+title-regular-xl { font-size: 2.8rem; }
+
+title-base-sm { font-size: 1.3rem; }
+title-base-md { font-size: 1.675rem; }
+title-base-lg { font-size: 2.05rem; }
+title-base-xl { font-size: 2.8rem; }
+
+title-semibold-sm { font-size: 1.3rem; }
+title-semibold-md { font-size: 1.675rem; }
+title-semibold-lg { font-size: 2.05rem; }
+title-semibold-xl { font-size: 2.8rem; }
+
+title-bold-sm { font-size: 1.3rem; }
+title-bold-md { font-size: 1.675rem; }
+title-bold-lg { font-size: 2.05rem; }
+title-bold-xl { font-size: 2.8rem; }
+
+/* Subtitles */
+.subtitle-extralight-sm { font-size: 1.175rem; }
+.subtitle-extralight-md { font-size: 1.3rem; }
+.subtitle-extralight-lg { font-size: 1.675rem; }
+.subtitle-extralight-xl { font-size: 2.05rem; }
+
+.subtitle-light-sm { font-size: 1.175rem; }
+.subtitle-light-md { font-size: 1.3rem; }
+.subtitle-light-lg { font-size: 1.675rem; }
+.subtitle-light-xl { font-size: 2.05rem; }
+
+.subtitle-regular-sm { font-size: 1.175rem; }
+.subtitle-regular-md { font-size: 1.3rem; }
+.subtitle-regular-lg { font-size: 1.675rem; }
+.subtitle-regular-xl { font-size: 2.05rem; }
+
+.subtitle-base-sm { font-size: 1.175rem; }
+.subtitle-base-md { font-size: 1.3rem; }
+.subtitle-base-lg { font-size: 1.675rem; }
+.subtitle-base-xl { font-size: 2.05rem; }
+
+.subtitle-semibold-sm { font-size: 1.175rem; }
+.subtitle-semibold-md { font-size: 1.3rem; }
+.subtitle-semibold-lg { font-size: 1.675rem; }
+.subtitle-semibold-xl { font-size: 2.05rem; }
+
+.subtitle-bold-sm { font-size: 1.175rem; }
+.subtitle-bold-md { font-size: 1.3rem; }
+.subtitle-bold-lg { font-size: 1.675rem; }
+.subtitle-bold-xl { font-size: 2.05rem; }
+
+/* Subheadings */
+.subheading-extralight-sm { font-size: 0.925rem; }
+.subheading-extralight-md { font-size: 1.05rem; }
+.subheading-extralight-lg { font-size: 1.3rem; }
+.subheading-extralight-xl { font-size: 1.675rem; }
+
+.subheading-light-sm { font-size: 0.925rem; }
+.subheading-light-md { font-size: 1.05rem; }
+.subheading-light-lg { font-size: 1.3rem; }
+.subheading-light-xl { font-size: 1.675rem; }
+
+.subheading-regular-sm { font-size: 0.925rem; }
+.subheading-regular-md { font-size: 1.05rem; }
+.subheading-regular-lg { font-size: 1.3rem; }
+.subheading-regular-xl { font-size: 1.675rem; }
+
+.subheading-base-sm { font-size: 0.925rem; }
+.subheading-base-md { font-size: 1.05rem; }
+.subheading-base-lg { font-size: 1.3rem; }
+.subheading-base-xl { font-size: 1.675rem; }
+
+.subheading-semibold-sm { font-size: 0.925rem; }
+.subheading-semibold-md { font-size: 1.05rem; }
+.subheading-semibold-lg { font-size: 1.3rem; }
+.subheading-semibold-xl { font-size: 1.675rem; }
+
+.subheading-bold-sm { font-size: 0.925rem; }
+.subheading-bold-md { font-size: 1.05rem; }
+.subheading-bold-lg { font-size: 1.3rem; }
+.subheading-bold-xl { font-size: 1.675rem; }
+
+/* Paragraphs */
+.para-extralight-sm { font-size: 1rem; }
+.para-extralight-md { font-size: 1.125rem; }
+.para-extralight-lg { font-size: 1.1875rem; }
+.para-extralight-xl { font-size: 1.25rem; }
+
+.para-light-sm { font-size: 1rem; }
+.para-light-md { font-size: 1.125rem; }
+.para-light-lg { font-size: 1.1875rem; }
+.para-light-xl { font-size: 1.25rem; }
+
+.para-regular-sm { font-size: 1rem; }
+.para-regular-md { font-size: 1.125rem; }
+.para-regular-lg { font-size: 1.1875rem; }
+.para-regular-xl { font-size: 1.25rem; }
+
+.para-base-sm { font-size: 1rem; }
+.para-base-md { font-size: 1.125rem; }
+.para-base-lg { font-size: 1.1875rem; }
+.para-base-xl { font-size: 1.25rem; }
+
+.para-semibold-sm { font-size: 1rem; }
+.para-semibold-md { font-size: 1.125rem; }
+.para-semibold-lg { font-size: 1.1875rem; }
+.para-semibold-xl { font-size: 1.25rem; }
+
+.para-bold-sm { font-size: 1rem; }
+.para-bold-md { font-size: 1.125rem; }
+.para-bold-lg { font-size: 1.1875rem; }
+.para-bold-xl { font-size: 1.25rem; }
+
+/* Subparagraphs */
+.subpara-extralight-sm { font-size: 0.875rem; }
+.subpara-extralight-md { font-size: 0.875rem; }
+.subpara-extralight-lg { font-size: 0.9rem; }
+.subpara-extralight-xl { font-size: 1rem; }
+
+.subpara-light-sm { font-size: 0.875rem; }
+.subpara-light-md { font-size: 0.875rem; }
+.subpara-light-lg { font-size: 0.9rem; }
+.subpara-light-xl { font-size: 1rem; }
+
+.subpara-regular-sm { font-size: 0.875rem; }
+.subpara-regular-md { font-size: 0.875rem; }
+.subpara-regular-lg { font-size: 0.9rem; }
+.subpara-regular-xl { font-size: 1rem; }
+
+.subpara-base-sm { font-size: 0.875rem; }
+.subpara-base-md { font-size: 0.875rem; }
+.subpara-base-lg { font-size: 0.9rem; }
+.subpara-base-xl { font-size: 1rem; }
+
+.subpara-semibold-sm { font-size: 0.875rem; }
+.subpara-semibold-md { font-size: 0.875rem; }
+.subpara-semibold-lg { font-size: 0.9rem; }
+.subpara-semibold-xl { font-size: 1rem; }
+
+.subpara-bold-sm { font-size: 0.875rem; }
+.subpara-bold-md { font-size: 0.875rem; }
+.subpara-bold-lg { font-size: 0.9rem; }
+.subpara-bold-xl { font-size: 1rem; }
+
+/* Special Paragraphs */
+.specialpara-extralight-sm { font-size: 1rem; }
+.specialpara-extralight-md { font-size: 1rem; }
+.specialpara-extralight-lg { font-size: 1.125rem; }
+.specialpara-extralight-xl { font-size: 1.125rem; }
+
+.specialpara-light-sm { font-size: 1rem; }
+.specialpara-light-md { font-size: 1rem; }
+.specialpara-light-lg { font-size: 1.125rem; }
+.specialpara-light-xl { font-size: 1.125rem; }
+
+.specialpara-regular-sm { font-size: 1rem; }
+.specialpara-regular-md { font-size: 1rem; }
+.specialpara-regular-lg { font-size: 1.125rem; }
+.specialpara-regular-xl { font-size: 1.125rem; }
+
+.specialpara-base-sm { font-size: 1rem; }
+.specialpara-base-md { font-size: 1rem; }
+.specialpara-base-lg { font-size: 1.125rem; }
+.specialpara-base-xl { font-size: 1.125rem; }
+
+.specialpara-semibold-sm { font-size: 1rem; }
+.specialpara-semibold-md { font-size: 1rem; }
+.specialpara-semibold-lg { font-size: 1.125rem; }
+.specialpara-semibold-xl { font-size: 1.125rem; }
+
+.specialpara-bold-sm { font-size: 1rem; }
+.specialpara-bold-md { font-size: 1rem; }
+.specialpara-bold-lg { font-size: 1.125rem; }
+.specialpara-bold-xl { font-size: 1.125rem; }
+
+
+/* max classes */
+
+/* ============================ */
+/* 🔐 MAX SIZE OVERRIDES (ALL) */
+/* ============================ */
+
+/* 💻 Stop growing at SM */
+@media (min-width: 640px) {
+  .max-heading-extralight-sm, .max-heading-light-sm, .max-heading-regular-sm, .max-heading-base-sm, .max-heading-semibold-sm, .max-heading-bold-sm {
+    font-size: 2.05rem !important;
+  }
+  .max-title-extralight-sm, .max-title-light-sm, .max-title-regular-sm, .max-title-base-sm, .max-title-semibold-sm, .max-title-bold-sm {
+    font-size: 1.675rem !important;
+  }
+  .max-subtitle-extralight-sm, .max-subtitle-light-sm, .max-subtitle-regular-sm, .max-subtitle-base-sm, .max-subtitle-semibold-sm, .max-subtitle-bold-sm {
+    font-size: 1.3rem !important;
+  }
+  .max-subheading-extralight-sm, .max-subheading-light-sm, .max-subheading-regular-sm, .max-subheading-base-sm, .max-subheading-semibold-sm, .max-subheading-bold-sm {
+    font-size: 1.05rem !important;
+  }
+  .max-para-extralight-sm, .max-para-light-sm, .max-para-regular-sm, .max-para-base-sm, .max-para-semibold-sm, .max-para-bold-sm {
+    font-size: 1.125rem !important;
+  }
+  .max-subpara-extralight-sm, .max-subpara-light-sm, .max-subpara-regular-sm, .max-subpara-base-sm, .max-subpara-semibold-sm, .max-subpara-bold-sm {
+    font-size: 0.875rem !important;
+  }
+  .max-specialpara-extralight-sm, .max-specialpara-light-sm, .max-specialpara-regular-sm, .max-specialpara-base-sm, .max-specialpara-semibold-sm, .max-specialpara-bold-sm {
+    font-size: 1rem !important;
+  }
+}
+
+/* 💻 Stop growing at MD */
+@media (min-width: 768px) {
+  .max-heading-extralight-md, .max-heading-light-md, .max-heading-regular-md, .max-heading-base-md, .max-heading-semibold-md, .max-heading-bold-md {
+    font-size: 2.8rem !important;
+  }
+  .max-title-extralight-md, .max-title-light-md, .max-title-regular-md, .max-title-base-md, .max-title-semibold-md, .max-title-bold-md {
+    font-size: 2.05rem !important;
+  }
+  .max-subtitle-extralight-md, .max-subtitle-light-md, .max-subtitle-regular-md, .max-subtitle-base-md, .max-subtitle-semibold-md, .max-subtitle-bold-md {
+    font-size: 1.675rem !important;
+  }
+  .max-subheading-extralight-md, .max-subheading-light-md, .max-subheading-regular-md, .max-subheading-base-md, .max-subheading-semibold-md, .max-subheading-bold-md {
+    font-size: 1.3rem !important;
+  }
+  .max-para-extralight-md, .max-para-light-md, .max-para-regular-md, .max-para-base-md, .max-para-semibold-md, .max-para-bold-md {
+    font-size: 1.1875rem !important;
+  }
+  .max-subpara-extralight-md, .max-subpara-light-md, .max-subpara-regular-md, .max-subpara-base-md, .max-subpara-semibold-md, .max-subpara-bold-md {
+    font-size: 0.9rem !important;
+  }
+  .max-specialpara-extralight-md, .max-specialpara-light-md, .max-specialpara-regular-md, .max-specialpara-base-md, .max-specialpara-semibold-md, .max-specialpara-bold-md {
+    font-size: 1.125rem !important;
+  }
+}
+
+/* 🖥️ Stop growing at LG */
+@media (min-width: 1024px) {
+  .max-heading-extralight-lg, .max-heading-light-lg, .max-heading-regular-lg, .max-heading-base-lg, .max-heading-semibold-lg, .max-heading-bold-lg {
+    font-size: 3.55rem !important;
+  }
+  .max-title-extralight-lg, .max-title-light-lg, .max-title-regular-lg, .max-title-base-lg, .max-title-semibold-lg, .max-title-bold-lg {
+    font-size: 2.8rem !important;
+  }
+  .max-subtitle-extralight-lg, .max-subtitle-light-lg, .max-subtitle-regular-lg, .max-subtitle-base-lg, .max-subtitle-semibold-lg, .max-subtitle-bold-lg {
+    font-size: 2.05rem !important;
+  }
+  .max-subheading-extralight-lg, .max-subheading-light-lg, .max-subheading-regular-lg, .max-subheading-base-lg, .max-subheading-semibold-lg, .max-subheading-bold-lg {
+    font-size: 1.675rem !important;
+  }
+  .max-para-extralight-lg, .max-para-light-lg, .max-para-regular-lg, .max-para-base-lg, .max-para-semibold-lg, .max-para-bold-lg {
+    font-size: 1.25rem !important;
+  }
+  .max-subpara-extralight-lg, .max-subpara-light-lg, .max-subpara-regular-lg, .max-subpara-base-lg, .max-subpara-semibold-lg, .max-subpara-bold-lg {
+    font-size: 1rem !important;
+  }
+  .max-specialpara-extralight-lg, .max-specialpara-light-lg, .max-specialpara-regular-lg, .max-specialpara-base-lg, .max-specialpara-semibold-lg, .max-specialpara-bold-lg {
+    font-size: 1.125rem !important;
+  }
+}
+
+/* 🖥️ Stop growing at XL */
+@media (min-width: 1280px) {
+  .max-heading-extralight-xl, .max-heading-light-xl, .max-heading-regular-xl, .max-heading-base-xl, .max-heading-semibold-xl, .max-heading-bold-xl {
+    font-size: 3.55rem !important;
+  }
+  .max-title-extralight-xl, .max-title-light-xl, .max-title-regular-xl, .max-title-base-xl, .max-title-semibold-xl, .max-title-bold-xl {
+    font-size: 2.8rem !important;
+  }
+  .max-subtitle-extralight-xl, .max-subtitle-light-xl, .max-subtitle-regular-xl, .max-subtitle-base-xl, .max-subtitle-semibold-xl, .max-subtitle-bold-xl {
+    font-size: 2.05rem !important;
+  }
+  .max-subheading-extralight-xl, .max-subheading-light-xl, .max-subheading-regular-xl, .max-subheading-base-xl, .max-subheading-semibold-xl, .max-subheading-bold-xl {
+    font-size: 1.675rem !important;
+  }
+  .max-para-extralight-xl, .max-para-light-xl, .max-para-regular-xl, .max-para-base-xl, .max-para-semibold-xl, .max-para-bold-xl {
+    font-size: 1.25rem !important;
+  }
+  .max-subpara-extralight-xl, .max-subpara-light-xl, .max-subpara-regular-xl, .max-subpara-base-xl, .max-subpara-semibold-xl, .max-subpara-bold-xl {
+    font-size: 1rem !important;
+  }
+  .max-specialpara-extralight-xl, .max-specialpara-light-xl, .max-specialpara-regular-xl, .max-specialpara-base-xl, .max-specialpara-semibold-xl, .max-specialpara-bold-xl {
+    font-size: 1.125rem !important;
   }
 }
