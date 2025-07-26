@@ -22,25 +22,25 @@ export default function Hero() {
       {/* Tint Overlay */}
       <div className='h-screen w-full z-0'>
         <div className="text-left p-6 md:p-10 text-white absolute  bottom-0 md:bottom-10 left-0 md:left-10 max-w-full">
-          <h1 className="text-white text-3xl md:text-6xl font-extralight mb-4 font-poppins">
+          <h1 className="text-white heading-extralight">
             Digital acceleration service
           </h1>
 
           <div className="flex flex-wrap md:flex-nowrap max-w-[50vw] max-h-[50vh]">
-            <h1 className="text-white text-2xl sm:text-3xl md:text-6xl font-extralight font-poppins mb-4">
+            <h1 className="text-white heading-extralight mb-4">
               for
             </h1>
-            <h1 className="text-red-700 text-2xl sm:text-3xl md:text-6xl font-light font-poppins mb-4 pl-3">
+            <h1 className="text-red-700 heading-extralight mb-4 pl-3">
               {displayedText}
             </h1>
           </div>
 
 
-          <h1 className="text-white text-xl md:text-2xl font-extralight mt-4 mb-4 font-poppins">
+          <h1 className="text-white subheading-extralight mt-4 mb-4">
             Design. Development. Consulting.
           </h1>
 
-          <h1 className="text-white text-lg md:text-xl font-bold mt-8 mb-4 font-poppins">
+          <h1 className="text-white subheading-bold mt-8 mb-4">
             Why Choose Us?
           </h1>
 
