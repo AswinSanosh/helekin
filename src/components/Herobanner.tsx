@@ -18,33 +18,33 @@ export default function Hero() {
   }, [index, fullText])
 
   return (
-    <div className="relative h-screen w-full bg-[url('/svg/hero.svg')] bg-cover bg-center bg-no-repeat z-20 flex items-center">
+    <div className="relative sm:h-screen h-3/4 w-full bg-[url('/svg/hero.svg')] bg-cover bg-center bg-no-repeat z-20 flex items-center">
       {/* Tint Overlay */}
       <div className='h-screen w-full z-0'>
         <div className="text-left p-6 md:p-10 text-white absolute  bottom-0 md:bottom-10 left-0 md:left-10 max-w-full">
-          <h1 className="text-white heading-extralight">
-            Digital acceleration service
-          </h1>
+          <div className="relative">
+            <h1 className="text-white heading-extralight whitespace-nowrap">
+              Digital acceleration service
+            </h1>
 
-          <div className="flex flex-wrap md:flex-nowrap max-w-[50vw] max-h-[50vh]">
-            <h1 className="text-white heading-extralight mb-4">
-              for
-            </h1>
-            <h1 className="text-red-700 heading-extralight mb-4 pl-3">
-              {displayedText}
-            </h1>
+            <div className="flex flex-nowrap md:flex-nowrap max-w-[50vw] max-h-[50vh] whitespace-nowrap">
+              <h1 className="text-white heading-extralight mb-4 flex-shrink-0">
+                for
+              </h1>
+              <h1 className="text-red-700 heading-extralight mb-4 pl-3 flex-shrink-0">
+                {displayedText}
+              </h1>
+            </div>
           </div>
-
-
           <h1 className="text-white subheading-extralight mt-4 mb-4">
             Design. Development. Consulting.
           </h1>
 
-          <h1 className="text-white subheading-bold mt-8 mb-4">
+          <h1 className="text-white para-bold mt-8 mb-4 hidden sm:block">
             Why Choose Us?
           </h1>
 
-          <div className="flex flex-col md:flex-row gap-5 mt-5">
+          <div className="sm:flex flex-col md:flex-row gap-5 mt-5 hidden">
             <div className="bg-white/20 rounded-lg h-auto md:h-[150px] w-full md:w-[250px] shadow-lg shadow-black/30 p-3">
               <h1 className="text-white para-semibold">
                 Built for Startups

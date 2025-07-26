@@ -7,7 +7,7 @@ import FAQ from "../../components/FAQ"; // Assuming you have a FAQ component
 export default function Home() {
   return (
     <main className="min-h-screen flex flex-col">
-      <div className="relative w-full h-screen">
+      <div className="relative">
         <Hero />
       </div>
       <div>
