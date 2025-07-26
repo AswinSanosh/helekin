@@ -171,7 +171,7 @@ export default function Services() {
             </h2>
             <p className="text-white/80 text-base md:text-xl font-poppins font-light mt-10 text-left">
               Our process is simple. You provide the 3D model, and we handle the
-              rest. We'll help you select the right material and printing
+              rest. Well help you select the right material and printing
               technology for your needs, then manage the printing,
               post-processing, and quality assurance to deliver a perfect
               physical part.

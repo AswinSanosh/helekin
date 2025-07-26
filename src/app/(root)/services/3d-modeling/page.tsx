@@ -173,7 +173,7 @@ export default function Services() {
               Our process begins with understanding your vision and gathering
               references. We then proceed through block-out, high-poly
               sculpting, retopology for optimization, and finally, texturing and
-              material creation to achieve the perfect look for your project's
+              material creation to achieve the perfect look for your projects
               needs.
             </p>
           </div>
