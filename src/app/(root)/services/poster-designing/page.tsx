@@ -1,9 +1,9 @@
-'use client';
+"use client";
 
-import Image from 'next/image';
-import serviceData from '../../../../components/ServiceList.json';
-import React, { useEffect, useState } from 'react';
-import Link from 'next/link';
+import Image from "next/image";
+import serviceData from "../../../../components/ServiceList.json";
+import React, { useEffect, useState } from "react";
+import Link from "next/link";
 
 interface Service {
   title: string;
@@ -18,9 +18,13 @@ export default function Services() {
   const Hardservices = serviceData.servicesList.electronics_and_hardware;
   const ThreeDservices = serviceData.servicesList.threed;
 
-  const [searchTerm, setSearchTerm] = useState('');
+  const [searchTerm, setSearchTerm] = useState("");
+
   const [hovering, setHovering] = useState(false);
-  const [hoveredIndex, setHoveredIndex] = useState<{ section: string; index: number } | null>(null);
+  const [hoveredIndex, setHoveredIndex] = useState<{
+    section: string;
+    index: number;
+  } | null>(null);
   const [index, setIndex] = useState(0);
 
   useEffect(() => {
@@ -47,10 +51,11 @@ export default function Services() {
 
   const renderServiceCards = (services: Service[], section: string) =>
     services.map((service, i) => {
-      const isHovered = hoveredIndex?.section === section && hoveredIndex.index === i;
+      const isHovered =
+        hoveredIndex?.section === section && hoveredIndex.index === i;
 
       return (
-        <Link href={service.link || '#'} key={i} className="w-full">
+        <Link href={service.link || "#"} key={i} className="w-full">
           <div
             onMouseEnter={() => handleMouseEnter(section, i)}
             onMouseLeave={handleMouseLeave}
@@ -59,11 +64,11 @@ export default function Services() {
               ...(isHovered
                 ? {
                     backgroundImage: `linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(${service.background})`,
-                    backgroundSize: 'cover',
-                    backgroundPosition: 'center',
+                    backgroundSize: "cover",
+                    backgroundPosition: "center",
                   }
                 : {
-                    backgroundColor: 'rgba(255,255,255,0.05)',
+                    backgroundColor: "rgba(255,255,255,0.05)",
                   }),
             }}
           >
@@ -72,18 +77,23 @@ export default function Services() {
               style={
                 isHovered
                   ? {
-                      backgroundColor: '#A50424',
-                      backdropFilter: 'blur(10px)',
+                      backgroundColor: "#A50424",
+                      backdropFilter: "blur(10px)",
                     }
                   : {}
               }
             >
-              <Image src={service.icon} alt={service.title} width={40} height={40} />
+              <Image
+                src={service.icon}
+                alt={service.title}
+                width={40}
+                height={40}
+              />
             </div>
             <h2
               className="text-white text-2xl font-semibold mb-2"
               style={{
-                color: isHovered ? '#A50424' : 'white',
+                color: isHovered ? "#A50424" : "white",
               }}
             >
               {service.title}
@@ -97,21 +107,22 @@ export default function Services() {
   return (
     <div>
       {/* Hero */}
-      <div className="h-180 w-full bg-[url('/svg/hero.svg')] bg-cover bg-center bg-no-repeat z-20">
-        <div className="absolute inset-0 bg-black/70 backdrop-blur-sm z-0 h-full" />
-        <div className="absolute h-150 bottom-5 left-20">
-          <div className="flex mb-4">
-            <h1 className="text-white text-6xl font-light font-poppins">
-              User-Centric
-            </h1>
-            <h1 className="text-red-700 text-6xl font-light font-poppins px-4">
-              Design
+      <div className="relative h-180 w-full bg-[url('/svg/hero.svg')] bg-cover bg-center bg-no-repeat z-20 flex items-center">
+        {/* Tint Overlay */}
+        <div className="absolute inset-0 bg-black/70 backdrop-blur-sm z-0" />
+
+        {/* Content on Left Center */}
+        <div className="relative z-10 text-white w-full px-10 max-w-4xl">
+          <div className="mb-4 flex flex-row gap-3">
+            <h1 className="text-6xl font-light font-poppins">Poster</h1>
+            <h1 className="text-6xl text-red-700 font-light font-poppins">
+              Designing
             </h1>
           </div>
-          <div className="w-2/5">
-            <p className="text-white/80 text-xl font-light font-poppins mt-10">
-              We design intuitive, engaging, and visually stunning interfaces
-              that create seamless user experiences and elevate your brand.
+          <div className="w-3/4">
+            <p className="text-white/80 text-lg font-light font-poppins mt-6">
+              We create compelling posters, banners, and visuals tailored for
+              promotions, events, and brand awareness.
             </p>
           </div>
         </div>
@@ -121,14 +132,15 @@ export default function Services() {
           Transforming Ideas into Intelligent Solutions
         </h2>
         <p className="text-white/80 text-base md:text-xl font-poppins font-light mt-10 text-center">
-          At Helekin, our UI/UX design process is rooted in deep user
-          understanding. We blend aesthetic appeal with functional clarity,
-          transforming complex challenges into simple, elegant solutions that
-          are both a joy to use and effective at driving business outcomes.
+          At Helekin, we capture your message in a single, powerful image. Our
+          graphic design team specializes in creating eye-catching posters and
+          promotional materials that grab attention, communicate clearly, and
+          drive action for your campaigns and events.
         </p>
       </div>
       <div className="relative z-0 w-full flex flex-col bg-[url('/images/fafa.png')] bg-cover bg-center bg-no-repeat px-6 pb-30">
         <div className="absolute inset-0 bg-black/50 backdrop-blur-sm z-0" />
+
         <div className="flex justify-between items-baseline z-20">
           <div className="relative z-10 w-full max-w-screen px-6 mx-auto mt-20">
             <h1 className="text-3xl font-poppins font-semibold text-red-700 mb-2 text-center">
@@ -137,7 +149,7 @@ export default function Services() {
           </div>
         </div>
         <div>
-          <div className="mt-20 sm:mt-40 flex sm:flex-row flex-col items-center justify-center gap-5">
+          <div className="mt-20 sm:mt-40 flex sm:flex-row flex-col items-center justify-center gap-5 ">
             <div className="flex flex-col items-start h-[250px] sm:w-[300px] w-full bg-white/10 backdrop-blur-lg shadow-lg shadow-black/30 p-6 rounded-xl transition-all hover:scale-[1.02] duration-300"></div>
             <div className="flex flex-col items-start h-[250px] sm:w-[300px] w-full bg-white/10 backdrop-blur-lg shadow-lg shadow-black/30 p-6 rounded-xl transition-all hover:scale-[1.02] duration-300 md:relative md:-top-30"></div>
             <div className="flex flex-col items-start h-[250px] sm:w-[300px] w-full bg-white/10 backdrop-blur-lg shadow-lg shadow-black/30 p-6 rounded-xl transition-all hover:scale-[1.02] duration-300"></div>
@@ -146,35 +158,34 @@ export default function Services() {
       </div>
       <div className="relative z-10 w-full mx-auto text-center bg-black pt-24">
         <h1 className="text-3xl font-poppins font-semibold text-red-700 mb-2 text-start ml-10">
-          Featured Design Projects
+          Featured Poster Designs
         </h1>
         <p className="text-white/80 text-base md:text-xl font-poppins font-light mt-5 mb-10 max-w-2xl text-start ml-10">
-          Our portfolio showcases our dedication to creating beautiful,
-          functional, and memorable user experiences.
+          Our portfolio showcases a diverse range of styles and concepts, each
+          crafted to meet the unique marketing goals of our clients.
         </p>
-        <div className="mt-5 flex sm:flex-row flex-col items-center justify-center gap-5 px-10">
+        <div className="mt-5 flex sm:flex-row flex-col items-center justify-center gap-5 px-10 ">
           <div className="flex flex-col items-start h-[300px] w-full bg-white/10 backdrop-blur-lg shadow-xl shadow-black/30 p-6 rounded-3xl transition-all hover:scale-[1.02] duration-300"></div>
           <div className="flex flex-col items-start h-[300px] w-full bg-white/10 backdrop-blur-lg shadow-xl shadow-black/30 p-6 rounded-3xl transition-all hover:scale-[1.02] duration-300"></div>
           <div className="flex flex-col items-start h-[300px] w-full bg-white/10 backdrop-blur-lg shadow-xl shadow-black/30 p-6 rounded-3xl transition-all hover:scale-[1.02] duration-300"></div>
         </div>
-        <div className="mt-50 flex sm:flex-row flex-col items-start justify-betweem gap-5 px-20">
-          <div className="w-1/3 flex flex-col">
+        <div className="mt-50 flex sm:flex-row flex-col items-start justify-betweem gap-5 px-20 ">
+          <div className="w-1/3 flex flex-col ">
             <h2 className="text-red-700 text-4xl md:text-4xl font-poppins font-medium text-left">
               Transforming Ideas into Intelligent Solutions
             </h2>
             <p className="text-white/80 text-base md:text-xl font-poppins font-light mt-10 text-left">
-              Our iterative design process ensures a final product that truly
-              resonates with your audience. We move from discovery and user
-              research to wireframing, prototyping, and user testing, refining
-              every detail to ensure a seamless and intuitive flow from start to
-              finish.
+              Our creative process starts with a deep dive into your brand and
+              campaign objectives. We move from concept sketching and mood
+              boarding to digital illustration and final print-ready production,
+              ensuring every design element aligns with your message.
             </p>
           </div>
           <div className="w-2/3 flex flex-col items-start">
             <div className="flex flex-col items-center justify-center md:items-center mt-2 gap-8 w-full">
               <div className="flex items-center justify-between bg-white/10 backdrop-blur-lg shadow-lg shadow-black/30 p-6 md:w-3/4 w-full">
                 <h1 className="font-poppins text-2xl font-medium text-white">
-                  What is the difference between UI and UX?
+                  What information do you need to start a design?
                 </h1>
                 <h1 className="font-poppins text-3xl font-medium text-white">
                   +
@@ -182,7 +193,7 @@ export default function Services() {
               </div>
               <div className="flex items-center justify-between bg-white/10 backdrop-blur-lg shadow-lg shadow-black/30 p-6 md:w-3/4 w-full">
                 <h1 className="font-poppins text-2xl font-medium text-white">
-                  How do you conduct user research?
+                  Can you handle printing and delivery?
                 </h1>
                 <h1 className="font-poppins text-3xl font-medium text-white">
                   +
@@ -190,7 +201,7 @@ export default function Services() {
               </div>
               <div className="flex items-center justify-between bg-white/10 backdrop-blur-lg shadow-lg shadow-black/30 p-6 md:w-3/4 w-full">
                 <h1 className="font-poppins text-2xl font-medium text-white">
-                  What design tools do you use?
+                  What file formats will I receive?
                 </h1>
                 <h1 className="font-poppins text-3xl font-medium text-white">
                   +
@@ -198,7 +209,7 @@ export default function Services() {
               </div>
               <div className="flex items-center justify-between bg-white/10 backdrop-blur-lg shadow-lg shadow-black/30 p-6 md:w-3/4 w-full">
                 <h1 className="font-poppins text-2xl font-medium text-white">
-                  Do you create design systems and style guides?
+                  Do you design for both digital and print?
                 </h1>
                 <h1 className="font-poppins text-3xl font-medium text-white">
                   +
@@ -208,15 +219,16 @@ export default function Services() {
           </div>
         </div>
         <h1 className="font-poppins text-4xl text-white mb-4 mt-50">
-          Ready to Elevate Your Design?
+          Ready to Make an Impact?
         </h1>
         <p className="text-white/80 mb-8 max-w-2xl mx-auto">
-          Let&#39;s craft a user experience that delights your audience and sets
-          your product apart from the competition.
+          Capture your audience&#39;s attention with a stunning poster.
+          Let&#39;s create a visual masterpiece for your next event or
+          promotion.
         </p>
         <Link href="/contact">
           <button className="bg-red-700 text-white font-semibold py-3 px-8 rounded-lg hover:bg-red-800 transition-colors duration-300 text-lg cursor-pointer">
-            Start a Design Project
+            Schedule a Consultation
           </button>
         </Link>
       </div>

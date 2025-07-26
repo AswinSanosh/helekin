@@ -44,7 +44,7 @@
         "desc": "We design modern, user-centered digital interfaces with intuitive navigation and smooth interactions.",
         "background": "/images/uiux.png",
         "icon": "/svg/servicesvgs/uiux.svg",
-        "link": "/services/ui-ux-design",
+        "link": "/services/ui-ux-designing",
         "tools": ["Figma", "Adobe XD", "Sketch", "Framer", "Zeplin"],
         "tags": [
           "UI",
@@ -82,7 +82,7 @@
         "desc": "We optimize websites to rank higher on search engines using advanced SEO techniques for better visibility.",
         "background": "/images/seo.png",
         "icon": "/svg/servicesvgs/seo.svg",
-        "link": "/services/seo",
+        "link": "/services/search-engine-optimization",
         "tools": ["Google Analytics", "Ahrefs", "SEMRush", "Yoast", "Moz"],
         "tags": ["SEO", "Marketing", "Search", "Optimization", "Software"],
         "tools-icons": [
