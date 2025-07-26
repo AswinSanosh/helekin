@@ -107,7 +107,7 @@ export default function Services() {
                         <h1 className="text-white text-6xl font-extralight font-poppins">Crafting</h1>
                         <h1 className="text-red-700 text-6xl font-light font-poppins px-4">Experiences</h1>
                     </div>
-                    <h1 className="text-white text-6xl font-extralight font-poppins">That Evoke Emotions.</h1>
+                    <h1 className="text-white text-6xl font-extralight font-poppins">That Evoke Emotions</h1>
                     <div className="w-3/4">
                         <p className="text-white/60 text-lg font-extralight font-poppins mt-4">
                             End to end solution for our customers tailored to their needs is what makes us different. Not only it saves cost, but makes it easy for the customers to engage with our solutions.
