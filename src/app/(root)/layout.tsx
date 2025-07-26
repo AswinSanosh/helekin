@@ -24,7 +24,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
-        <div className="overflowx-hidden w-[100vw]">
+        <div className="overflow-x-hidden w-[100vw]">
           <Navbar />
           {children}
           <Contact />
