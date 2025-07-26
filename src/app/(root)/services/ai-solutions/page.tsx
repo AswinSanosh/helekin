@@ -98,16 +98,20 @@ export default function Services() {
   return (
     <div>
       {/* Hero */}
-      <div className="h-180 w-full bg-[url('/svg/hero.svg')] bg-cover bg-center bg-no-repeat z-20">
-        <div className="absolute inset-0 bg-black/70 backdrop-blur-sm z-0 h-full" />
-        <div className="absolute h-150 bottom-5 left-20">
-          <div className="flex mb-4">
-            <h1 className="text-white text-6xl font-light font-poppins">Artificial</h1>
-            <h1 className="text-red-700 text-6xl font-light font-poppins px-4">Intelligence</h1>
+      <div className="relative h-180 w-full bg-[url('/svg/hero.svg')] bg-cover bg-center bg-no-repeat z-20 flex items-center">
+        {/* Tint Overlay */}
+        <div className="absolute inset-0 bg-black/70 backdrop-blur-sm z-0" />
+
+        {/* Content on Left Center */}
+        <div className="relative z-10 text-white w-full px-10 max-w-4xl">
+          <div className="mb-4 flex flex-row gap-3">
+            <h1 className="text-6xl font-light font-poppins">Artificial</h1>
+            <h1 className="text-6xl text-red-700 font-light font-poppins">Intelligence</h1>
           </div>
-          <div className="w-2/5">
-            <p className="text-white/80 text-xl font-light font-poppins mt-10">
-              End to end solution for our customers tailored to their needs is what makes us different. Not only it saves cost, but makes it easy for the customers to engage with our solutions.
+          <div className="w-3/4">
+            <p className="text-white/80 text-lg font-light font-poppins mt-6">
+              End to end solution for our customers tailored to their needs is what makes us different.
+              Not only it saves cost, but makes it easy for the customers to engage with our solutions.
             </p>
           </div>
         </div>

@@ -23,9 +23,8 @@ export default function ServiceModal({ isOpen, onClose, service }: Props) {
             <div className="fixed inset-0 bg-black/50 backdrop-blur-sm" aria-hidden="true" />
 
             {/* Modal */}
-            <div className="fixed inset-0 flex items-center justify-center p-4 m-auto">
-                <Dialog.Panel className="w-1/2 h-2/3 rounded-xl bg-black text-white shadow-xl overflow-hidden relative">
-
+            <div className="fixed inset-0 flex items-center justify-center p-4 m-auto h-full w-full">
+                <Dialog.Panel className="w-[800px] h-[500px] rounded-xl bg-black text-white shadow-xl overflow-hidden relative">
                     {/* Image Background */}
                     <div className="relative w-full h-1/2">
                         {/* Background Image */}
@@ -58,7 +57,7 @@ export default function ServiceModal({ isOpen, onClose, service }: Props) {
                                 <Image src="/icons/ai.png" alt="ai" width={20} height={20} />
                             </div>
                             <Link href={link}>
-                                <button className="bg-red-700 hover:bg-white hover:text-red-700 transition-colors duration-300 text-white text-sm px-4 py-2 rounded-md">
+                                <button className="bg-red-700 absolute bottom-5 right-5 hover:bg-white hover:text-red-700 transition-colors duration-300 text-white text-sm px-4 py-2 rounded-md">
                                     Learn More
                                 </button>
                             </Link>

@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import serviceData from '../../../../components/ServiceList.json';
+import serviceData from "../../../../components/ServiceList.json";
 import React, { useEffect, useState } from "react";
 import Link from "next/link";
 
@@ -110,18 +110,15 @@ export default function Services() {
         <div className="absolute inset-0 bg-black/70 backdrop-blur-sm z-0 h-full" />
         <div className="absolute h-150 bottom-5 left-20">
           <div className="flex mb-4">
-            <h1 className="text-white text-6xl font-light font-poppins">
-              Cloud
-            </h1>
+            <h1 className="text-white text-6xl font-light font-poppins">3D</h1>
             <h1 className="text-red-700 text-6xl font-light font-poppins px-4">
-              Computing
+              Modeling
             </h1>
           </div>
           <div className="w-2/5">
             <p className="text-white/80 text-xl font-light font-poppins mt-10">
-              We architect and manage scalable, secure, and cost-effective cloud
-              infrastructure to power your applications and drive business
-              innovation.
+              High-quality 3D models for visualization, animation, and real-time
+              rendering across industries.
             </p>
           </div>
         </div>
@@ -131,11 +128,10 @@ export default function Services() {
           Transforming Ideas into Intelligent Solutions
         </h2>
         <p className="text-white/80 text-base md:text-xl font-poppins font-light mt-10 text-center">
-          At Helekin, we harness the power of leading cloud platforms like AWS,
-          Azure, and Google Cloud to build resilient and efficient
-          infrastructure. From serverless computing to container orchestration,
-          our solutions provide the foundation for modern applications, enabling
-          you to scale on-demand and accelerate your time to market.
+          At Helekin, we bring your concepts to life in three dimensions. Our
+          artists and technicians create detailed, photorealistic 3D models
+          suitable for product visualization, architectural walkthroughs,
+          animation, and integration into real-time game engines.
         </p>
       </div>
       <div className="relative z-0 w-full flex flex-col bg-[url('/images/fafa.png')] bg-cover bg-center bg-no-repeat px-6 pb-30">
@@ -157,11 +153,11 @@ export default function Services() {
       </div>
       <div className="relative z-10 w-full mx-auto text-center bg-black pt-24">
         <h1 className="text-3xl font-poppins font-semibold text-red-700 mb-2 text-start ml-10">
-          Featured Cloud Architectures
+          Featured 3D Renders
         </h1>
         <p className="text-white/80 text-base md:text-xl font-poppins font-light mt-5 mb-10 max-w-2xl text-start ml-10">
-          Our portfolio demonstrates our expertise in building robust, secure,
-          and highly available cloud-native solutions.
+          Our portfolio demonstrates our commitment to artistic excellence and
+          technical precision in every model we create.
         </p>
         <div className="mt-5 flex sm:flex-row flex-col items-center justify-center gap-5 px-10">
           <div className="flex flex-col items-start h-[300px] w-full bg-white/10 backdrop-blur-lg shadow-xl shadow-black/30 p-6 rounded-3xl transition-all hover:scale-[1.02] duration-300"></div>
@@ -174,18 +170,18 @@ export default function Services() {
               Transforming Ideas into Intelligent Solutions
             </h2>
             <p className="text-white/80 text-base md:text-xl font-poppins font-light mt-10 text-left">
-              We guide you through every phase of your cloud journey. Our
-              process includes a thorough assessment and planning stage,
-              seamless migration and implementation, and ongoing optimization
-              and management through modern DevOps practices to ensure peak
-              performance and cost-efficiency.
+              Our process begins with understanding your vision and gathering
+              references. We then proceed through block-out, high-poly
+              sculpting, retopology for optimization, and finally, texturing and
+              material creation to achieve the perfect look for your projects
+              needs.
             </p>
           </div>
           <div className="w-2/3 flex flex-col items-start">
             <div className="flex flex-col items-center justify-center md:items-center mt-2 gap-8 w-full">
               <div className="flex items-center justify-between bg-white/10 backdrop-blur-lg shadow-lg shadow-black/30 p-6 md:w-3/4 w-full">
                 <h1 className="font-poppins text-2xl font-medium text-white">
-                  Which cloud provider (AWS, Azure) is best?
+                  What 3D modeling software do you specialize in?
                 </h1>
                 <h1 className="font-poppins text-3xl font-medium text-white">
                   +
@@ -193,7 +189,7 @@ export default function Services() {
               </div>
               <div className="flex items-center justify-between bg-white/10 backdrop-blur-lg shadow-lg shadow-black/30 p-6 md:w-3/4 w-full">
                 <h1 className="font-poppins text-2xl font-medium text-white">
-                  How do you ensure cloud security and compliance?
+                  What file formats can you deliver the models in?
                 </h1>
                 <h1 className="font-poppins text-3xl font-medium text-white">
                   +
@@ -201,7 +197,7 @@ export default function Services() {
               </div>
               <div className="flex items-center justify-between bg-white/10 backdrop-blur-lg shadow-lg shadow-black/30 p-6 md:w-3/4 w-full">
                 <h1 className="font-poppins text-2xl font-medium text-white">
-                  What is your approach to cloud cost optimization?
+                  Can you create low-poly models for games?
                 </h1>
                 <h1 className="font-poppins text-3xl font-medium text-white">
                   +
@@ -209,7 +205,7 @@ export default function Services() {
               </div>
               <div className="flex items-center justify-between bg-white/10 backdrop-blur-lg shadow-lg shadow-black/30 p-6 md:w-3/4 w-full">
                 <h1 className="font-poppins text-2xl font-medium text-white">
-                  Can you migrate our existing applications to the cloud?
+                  Do you also provide animation and rigging services?
                 </h1>
                 <h1 className="font-poppins text-3xl font-medium text-white">
                   +
@@ -219,11 +215,11 @@ export default function Services() {
           </div>
         </div>
         <h1 className="font-poppins text-4xl text-white mb-4 mt-50">
-          Ready to Scale with the Cloud?
+          Ready to Visualize Your Project?
         </h1>
         <p className="text-white/80 mb-8 max-w-2xl mx-auto">
-          Unlock unparalleled scalability, security, and performance. Let&#39;s
-          build your future-proof cloud infrastructure together.
+          From initial concept to final render, let our team build the stunning
+          3D assets your project deserves.
         </p>
         <Link href="/contact">
           <button className="bg-red-700 text-white font-semibold py-3 px-8 rounded-lg hover:bg-red-800 transition-colors duration-300 text-lg cursor-pointer">

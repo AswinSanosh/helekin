@@ -1,9 +1,9 @@
-'use client';
+"use client";
 
-import Image from 'next/image';
-import serviceData from '../../../../components/ServiceList.json';
-import React, { useEffect, useState } from 'react';
-import Link from 'next/link';
+import Image from "next/image";
+import serviceData from "../../../../components/ServiceList.json";
+import React, { useEffect, useState } from "react";
+import Link from "next/link";
 
 interface Service {
   title: string;
@@ -18,9 +18,13 @@ export default function Services() {
   const Hardservices = serviceData.servicesList.electronics_and_hardware;
   const ThreeDservices = serviceData.servicesList.threed;
 
-  const [searchTerm, setSearchTerm] = useState('');
+  const [searchTerm, setSearchTerm] = useState("");
+
   const [hovering, setHovering] = useState(false);
-  const [hoveredIndex, setHoveredIndex] = useState<{ section: string; index: number } | null>(null);
+  const [hoveredIndex, setHoveredIndex] = useState<{
+    section: string;
+    index: number;
+  } | null>(null);
   const [index, setIndex] = useState(0);
 
   useEffect(() => {
@@ -47,10 +51,11 @@ export default function Services() {
 
   const renderServiceCards = (services: Service[], section: string) =>
     services.map((service, i) => {
-      const isHovered = hoveredIndex?.section === section && hoveredIndex.index === i;
+      const isHovered =
+        hoveredIndex?.section === section && hoveredIndex.index === i;
 
       return (
-        <Link href={service.link || '#'} key={i} className="w-full">
+        <Link href={service.link || "#"} key={i} className="w-full">
           <div
             onMouseEnter={() => handleMouseEnter(section, i)}
             onMouseLeave={handleMouseLeave}
@@ -59,11 +64,11 @@ export default function Services() {
               ...(isHovered
                 ? {
                     backgroundImage: `linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(${service.background})`,
-                    backgroundSize: 'cover',
-                    backgroundPosition: 'center',
+                    backgroundSize: "cover",
+                    backgroundPosition: "center",
                   }
                 : {
-                    backgroundColor: 'rgba(255,255,255,0.05)',
+                    backgroundColor: "rgba(255,255,255,0.05)",
                   }),
             }}
           >
@@ -72,18 +77,23 @@ export default function Services() {
               style={
                 isHovered
                   ? {
-                      backgroundColor: '#A50424',
-                      backdropFilter: 'blur(10px)',
+                      backgroundColor: "#A50424",
+                      backdropFilter: "blur(10px)",
                     }
                   : {}
               }
             >
-              <Image src={service.icon} alt={service.title} width={40} height={40} />
+              <Image
+                src={service.icon}
+                alt={service.title}
+                width={40}
+                height={40}
+              />
             </div>
             <h2
               className="text-white text-2xl font-semibold mb-2"
               style={{
-                color: isHovered ? '#A50424' : 'white',
+                color: isHovered ? "#A50424" : "white",
               }}
             >
               {service.title}
@@ -97,21 +107,22 @@ export default function Services() {
   return (
     <div>
       {/* Hero */}
-      <div className="h-180 w-full bg-[url('/svg/hero.svg')] bg-cover bg-center bg-no-repeat z-20">
-        <div className="absolute inset-0 bg-black/70 backdrop-blur-sm z-0 h-full" />
-        <div className="absolute h-150 bottom-5 left-20">
-          <div className="flex mb-4">
-            <h1 className="text-white text-6xl font-light font-poppins">
-              User-Centric
-            </h1>
-            <h1 className="text-red-700 text-6xl font-light font-poppins px-4">
-              Design
+      <div className="relative h-180 w-full bg-[url('/svg/hero.svg')] bg-cover bg-center bg-no-repeat z-20 flex items-center">
+        {/* Tint Overlay */}
+        <div className="absolute inset-0 bg-black/70 backdrop-blur-sm z-0" />
+
+        {/* Content on Left Center */}
+        <div className="relative z-10 text-white w-full px-10 max-w-4xl">
+          <div className="mb-4 flex flex-row gap-3">
+            <h1 className="text-6xl font-light font-poppins">UI/UX</h1>
+            <h1 className="text-6xl text-red-700 font-light font-poppins">
+              Designing
             </h1>
           </div>
-          <div className="w-2/5">
-            <p className="text-white/80 text-xl font-light font-poppins mt-10">
-              We design intuitive, engaging, and visually stunning interfaces
-              that create seamless user experiences and elevate your brand.
+          <div className="w-3/4">
+            <p className="text-white/80 text-lg font-light font-poppins mt-6">
+              We design modern, user-centered digital interfaces with intuitive
+              navigation and smooth interactions.
             </p>
           </div>
         </div>
@@ -129,6 +140,7 @@ export default function Services() {
       </div>
       <div className="relative z-0 w-full flex flex-col bg-[url('/images/fafa.png')] bg-cover bg-center bg-no-repeat px-6 pb-30">
         <div className="absolute inset-0 bg-black/50 backdrop-blur-sm z-0" />
+
         <div className="flex justify-between items-baseline z-20">
           <div className="relative z-10 w-full max-w-screen px-6 mx-auto mt-20">
             <h1 className="text-3xl font-poppins font-semibold text-red-700 mb-2 text-center">
@@ -137,7 +149,7 @@ export default function Services() {
           </div>
         </div>
         <div>
-          <div className="mt-20 sm:mt-40 flex sm:flex-row flex-col items-center justify-center gap-5">
+          <div className="mt-20 sm:mt-40 flex sm:flex-row flex-col items-center justify-center gap-5 ">
             <div className="flex flex-col items-start h-[250px] sm:w-[300px] w-full bg-white/10 backdrop-blur-lg shadow-lg shadow-black/30 p-6 rounded-xl transition-all hover:scale-[1.02] duration-300"></div>
             <div className="flex flex-col items-start h-[250px] sm:w-[300px] w-full bg-white/10 backdrop-blur-lg shadow-lg shadow-black/30 p-6 rounded-xl transition-all hover:scale-[1.02] duration-300 md:relative md:-top-30"></div>
             <div className="flex flex-col items-start h-[250px] sm:w-[300px] w-full bg-white/10 backdrop-blur-lg shadow-lg shadow-black/30 p-6 rounded-xl transition-all hover:scale-[1.02] duration-300"></div>
@@ -152,13 +164,13 @@ export default function Services() {
           Our portfolio showcases our dedication to creating beautiful,
           functional, and memorable user experiences.
         </p>
-        <div className="mt-5 flex sm:flex-row flex-col items-center justify-center gap-5 px-10">
+        <div className="mt-5 flex sm:flex-row flex-col items-center justify-center gap-5 px-10 ">
           <div className="flex flex-col items-start h-[300px] w-full bg-white/10 backdrop-blur-lg shadow-xl shadow-black/30 p-6 rounded-3xl transition-all hover:scale-[1.02] duration-300"></div>
           <div className="flex flex-col items-start h-[300px] w-full bg-white/10 backdrop-blur-lg shadow-xl shadow-black/30 p-6 rounded-3xl transition-all hover:scale-[1.02] duration-300"></div>
           <div className="flex flex-col items-start h-[300px] w-full bg-white/10 backdrop-blur-lg shadow-xl shadow-black/30 p-6 rounded-3xl transition-all hover:scale-[1.02] duration-300"></div>
         </div>
-        <div className="mt-50 flex sm:flex-row flex-col items-start justify-betweem gap-5 px-20">
-          <div className="w-1/3 flex flex-col">
+        <div className="mt-50 flex sm:flex-row flex-col items-start justify-betweem gap-5 px-20 ">
+          <div className="w-1/3 flex flex-col ">
             <h2 className="text-red-700 text-4xl md:text-4xl font-poppins font-medium text-left">
               Transforming Ideas into Intelligent Solutions
             </h2>
@@ -216,7 +228,7 @@ export default function Services() {
         </p>
         <Link href="/contact">
           <button className="bg-red-700 text-white font-semibold py-3 px-8 rounded-lg hover:bg-red-800 transition-colors duration-300 text-lg cursor-pointer">
-            Start a Design Project
+            Schedule a Consultation
           </button>
         </Link>
       </div>

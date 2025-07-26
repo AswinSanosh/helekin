@@ -42,12 +42,12 @@ export default function Aboutbanner() {
         <h1 className="text-white text-2xl md:text-4xl font-poppins font-semibold leading-tight">
           Empowering Global Growth Through Smart Digital Solutions
         </h1>
-        <p className="text-white text-base md:text-lg font-poppins">
+        <p className="text-white/80 specialpara-base">
           At Helekin, we&#39;re passionate about helping businesses thrive in the digital age.
           As a startup driven by innovation and agility, we craft tailored digital solutions
           that solve real problems and unlock new opportunities. From building powerful digital
           experiences to scaling your ideas, we&#39;re here to support your journey every step of
-          the way. Our mission is simple — to empower businesses worldwide with the tools,
+          the way. Our mission is simple to empower businesses worldwide with the tools,
           technology, and creativity they need to grow.
         </p>
 

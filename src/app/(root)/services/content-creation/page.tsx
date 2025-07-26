@@ -114,15 +114,15 @@ export default function Services() {
         {/* Content on Left Center */}
         <div className="relative z-10 text-white w-full px-10 max-w-4xl">
           <div className="mb-4 flex flex-row gap-3">
-            <h1 className="text-6xl font-light font-poppins">App</h1>
+            <h1 className="text-6xl font-light font-poppins">Content</h1>
             <h1 className="text-6xl text-red-700 font-light font-poppins">
-              Development
+              Creation
             </h1>
           </div>
           <div className="w-3/4">
             <p className="text-white/80 text-lg font-light font-poppins mt-6">
-              We craft high-performance Android and iOS apps with seamless
-              functionality, elegant UI, and robust backends.
+              We create high-quality content for digital platforms including
+              blogs, social posts, and video scripts.
             </p>
           </div>
         </div>
@@ -132,11 +132,11 @@ export default function Services() {
           Transforming Ideas into Intelligent Solutions
         </h2>
         <p className="text-white/80 text-base md:text-xl font-poppins font-light mt-10 text-center">
-          At Helekin, we specialize in turning your ideas into powerful mobile
-          applications. Whether it&#39;s a native iOS, Android, or
-          cross-platform app, we leverage cutting-edge technology to build fast,
-          secure, and user-friendly mobile experiences that keep your audience
-          connected, wherever they are.
+          At Helekin, we craft compelling narratives that resonate with your
+          audience and build brand authority. From insightful blog articles to
+          engaging video scripts, our content is strategically designed to
+          inform, entertain, and convert, fueling your entire marketing
+          ecosystem.
         </p>
       </div>
       <div className="relative z-0 w-full flex flex-col bg-[url('/images/fafa.png')] bg-cover bg-center bg-no-repeat px-6 pb-30">
@@ -159,11 +159,11 @@ export default function Services() {
       </div>
       <div className="relative z-10 w-full mx-auto text-center bg-black pt-24">
         <h1 className="text-3xl font-poppins font-semibold text-red-700 mb-2 text-start ml-10">
-          Featured Mobile Apps
+          Featured Content Pieces
         </h1>
         <p className="text-white/80 text-base md:text-xl font-poppins font-light mt-5 mb-10 max-w-2xl text-start ml-10">
-          Our portfolio highlights our expertise in mobile app innovation and
-          creating seamless, user-centric designs.
+          Our portfolio showcases our versatility in creating impactful content
+          that captures attention and delivers a clear, persuasive message.
         </p>
         <div className="mt-5 flex sm:flex-row flex-col items-center justify-center gap-5 px-10 ">
           <div className="flex flex-col items-start h-[300px] w-full bg-white/10 backdrop-blur-lg shadow-xl shadow-black/30 p-6 rounded-3xl transition-all hover:scale-[1.02] duration-300"></div>
@@ -176,18 +176,17 @@ export default function Services() {
               Transforming Ideas into Intelligent Solutions
             </h2>
             <p className="text-white/80 text-base md:text-xl font-poppins font-light mt-10 text-left">
-              We design and develop with a mobile-first mindset, focusing on
-              performance, usability across diverse devices, and optimizing for
-              the unique challenges of the mobile ecosystem. Our process
-              includes rigorous testing, performance tuning, and navigating the
-              app store submission process for you.
+              Our content process is built on a foundation of research and
+              strategy. We identify your audience&#39;s needs, conduct keyword
+              research, and develop a content strategy before moving to writing,
+              editing, and optimization, ensuring every piece serves a purpose.
             </p>
           </div>
           <div className="w-2/3 flex flex-col items-start">
             <div className="flex flex-col items-center justify-center md:items-center mt-2 gap-8 w-full">
               <div className="flex items-center justify-between bg-white/10 backdrop-blur-lg shadow-lg shadow-black/30 p-6 md:w-3/4 w-full">
                 <h1 className="font-poppins text-2xl font-medium text-white">
-                  Native or Cross-Platform: Which is right for me?
+                  Do you provide content strategy services?
                 </h1>
                 <h1 className="font-poppins text-3xl font-medium text-white">
                   +
@@ -195,7 +194,7 @@ export default function Services() {
               </div>
               <div className="flex items-center justify-between bg-white/10 backdrop-blur-lg shadow-lg shadow-black/30 p-6 md:w-3/4 w-full">
                 <h1 className="font-poppins text-2xl font-medium text-white">
-                  How do you handle app store submissions?
+                  Is your content optimized for SEO?
                 </h1>
                 <h1 className="font-poppins text-3xl font-medium text-white">
                   +
@@ -203,7 +202,7 @@ export default function Services() {
               </div>
               <div className="flex items-center justify-between bg-white/10 backdrop-blur-lg shadow-lg shadow-black/30 p-6 md:w-3/4 w-full">
                 <h1 className="font-poppins text-2xl font-medium text-white">
-                  What is your process for testing mobile apps?
+                  Can you write for a highly technical audience?
                 </h1>
                 <h1 className="font-poppins text-3xl font-medium text-white">
                   +
@@ -211,7 +210,7 @@ export default function Services() {
               </div>
               <div className="flex items-center justify-between bg-white/10 backdrop-blur-lg shadow-lg shadow-black/30 p-6 md:w-3/4 w-full">
                 <h1 className="font-poppins text-2xl font-medium text-white">
-                  Can you integrate my app with existing systems?
+                  What is your revision and approval process?
                 </h1>
                 <h1 className="font-poppins text-3xl font-medium text-white">
                   +
@@ -221,11 +220,11 @@ export default function Services() {
           </div>
         </div>
         <h1 className="font-poppins text-4xl text-white mb-4 mt-50">
-          Ready to build your app?
+          Ready to Tell Your Story?
         </h1>
         <p className="text-white/80 mb-8 max-w-2xl mx-auto">
-          Let&#39;s bring your mobile app idea to life with a beautiful
-          interface and powerful functionality that captivates users.
+          Let&#39;s create content that builds trust, drives engagement, and
+          grows your business. Connect with our creative team today.
         </p>
         <Link href="/contact">
           <button className="bg-red-700 text-white font-semibold py-3 px-8 rounded-lg hover:bg-red-800 transition-colors duration-300 text-lg cursor-pointer">
