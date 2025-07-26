@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import "../../utils/styles/globals.css";
-
 import Navbar from "../../components/Navbar";
 import Footer from "../../components/footer";
 import Contact from "../../components/Contact";
@@ -24,7 +23,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
-        <div className="overflow-x-hidden w-[100vw]">
+        <div className="overflow-x-hidden ">
           <Navbar />
           {children}
           <Contact />
