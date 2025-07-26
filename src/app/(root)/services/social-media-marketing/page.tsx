@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import serviceData from '../../../../components/ServiceList.json';
+import serviceData from "../../../../components/ServiceList.json";
 import React, { useEffect, useState } from "react";
 import Link from "next/link";
 
@@ -19,6 +19,7 @@ export default function Services() {
   const ThreeDservices = serviceData.servicesList.threed;
 
   const [searchTerm, setSearchTerm] = useState("");
+
   const [hovering, setHovering] = useState(false);
   const [hoveredIndex, setHoveredIndex] = useState<{
     section: string;
@@ -106,22 +107,22 @@ export default function Services() {
   return (
     <div>
       {/* Hero */}
-      <div className="h-180 w-full bg-[url('/svg/hero.svg')] bg-cover bg-center bg-no-repeat z-20">
-        <div className="absolute inset-0 bg-black/70 backdrop-blur-sm z-0 h-full" />
-        <div className="absolute h-150 bottom-5 left-20">
-          <div className="flex mb-4">
-            <h1 className="text-white text-6xl font-light font-poppins">
-              Cloud
-            </h1>
-            <h1 className="text-red-700 text-6xl font-light font-poppins px-4">
-              Computing
+      <div className="relative h-180 w-full bg-[url('/svg/hero.svg')] bg-cover bg-center bg-no-repeat z-20 flex items-center">
+        {/* Tint Overlay */}
+        <div className="absolute inset-0 bg-black/70 backdrop-blur-sm z-0" />
+
+        {/* Content on Left Center */}
+        <div className="relative z-10 text-white w-full px-10 max-w-4xl">
+          <div className="mb-4 flex flex-row gap-3">
+            <h1 className="text-6xl font-light font-poppins">Social Media</h1>
+            <h1 className="text-6xl text-red-700 font-light font-poppins">
+              Marketing
             </h1>
           </div>
-          <div className="w-2/5">
-            <p className="text-white/80 text-xl font-light font-poppins mt-10">
-              We architect and manage scalable, secure, and cost-effective cloud
-              infrastructure to power your applications and drive business
-              innovation.
+          <div className="w-3/4">
+            <p className="text-white/80 text-lg font-light font-poppins mt-6">
+              We boost brand presence with strategic social campaigns across all
+              major platforms to grow engagement.
             </p>
           </div>
         </div>
@@ -131,15 +132,15 @@ export default function Services() {
           Transforming Ideas into Intelligent Solutions
         </h2>
         <p className="text-white/80 text-base md:text-xl font-poppins font-light mt-10 text-center">
-          At Helekin, we harness the power of leading cloud platforms like AWS,
-          Azure, and Google Cloud to build resilient and efficient
-          infrastructure. From serverless computing to container orchestration,
-          our solutions provide the foundation for modern applications, enabling
-          you to scale on-demand and accelerate your time to market.
+          At Helekin, we build and nurture vibrant online communities around
+          your brand. Our social media strategies are designed to increase your
+          reach, foster meaningful engagement, and convert followers into loyal
+          customers through compelling content and targeted campaigns.
         </p>
       </div>
       <div className="relative z-0 w-full flex flex-col bg-[url('/images/fafa.png')] bg-cover bg-center bg-no-repeat px-6 pb-30">
         <div className="absolute inset-0 bg-black/50 backdrop-blur-sm z-0" />
+
         <div className="flex justify-between items-baseline z-20">
           <div className="relative z-10 w-full max-w-screen px-6 mx-auto mt-20">
             <h1 className="text-3xl font-poppins font-semibold text-red-700 mb-2 text-center">
@@ -148,7 +149,7 @@ export default function Services() {
           </div>
         </div>
         <div>
-          <div className="mt-20 sm:mt-40 flex sm:flex-row flex-col items-center justify-center gap-5">
+          <div className="mt-20 sm:mt-40 flex sm:flex-row flex-col items-center justify-center gap-5 ">
             <div className="flex flex-col items-start h-[250px] sm:w-[300px] w-full bg-white/10 backdrop-blur-lg shadow-lg shadow-black/30 p-6 rounded-xl transition-all hover:scale-[1.02] duration-300"></div>
             <div className="flex flex-col items-start h-[250px] sm:w-[300px] w-full bg-white/10 backdrop-blur-lg shadow-lg shadow-black/30 p-6 rounded-xl transition-all hover:scale-[1.02] duration-300 md:relative md:-top-30"></div>
             <div className="flex flex-col items-start h-[250px] sm:w-[300px] w-full bg-white/10 backdrop-blur-lg shadow-lg shadow-black/30 p-6 rounded-xl transition-all hover:scale-[1.02] duration-300"></div>
@@ -157,35 +158,35 @@ export default function Services() {
       </div>
       <div className="relative z-10 w-full mx-auto text-center bg-black pt-24">
         <h1 className="text-3xl font-poppins font-semibold text-red-700 mb-2 text-start ml-10">
-          Featured Cloud Architectures
+          Featured Social Campaigns
         </h1>
         <p className="text-white/80 text-base md:text-xl font-poppins font-light mt-5 mb-10 max-w-2xl text-start ml-10">
-          Our portfolio demonstrates our expertise in building robust, secure,
-          and highly available cloud-native solutions.
+          Our portfolio showcases our ability to create viral content, grow
+          online communities, and drive significant engagement for our clients.
         </p>
-        <div className="mt-5 flex sm:flex-row flex-col items-center justify-center gap-5 px-10">
+        <div className="mt-5 flex sm:flex-row flex-col items-center justify-center gap-5 px-10 ">
           <div className="flex flex-col items-start h-[300px] w-full bg-white/10 backdrop-blur-lg shadow-xl shadow-black/30 p-6 rounded-3xl transition-all hover:scale-[1.02] duration-300"></div>
           <div className="flex flex-col items-start h-[300px] w-full bg-white/10 backdrop-blur-lg shadow-xl shadow-black/30 p-6 rounded-3xl transition-all hover:scale-[1.02] duration-300"></div>
           <div className="flex flex-col items-start h-[300px] w-full bg-white/10 backdrop-blur-lg shadow-xl shadow-black/30 p-6 rounded-3xl transition-all hover:scale-[1.02] duration-300"></div>
         </div>
-        <div className="mt-50 flex sm:flex-row flex-col items-start justify-betweem gap-5 px-20">
-          <div className="w-1/3 flex flex-col">
+        <div className="mt-50 flex sm:flex-row flex-col items-start justify-betweem gap-5 px-20 ">
+          <div className="w-1/3 flex flex-col ">
             <h2 className="text-red-700 text-4xl md:text-4xl font-poppins font-medium text-left">
               Transforming Ideas into Intelligent Solutions
             </h2>
             <p className="text-white/80 text-base md:text-xl font-poppins font-light mt-10 text-left">
-              We guide you through every phase of your cloud journey. Our
-              process includes a thorough assessment and planning stage,
-              seamless migration and implementation, and ongoing optimization
-              and management through modern DevOps practices to ensure peak
-              performance and cost-efficiency.
+              Our approach involves a deep analysis of your target audience and
+              brand voice. We develop a content calendar, create engaging posts,
+              manage community interactions, and use detailed analytics to
+              continually refine our strategy and maximize your return on
+              investment.
             </p>
           </div>
           <div className="w-2/3 flex flex-col items-start">
             <div className="flex flex-col items-center justify-center md:items-center mt-2 gap-8 w-full">
               <div className="flex items-center justify-between bg-white/10 backdrop-blur-lg shadow-lg shadow-black/30 p-6 md:w-3/4 w-full">
                 <h1 className="font-poppins text-2xl font-medium text-white">
-                  Which cloud provider (AWS, Azure) is best?
+                  Which social media platforms are best for my business?
                 </h1>
                 <h1 className="font-poppins text-3xl font-medium text-white">
                   +
@@ -193,7 +194,7 @@ export default function Services() {
               </div>
               <div className="flex items-center justify-between bg-white/10 backdrop-blur-lg shadow-lg shadow-black/30 p-6 md:w-3/4 w-full">
                 <h1 className="font-poppins text-2xl font-medium text-white">
-                  How do you ensure cloud security and compliance?
+                  How do you measure the ROI of social media marketing?
                 </h1>
                 <h1 className="font-poppins text-3xl font-medium text-white">
                   +
@@ -201,7 +202,7 @@ export default function Services() {
               </div>
               <div className="flex items-center justify-between bg-white/10 backdrop-blur-lg shadow-lg shadow-black/30 p-6 md:w-3/4 w-full">
                 <h1 className="font-poppins text-2xl font-medium text-white">
-                  What is your approach to cloud cost optimization?
+                  Do you manage paid social media advertising campaigns?
                 </h1>
                 <h1 className="font-poppins text-3xl font-medium text-white">
                   +
@@ -209,7 +210,7 @@ export default function Services() {
               </div>
               <div className="flex items-center justify-between bg-white/10 backdrop-blur-lg shadow-lg shadow-black/30 p-6 md:w-3/4 w-full">
                 <h1 className="font-poppins text-2xl font-medium text-white">
-                  Can you migrate our existing applications to the cloud?
+                  How often will you post on our accounts?
                 </h1>
                 <h1 className="font-poppins text-3xl font-medium text-white">
                   +
@@ -219,11 +220,11 @@ export default function Services() {
           </div>
         </div>
         <h1 className="font-poppins text-4xl text-white mb-4 mt-50">
-          Ready to Scale with the Cloud?
+          Ready to Grow Your Audience?
         </h1>
         <p className="text-white/80 mb-8 max-w-2xl mx-auto">
-          Unlock unparalleled scalability, security, and performance. Let&#39;s
-          build your future-proof cloud infrastructure together.
+          Let&#39;s build a powerful social media presence that connects with
+          your customers and elevates your brand. Start the conversation today.
         </p>
         <Link href="/contact">
           <button className="bg-red-700 text-white font-semibold py-3 px-8 rounded-lg hover:bg-red-800 transition-colors duration-300 text-lg cursor-pointer">

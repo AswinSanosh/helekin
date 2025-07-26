@@ -114,15 +114,15 @@ export default function Services() {
         {/* Content on Left Center */}
         <div className="relative z-10 text-white w-full px-10 max-w-4xl">
           <div className="mb-4 flex flex-row gap-3">
-            <h1 className="text-6xl font-light font-poppins">App</h1>
+            <h1 className="text-6xl font-light font-poppins">Search Engine</h1>
             <h1 className="text-6xl text-red-700 font-light font-poppins">
-              Development
+              Optimization
             </h1>
           </div>
           <div className="w-3/4">
             <p className="text-white/80 text-lg font-light font-poppins mt-6">
-              We craft high-performance Android and iOS apps with seamless
-              functionality, elegant UI, and robust backends.
+              We optimize websites to rank higher on search engines using
+              advanced SEO techniques for better visibility.
             </p>
           </div>
         </div>
@@ -132,11 +132,11 @@ export default function Services() {
           Transforming Ideas into Intelligent Solutions
         </h2>
         <p className="text-white/80 text-base md:text-xl font-poppins font-light mt-10 text-center">
-          At Helekin, we specialize in turning your ideas into powerful mobile
-          applications. Whether it&#39;s a native iOS, Android, or
-          cross-platform app, we leverage cutting-edge technology to build fast,
-          secure, and user-friendly mobile experiences that keep your audience
-          connected, wherever they are.
+          At Helekin, we elevate your online presence by driving organic traffic
+          to your website. Our comprehensive SEO strategies focus on technical
+          optimization, quality content, and authoritative link building to
+          ensure you don&#39;t just rank, but dominate the search results for
+          your target keywords.
         </p>
       </div>
       <div className="relative z-0 w-full flex flex-col bg-[url('/images/fafa.png')] bg-cover bg-center bg-no-repeat px-6 pb-30">
@@ -159,11 +159,12 @@ export default function Services() {
       </div>
       <div className="relative z-10 w-full mx-auto text-center bg-black pt-24">
         <h1 className="text-3xl font-poppins font-semibold text-red-700 mb-2 text-start ml-10">
-          Featured Mobile Apps
+          Featured SEO Case Studies
         </h1>
         <p className="text-white/80 text-base md:text-xl font-poppins font-light mt-5 mb-10 max-w-2xl text-start ml-10">
-          Our portfolio highlights our expertise in mobile app innovation and
-          creating seamless, user-centric designs.
+          Our portfolio showcases our proven success in boosting rankings,
+          increasing organic traffic, and delivering measurable results for
+          clients across industries.
         </p>
         <div className="mt-5 flex sm:flex-row flex-col items-center justify-center gap-5 px-10 ">
           <div className="flex flex-col items-start h-[300px] w-full bg-white/10 backdrop-blur-lg shadow-xl shadow-black/30 p-6 rounded-3xl transition-all hover:scale-[1.02] duration-300"></div>
@@ -176,18 +177,18 @@ export default function Services() {
               Transforming Ideas into Intelligent Solutions
             </h2>
             <p className="text-white/80 text-base md:text-xl font-poppins font-light mt-10 text-left">
-              We design and develop with a mobile-first mindset, focusing on
-              performance, usability across diverse devices, and optimizing for
-              the unique challenges of the mobile ecosystem. Our process
-              includes rigorous testing, performance tuning, and navigating the
-              app store submission process for you.
+              Our data-driven approach begins with a thorough audit of your site
+              and a deep competitor analysis. We then craft a bespoke strategy
+              covering on-page, off-page, and technical SEO, followed by
+              continuous monitoring and reporting to adapt to the ever-changing
+              search landscape.
             </p>
           </div>
           <div className="w-2/3 flex flex-col items-start">
             <div className="flex flex-col items-center justify-center md:items-center mt-2 gap-8 w-full">
               <div className="flex items-center justify-between bg-white/10 backdrop-blur-lg shadow-lg shadow-black/30 p-6 md:w-3/4 w-full">
                 <h1 className="font-poppins text-2xl font-medium text-white">
-                  Native or Cross-Platform: Which is right for me?
+                  How long does it take to see SEO results?
                 </h1>
                 <h1 className="font-poppins text-3xl font-medium text-white">
                   +
@@ -195,7 +196,7 @@ export default function Services() {
               </div>
               <div className="flex items-center justify-between bg-white/10 backdrop-blur-lg shadow-lg shadow-black/30 p-6 md:w-3/4 w-full">
                 <h1 className="font-poppins text-2xl font-medium text-white">
-                  How do you handle app store submissions?
+                  What is the difference between on-page and off-page SEO?
                 </h1>
                 <h1 className="font-poppins text-3xl font-medium text-white">
                   +
@@ -203,7 +204,7 @@ export default function Services() {
               </div>
               <div className="flex items-center justify-between bg-white/10 backdrop-blur-lg shadow-lg shadow-black/30 p-6 md:w-3/4 w-full">
                 <h1 className="font-poppins text-2xl font-medium text-white">
-                  What is your process for testing mobile apps?
+                  Do you guarantee a #1 ranking on Google?
                 </h1>
                 <h1 className="font-poppins text-3xl font-medium text-white">
                   +
@@ -211,7 +212,7 @@ export default function Services() {
               </div>
               <div className="flex items-center justify-between bg-white/10 backdrop-blur-lg shadow-lg shadow-black/30 p-6 md:w-3/4 w-full">
                 <h1 className="font-poppins text-2xl font-medium text-white">
-                  Can you integrate my app with existing systems?
+                  What metrics do you use to measure success?
                 </h1>
                 <h1 className="font-poppins text-3xl font-medium text-white">
                   +
@@ -221,11 +222,11 @@ export default function Services() {
           </div>
         </div>
         <h1 className="font-poppins text-4xl text-white mb-4 mt-50">
-          Ready to build your app?
+          Ready to Climb the Ranks?
         </h1>
         <p className="text-white/80 mb-8 max-w-2xl mx-auto">
-          Let&#39;s bring your mobile app idea to life with a beautiful
-          interface and powerful functionality that captivates users.
+          Let&#39;s increase your visibility and attract more customers. Get a
+          comprehensive SEO strategy tailored for your business.
         </p>
         <Link href="/contact">
           <button className="bg-red-700 text-white font-semibold py-3 px-8 rounded-lg hover:bg-red-800 transition-colors duration-300 text-lg cursor-pointer">
