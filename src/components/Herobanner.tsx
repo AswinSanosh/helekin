@@ -24,11 +24,11 @@ export default function Hero() {
       <div className="h-full w-full z-0">
         <div className="text-left p-6 md:p-10 text-white absolute bottom-0 md:bottom-10 left-0 sm:left-10 w-full">
           <div className="relative">
-            <h1 className="text-white heading-extralight max-heading-extralight-lg whitespace-nowrap">
+            <h1 className="text-white heading-extralight max-heading-extralight-lg">
               Digital acceleration service
             </h1>
 
-            <div className="flex flex-nowrap max-w-[90vw] sm:max-w-[50vw] max-h-[50vh] whitespace-nowrap">
+            <div className="flex flex-nowrap max-w-[90vw] sm:max-w-[50vw] max-h-[50vh]">
               <h1 className="text-white heading-extralight max-heading-extralight-lg mb-4 flex-shrink-0">
                 for
               </h1>
