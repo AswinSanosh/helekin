@@ -6,18 +6,18 @@ import React, { useEffect, useState } from 'react';
 import Link from 'next/link';
 
 interface Service {
-  title: string;
-  desc: string;
-  icon: string;
-  background: string;
-  link?: string;
+    title: string;
+    desc: string;
+    icon: string;
+    background: string;
+    link?: string;
 }
 
 export default function Services() {
     const Softservices = serviceData.servicesList.software;
     const Hardservices = serviceData.servicesList.electronics_and_hardware;
     const ThreeDservices = serviceData.servicesList.threed;
-    
+
     const [searchTerm, setSearchTerm] = useState('');
 
     const [hovering, setHovering] = useState(false);
@@ -98,7 +98,9 @@ export default function Services() {
     return (
         <div>
             {/* Hero */}
-            <div className="h-150 w-full bg-black bg-cover bg-center bg-no-repeat z-20">
+            <div className="h-180 w-full bg-[url('/svg/hero.svg')] bg-cover bg-center bg-no-repeat z-20">
+                <div className="absolute inset-0 bg-black/70 backdrop-blur-sm z-0 h-full" />
+
                 <div className="absolute h-150 bottom-10 left-20 mb-4">
                     <div className="flex mb-4">
                         <h1 className="text-white text-6xl font-extralight font-poppins">Crafting</h1>

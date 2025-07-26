@@ -35,12 +35,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        // Add this prop to prevent hydration errors
-        suppressHydrationWarning={true}
-        className={`${geistSans.variable} ${geistMono.variable} antialiased overflow-hidden`}
+        className={`${geistSans.variable} ${geistMono.variable} `}
       >
         <Navbar />
-        <div>{children}</div>
+        {children}
         <Contact />
         <Forms />
         <Footer />
