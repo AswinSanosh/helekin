@@ -1,11 +1,11 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono, Poppins } from "next/font/google";
+// Removed unused Poppins font import
+import { Geist, Geist_Mono } from "next/font/google";
 import "../globals.css";
 import Navbar from "../../components/Navbar";
 import Footer from "../../components/footer";
 import Contact from "../../components/Contact";
 import Forms from "../../components/forms";
-
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -35,6 +35,8 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
+        // Add this prop to prevent hydration errors
+        suppressHydrationWarning={true}
         className={`${geistSans.variable} ${geistMono.variable} antialiased overflow-hidden`}
       >
         <Navbar />
