@@ -3,7 +3,7 @@
     "software": [
       {
         "title": "Web Development",
-        "desc": "We build responsive websites and mobile apps with powerful backends and smooth user experiences, optimized for performance and scalability.",
+        "desc": "We build responsive websites and apps with smooth user experiences, optimized for performance and scalability.",
         "background": "/images/fafa.png",
         "icon": "/svg/servicesvgs/Webdev.svg",
         "link": "/services/web-development",
@@ -25,10 +25,10 @@
       },
       {
         "title": "App Development",
-        "desc": "We craft high-performance mobile applications for Android and iOS platforms, ensuring seamless functionality, elegant UI, and robust backends.",
+        "desc": "We craft high-performance Android and iOS apps with seamless functionality, elegant UI, and robust backends.",
         "background": "/images/appdev.png",
         "icon": "/svg/servicesvgs/appdev.svg",
-        "link": "/services/app-development",
+        "link": "/services/mobile-app-development",
         "tools": ["Flutter", "React Native", "Swift", "Kotlin", "Firebase"],
         "tags": ["App Development", "Mobile", "iOS", "Android", "Software"],
         "tools-icons": [
@@ -41,7 +41,7 @@
       },
       {
         "title": "UI/UX Designing",
-        "desc": "We design user-first digital experiences with intuitive navigation, modern aesthetics, and user-centered design strategies.",
+        "desc": "We design modern, user-centered digital interfaces with intuitive navigation and smooth interactions.",
         "background": "/images/uiux.png",
         "icon": "/svg/servicesvgs/uiux.svg",
         "link": "/services/ui-ux-design",
@@ -64,7 +64,7 @@
       },
       {
         "title": "Poster Designing",
-        "desc": "We create captivating posters, banners, and visual content tailored for events, promotions, and brand awareness.",
+        "desc": "We create compelling posters, banners, and visuals tailored for promotions, events, and brand awareness.",
         "background": "/images/poster.png",
         "icon": "/svg/servicesvgs/poster.svg",
         "link": "/services/poster-designing",
@@ -79,7 +79,7 @@
       },
       {
         "title": "Search Engine Optimization",
-        "desc": "We optimize websites to rank higher on search engines using advanced on-page and off-page SEO techniques for increased visibility.",
+        "desc": "We optimize websites to rank higher on search engines using advanced SEO techniques for better visibility.",
         "background": "/images/seo.png",
         "icon": "/svg/servicesvgs/seo.svg",
         "link": "/services/seo",
@@ -95,7 +95,7 @@
       },
       {
         "title": "Social Media Marketing",
-        "desc": "We build brand presence and engagement through strategic social media campaigns across all major platforms.",
+        "desc": "We boost brand presence with strategic social campaigns across all major platforms to grow engagement.",
         "background": "/images/smm.png",
         "icon": "/svg/servicesvgs/smm.svg",
         "link": "/services/social-media-marketing",
@@ -117,7 +117,7 @@
       },
       {
         "title": "Content Creation",
-        "desc": "We develop high-quality content tailored for digital platforms including blogs, social media, video scripts, and brand storytelling.",
+        "desc": "We create high-quality content for digital platforms including blogs, social posts, and video scripts.",
         "background": "/images/content.png",
         "icon": "/svg/servicesvgs/content.svg",
         "link": "/services/content-creation",
@@ -134,220 +134,76 @@
     ],
     "electronics_and_hardware": [
       {
-        "title": "PCB Designing",
-        "desc": "Design and prototyping of PCBs using industry-grade tools for commercial and industrial applications.",
+        "title": "PCB Design",
+        "desc": "We design and prototype high-quality PCBs for commercial and industrial applications using modern EDA tools.",
         "background": "/images/pcb.png",
         "icon": "/svg/servicesvgs/pcb.svg",
-        "link": "/services/pcb-designing",
-        "tools": ["KiCad", "Altium Designer", "Eagle", "EasyEDA", "OrCAD"],
-        "tags": ["PCB", "Design", "Electronics", "Hardware", "Prototyping"],
-        "tools-icons": [
-          "/svg/tools/kicad.svg",
-          "/svg/tools/altium.svg",
-          "/svg/tools/eagle.svg",
-          "/svg/tools/easyeda.svg",
-          "/svg/tools/orcad.svg"
-        ]
+        "link": "/services/pcb-designing"
       },
       {
         "title": "Laser Engraving",
-        "desc": "Precision laser engraving services for PCBs, enclosures, branding elements, and custom hardware.",
+        "desc": "We provide precision laser engraving for enclosures, branding, PCB labeling, and personalized hardware.",
         "background": "/images/laser.png",
         "icon": "/svg/servicesvgs/laser.svg",
-        "link": "/services/laser-engraving",
-        "tools": ["LightBurn", "RDWorks", "CorelDRAW", "AutoCAD", "EzCad"],
-        "tags": [
-          "Laser",
-          "Engraving",
-          "Hardware",
-          "Electronics",
-          "Fabrication"
-        ],
-        "tools-icons": [
-          "/svg/tools/lightburn.svg",
-          "/svg/tools/rdworks.svg",
-          "/svg/tools/coreldraw.svg",
-          "/svg/tools/autocad.svg",
-          "/svg/tools/ezcad.svg"
-        ]
+        "link": "/services/laser-engraving"
       },
       {
         "title": "Hardware Assembling",
-        "desc": "We assemble custom electronic systems with precise soldering, testing, and integration of electronic components and modules.",
+        "desc": "We assemble electronics using soldering, testing, and integration of components with clean wiring practices.",
         "background": "/images/assembling.png",
         "icon": "/svg/servicesvgs/assembling.svg",
-        "link": "/services/electronics-assembling",
-        "tools": [
-          "Soldering Station",
-          "Multimeter",
-          "Oscilloscope",
-          "Power Supply",
-          "Tweezers"
-        ],
-        "tags": ["Assembly", "Electronics", "Soldering", "Hardware", "Testing"],
-        "tools-icons": [
-          "/svg/tools/soldering.svg",
-          "/svg/tools/multimeter.svg",
-          "/svg/tools/oscilloscope.svg",
-          "/svg/tools/powersupply.svg",
-          "/svg/tools/tweezers.svg"
-        ]
+        "link": "/services/hardware-assembling"
       },
       {
         "title": "IoT Integration",
-        "desc": "We develop embedded systems with seamless IoT connectivity, enabling remote monitoring and control through scalable cloud platforms.",
+        "desc": "We build smart IoT systems with cloud connectivity, sensor data collection, and embedded programming.",
         "background": "/images/iot-bg.png",
         "icon": "/svg/servicesvgs/iot.svg",
-        "link": "/services/iot-integration",
-        "tools": ["ESP32", "Raspberry Pi", "Arduino", "MQTT", "Blynk"],
-        "tags": ["IoT", "Embedded", "Cloud", "Electronics", "Hardware"],
-        "tools-icons": [
-          "/svg/tools/esp32.svg",
-          "/svg/tools/raspberrypi.svg",
-          "/svg/tools/arduino.svg",
-          "/svg/tools/mqtt.svg",
-          "/svg/tools/blynk.svg"
-        ]
+        "link": "/services/iot-integration"
       },
       {
         "title": "PLC Programming",
-        "desc": "Development of custom logic control solutions using programmable logic controllers for industrial automation systems.",
+        "desc": "We develop PLC-based automation for industries using Siemens, Allen Bradley, Delta, and other platforms.",
         "background": "/images/plc.png",
         "icon": "/svg/servicesvgs/plc.svg",
-        "link": "/services/plc-programming",
-        "tools": [
-          "Siemens TIA Portal",
-          "RSLogix",
-          "CX-Programmer",
-          "WPLSoft",
-          "Codesys"
-        ],
-        "tags": ["PLC", "Automation", "Industrial", "Programming", "Hardware"],
-        "tools-icons": [
-          "/svg/tools/tia.svg",
-          "/svg/tools/rslogix.svg",
-          "/svg/tools/cxprogrammer.svg",
-          "/svg/tools/wplsoft.svg",
-          "/svg/tools/codesys.svg"
-        ]
+        "link": "/services/plc-programming"
       },
       {
         "title": "SCADA Designing",
-        "desc": "We design SCADA systems for industrial automation with real-time monitoring, control, and data acquisition solutions.",
+        "desc": "We design SCADA systems for industrial monitoring, control, and data acquisition in real-time.",
         "background": "/images/scada.png",
         "icon": "/svg/servicesvgs/scada.svg",
-        "link": "/services/scada-designing",
-        "tools": ["Wonderware", "Ignition", "WinCC", "LabVIEW", "FactoryTalk"],
-        "tags": [
-          "SCADA",
-          "Automation",
-          "Industrial",
-          "Monitoring",
-          "Electronics"
-        ],
-        "tools-icons": [
-          "/svg/tools/wonderware.svg",
-          "/svg/tools/ignition.svg",
-          "/svg/tools/wincc.svg",
-          "/svg/tools/labview.svg",
-          "/svg/tools/factorytalk.svg"
-        ]
+        "link": "/services/scada-designing"
       }
     ],
     "threed": [
       {
         "title": "CAD Designing & 3D Modeling",
-        "desc": "We create detailed CAD models and 3D visualizations for mechanical parts, products, and engineering systems across various industries.",
+        "desc": "We create detailed CAD models for mechanical parts and prototypes using industry-grade design software.",
         "background": "/images/3dmodel.png",
         "icon": "/svg/servicesvgs/3dmodel.svg",
-        "link": "/services/3d-modeling",
-        "tools": ["Fusion 360", "SolidWorks", "AutoCAD", "Blender", "CATIA"],
-        "tags": [
-          "CAD",
-          "3D Modeling",
-          "Design",
-          "Engineering",
-          "Visualization"
-        ],
-        "tools-icons": [
-          "/svg/tools/fusion360.svg",
-          "/svg/tools/solidworks.svg",
-          "/svg/tools/autocad.svg",
-          "/svg/tools/blender.svg",
-          "/svg/tools/catia.svg"
-        ]
+        "link": "/services/3d-modeling"
       },
       {
         "title": "3D Printing & Polishing",
-        "desc": "We offer high-quality 3D printing in FDM, SLA, and SLS formats along with surface finishing and polishing for prototypes and end-use parts.",
+        "desc": "We offer high-quality 3D prints using FDM/SLA with surface finishing for functional and visual parts.",
         "background": "/images/3dprint.png",
         "icon": "/svg/servicesvgs/3dprint.svg",
-        "link": "/services/3d-printing",
-        "tools": [
-          "Ultimaker",
-          "Creality",
-          "Formlabs",
-          "PrusaSlicer",
-          "Sandpaper & Resin"
-        ],
-        "tags": [
-          "3D Printing",
-          "Polishing",
-          "Prototyping",
-          "Manufacturing",
-          "Hardware"
-        ],
-        "tools-icons": [
-          "/svg/tools/ultimaker.svg",
-          "/svg/tools/creality.svg",
-          "/svg/tools/formlabs.svg",
-          "/svg/tools/prusaslicer.svg",
-          "/svg/tools/resin.svg"
-        ]
+        "link": "/services/3d-printing"
       },
       {
         "title": "Software & Electronics Prototyping",
-        "desc": "We combine 3D printed enclosures with embedded systems and software interfaces to rapidly prototype electronic devices.",
+        "desc": "We integrate 3D printed enclosures with embedded circuits for fast and reliable product prototyping.",
         "background": "/images/prototyping.png",
         "icon": "/svg/servicesvgs/prototyping.svg",
-        "link": "/services/software-electronics-prototyping",
-        "tools": ["Fusion 360", "Arduino", "ESP32", "Fritzing", "Laser Cutter"],
-        "tags": [
-          "Prototyping",
-          "Electronics",
-          "Software",
-          "Hardware",
-          "3D Printing"
-        ],
-        "tools-icons": [
-          "/svg/tools/fusion360.svg",
-          "/svg/tools/arduino.svg",
-          "/svg/tools/esp32.svg",
-          "/svg/tools/fritzing.svg",
-          "/svg/tools/lasercutter.svg"
-        ]
+        "link": "/services/software-electronics-prototyping"
       },
       {
         "title": "Simulation & Analysis",
-        "desc": "We provide high-fidelity simulations including FEA, CFD, and thermal analysis to validate and optimize designs before production.",
+        "desc": "We run FEA, CFD, and thermal simulations to validate designs before production and ensure reliability.",
         "background": "/images/simulation.png",
         "icon": "/svg/servicesvgs/analysis.svg",
-        "link": "/services/simulation-analysis",
-        "tools": [
-          "ANSYS",
-          "SimScale",
-          "COMSOL",
-          "SolidWorks Simulation",
-          "Fusion 360"
-        ],
-        "tags": ["Simulation", "Analysis", "FEA", "CFD", "Thermal", "Design"],
-        "tools-icons": [
-          "/svg/tools/ansys.svg",
-          "/svg/tools/simscale.svg",
-          "/svg/tools/comsol.svg",
-          "/svg/tools/solidworks.svg",
-          "/svg/tools/fusion360.svg"
-        ]
+        "link": "/services/simulation-analysis"
       }
     ]
   }
