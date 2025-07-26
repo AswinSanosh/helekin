@@ -8,7 +8,13 @@
         "icon": "/svg/servicesvgs/Webdev.svg",
         "link": "/services/web-development",
         "tools": ["React", "Node.js", "Django", "Flask", "Next.js"],
-        "tags": ["Web Development", "Frontend", "Backend", "Full Stack","Software"],
+        "tags": [
+          "Web Development",
+          "Frontend",
+          "Backend",
+          "Full Stack",
+          "Software"
+        ],
         "tools-icons": [
           "/svg/tools/react.svg",
           "/svg/tools/nodejs.svg",
@@ -18,85 +24,330 @@
         ]
       },
       {
-        "title": "Mobile",
-        "desc": "We build responsive websites and mobile apps with powerful backends and smooth user experiences, optimized for performance and scalability.",
-        "background": "/images/hero.png",
-        "icon": "/svg/servicesvgs/app dev.svg",
-        "link": "/services/mobile-app-development"
+        "title": "App Development",
+        "desc": "We craft high-performance mobile applications for Android and iOS platforms, ensuring seamless functionality, elegant UI, and robust backends.",
+        "background": "/images/appdev.png",
+        "icon": "/svg/servicesvgs/appdev.svg",
+        "link": "/services/app-development",
+        "tools": ["Flutter", "React Native", "Swift", "Kotlin", "Firebase"],
+        "tags": ["App Development", "Mobile", "iOS", "Android", "Software"],
+        "tools-icons": [
+          "/svg/tools/flutter.svg",
+          "/svg/tools/reactnative.svg",
+          "/svg/tools/swift.svg",
+          "/svg/tools/kotlin.svg",
+          "/svg/tools/firebase.svg"
+        ]
       },
       {
-        "title": "AI",
-        "desc": "We build responsive websites and mobile apps with powerful backends and smooth user experiences, optimized for performance and scalability.",
-        "background": "/images/hero.png",
-        "icon": "/svg/servicesvgs/iot.svg",
-        "link": "/services/ai-solutions"
+        "title": "UI/UX Designing",
+        "desc": "We design user-first digital experiences with intuitive navigation, modern aesthetics, and user-centered design strategies.",
+        "background": "/images/uiux.png",
+        "icon": "/svg/servicesvgs/uiux.svg",
+        "link": "/services/ui-ux-design",
+        "tools": ["Figma", "Adobe XD", "Sketch", "Framer", "Zeplin"],
+        "tags": [
+          "UI",
+          "UX",
+          "Design",
+          "Wireframing",
+          "Prototyping",
+          "Software"
+        ],
+        "tools-icons": [
+          "/svg/tools/figma.svg",
+          "/svg/tools/adobexd.svg",
+          "/svg/tools/sketch.svg",
+          "/svg/tools/framer.svg",
+          "/svg/tools/zeplin.svg"
+        ]
       },
       {
-        "title": "UI/UX",
-        "desc": "We build responsive websites and mobile apps with powerful backends and smooth user experiences, optimized for performance and scalability.",
-        "background": "/images/fafa.png",
-        "icon": "/svg/servicesvgs/app dev.svg",
-        "link": "/services/ui-ux-design"
+        "title": "Poster Designing",
+        "desc": "We create captivating posters, banners, and visual content tailored for events, promotions, and brand awareness.",
+        "background": "/images/poster.png",
+        "icon": "/svg/servicesvgs/poster.svg",
+        "link": "/services/poster-designing",
+        "tools": ["Adobe Photoshop", "Canva", "Illustrator", "Figma"],
+        "tags": ["Design", "Poster", "Graphics", "Marketing", "Software"],
+        "tools-icons": [
+          "/svg/tools/photoshop.svg",
+          "/svg/tools/canva.svg",
+          "/svg/tools/illustrator.svg",
+          "/svg/tools/figma.svg"
+        ]
       },
       {
-        "title": "Cloud",
-        "desc": "We build responsive websites and mobile apps with powerful backends and smooth user experiences, optimized for performance and scalability.",
-        "background": "/images/fafa.png",
-        "icon": "/svg/servicesvgs/app dev.svg",
-        "link": "/services/cloud-computing"
+        "title": "Search Engine Optimization",
+        "desc": "We optimize websites to rank higher on search engines using advanced on-page and off-page SEO techniques for increased visibility.",
+        "background": "/images/seo.png",
+        "icon": "/svg/servicesvgs/seo.svg",
+        "link": "/services/seo",
+        "tools": ["Google Analytics", "Ahrefs", "SEMRush", "Yoast", "Moz"],
+        "tags": ["SEO", "Marketing", "Search", "Optimization", "Software"],
+        "tools-icons": [
+          "/svg/tools/analytics.svg",
+          "/svg/tools/ahrefs.svg",
+          "/svg/tools/semrush.svg",
+          "/svg/tools/yoast.svg",
+          "/svg/tools/moz.svg"
+        ]
       },
       {
-        "title": "DevOps",
-        "desc": "We build responsive websites and mobile apps with powerful backends and smooth user experiences, optimized for performance and scalability.",
-        "background": "/images/fafa.png",
-        "icon": "/svg/servicesvgs/app dev.svg",
-        "link": "/services/devops"
+        "title": "Social Media Marketing",
+        "desc": "We build brand presence and engagement through strategic social media campaigns across all major platforms.",
+        "background": "/images/smm.png",
+        "icon": "/svg/servicesvgs/smm.svg",
+        "link": "/services/social-media-marketing",
+        "tools": [
+          "Meta Business Suite",
+          "Buffer",
+          "Hootsuite",
+          "Canva",
+          "Analytics"
+        ],
+        "tags": ["Marketing", "Social Media", "Branding", "SMM", "Software"],
+        "tools-icons": [
+          "/svg/tools/meta.svg",
+          "/svg/tools/buffer.svg",
+          "/svg/tools/hootsuite.svg",
+          "/svg/tools/canva.svg",
+          "/svg/tools/analytics.svg"
+        ]
+      },
+      {
+        "title": "Content Creation",
+        "desc": "We develop high-quality content tailored for digital platforms including blogs, social media, video scripts, and brand storytelling.",
+        "background": "/images/content.png",
+        "icon": "/svg/servicesvgs/content.svg",
+        "link": "/services/content-creation",
+        "tools": ["Notion", "Grammarly", "ChatGPT", "Canva", "Google Docs"],
+        "tags": ["Content", "Writing", "Marketing", "Branding", "Software"],
+        "tools-icons": [
+          "/svg/tools/notion.svg",
+          "/svg/tools/grammarly.svg",
+          "/svg/tools/chatgpt.svg",
+          "/svg/tools/canva.svg",
+          "/svg/tools/docs.svg"
+        ]
       }
     ],
     "electronics_and_hardware": [
+      {
+        "title": "PCB Designing",
+        "desc": "Design and prototyping of PCBs using industry-grade tools for commercial and industrial applications.",
+        "background": "/images/pcb.png",
+        "icon": "/svg/servicesvgs/pcb.svg",
+        "link": "/services/pcb-designing",
+        "tools": ["KiCad", "Altium Designer", "Eagle", "EasyEDA", "OrCAD"],
+        "tags": ["PCB", "Design", "Electronics", "Hardware", "Prototyping"],
+        "tools-icons": [
+          "/svg/tools/kicad.svg",
+          "/svg/tools/altium.svg",
+          "/svg/tools/eagle.svg",
+          "/svg/tools/easyeda.svg",
+          "/svg/tools/orcad.svg"
+        ]
+      },
+      {
+        "title": "Laser Engraving",
+        "desc": "Precision laser engraving services for PCBs, enclosures, branding elements, and custom hardware.",
+        "background": "/images/laser.png",
+        "icon": "/svg/servicesvgs/laser.svg",
+        "link": "/services/laser-engraving",
+        "tools": ["LightBurn", "RDWorks", "CorelDRAW", "AutoCAD", "EzCad"],
+        "tags": [
+          "Laser",
+          "Engraving",
+          "Hardware",
+          "Electronics",
+          "Fabrication"
+        ],
+        "tools-icons": [
+          "/svg/tools/lightburn.svg",
+          "/svg/tools/rdworks.svg",
+          "/svg/tools/coreldraw.svg",
+          "/svg/tools/autocad.svg",
+          "/svg/tools/ezcad.svg"
+        ]
+      },
+      {
+        "title": "Hardware Assembling",
+        "desc": "We assemble custom electronic systems with precise soldering, testing, and integration of electronic components and modules.",
+        "background": "/images/assembling.png",
+        "icon": "/svg/servicesvgs/assembling.svg",
+        "link": "/services/electronics-assembling",
+        "tools": [
+          "Soldering Station",
+          "Multimeter",
+          "Oscilloscope",
+          "Power Supply",
+          "Tweezers"
+        ],
+        "tags": ["Assembly", "Electronics", "Soldering", "Hardware", "Testing"],
+        "tools-icons": [
+          "/svg/tools/soldering.svg",
+          "/svg/tools/multimeter.svg",
+          "/svg/tools/oscilloscope.svg",
+          "/svg/tools/powersupply.svg",
+          "/svg/tools/tweezers.svg"
+        ]
+      },
       {
         "title": "IoT Integration",
         "desc": "We develop embedded systems with seamless IoT connectivity, enabling remote monitoring and control through scalable cloud platforms.",
         "background": "/images/iot-bg.png",
         "icon": "/svg/servicesvgs/iot.svg",
-        "link": "/services/iot-integration"
+        "link": "/services/iot-integration",
+        "tools": ["ESP32", "Raspberry Pi", "Arduino", "MQTT", "Blynk"],
+        "tags": ["IoT", "Embedded", "Cloud", "Electronics", "Hardware"],
+        "tools-icons": [
+          "/svg/tools/esp32.svg",
+          "/svg/tools/raspberrypi.svg",
+          "/svg/tools/arduino.svg",
+          "/svg/tools/mqtt.svg",
+          "/svg/tools/blynk.svg"
+        ]
       },
       {
-        "title": "Embedded Systems",
-        "desc": "Custom firmware and hardware integration solutions tailored for smart devices and edge computing.",
-        "background": "/images/embedded.png",
-        "icon": "/svg/servicesvgs/embedded.svg",
-        "link": "/services/embedded-systems"
+        "title": "PLC Programming",
+        "desc": "Development of custom logic control solutions using programmable logic controllers for industrial automation systems.",
+        "background": "/images/plc.png",
+        "icon": "/svg/servicesvgs/plc.svg",
+        "link": "/services/plc-programming",
+        "tools": [
+          "Siemens TIA Portal",
+          "RSLogix",
+          "CX-Programmer",
+          "WPLSoft",
+          "Codesys"
+        ],
+        "tags": ["PLC", "Automation", "Industrial", "Programming", "Hardware"],
+        "tools-icons": [
+          "/svg/tools/tia.svg",
+          "/svg/tools/rslogix.svg",
+          "/svg/tools/cxprogrammer.svg",
+          "/svg/tools/wplsoft.svg",
+          "/svg/tools/codesys.svg"
+        ]
       },
       {
-        "title": "PCB Design",
-        "desc": "Design and prototyping of PCBs using industry-grade tools for commercial and industrial applications.",
-        "background": "/images/pcb.png",
-        "icon": "/svg/servicesvgs/pcb.svg",
-        "link": "/services/pcb-design"
+        "title": "SCADA Designing",
+        "desc": "We design SCADA systems for industrial automation with real-time monitoring, control, and data acquisition solutions.",
+        "background": "/images/scada.png",
+        "icon": "/svg/servicesvgs/scada.svg",
+        "link": "/services/scada-designing",
+        "tools": ["Wonderware", "Ignition", "WinCC", "LabVIEW", "FactoryTalk"],
+        "tags": [
+          "SCADA",
+          "Automation",
+          "Industrial",
+          "Monitoring",
+          "Electronics"
+        ],
+        "tools-icons": [
+          "/svg/tools/wonderware.svg",
+          "/svg/tools/ignition.svg",
+          "/svg/tools/wincc.svg",
+          "/svg/tools/labview.svg",
+          "/svg/tools/factorytalk.svg"
+        ]
       }
     ],
     "threed": [
       {
-        "title": "3D Modeling",
-        "desc": "High-quality 3D models for visualization, animation, and real-time rendering across industries.",
+        "title": "CAD Designing & 3D Modeling",
+        "desc": "We create detailed CAD models and 3D visualizations for mechanical parts, products, and engineering systems across various industries.",
         "background": "/images/3dmodel.png",
         "icon": "/svg/servicesvgs/3dmodel.svg",
-        "link": "/services/3d-modeling"
+        "link": "/services/3d-modeling",
+        "tools": ["Fusion 360", "SolidWorks", "AutoCAD", "Blender", "CATIA"],
+        "tags": [
+          "CAD",
+          "3D Modeling",
+          "Design",
+          "Engineering",
+          "Visualization"
+        ],
+        "tools-icons": [
+          "/svg/tools/fusion360.svg",
+          "/svg/tools/solidworks.svg",
+          "/svg/tools/autocad.svg",
+          "/svg/tools/blender.svg",
+          "/svg/tools/catia.svg"
+        ]
       },
       {
-        "title": "3D Printing",
-        "desc": "Rapid prototyping and small-batch production using FDM, SLA, and SLS 3D printing technologies.",
+        "title": "3D Printing & Polishing",
+        "desc": "We offer high-quality 3D printing in FDM, SLA, and SLS formats along with surface finishing and polishing for prototypes and end-use parts.",
         "background": "/images/3dprint.png",
         "icon": "/svg/servicesvgs/3dprint.svg",
-        "link": "/services/3d-printing"
+        "link": "/services/3d-printing",
+        "tools": [
+          "Ultimaker",
+          "Creality",
+          "Formlabs",
+          "PrusaSlicer",
+          "Sandpaper & Resin"
+        ],
+        "tags": [
+          "3D Printing",
+          "Polishing",
+          "Prototyping",
+          "Manufacturing",
+          "Hardware"
+        ],
+        "tools-icons": [
+          "/svg/tools/ultimaker.svg",
+          "/svg/tools/creality.svg",
+          "/svg/tools/formlabs.svg",
+          "/svg/tools/prusaslicer.svg",
+          "/svg/tools/resin.svg"
+        ]
       },
       {
-        "title": "Product Design",
-        "desc": "From concept sketches to full product design with CAD modeling and prototyping.",
-        "background": "/images/productdesign.png",
-        "icon": "/svg/servicesvgs/productdesign.svg",
-        "link": "/services/product-design"
+        "title": "Software & Electronics Prototyping",
+        "desc": "We combine 3D printed enclosures with embedded systems and software interfaces to rapidly prototype electronic devices.",
+        "background": "/images/prototyping.png",
+        "icon": "/svg/servicesvgs/prototyping.svg",
+        "link": "/services/software-electronics-prototyping",
+        "tools": ["Fusion 360", "Arduino", "ESP32", "Fritzing", "Laser Cutter"],
+        "tags": [
+          "Prototyping",
+          "Electronics",
+          "Software",
+          "Hardware",
+          "3D Printing"
+        ],
+        "tools-icons": [
+          "/svg/tools/fusion360.svg",
+          "/svg/tools/arduino.svg",
+          "/svg/tools/esp32.svg",
+          "/svg/tools/fritzing.svg",
+          "/svg/tools/lasercutter.svg"
+        ]
+      },
+      {
+        "title": "Simulation & Analysis",
+        "desc": "We provide high-fidelity simulations including FEA, CFD, and thermal analysis to validate and optimize designs before production.",
+        "background": "/images/simulation.png",
+        "icon": "/svg/servicesvgs/analysis.svg",
+        "link": "/services/simulation-analysis",
+        "tools": [
+          "ANSYS",
+          "SimScale",
+          "COMSOL",
+          "SolidWorks Simulation",
+          "Fusion 360"
+        ],
+        "tags": ["Simulation", "Analysis", "FEA", "CFD", "Thermal", "Design"],
+        "tools-icons": [
+          "/svg/tools/ansys.svg",
+          "/svg/tools/simscale.svg",
+          "/svg/tools/comsol.svg",
+          "/svg/tools/solidworks.svg",
+          "/svg/tools/fusion360.svg"
+        ]
       }
     ]
   }
