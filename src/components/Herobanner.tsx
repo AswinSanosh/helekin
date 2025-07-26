@@ -18,7 +18,8 @@ export default function Hero() {
   }, [index, fullText])
 
   return (
-    <div className="relative sm:h-screen h-[100vh] w-full bg-[url('/svg/hero.svg')] bg-cover bg-center bg-no-repeat z-20 flex items-center overflow-hidden">
+    <div className="relative sm:h-screen h-[100vh] w-[100vw] bg-[url('/svg/hero.svg')] bg-cover bg-center bg-no-repeat z-20 flex items-center overflow-x-hidden">
+
       {/* Tint Overlay */}
       <div className="h-full w-full z-0">
         <div className="text-left p-6 md:p-10 text-white absolute bottom-0 md:bottom-10 left-0 sm:left-10 w-full">
