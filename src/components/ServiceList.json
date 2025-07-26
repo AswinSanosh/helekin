@@ -2,11 +2,20 @@
   "servicesList": {
     "software": [
       {
-        "title": "Web Dev",
+        "title": "Web Development",
         "desc": "We build responsive websites and mobile apps with powerful backends and smooth user experiences, optimized for performance and scalability.",
         "background": "/images/fafa.png",
         "icon": "/svg/servicesvgs/Webdev.svg",
-        "link": "/services/web-development"
+        "link": "/services/web-development",
+        "tools": ["React", "Node.js", "Django", "Flask", "Next.js"],
+        "tags": ["Web Development", "Frontend", "Backend", "Full Stack","Software"],
+        "tools-icons": [
+          "/svg/tools/react.svg",
+          "/svg/tools/nodejs.svg",
+          "/svg/tools/django.svg",
+          "/svg/tools/flask.svg",
+          "/svg/tools/nextjs.svg"
+        ]
       },
       {
         "title": "Mobile",
