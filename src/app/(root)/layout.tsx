@@ -1,21 +1,10 @@
 import type { Metadata } from "next";
-// Removed unused Poppins font import
-import { Geist, Geist_Mono } from "next/font/google";
-import "../globals.css";
+import "../../utils/styles/globals.css";
+
 import Navbar from "../../components/Navbar";
 import Footer from "../../components/footer";
 import Contact from "../../components/Contact";
 import Forms from "../../components/forms";
-
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
 
 export const metadata: Metadata = {
   title: 'Helekin',
@@ -34,9 +23,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} `}
-      >
+      <body>
         <Navbar />
         {children}
         <Contact />
