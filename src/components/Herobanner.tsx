@@ -45,37 +45,38 @@ export default function Hero() {
           </h1>
 
           <div className="flex flex-col md:flex-row gap-5 mt-5">
-            <div className="bg-white/20 rounded-lg h-auto md:h-[150px] w-full md:w-[250px] shadow-lg shadow-black/30 p-4">
-              <h1 className="text-white text-base md:text-lg font-semibold font-poppins">
+            <div className="bg-white/20 rounded-lg h-auto md:h-[150px] w-full md:w-[250px] shadow-lg shadow-black/30 p-3">
+              <h1 className="text-white para-semibold">
                 Built for Startups
               </h1>
-              <p className="text-white text-sm font-light font-poppins mt-2">
+              <p className="text-white subpara-light mt-1">
                 We understand the unique challenges startups face and tailor our solutions to help you succeed.
               </p>
             </div>
 
-            <div className="bg-white/20 rounded-lg h-auto md:h-[150px] w-full md:w-[250px] shadow-lg shadow-black/30 p-4">
-              <h1 className="text-white text-base md:text-lg font-semibold font-poppins">
+            <div className="bg-white/20 rounded-lg h-auto md:h-[150px] w-full md:w-[250px] shadow-lg shadow-black/30 p-3">
+              <h1 className="text-white para-semibold">
                 Expert Team
               </h1>
-              <p className="text-white text-sm font-light font-poppins mt-2">
+              <p className="text-white subpara-light mt-1">
                 Our team of experts brings years of experience in digital acceleration.
               </p>
             </div>
 
-            <div className="bg-white/20 rounded-lg h-auto md:h-[150px] w-full md:w-[250px] shadow-lg shadow-black/30 p-4">
-              <h1 className="text-white text-base md:text-lg font-semibold font-poppins">
+            <div className="bg-white/20 rounded-lg h-auto md:h-[150px] w-full md:w-[250px] shadow-lg shadow-black/30 p-3">
+              <h1 className="text-white para-semibold">
                 End-to-End Service
               </h1>
-              <p className="text-white text-sm font-light font-poppins mt-2">
+              <p className="text-white subpara-light mt-1">
                 We provide customized solutions that fit your specific needs and goals.
               </p>
             </div>
           </div>
-
-          <button className="bg-red-800 rounded-xl w-full md:w-60 p-4 text-xl md:text-3xl mt-8 hover:cursor-pointer hover:bg-white hover:text-red-700 duration-300 font-poppins">
-            Get Quote
-          </button>
+          <div className='flex justify-center md:justify-start'>
+            <button className="bg-red-800 rounded-xl w-3/4 md:w-60 p-4 text-xl md:text-3xl mt-8 hover:cursor-pointer hover:bg-white hover:text-red-700 duration-300 font-poppins">
+              Get Quote
+            </button>
+          </div>
         </div>
       </div>
     </div>

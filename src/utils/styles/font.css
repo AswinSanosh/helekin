@@ -1,117 +1,114 @@
 /* Base font family and transition */
-.heading-extralight, .heading-light, .heading-md, .heading-semibold, .heading-bold,
-.title-extralight, .title-light, .title-md, .title-semibold, .title-bold,
-.subheading-extralight, .subheading-light, .subheading-md, .subheading-semibold, .subheading-bold,
-.para-extralight, .para-light, .para-md, .para-semibold, .para-bold,
-.subpara-extralight, .subpara-light, .subpara-md, .subpara-semibold, .subpara-bold {
+.heading-extralight, .heading-light, .heading-regular, .heading-base, .heading-semibold, .heading-bold,
+.title-extralight, .title-light, .title-regular, .title-base, .title-semibold, .title-bold,
+.subtitle-extralight, .subtitle-light, .subtitle-regular, .subtitle-base, .subtitle-semibold, .subtitle-bold,
+.subheading-extralight, .subheading-light, .subheading-regular, .subheading-base, .subheading-semibold, .subheading-bold,
+.para-extralight, .para-light, .para-regular, .para-base, .para-semibold, .para-bold,
+.subpara-extralight, .subpara-light, .subpara-regular, .subpara-base, .subpara-semibold, .subpara-bold,
+.specialpara-extralight, .specialpara-light, .specialpara-regular, .specialpara-base, .specialpara-semibold, .specialpara-bold {
   font-family: 'Poppins', sans-serif;
   transition: all 300ms;
 }
 
-/* ------------------- */
-/* 👑 HEADING (Largest) */
-/* ------------------- */
-.heading-extralight { font-weight: 200; font-size: 1.875rem; }
-.heading-light      { font-weight: 300; font-size: 1.875rem; }
-.heading-md         { font-weight: 500; font-size: 1.875rem; }
-.heading-semibold   { font-weight: 600; font-size: 1.875rem; }
-.heading-bold       { font-weight: 700; font-size: 1.875rem; }
+/* Font weight mappings */
+[class*="-extralight"] { font-weight: 200; }
+[class*="-light"]      { font-weight: 300; }
+[class*="-regular"]    { font-weight: 400; }
+[class*="-base"]       { font-weight: 500; }
+[class*="-semibold"]   { font-weight: 600; }
+[class*="-bold"]       { font-weight: 700; }
 
-/* ------------------- */
-/* 🏷️ TITLE */
-/* ------------------- */
-.title-extralight { font-weight: 200; font-size: 1.5rem; }
-.title-light      { font-weight: 300; font-size: 1.5rem; }
-.title-md         { font-weight: 500; font-size: 1.5rem; }
-.title-semibold   { font-weight: 600; font-size: 1.5rem; }
-.title-bold       { font-weight: 700; font-size: 1.5rem; }
+/* 👑 Typography scale — default (mobile-first) */
+.heading-extralight, .heading-light, .heading-regular, .heading-base, .heading-semibold, .heading-bold {
+  font-size: 1.875rem;
+}
+.title-extralight, .title-light, .title-regular, .title-base, .title-semibold, .title-bold {
+  font-size: 1.5rem;
+}
+.subtitle-extralight, .subtitle-light, .subtitle-regular, .subtitle-base, .subtitle-semibold, .subtitle-bold {
+  font-size: 1.375rem;
+}
+.subheading-extralight, .subheading-light, .subheading-regular, .subheading-base, .subheading-semibold, .subheading-bold {
+  font-size: 1.125rem;
+}
+.para-extralight, .para-light, .para-regular, .para-base, .para-semibold, .para-bold {
+  font-size: 1rem;
+}
+.subpara-extralight, .subpara-light, .subpara-regular, .subpara-base, .subpara-semibold, .subpara-bold {
+  font-size: 0.875rem;
+}
+.specialpara-extralight, .specialpara-light, .specialpara-regular, .specialpara-base, .specialpara-semibold, .specialpara-bold {
+  font-size: 1rem;
+}
 
-/* ------------------- */
-/* 🧩 SUBHEADING */
-/* ------------------- */
-.subheading-extralight { font-weight: 200; font-size: 1.125rem; }
-.subheading-light      { font-weight: 300; font-size: 1.125rem; }
-.subheading-md         { font-weight: 500; font-size: 1.125rem; }
-.subheading-semibold   { font-weight: 600; font-size: 1.125rem; }
-.subheading-bold       { font-weight: 700; font-size: 1.125rem; }
-
-/* ------------------- */
-/* 📃 PARAGRAPH */
-/* ------------------- */
-.para-extralight { font-weight: 200; font-size: 1rem; }
-.para-light      { font-weight: 300; font-size: 1rem; }
-.para-md         { font-weight: 500; font-size: 1rem; }
-.para-semibold   { font-weight: 600; font-size: 1rem; }
-.para-bold       { font-weight: 700; font-size: 1rem; }
-
-/* ------------------- */
-/* 📝 SUB-PARAGRAPH (Smallest) */
-/* ------------------- */
-.subpara-extralight { font-weight: 200; font-size: 0.875rem; }
-.subpara-light      { font-weight: 300; font-size: 0.875rem; }
-.subpara-md         { font-weight: 500; font-size: 0.875rem; }
-.subpara-semibold   { font-weight: 600; font-size: 0.875rem; }
-.subpara-bold       { font-weight: 700; font-size: 0.875rem; }
-
-/* ------------------- */
 /* 📱 SM (min-width: 640px) */
-/* ------------------- */
 @media (min-width: 640px) {
-  .heading-extralight, .heading-light, .heading-md, .heading-semibold, .heading-bold {
+  .heading-extralight, .heading-light, .heading-regular, .heading-base, .heading-semibold, .heading-bold {
     font-size: 2.25rem;
   }
-  .title-extralight, .title-light, .title-md, .title-semibold, .title-bold {
+  .title-extralight, .title-light, .title-regular, .title-base, .title-semibold, .title-bold {
     font-size: 1.875rem;
   }
-  .subheading-extralight, .subheading-light, .subheading-md, .subheading-semibold, .subheading-bold {
-    font-size: 1.25rem;
-  }
-  .para-extralight, .para-light, .para-md, .para-semibold, .para-bold {
-    font-size: 1.125rem;
-  }
-  .subpara-extralight, .subpara-light, .subpara-md, .subpara-semibold, .subpara-bold {
-    font-size: 1rem;
-  }
-}
-
-/* ------------------- */
-/* 💻 MD (min-width: 768px) */
-/* ------------------- */
-@media (min-width: 768px) {
-  .heading-extralight, .heading-light, .heading-md, .heading-semibold, .heading-bold {
-    font-size: 3rem;
-  }
-  .title-extralight, .title-light, .title-md, .title-semibold, .title-bold {
-    font-size: 2.25rem;
-  }
-  .subheading-extralight, .subheading-light, .subheading-md, .subheading-semibold, .subheading-bold {
+  .subtitle-extralight, .subtitle-light, .subtitle-regular, .subtitle-base, .subtitle-semibold, .subtitle-bold {
     font-size: 1.5rem;
   }
-  .para-extralight, .para-light, .para-md, .para-semibold, .para-bold {
+  .subheading-extralight, .subheading-light, .subheading-regular, .subheading-base, .subheading-semibold, .subheading-bold {
     font-size: 1.25rem;
   }
-  .subpara-extralight, .subpara-light, .subpara-md, .subpara-semibold, .subpara-bold {
+  .para-extralight, .para-light, .para-regular, .para-base, .para-semibold, .para-bold {
+    font-size: 1.125rem;
+  }
+  .subpara-extralight, .subpara-light, .subpara-regular, .subpara-base, .subpara-semibold, .subpara-bold {
+    font-size: 0.875rem;
+  }
+}
+
+/* 💻 MD (min-width: 768px) */
+@media (min-width: 768px) {
+  .heading-extralight, .heading-light, .heading-regular, .heading-base, .heading-semibold, .heading-bold {
+    font-size: 3rem;
+  }
+  .title-extralight, .title-light, .title-regular, .title-base, .title-semibold, .title-bold {
+    font-size: 2.25rem;
+  }
+  .subtitle-extralight, .subtitle-light, .subtitle-regular, .subtitle-base, .subtitle-semibold, .subtitle-bold {
+    font-size: 1.875rem;
+  }
+  .subheading-extralight, .subheading-light, .subheading-regular, .subheading-base, .subheading-semibold, .subheading-bold {
+    font-size: 1.5rem;
+  }
+  .para-extralight, .para-light, .para-regular, .para-base, .para-semibold, .para-bold {
+    font-size: 1.1875rem;
+  }
+  .subpara-extralight, .subpara-light, .subpara-regular, .subpara-base, .subpara-semibold, .subpara-bold {
+    font-size: 0.9rem;
+  }
+  .specialpara-extralight, .specialpara-light, .specialpara-regular, .specialpara-base, .specialpara-semibold, .specialpara-bold {
     font-size: 1.125rem;
   }
 }
 
-/* ------------------- */
 /* 🖥️ LG (min-width: 1024px) */
-/* ------------------- */
 @media (min-width: 1024px) {
-  .heading-extralight, .heading-light, .heading-md, .heading-semibold, .heading-bold {
+  .heading-extralight, .heading-light, .heading-regular, .heading-base, .heading-semibold, .heading-bold {
     font-size: 3.75rem;
   }
-  .title-extralight, .title-light, .title-md, .title-semibold, .title-bold {
+  .title-extralight, .title-light, .title-regular, .title-base, .title-semibold, .title-bold {
     font-size: 3rem;
   }
-  .subheading-extralight, .subheading-light, .subheading-md, .subheading-semibold, .subheading-bold {
+  .subtitle-extralight, .subtitle-light, .subtitle-regular, .subtitle-base, .subtitle-semibold, .subtitle-bold {
+    font-size: 2.25rem;
+  }
+  .subheading-extralight, .subheading-light, .subheading-regular, .subheading-base, .subheading-semibold, .subheading-bold {
     font-size: 1.875rem;
   }
-  .para-extralight, .para-light, .para-md, .para-semibold, .para-bold {
-    font-size: 1.5rem;
-  }
-  .subpara-extralight, .subpara-light, .subpara-md, .subpara-semibold, .subpara-bold {
+  .para-extralight, .para-light, .para-regular, .para-base, .para-semibold, .para-bold {
     font-size: 1.25rem;
+  }
+  .subpara-extralight, .subpara-light, .subpara-regular, .subpara-base, .subpara-semibold, .subpara-bold {
+    font-size: 1rem;
+  }
+  .specialpara-extralight, .specialpara-light, .specialpara-regular, .specialpara-base, .specialpara-semibold, .specialpara-bold {
+    font-size: 1.125rem;
   }
 }
