@@ -11,14 +11,20 @@ export default function Products() {
         </h1>
 
         <div className="flex flex-col md:flex-row items-start md:items-center justify-between mt-2 gap-4">
-          <div className='flex flex-col items-start w-1/2'>
+          <div className='flex flex-col items-start md:w-1/2'>
             <p className="text-lg font-extralight font-poppins text-white/80">
               Browse our collection of high-quality, custom-built tech solutions designed for everyday use and professional applications. From software applications to hardware devices, we offer a range of products that enhance productivity and streamline your workflow.
             </p>
           </div>
           <Link
-            href="/services"
-            className="underline underline-offset-4 hover:text-white/60 transition-colors duration-300 cursor-pointer mr-30"
+            href="/products"
+            className="
+            inline-block bg-white/20 border border-white rounded-xl
+            px-6 py-3 text-base md:text-lg font-poppins
+            hover:bg-white hover:text-red-700
+            transition-colors duration-300 ease-in-out text-white
+            cursor-pointer
+            "
           >
             View All
           </Link>
