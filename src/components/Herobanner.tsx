@@ -33,7 +33,7 @@ export default function Hero() {
   ]
 
   return (
-    <div className="relative md:h-screen min-h-[100vh] w-full bg-[url('/svg/hero.svg')] bg-cover bg-center bg-no-repeat z-20 flex items-end justify-start overflow-x-hidden">
+    <div className="relative md:h-screen pt-20 w-full bg-[url('/svg/hero.svg')] bg-cover bg-center bg-no-repeat z-20 flex items-end justify-start overflow-x-hidden">
       <div className="text-left p-10 px-5 md:px-10 text-white flex flex-col justify-end items-start w-full sm:pl-10 h-full">
         <div className="relative">
           <h1 className="text-white heading-light max-heading-light-lg">
