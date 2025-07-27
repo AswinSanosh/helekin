@@ -93,7 +93,7 @@ export default function SoftwareServicesCarousel() {
       {/* Left Arrow */}
       <button
         onClick={handlePrev}
-        className="hidden md:flex relative z-20 p-2 h-[300px] w-[50px] items-center justify-center rounded-l-2xl hover:bg-red-700 bg-black"
+        className="hidden md:flex relative z-20 p-2 h-[300px] w-[50px] items-center justify-center rounded-l-2xl hover:bg-red-700 bg-black/50"
       >
         <Image
           src="/svg/arrow-left.svg"
@@ -108,7 +108,7 @@ export default function SoftwareServicesCarousel() {
 
       {/* Carousel */}
       <div
-        className="overflow-x-hidden md:overflow-hidden px-4 md:px-10 max-w-full md:max-w-[75vw] scrollbar-hide"
+        className="overflow-x-auto md:overflow-hidden px-4 md:px-10 max-w-full md:max-w-[75vw] scrollbar-hide"
         onMouseEnter={() => setHovering(true)}
         onMouseLeave={() => setHovering(false)}
       >
@@ -133,7 +133,7 @@ export default function SoftwareServicesCarousel() {
                 <div
                   onMouseEnter={() => setHoveredIndex(idx)}
                   onMouseLeave={() => setHoveredIndex(null)}
-                  className="w-[300px] h-[300px] bg-black text-white rounded-xl text-center text-sm mr-10 flex-shrink-0 md:hover:w-[500px] transition-all duration-300"
+                  className="w-[300px] h-[300px] bg-white/10 backdrop-blur-2xl shadow-2xl shadow-black/30 text-white rounded-xl text-center text-sm mr-10 flex-shrink-0 md:hover:w-[500px] transition-all duration-300"
                   style={
                     isHovered
                       ? {
@@ -168,14 +168,14 @@ export default function SoftwareServicesCarousel() {
                     </div>
                     <div className="text-left relative m-5 top-5 transition-all duration-300">
                       <h1
-                        className={`transition-all duration-500 text-2xl font-poppins font-semibold md:${
-                          isHovered ? 'text-red-700' : 'text-white'
+                        className={`transition-all duration-500 text-2xl font-poppins font-semibold ${
+                          isHovered ? 'text-[#A50424]' : 'text-white'
                         }`}
                       >
                         {service.title}
                       </h1>
                       <p
-                        className={`transition-all duration-800 font-poppins font-light md:${
+                        className={`transition-all duration-800 font-poppins font-light ${
                           isHovered ? 'text-lg md:font-semibold' : 'text-md '
                         }`}
                       >
@@ -193,7 +193,7 @@ export default function SoftwareServicesCarousel() {
       {/* Right Arrow */}
       <button
         onClick={handleNext}
-        className="hidden md:flex z-20 p-2 h-[300px] w-[50px] items-center justify-center rounded-r-2xl hover:bg-red-700 bg-black"
+        className="hidden md:flex z-20 p-2 h-[300px] w-[50px] items-center justify-center rounded-r-2xl hover:bg-red-700 bg-black/50"
       >
         <Image
           src="/svg/arrow-right.svg"

@@ -6,7 +6,7 @@ import ThreedServicesCarousel from './ThreedCar';
 export default function Services() {
   return (
     <div className="relative z-0 min-h-auto w-full flex flex-col bg-[url('/images/fafa.png')] bg-cover bg-center bg-no-repeat px-6 pb-30">
-      <div className="absolute inset-0 bg-black/50 backdrop-blur-sm z-0" />
+      <div className="absolute inset-0 bg-black/70 backdrop-blur-sm z-0" />
 
       <div className='w-full m-auto'>
         <div className="relative z-10 w-full max-w-screen px-6 mx-auto mt-20">
@@ -23,7 +23,7 @@ export default function Services() {
           
           <Link
             href="/services"
-            className="underline underline-offset-4 hover:text-white/60 transition-colors duration-300 cursor-pointer mr-30"
+            className="underline underline-offset-4 hover:text-[#A50424] transition-colors duration-300 cursor-pointer mr-30 text-white"
           >
             View All
           </Link>
