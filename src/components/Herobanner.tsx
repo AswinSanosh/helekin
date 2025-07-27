@@ -39,7 +39,7 @@ export default function Hero() {
           </div>
 
           <h1 className="text-white subheading-extralight max-subheading-extralight-md mb-8">
-            Design. Development. Consulting.
+            Design. Development. Consulting. 
           </h1>
 
           <h1 className="text-white para-bold max-para-bold-md mt-5 mb-4">
