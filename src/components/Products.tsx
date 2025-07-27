@@ -20,7 +20,7 @@ export default function Products() {
             href="/products"
             className="
             inline-block bg-white/20 border border-white rounded-xl
-            px-6 py-3 text-base md:text-lg font-poppins
+            md:px-6 md:py-3 px-3 py-2 text-base md:text-lg font-poppins
             hover:bg-white hover:text-red-700
             transition-colors duration-300 ease-in-out text-white
             cursor-pointer
@@ -30,9 +30,9 @@ export default function Products() {
           </Link>
         </div>
         <div className='mt-20 flex flex-row items-center justify-center'>
-          <div className="bg-[url('/images/product2.png')] bg-no-repeat bg-center bg-cover h-[400px] w-[400px] rounded-3xl flex items-center justify-center -right-10 relative z-30"></div>
-          <div className="bg-[url('/images/product1.png')] bg-no-repeat bg-center bg-cover h-[500px] w-[500px] rounded-3xl flex items-center justify-center drop-shadow-3xl shadow-black z-40"></div>
-          <div className="bg-[url('/images/product4.png')] bg-no-repeat bg-center bg-cover h-[400px] w-[400px] rounded-3xl flex items-center justify-center -left-10 relative z-30"></div>
+          <div className="bg-[url('/images/product2.png')] bg-no-repeat bg-center bg-cover md:h-[400px] h-[150px] w-[400px] rounded-3xl flex items-center justify-center -right-10 relative z-30"></div>
+          <div className="bg-[url('/images/product1.png')] bg-no-repeat bg-center bg-cover md:h-[500px] h-[200px] w-[500px] rounded-3xl flex items-center justify-center drop-shadow-3xl shadow-black z-40"></div>
+          <div className="bg-[url('/images/product4.png')] bg-no-repeat bg-center bg-cover md:h-[400px] h-[150px] w-[400px] rounded-3xl flex items-center justify-center -left-10 relative z-30"></div>
         </div>
       </div>
 
