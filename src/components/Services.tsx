@@ -14,7 +14,7 @@ export default function Services() {
             Explore What We Do Best
           </h1>
 
-          <div className="flex flex-col md:flex-row items-start md:items-center justify-between mt-2 gap-4">
+          <div className="flex flex-col md:flex-row items-start md:items-center justify-center mt-2 gap-4">
             <div className="flex flex-col items-start md:w-1/2">
               <p className="text-lg font-extralight font-poppins text-white/80">
                 Browse our collection of high-quality, custom-built tech solutions designed for everyday use and professional applications. From software applications to hardware devices, we offer a range of products that enhance productivity and streamline your workflow.
@@ -23,7 +23,7 @@ export default function Services() {
 
             <Link
               href="/services"
-              className="inline-block bg-white/20 border border-white rounded-xl
+              className="md:inline-block bg-white/20 border border-white rounded-xl hidden m-auto
                 md:px-6 md:py-3 px-3 py-2 text-base md:text-lg font-poppins
                 hover:bg-white hover:text-red-700
                 transition-colors duration-300 ease-in-out text-white
@@ -78,6 +78,16 @@ export default function Services() {
           <div className="block md:hidden mt-2 text-white/80 text-sm font-poppins">
             Our 3D printing service provides rapid prototyping and custom part fabrication using high-quality materials. Perfect for makers, engineers, and creative professionals needing fast, precise results.
           </div>
+          <Link
+            href="/services"
+            className="inline-block bg-white/20 border border-white rounded-xl md:hidden mt-10
+                md:px-6 md:py-3 px-3 py-2 text-base md:text-lg font-poppins
+                hover:bg-white hover:text-red-700
+                transition-colors duration-300 ease-in-out text-white
+                cursor-pointer"
+          >
+            View All
+          </Link>
 
           {/* Desktop Carousel */}
           <div className="hidden md:block">
