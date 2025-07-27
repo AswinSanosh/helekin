@@ -134,46 +134,99 @@
     ],
     "electronics_and_hardware": [
       {
-        "title": "PCB Design",
+        "title": "PCB Designing",
         "desc": "We design and prototype high-quality PCBs for commercial and industrial applications using modern EDA tools.",
         "background": "/images/ServiceBackground/PCBdesign.jpg",
         "icon": "/svg/servicesvgs/pcb.svg",
-        "link": "/services/pcb-designing"
+        "link": "/services/pcb-designing",
+        "tools": ["KiCad", "Altium Designer", "Eagle", "EasyEDA"],
+        "tags": ["PCB", "Electronics", "Design", "EDA", "Hardware"],
+        "tools-icons": [
+          "/svg/tools/kicad.svg",
+          "/svg/tools/altium.svg",
+          "/svg/tools/eagle.svg",
+          "/svg/tools/easyeda.svg"
+        ]
       },
       {
         "title": "Laser Engraving",
         "desc": "We provide precision laser engraving for enclosures, branding, PCB labeling, and personalized hardware.",
         "background": "/images/laser.png",
         "icon": "/svg/servicesvgs/laser.svg",
-        "link": "/services/laser-engraving"
+        "link": "/services/laser-engraving",
+        "tools": ["LightBurn", "RDWorks", "CorelDRAW"],
+        "tags": ["Laser", "Engraving", "Branding", "Hardware", "Precision"],
+        "tools-icons": [
+          "/svg/tools/lightburn.svg",
+          "/svg/tools/rdworks.svg",
+          "/svg/tools/coreldraw.svg"
+        ]
       },
       {
-        "title": "Hardware Assembling",
+        "title": "Electronics & Hardware Assembling",
         "desc": "We assemble electronics using soldering, testing, and integration of components with clean wiring practices.",
         "background": "/images/assembling.png",
         "icon": "/svg/servicesvgs/assembling.svg",
-        "link": "/services/hardware-assembling"
+        "link": "/services/electronics-hardware-assembling",
+        "tools": [
+          "Soldering Iron",
+          "Multimeter",
+          "Oscilloscope",
+          "Hot Air Gun"
+        ],
+        "tags": ["Assembly", "Electronics", "Hardware", "Testing", "Soldering"],
+        "tools-icons": [
+          "/svg/tools/soldering.svg",
+          "/svg/tools/multimeter.svg",
+          "/svg/tools/oscilloscope.svg",
+          "/svg/tools/hotairgun.svg"
+        ]
       },
       {
         "title": "IoT Integration",
         "desc": "We build smart IoT systems with cloud connectivity, sensor data collection, and embedded programming.",
         "background": "/images/iot-bg.png",
         "icon": "/svg/servicesvgs/iot.svg",
-        "link": "/services/iot-integration"
+        "link": "/services/iot-integration",
+        "tools": ["ESP32", "Arduino", "MQTT", "Firebase", "Node-RED"],
+        "tags": ["IoT", "Embedded", "Cloud", "Automation", "Hardware"],
+        "tools-icons": [
+          "/svg/tools/esp32.svg",
+          "/svg/tools/arduino.svg",
+          "/svg/tools/mqtt.svg",
+          "/svg/tools/firebase.svg",
+          "/svg/tools/nodered.svg"
+        ]
       },
       {
         "title": "PLC Programming",
         "desc": "We develop PLC-based automation for industries using Siemens, Allen Bradley, Delta, and other platforms.",
         "background": "/images/plc.png",
         "icon": "/svg/servicesvgs/plc.svg",
-        "link": "/services/plc-programming"
+        "link": "/services/plc-programming",
+        "tools": ["TIA Portal", "RSLogix", "WPLSoft", "Codesys"],
+        "tags": ["PLC", "Automation", "Industrial", "Programming", "Hardware"],
+        "tools-icons": [
+          "/svg/tools/tiaportal.svg",
+          "/svg/tools/rslogix.svg",
+          "/svg/tools/wplsoft.svg",
+          "/svg/tools/codesys.svg"
+        ]
       },
       {
         "title": "SCADA Designing",
         "desc": "We design SCADA systems for industrial monitoring, control, and data acquisition in real-time.",
         "background": "/images/scada.png",
         "icon": "/svg/servicesvgs/scada.svg",
-        "link": "/services/scada-designing"
+        "link": "/services/scada-designing",
+        "tools": ["WinCC", "FactoryTalk", "InduSoft", "Ignition"],
+        "tags": ["SCADA", "Monitoring", "Control", "Industrial", "Automation"],
+        "tools-icons": [
+          "/svg/tools/wincc.svg",
+          "/svg/tools/factorytalk.svg",
+          "/svg/tools/indusoft.svg",
+          "/svg/tools/ignition.svg"
+        ]
       }
     ],
     "threed": [
@@ -182,28 +235,60 @@
         "desc": "We create detailed CAD models for mechanical parts and prototypes using industry-grade design software.",
         "background": "/images/3dmodel.png",
         "icon": "/svg/servicesvgs/3dmodel.svg",
-        "link": "/services/3d-modeling"
+        "link": "/services/3d-modeling",
+        "tools": ["Fusion 360", "SolidWorks", "AutoCAD", "TinkerCAD"],
+        "tags": ["CAD", "3D Modeling", "Design", "Mechanical", "Prototyping"],
+        "tools-icons": [
+          "/svg/tools/fusion360.svg",
+          "/svg/tools/solidworks.svg",
+          "/svg/tools/autocad.svg",
+          "/svg/tools/tinkercad.svg"
+        ]
       },
       {
         "title": "3D Printing & Polishing",
         "desc": "We offer high-quality 3D prints using FDM/SLA with surface finishing for functional and visual parts.",
         "background": "/images/3dprint.png",
         "icon": "/svg/servicesvgs/3dprint.svg",
-        "link": "/services/3d-printing"
+        "link": "/services/3d-printing",
+        "tools": ["Cura", "PrusaSlicer", "Elegoo", "Anycubic"],
+        "tags": ["3D Printing", "FDM", "SLA", "Finishing", "Prototype"],
+        "tools-icons": [
+          "/svg/tools/cura.svg",
+          "/svg/tools/prusaslicer.svg",
+          "/svg/tools/elegoo.svg",
+          "/svg/tools/anycubic.svg"
+        ]
       },
       {
         "title": "Software & Electronics Prototyping",
         "desc": "We integrate 3D printed enclosures with embedded circuits for fast and reliable product prototyping.",
         "background": "/images/prototyping.png",
         "icon": "/svg/servicesvgs/prototyping.svg",
-        "link": "/services/software-electronics-prototyping"
+        "link": "/services/software-electronics-prototyping",
+        "tools": ["ESP32", "Fusion 360", "Breadboard", "Arduino IDE"],
+        "tags": ["Prototyping", "Embedded", "Design", "IoT", "Electronics"],
+        "tools-icons": [
+          "/svg/tools/esp32.svg",
+          "/svg/tools/fusion360.svg",
+          "/svg/tools/breadboard.svg",
+          "/svg/tools/arduino.svg"
+        ]
       },
       {
         "title": "Simulation & Analysis",
         "desc": "We run FEA, CFD, and thermal simulations to validate designs before production and ensure reliability.",
         "background": "/images/simulation.png",
         "icon": "/svg/servicesvgs/analysis.svg",
-        "link": "/services/simulation-analysis"
+        "link": "/services/simulation-analysis",
+        "tools": ["ANSYS", "SolidWorks Simulation", "SimScale", "COMSOL"],
+        "tags": ["Simulation", "FEA", "CFD", "Thermal", "Analysis"],
+        "tools-icons": [
+          "/svg/tools/ansys.svg",
+          "/svg/tools/swsim.svg",
+          "/svg/tools/simscale.svg",
+          "/svg/tools/comsol.svg"
+        ]
       }
     ]
   }
