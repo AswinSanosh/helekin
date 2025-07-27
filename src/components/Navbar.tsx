@@ -8,6 +8,7 @@ import Image from 'next/image'
 export default function Navbar() {
   const pathname = usePathname()
   const [hidden, setHidden] = useState(false)
+  const [isSidebarOpen, setIsSidebarOpen] = useState(false)
   const [isAtTop, setIsAtTop] = useState(true)
 
   const lastY = useRef(0)
@@ -45,41 +46,31 @@ export default function Navbar() {
 
   return (
     <>
-      {/* Main Nav Bar Container */}
-      <div className="fixed top-0 left-0 w-full z-50 bg-black/70 backdrop-blur-2xl text-white xl:hidden">
-        {/* Top section with logo */}
-        <div className="flex items-center justify-between px-4 py-3 shadow shadow-black/30">
-          <Link href="/" className="flex items-center gap-2">
-            <Image
-              src="/images/logowrite.png"
-              alt="logo"
-              width={100}
-              height={100}
-              loading="lazy"
-              className="h-6 w-auto"
-            />
-          </Link>
-        </div>
-
-        {/* Mobile Nav Links */}
-        {/* Mobile Nav Links */}
-        <nav className="flex flex-wrap justify-center gap-4 px-4 py-2 text-sm font-poppins font-light border-t border-white/10 xl:hidden">
-          {navLinks.map(({ href, label }) => (
-            label === 'Contact Us' ? null : (
-              <Link
-                key={href}
-                href={href}
-                className={`no-underline transition hover:text-white/60 ${pathname === href ? 'text-red-500 font-medium' : 'text-white'
-                  }`}
-              >
-                {label}
-              </Link>
-            )
-          ))}
-        </nav>
+      {/* Mobile Top Bar (Logo + Burger) */}
+      <div className="xl:hidden fixed top-0 left-0 w-full z-50 bg-[#111111] flex items-center justify-between px-4 py-3">
+        <Link href="/" className="flex items-center">
+          <Image
+            src="/images/logowrite.png"
+            alt="logo"
+            width={80}
+            height={80}
+            loading="lazy"
+            className="h-6 w-auto"
+          />
+        </Link>
+        <button onClick={() => setIsSidebarOpen(true)}>
+          <Image
+            width={24}
+            height={24}
+            loading="lazy"
+            src="/svg/burger.svg"
+            alt="menu"
+            className={`w-6 h-6 transition ${isSidebarOpen ? 'text-red-700 font-medium' : 'text-white'}`}
+          />
+        </button>
       </div>
 
-      {/* Desktop Nav (unchanged) */}
+      {/* Desktop Nav */}
       <div className="flex justify-between absolute top-0 left-0 w-full z-40">
         <div className="max-w-[300px] w-full h-auto absolute md:top-10 md:left-10 top-8 left-3 xl:flex hidden">
           <Link href="/" className="flex items-center gap-1 md:gap-3 text-center align-middle">
@@ -114,13 +105,45 @@ export default function Navbar() {
               <Link
                 key={href}
                 href={href}
-                className={`no-underline transition hover:text-white/60 ${pathname === href ? 'text-red-500 font-medium font-poppins' : 'text-white'}`}
+                className={`no-underline transition hover:text-white/60 ${
+                  pathname === href ? 'text-red-500 font-medium font-poppins' : 'text-white'
+                }`}
               >
                 {label}
               </Link>
             ))}
           </div>
         </nav>
+      </div>
+
+      {/* Sidebar for Mobile */}
+      <div
+        className={`fixed xl:hidden top-0 right-0 h-full w-64 bg-black/20 backdrop-blur-xl shadow-lg shadow-black/30 z-50 transform transition-transform duration-300 ease-in-out
+          ${isSidebarOpen ? 'translate-x-0' : 'translate-x-full'}
+        `}
+      >
+        {/* Close Icon */}
+        <div className="fixed top-4 right-4 z-50">
+          <button onClick={() => setIsSidebarOpen(false)}>
+            <Image width={10} height={10} loading="lazy" src="/svg/close.svg" alt="close" className="w-8 h-6" />
+          </button>
+        </div>
+
+        {/* Sidebar Links */}
+        <div className="mt-24 flex flex-col gap-6 px-6 text-white font-poppins font-regular text-lg xl:hidden">
+          {navLinks.map(({ href, label }) => (
+            <Link
+              key={href}
+              href={href}
+              onClick={() => setIsSidebarOpen(false)}
+              className={`no-underline transition ${
+                pathname === href ? 'text-red-700 font-medium' : 'text-white'
+              }`}
+            >
+              {label}
+            </Link>
+          ))}
+        </div>
       </div>
     </>
   )
