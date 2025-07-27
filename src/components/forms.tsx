@@ -13,7 +13,7 @@ export default function Form() {
                         Get in touch with our <span className="text-red-500">Experts</span>
                     </h2>
                     <p className="text-sm text-gray-400">
-                        Let&#39;s see how we can help enhance your user journey.
+                        Let&#39;s see how we can help enhance your user journey
                     </p>
 
                     {/* Name */}
