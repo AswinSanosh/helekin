@@ -19,23 +19,23 @@ export default function Hero() {
 
   return (
     <div className="relative md:h-screen min-h-[100vh] w-full bg-[url('/svg/hero.svg')] bg-cover bg-center bg-no-repeat z-20 flex items-end justify-start overflow-x-hidden pt-50">
-      <div className="text-left p-10 text-white flex flex-col justify-end items-start w-full sm:pl-10 h-full">
+      <div className="text-left p-10 px-5 md:px-10 text-white flex flex-col justify-end items-start w-full sm:pl-10 h-full">
         <div className="relative">
-          <h1 className="text-white heading-extralight max-heading-light-md">
+          <h1 className="text-white heading-light max-heading-light-lg">
             Digital acceleration services
           </h1>
 
           <div className="flex gap-2 sm:gap-3 justify-bottom sm:flex-nowrap max-w-[90vw] sm:max-w-[50vw] max-h-[50vh]">
-            <h1 className="text-white heading-light max-heading-light-md mb-4 flex-shrink-0">
+            <h1 className="text-white heading-light max-heading-light-lg mb-4 flex-shrink-0">
               for
             </h1>
-            <h1 className="text-red-700 heading-light max-heading-light-md mb-4 flex-shrink-0">
+            <h1 className="text-red-700 heading-light max-heading-light-lg mb-4 flex-shrink-0">
               {displayedText}
             </h1>
           </div>
         </div>
 
-        <h1 className="text-white subheading-extralight max-subheading-extralight-md mb-8">
+        <h1 className="text-white subheading-extralight max-subheading-extralight-lg mb-4">
           Design. Development. Consulting.
         </h1>
 
