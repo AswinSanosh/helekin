@@ -18,7 +18,7 @@ export default function Hero() {
   }, [index, fullText])
 
   return (
-    <div className="relative md:h-screen min-h-[100vh] w-full bg-[url('/svg/hero.svg')] bg-cover bg-center bg-no-repeat z-20 flex items-end justify-start overflow-x-hidden pt-50">
+    <div className="relative md:h-screen min-h-[100vh] w-full bg-[url('/svg/hero.svg')] bg-cover bg-center bg-no-repeat z-20 flex items-end justify-start overflow-x-hidden pt-20">
       <div className="text-left p-10 px-5 md:px-10 text-white flex flex-col justify-end items-start w-full sm:pl-10 h-full">
         <div className="relative">
           <h1 className="text-white heading-light max-heading-light-lg">
@@ -60,7 +60,7 @@ export default function Hero() {
           ].map((item, idx) => (
             <div
               key={idx}
-              className="bg-white/20 rounded-lg h-auto md:h-[140px] w-full md:w-[250px] shadow-lg shadow-black/30 p-3"
+              className="bg-white/10 rounded-lg h-auto md:h-[140px] w-full md:w-[250px] shadow-lg shadow-black/30 backdrop-blur-sm p-3"
             >
               <h1 className="text-white para-semibold max-para-semibold-md">{item.title}</h1>
               <p className="text-white subpara-light max-subpara-light-md mt-1">{item.desc}</p>
