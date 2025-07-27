@@ -1,31 +1,25 @@
-'use client';
+'use client'
 
-export default function Products() {
+import Accordion from './GenericAccordion';
+
+export default function FAQPage() {
   return (
-    <div className="relative z-0 min-h-auto w-full flex flex-col bg-black bg-cover bg-center bg-no-repeat px-6 pb-30 items-center justify-center">
-      <div className="flex flex-col relative z-10 w-full max-w-screen px-6 mx-auto mt-20 items-center justify-center">
-        <h1 className="text-4xl font-poppins font-semibold text-red-700 mb-10">
-          FAQs
-        </h1>
-        <div className="flex flex-col items-center justify-center md:items-center mt-2 gap-8 w-full">
-          <div className='flex items-center justify-between bg-white/10 backdrop-blur-lg shadow-lg shadow-black/30 p-6 md:w-3/4 w-full'>
-            <h1 className='font-poppins text-2xl font-medium text-white'>What are the security standards you follow for web designing?</h1>
-            <h1 className='font-poppins text-3xl font-medium text-white'>+</h1>
-          </div>
-          <div className='flex items-center justify-between bg-white/10 backdrop-blur-lg shadow-lg shadow-black/30 p-6 md:w-3/4 w-full'>
-            <h1 className='font-poppins text-2xl font-medium text-white'>How do you choose the languages for the projects?</h1>
-            <h1 className='font-poppins text-3xl font-medium text-white'>+</h1>
-          </div>
-          <div className='flex items-center justify-between bg-white/10 backdrop-blur-lg shadow-lg shadow-black/30 p-6 md:w-3/4 w-full'>
-            <h1 className='font-poppins text-2xl font-medium text-white'>What are the security standards you follow for web designing?</h1>
-            <h1 className='font-poppins text-3xl font-medium text-white'>+</h1>
-          </div>
-          <div className='flex items-center justify-between bg-white/10 backdrop-blur-lg shadow-lg shadow-black/30 p-6 md:w-3/4 w-full'>
-            <h1 className='font-poppins text-2xl font-medium text-white'>What are the security standards you follow for web designing?</h1>
-            <h1 className='font-poppins text-3xl font-medium text-white'>+</h1>
-          </div>
-        </div>
+    <section className="min-h-screen bg-black px-4 py-10 md:px-16 text-white ">
+      <h1 className='title-bold text-center justify-between text-red-700 mb-10'>FAQs</h1>
+      <div className='w-[75vw] mx-auto'>
+        <Accordion
+          question="What are the security standards you follow for web designing?"
+          answer="Helekin upholds unique security standards to serve our clients, keeping a high priority on safety and security. We keep utmost confidentiality on the data from the client side and undertake optimal measures to store the client data securely. Each and every stage of design and development is subjected to a security check and we never back down from our assigned responsibilities."
+        />
+        <Accordion
+          question="How do you choose the languages for the projects?"
+          answer="We evaluate the client's requirements, scalability, performance needs, and team expertise before selecting the best language for the project."
+        />
+        <Accordion
+          question="Do you provide post-launch support?"
+          answer="Yes, we offer post-launch support, including bug fixes, updates, and technical assistance to ensure your project remains stable and secure."
+        />
       </div>
-    </div>
-  );
+    </section>
+  )
 }
