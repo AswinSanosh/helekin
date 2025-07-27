@@ -136,7 +136,7 @@
       {
         "title": "PCB Design",
         "desc": "We design and prototype high-quality PCBs for commercial and industrial applications using modern EDA tools.",
-        "background": "/images/pcb.png",
+        "background": "/images/ServiceBackground/PCBdesign.jpg",
         "icon": "/svg/servicesvgs/pcb.svg",
         "link": "/services/pcb-designing"
       },
