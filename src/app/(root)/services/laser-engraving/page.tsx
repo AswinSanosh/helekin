@@ -111,16 +111,16 @@ export default function Services() {
         <div className="relative z-10 text-white w-full px-6 sm:px-10 max-w-4xl">
           <div className="mb-4 flex flex-col sm:flex-row gap-3">
             <h1 className="text-4xl sm:text-6xl font-light font-poppins">
-              PCB
+              Laser
             </h1>
             <h1 className="text-4xl sm:text-6xl text-red-700 font-light font-poppins">
-              Designing
+              Engraving
             </h1>
           </div>
           <div className="w-full sm:w-3/4">
             <p className="text-white/80 text-base sm:text-lg font-light font-poppins mt-4 sm:mt-6">
-              Designing and prototyping of PCBs using industry-grade tools for
-              commercial and industrial applications.
+              We provide precision laser engraving for enclosures, branding, PCB
+              labeling, and personalized hardware.
             </p>
           </div>
         </div>
@@ -131,11 +131,11 @@ export default function Services() {
           Transforming Ideas into Intelligent Solutions
         </h2>
         <p className="text-white/80 text-base sm:text-xl font-poppins font-light mt-6 sm:mt-10 text-center max-w-6xl">
-          At Helekin, we translate your complex schematics into robust,
-          manufacturable Printed Circuit Boards. Our expertise covers everything
-          from high-speed digital designs to sensitive analog layouts, ensuring
-          optimal performance, signal integrity, and reliability for your
-          electronic products.
+          At Helekin, we add the perfect finishing touch to your products with
+          high-precision laser engraving. From custom logos on electronic
+          enclosures to detailed markings on PCBs and personalized hardware, our
+          technology ensures a clean, permanent, and professional result every
+          time.
         </p>
       </div>
 
@@ -159,11 +159,11 @@ export default function Services() {
 
       <div className="relative z-10 w-full mx-auto text-center bg-black pt-24 px-6 sm:px-10">
         <h1 className="text-2xl sm:text-3xl font-poppins font-semibold text-red-700 mb-2 text-start">
-          Featured PCB Layouts
+          Featured Engraving Projects
         </h1>
         <p className="text-white/80 text-base sm:text-xl font-poppins font-light mt-5 mb-10 max-w-2xl text-start">
-          Our portfolio showcases our precision and attention to detail in
-          creating complex, high-performance circuit boards.
+          Our portfolio showcases the sharp detail and versatility of our
+          engraving services on a variety of materials and products.
         </p>
         <div className="mt-5 flex sm:flex-row flex-col items-center justify-center gap-5">
           <div className="flex flex-col items-start h-[300px] w-full bg-white/10 backdrop-blur-lg shadow-xl shadow-black/30 p-6 rounded-3xl transition-all hover:scale-[1.02] duration-300"></div>
@@ -177,11 +177,10 @@ export default function Services() {
               Transforming Ideas into Intelligent Solutions
             </h2>
             <p className="text-white/80 text-base sm:text-xl font-poppins font-light mt-6 sm:mt-10 text-left">
-              Our workflow ensures a seamless transition from concept to
-              reality. We begin with requirement analysis and schematic capture,
-              followed by component selection, layout and routing, and finally,
-              comprehensive Design for Manufacturability (DFM) checks to
-              guarantee a flawless production run.
+              Our process is meticulous. We work with your design files to
+              calibrate our laser systems for the specific material, ensuring
+              optimal depth, contrast, and precision. Every piece undergoes a
+              quality check to guarantee it meets your exact specifications.
             </p>
           </div>
 
@@ -189,7 +188,7 @@ export default function Services() {
             <div className="flex flex-col items-center justify-center md:items-center mt-2 gap-8 w-full">
               <div className="flex items-center justify-between bg-white/10 backdrop-blur-lg shadow-lg shadow-black/30 p-6 w-full sm:w-3/4">
                 <h1 className="font-poppins text-lg sm:text-2xl font-medium text-white">
-                  What design software do you use?
+                  What materials can you engrave on?
                 </h1>
                 <h1 className="font-poppins text-2xl sm:text-3xl font-medium text-white">
                   +
@@ -197,7 +196,7 @@ export default function Services() {
               </div>
               <div className="flex items-center justify-between bg-white/10 backdrop-blur-lg shadow-lg shadow-black/30 p-6 w-full sm:w-3/4">
                 <h1 className="font-poppins text-lg sm:text-2xl font-medium text-white">
-                  What is the difference between schematic and layout?
+                  What file formats do you accept for designs?
                 </h1>
                 <h1 className="font-poppins text-2xl sm:text-3xl font-medium text-white">
                   +
@@ -205,7 +204,7 @@ export default function Services() {
               </div>
               <div className="flex items-center justify-between bg-white/10 backdrop-blur-lg shadow-lg shadow-black/30 p-6 w-full sm:w-3/4">
                 <h1 className="font-poppins text-lg sm:text-2xl font-medium text-white">
-                  How do you handle high-speed signal routing?
+                  What is the maximum size for engraving?
                 </h1>
                 <h1 className="font-poppins text-2xl sm:text-3xl font-medium text-white">
                   +
@@ -213,7 +212,7 @@ export default function Services() {
               </div>
               <div className="flex items-center justify-between bg-white/10 backdrop-blur-lg shadow-lg shadow-black/30 p-6 w-full sm:w-3/4">
                 <h1 className="font-poppins text-lg sm:text-2xl font-medium text-white">
-                  Can you manage the prototyping process?
+                  Can you engrave on curved surfaces?
                 </h1>
                 <h1 className="font-poppins text-2xl sm:text-3xl font-medium text-white">
                   +
@@ -224,11 +223,11 @@ export default function Services() {
         </div>
 
         <h1 className="font-poppins text-3xl sm:text-4xl text-white mb-4 mt-20">
-          Ready to Bring Your Circuit to Life?
+          Ready to Make Your Mark?
         </h1>
         <p className="text-white/80 mb-8 max-w-2xl mx-auto text-base sm:text-lg">
-          From concept to a fully realized board, let our experts engineer the
-          electronic foundation for your next great product.
+          Add a professional, custom finish to your products. Let&#39;s discuss
+          your engraving needs and bring your branding to life.
         </p>
         <Link href="/contact">
           <button className="bg-red-700 text-white font-semibold py-3 px-6 sm:px-8 rounded-lg hover:bg-red-800 transition-colors duration-300 text-base sm:text-lg cursor-pointer">
