@@ -4,6 +4,7 @@ import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import { useEffect, useState, useRef } from 'react'
 import Image from 'next/image'
+import { SidebarClose } from 'lucide-react'
 
 export default function Navbar() {
   const pathname = usePathname()
@@ -98,14 +99,15 @@ export default function Navbar() {
         {/* Mobile Menu Icon */}
         <div className="xl:hidden z-30 fixed right-5 top-8">
           <button onClick={() => setIsSidebarOpen(true)}>
-            <Image width={10} height={10} loading='lazy' src="/svg/burger.svg" alt="menu" className="w-8 h-6" />
+            <Image width={10} height={10} loading='lazy' src="/svg/burger.svg" alt="menu" className={`w-6 h-6 transition ${isSidebarOpen? 'hidden' : 'block'
+                }`}/>
           </button>
         </div>
       </div>
 
       {/* Sidebar for Mobile */}
       <div
-        className={`fixed xl:hidden top-0 right-0 h-full w-64 bg-white/13 backdrop-blur-xs shadow-lg shadow-black/30 z-50 transform transition-transform duration-300 ease-in-out
+        className={`fixed xl:hidden top-0 right-0 h-full w-64 bg-black/20 backdrop-blur-xl shadow-lg shadow-black/30 z-50 transform transition-transform duration-300 ease-in-out
           ${isSidebarOpen ? 'translate-x-0' : 'translate-x-full'}
         `}
       >
@@ -117,13 +119,13 @@ export default function Navbar() {
         </div>
 
         {/* Sidebar Links */}
-        <div className="mt-24 flex flex-col gap-6 px-6 text-black font-poppins font-regular text-lg xl:hidden">
+        <div className="mt-24 flex flex-col gap-6 px-6 text-white font-poppins font-regular text-lg xl:hidden">
           {navLinks.map(({ href, label }) => (
             <Link
               key={href}
               href={href}
               onClick={() => setIsSidebarOpen(false)}
-              className={`no-underline transition ${pathname === href ? 'text-red-700 font-medium' : 'text-black'
+              className={`no-underline transition ${pathname === href ? 'text-red-700 font-medium' : 'text-white'
                 }`}
             >
               {label}
