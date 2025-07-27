@@ -4,12 +4,10 @@ import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import { useEffect, useState, useRef } from 'react'
 import Image from 'next/image'
-import { SidebarClose } from 'lucide-react'
 
 export default function Navbar() {
   const pathname = usePathname()
   const [hidden, setHidden] = useState(false)
-  const [isSidebarOpen, setIsSidebarOpen] = useState(false)
   const [isAtTop, setIsAtTop] = useState(true)
 
   const lastY = useRef(0)
@@ -22,7 +20,6 @@ export default function Navbar() {
       } else if (currentY < lastY.current) {
         setHidden(false) // scroll up
       }
-      // check if at top
       lastY.current = currentY
     }
 
@@ -32,7 +29,7 @@ export default function Navbar() {
 
   useEffect(() => {
     const handleScroll = () => {
-      setIsAtTop(window.scrollY >= window.innerHeight ? false : true) // adjust threshold as needed
+      setIsAtTop(window.scrollY >= window.innerHeight ? false : true)
     }
     window.addEventListener('scroll', handleScroll)
     return () => window.removeEventListener('scroll', handleScroll)
@@ -48,11 +45,44 @@ export default function Navbar() {
 
   return (
     <>
-      {/* Main Nav Bar */}
-      <div className="flex justify-between absolute top-0 left-0 w-full z-50">
-        <div className="max-w-[300px] w-full h-auto absolute md:top-10 md:left-10 top-8 left-3">
+      {/* Main Nav Bar Container */}
+      <div className="fixed top-0 left-0 w-full z-50 bg-black/70 backdrop-blur-2xl text-white xl:hidden">
+        {/* Top section with logo */}
+        <div className="flex items-center justify-between px-4 py-3 shadow shadow-black/30">
+          <Link href="/" className="flex items-center gap-2">
+            <Image
+              src="/images/logowrite.png"
+              alt="logo"
+              width={100}
+              height={100}
+              loading="lazy"
+              className="h-6 w-auto"
+            />
+          </Link>
+        </div>
+
+        {/* Mobile Nav Links */}
+        {/* Mobile Nav Links */}
+        <nav className="flex flex-wrap justify-center gap-4 px-4 py-2 text-sm font-poppins font-light border-t border-white/10 xl:hidden">
+          {navLinks.map(({ href, label }) => (
+            label === 'Contact Us' ? null : (
+              <Link
+                key={href}
+                href={href}
+                className={`no-underline transition hover:text-white/60 ${pathname === href ? 'text-red-500 font-medium' : 'text-white'
+                  }`}
+              >
+                {label}
+              </Link>
+            )
+          ))}
+        </nav>
+      </div>
+
+      {/* Desktop Nav (unchanged) */}
+      <div className="flex justify-between absolute top-0 left-0 w-full z-40">
+        <div className="max-w-[300px] w-full h-auto absolute md:top-10 md:left-10 top-8 left-3 xl:flex hidden">
           <Link href="/" className="flex items-center gap-1 md:gap-3 text-center align-middle">
-            {/* Logo image */}
             <Image
               src="/images/logowrite.png"
               alt="logo"
@@ -64,18 +94,15 @@ export default function Navbar() {
           </Link>
         </div>
 
-        {/* Desktop Navigation */}
         <nav
-          className={`
-            hidden xl:flex fixed top-8 left-1/2 -translate-x-1/2 rounded-lg
+          className={`hidden xl:flex fixed top-8 left-1/2 -translate-x-1/2 rounded-lg
             text-white text-lg font-poppins font-light z-50
             transition-transform duration-300 ease-in-out
             ${hidden ? '-translate-y-50 ' : 'translate-y-0'}
           `}
         >
           <div
-            className={`
-              z-20 top-8 py-2 px-5 shadow-lg shadow-black/30 rounded-lg backdrop-blur-2xl
+            className={`z-20 top-8 py-2 px-5 shadow-lg shadow-black/30 rounded-lg backdrop-blur-2xl
               flex items-center justify-between gap-16
               font-poppins text-white text-lg font-light
               text-center whitespace-nowrap flex-nowrap
@@ -87,51 +114,13 @@ export default function Navbar() {
               <Link
                 key={href}
                 href={href}
-                className={`no-underline transition hover:text-white/60 ${pathname === href ? 'text-red-500 font-medium font-poppins' : 'text-white'
-                  }`}
+                className={`no-underline transition hover:text-white/60 ${pathname === href ? 'text-red-500 font-medium font-poppins' : 'text-white'}`}
               >
                 {label}
               </Link>
             ))}
           </div>
         </nav>
-
-        {/* Mobile Menu Icon */}
-        <div className="xl:hidden z-30 fixed right-5 top-8">
-          <button onClick={() => setIsSidebarOpen(true)}>
-            <Image width={10} height={10} loading='lazy' src="/svg/burger.svg" alt="menu" className={`w-6 h-6 transition ${isSidebarOpen? 'hidden' : 'block'
-                }`}/>
-          </button>
-        </div>
-      </div>
-
-      {/* Sidebar for Mobile */}
-      <div
-        className={`fixed xl:hidden top-0 right-0 h-full w-64 bg-black/20 backdrop-blur-xl shadow-lg shadow-black/30 z-50 transform transition-transform duration-300 ease-in-out
-          ${isSidebarOpen ? 'translate-x-0' : 'translate-x-full'}
-        `}
-      >
-        {/* Close Icon */}
-        <div className="fixed top-8 right-5 z-50">
-          <button onClick={() => setIsSidebarOpen(false)}>
-            <Image width={10} height={10} loading='lazy' src="/svg/close.svg" alt="close" className="w-8 h-6" />
-          </button>
-        </div>
-
-        {/* Sidebar Links */}
-        <div className="mt-24 flex flex-col gap-6 px-6 text-white font-poppins font-regular text-lg xl:hidden">
-          {navLinks.map(({ href, label }) => (
-            <Link
-              key={href}
-              href={href}
-              onClick={() => setIsSidebarOpen(false)}
-              className={`no-underline transition ${pathname === href ? 'text-red-700 font-medium' : 'text-white'
-                }`}
-            >
-              {label}
-            </Link>
-          ))}
-        </div>
       </div>
     </>
   )
