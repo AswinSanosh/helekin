@@ -108,19 +108,19 @@ export default function Services() {
     <div>
       <div className="relative h-[550px] sm:h-180 w-full bg-[url('/svg/hero.svg')] bg-cover bg-center bg-no-repeat z-20 flex items-center">
         <div className="absolute inset-0 bg-black/70 backdrop-blur-sm z-0" />
-        <div className="relative z-10 text-white w-full px-6 sm:px-10 max-w-4xl">
+        <div className="relative z-10 text-white w-full px-6 sm:px-10 max-w-6xl">
           <div className="mb-4 flex flex-col sm:flex-row gap-3">
             <h1 className="text-4xl sm:text-6xl font-light font-poppins">
-              PCB
+              Electronics &
             </h1>
             <h1 className="text-4xl sm:text-6xl text-red-700 font-light font-poppins">
-              Designing
+              Hardware Assembly
             </h1>
           </div>
           <div className="w-full sm:w-3/4">
             <p className="text-white/80 text-base sm:text-lg font-light font-poppins mt-4 sm:mt-6">
-              Designing and prototyping of PCBs using industry-grade tools for
-              commercial and industrial applications.
+              We assemble electronics using soldering, testing, and integration
+              of components with clean wiring practices.
             </p>
           </div>
         </div>
@@ -131,11 +131,11 @@ export default function Services() {
           Transforming Ideas into Intelligent Solutions
         </h2>
         <p className="text-white/80 text-base sm:text-xl font-poppins font-light mt-6 sm:mt-10 text-center max-w-6xl">
-          At Helekin, we translate your complex schematics into robust,
-          manufacturable Printed Circuit Boards. Our expertise covers everything
-          from high-speed digital designs to sensitive analog layouts, ensuring
-          optimal performance, signal integrity, and reliability for your
-          electronic products.
+          At Helekin, we bring your hardware designs to life with expert
+          assembly services. Our skilled technicians handle everything from
+          intricate PCB soldering to complete system integration, ensuring every
+          connection is secure and every component functions perfectly according
+          to your specifications.
         </p>
       </div>
 
@@ -159,11 +159,11 @@ export default function Services() {
 
       <div className="relative z-10 w-full mx-auto text-center bg-black pt-24 px-6 sm:px-10">
         <h1 className="text-2xl sm:text-3xl font-poppins font-semibold text-red-700 mb-2 text-start">
-          Featured PCB Layouts
+          Featured Assembled Products
         </h1>
         <p className="text-white/80 text-base sm:text-xl font-poppins font-light mt-5 mb-10 max-w-2xl text-start">
-          Our portfolio showcases our precision and attention to detail in
-          creating complex, high-performance circuit boards.
+          Our portfolio showcases our meticulous attention to detail in building
+          robust and reliable electronic devices and systems.
         </p>
         <div className="mt-5 flex sm:flex-row flex-col items-center justify-center gap-5">
           <div className="flex flex-col items-start h-[300px] w-full bg-white/10 backdrop-blur-lg shadow-xl shadow-black/30 p-6 rounded-3xl transition-all hover:scale-[1.02] duration-300"></div>
@@ -177,11 +177,11 @@ export default function Services() {
               Transforming Ideas into Intelligent Solutions
             </h2>
             <p className="text-white/80 text-base sm:text-xl font-poppins font-light mt-6 sm:mt-10 text-left">
-              Our workflow ensures a seamless transition from concept to
-              reality. We begin with requirement analysis and schematic capture,
-              followed by component selection, layout and routing, and finally,
-              comprehensive Design for Manufacturability (DFM) checks to
-              guarantee a flawless production run.
+              Our assembly process emphasizes quality and precision. We follow
+              your schematics and Bill of Materials (BOM) meticulously,
+              performing component verification, professional soldering, and
+              rigorous functional testing at every stage to guarantee a
+              high-quality final product.
             </p>
           </div>
 
@@ -189,7 +189,7 @@ export default function Services() {
             <div className="flex flex-col items-center justify-center md:items-center mt-2 gap-8 w-full">
               <div className="flex items-center justify-between bg-white/10 backdrop-blur-lg shadow-lg shadow-black/30 p-6 w-full sm:w-3/4">
                 <h1 className="font-poppins text-lg sm:text-2xl font-medium text-white">
-                  What design software do you use?
+                  What types of soldering do you perform?
                 </h1>
                 <h1 className="font-poppins text-2xl sm:text-3xl font-medium text-white">
                   +
@@ -197,7 +197,7 @@ export default function Services() {
               </div>
               <div className="flex items-center justify-between bg-white/10 backdrop-blur-lg shadow-lg shadow-black/30 p-6 w-full sm:w-3/4">
                 <h1 className="font-poppins text-lg sm:text-2xl font-medium text-white">
-                  What is the difference between schematic and layout?
+                  Can you source the components for our assembly?
                 </h1>
                 <h1 className="font-poppins text-2xl sm:text-3xl font-medium text-white">
                   +
@@ -205,7 +205,7 @@ export default function Services() {
               </div>
               <div className="flex items-center justify-between bg-white/10 backdrop-blur-lg shadow-lg shadow-black/30 p-6 w-full sm:w-3/4">
                 <h1 className="font-poppins text-lg sm:text-2xl font-medium text-white">
-                  How do you handle high-speed signal routing?
+                  What is your quality control and testing process?
                 </h1>
                 <h1 className="font-poppins text-2xl sm:text-3xl font-medium text-white">
                   +
@@ -213,7 +213,7 @@ export default function Services() {
               </div>
               <div className="flex items-center justify-between bg-white/10 backdrop-blur-lg shadow-lg shadow-black/30 p-6 w-full sm:w-3/4">
                 <h1 className="font-poppins text-lg sm:text-2xl font-medium text-white">
-                  Can you manage the prototyping process?
+                  Do you handle small-batch and prototype assembly?
                 </h1>
                 <h1 className="font-poppins text-2xl sm:text-3xl font-medium text-white">
                   +
@@ -224,11 +224,11 @@ export default function Services() {
         </div>
 
         <h1 className="font-poppins text-3xl sm:text-4xl text-white mb-4 mt-20">
-          Ready to Bring Your Circuit to Life?
+          Ready to Build Your Hardware?
         </h1>
         <p className="text-white/80 mb-8 max-w-2xl mx-auto text-base sm:text-lg">
-          From concept to a fully realized board, let our experts engineer the
-          electronic foundation for your next great product.
+          From a single prototype to a small production run, let our expert
+          technicians assemble your electronic hardware with precision and care.
         </p>
         <Link href="/contact">
           <button className="bg-red-700 text-white font-semibold py-3 px-6 sm:px-8 rounded-lg hover:bg-red-800 transition-colors duration-300 text-base sm:text-lg cursor-pointer">
