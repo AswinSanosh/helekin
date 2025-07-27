@@ -4,7 +4,7 @@ import React from 'react'
 
 export default function Form() {
     return (
-        <section className="min-h-screen-lg bg-black text-white lg:px-12 flex items-center justify-center px-10 pb-20">
+        <section className="min-h-screen-lg bg-black text-white lg:px-12 flex items-center justify-center px-10 py-20 ">
             <div className="w-full flex flex-col lg:flex-row gap-8 items-start justify-between">
 
                 {/* Left: Form */}

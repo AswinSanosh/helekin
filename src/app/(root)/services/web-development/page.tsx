@@ -173,7 +173,7 @@ export default function Services() {
           <div className="flex flex-col items-start h-[300px] w-full bg-white/10 backdrop-blur-lg shadow-xl shadow-black/30 p-6 rounded-3xl transition-all hover:scale-[1.02] duration-300"></div>
         </div>
 
-        <div className="mt-20 flex flex-col sm:flex-row items-start justify-between gap-10 sm:gap-5">
+        <div className="mt-50 flex flex-col sm:flex-row items-start justify-between gap-10 sm:gap-5">
           <div className="w-full sm:w-1/3 flex flex-col">
             <h2 className="text-red-700 text-3xl sm:text-4xl font-poppins font-medium text-left">
               Transforming Ideas into Intelligent Solutions
@@ -225,7 +225,7 @@ export default function Services() {
           </div>
         </div>
 
-        <h1 className="font-poppins text-3xl sm:text-4xl text-white mb-4 mt-20">
+        <h1 className="font-poppins text-3xl sm:text-4xl text-white mb-4 mt-50">
           Ready to build your website?
         </h1>
         <p className="text-white/80 mb-8 max-w-2xl mx-auto text-base sm:text-lg">
@@ -233,7 +233,7 @@ export default function Services() {
           that grows with your business.
         </p>
         <Link href="/contact">
-          <button className="bg-red-700 text-white font-semibold py-3 px-6 sm:px-8 rounded-lg hover:bg-red-800 transition-colors duration-300 text-base sm:text-lg cursor-pointer">
+          <button className="bg-red-700 mb-50 text-white font-semibold py-3 px-6 sm:px-8 rounded-lg hover:bg-red-800 transition-colors duration-300 text-base sm:text-lg cursor-pointer">
             Schedule a Consultation
           </button>
         </Link>
