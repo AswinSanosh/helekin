@@ -17,25 +17,40 @@ export default function Hero() {
     }
   }, [index, fullText])
 
+  const whyChooseUs = [
+    {
+      title: 'Built for Startups',
+      desc: 'We understand the unique challenges startups face and tailor our solutions to help you succeed.',
+    },
+    {
+      title: 'Expert Team',
+      desc: 'Our team of experts brings years of experience in digital acceleration.',
+    },
+    {
+      title: 'End-to-End Service',
+      desc: 'We provide customized solutions that fit your specific needs and goals.',
+    },
+  ]
+
   return (
-    <div className="relative md:h-screen min-h-[100vh] w-full bg-[url('/svg/hero.svg')] bg-cover bg-center bg-no-repeat z-20 flex items-end justify-start overflow-x-hidden pt-50">
-      <div className="text-left p-10 text-white flex flex-col justify-end items-start w-full sm:pl-10 h-full">
+    <div className="relative md:h-screen pt-30 w-full bg-[url('/svg/hero.svg')] bg-cover bg-center bg-no-repeat z-20 flex items-end justify-start overflow-x-hidden">
+      <div className="text-left p-10 px-5 md:px-10 text-white flex flex-col justify-end items-start w-full sm:pl-10 h-full">
         <div className="relative">
-          <h1 className="text-white heading-extralight max-heading-light-md">
+          <h1 className="text-white heading-light max-heading-light-lg">
             Digital acceleration services
           </h1>
 
-          <div className="flex gap-2 sm:gap-3 justify-bottom sm:flex-nowrap max-w-[90vw] sm:max-w-[50vw] max-h-[50vh]">
-            <h1 className="text-white heading-light max-heading-light-md mb-4 flex-shrink-0">
-              for
+          <div className="flex sm:gap-3 justify-bottom sm:flex-nowrap max-w-[90vw] sm:max-w-[50vw] max-h-[50vh]">
+            <h1 className="text-white heading-light max-heading-light-lg mb-4 flex-shrink-0">
+              for&nbsp;
             </h1>
-            <h1 className="text-red-700 heading-light max-heading-light-md mb-4 flex-shrink-0">
+            <h1 className="text-red-700 heading-light max-heading-light-lg mb-4 flex-shrink-0">
               {displayedText}
             </h1>
           </div>
         </div>
 
-        <h1 className="text-white subheading-extralight max-subheading-extralight-md mb-8">
+        <h1 className="text-white subheading-extralight max-subheading-extralight-lg mb-4">
           Design. Development. Consulting.
         </h1>
 
@@ -43,29 +58,32 @@ export default function Hero() {
           Why Choose Us?
         </h1>
 
-        <div className="flex flex-col md:flex-row gap-5 mt-3">
-          {[
-            {
-              title: 'Built for Startups',
-              desc: 'We understand the unique challenges startups face and tailor our solutions to help you succeed.',
-            },
-            {
-              title: 'Expert Team',
-              desc: 'Our team of experts brings years of experience in digital acceleration.',
-            },
-            {
-              title: 'End-to-End Service',
-              desc: 'We provide customized solutions that fit your specific needs and goals.',
-            },
-          ].map((item, idx) => (
+        {/* Desktop Grid */}
+        <div className="hidden md:flex flex-col md:flex-row gap-5 mt-3">
+          {whyChooseUs.map((item, idx) => (
             <div
               key={idx}
-              className="bg-white/20 rounded-lg h-auto md:h-[140px] w-full md:w-[250px] shadow-lg shadow-black/30 p-3"
+              className="bg-white/10 rounded-lg h-auto md:h-[140px] w-full md:w-[250px] shadow-lg shadow-[#030303]/30 backdrop-blur-sm p-3"
             >
               <h1 className="text-white para-semibold max-para-semibold-md">{item.title}</h1>
               <p className="text-white subpara-light max-subpara-light-md mt-1">{item.desc}</p>
             </div>
           ))}
+        </div>
+
+        {/* Mobile Carousel */}
+        <div className="md:hidden w-full overflow-x-auto mt-3">
+          <div className="flex gap-4 px-2 w-max">
+            {whyChooseUs.map((item, idx) => (
+              <div
+                key={idx}
+                className="flex-shrink-0 bg-white/10 rounded-lg h-auto w-[250px] shadow-lg shadow-[#030303]/30 backdrop-blur-sm p-3"
+              >
+                <h1 className="text-white para-semibold max-para-semibold-md">{item.title}</h1>
+                <p className="text-white subpara-light max-subpara-light-md mt-1">{item.desc}</p>
+              </div>
+            ))}
+          </div>
         </div>
 
         {/* CTA Button */}

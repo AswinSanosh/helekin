@@ -4,7 +4,7 @@ import React from 'react'
 
 export default function Form() {
     return (
-        <section className="min-h-screen-lg bg-black text-white lg:px-12 flex items-center justify-center px-10 py-20 ">
+        <section className="min-h-screen-lg bg-[#030303] text-white lg:px-12 flex items-center justify-center px-10 py-20 md:py-50 ">
             <div className="w-full flex flex-col lg:flex-row gap-8 items-start justify-between">
 
                 {/* Left: Form */}
@@ -82,7 +82,7 @@ export default function Form() {
                 {/* Right: Cards Illustration (Desktop View) */}
                 <div className="hidden lg:flex w-1/2 relative items-center justify-center m-auto p-20">
                     <div className="bg-[url('/images/product2.png')] bg-no-repeat bg-center bg-cover h-[200px] w-[200px] rounded-3xl flex items-center justify-center -right-20 relative z-30"></div>
-                    <div className="bg-[url('/images/product1.png')] bg-no-repeat bg-center bg-cover h-[300px] w-[300px] rounded-3xl flex items-center justify-center drop-shadow-3xl shadow-black z-40"></div>
+                    <div className="bg-[url('/images/product1.png')] bg-no-repeat bg-center bg-cover h-[300px] w-[300px] rounded-3xl flex items-center justify-center drop-shadow-3xl shadow-[#030303] z-40"></div>
                     <div className="bg-[url('/images/product4.png')] bg-no-repeat bg-center bg-cover h-[200px] w-[200px] rounded-3xl flex items-center justify-center -left-20 relative z-30"></div>
                 </div>
             </div>

@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import serviceData from "../../../../components/ServiceList.json";
+import serviceData from "../../../../../components/ServiceList.json";
 import React, { useEffect, useState } from "react";
 import Link from "next/link";
 
@@ -59,7 +59,7 @@ export default function Services() {
           <div
             onMouseEnter={() => handleMouseEnter(section, i)}
             onMouseLeave={handleMouseLeave}
-            className="flex flex-col items-start h-[270px] w-full bg-white/10 backdrop-blur-lg shadow-lg shadow-black/30 p-6 rounded-xl transition-all hover:scale-[1.02] duration-300"
+            className="flex flex-col items-start h-[270px] w-full bg-white/10 backdrop-blur-lg shadow-lg shadow-[#030303]/30 p-6 rounded-xl transition-all hover:scale-[1.02] duration-300"
             style={{
               ...(isHovered
                 ? {
@@ -106,41 +106,41 @@ export default function Services() {
 
   return (
     <div>
-      <div className="relative h-[550px] sm:h-180 w-full bg-[url('/svg/hero.svg')] bg-cover bg-center bg-no-repeat z-20 flex items-center">
-        <div className="absolute inset-0 bg-black/70 backdrop-blur-sm z-0" />
+      <div className="relative h-[90vh] sm:h-180 w-full bg-[url('/svg/hero.svg')] bg-cover bg-center bg-no-repeat z-20 flex items-center">
+        <div className="absolute inset-0 bg-[#030303]/70 backdrop-blur-sm z-0" />
         <div className="relative z-10 text-white w-full px-6 sm:px-10 max-w-4xl">
           <div className="mb-4 flex flex-col sm:flex-row gap-3">
             <h1 className="text-4xl sm:text-6xl font-light font-poppins">
-              Laser
+              PCB
             </h1>
             <h1 className="text-4xl sm:text-6xl text-red-700 font-light font-poppins">
-              Engraving
+              Designing
             </h1>
           </div>
           <div className="w-full sm:w-3/4">
             <p className="text-white/80 text-base sm:text-lg font-light font-poppins mt-4 sm:mt-6">
-              We provide precision laser engraving for enclosures, branding, PCB
-              labeling, and personalized hardware.
+              Designing and prototyping of PCBs using industry-grade tools for
+              commercial and industrial applications.
             </p>
           </div>
         </div>
       </div>
 
-      <div className="relative z-10 w-full bg-black py-14 px-6 sm:px-10 flex flex-col items-center justify-center text-white">
+      <div className="relative z-10 w-full bg-[#030303] py-14 px-6 sm:px-10 flex flex-col items-center justify-center text-white">
         <h2 className="text-red-700 text-3xl sm:text-4xl font-poppins font-medium text-center">
           Transforming Ideas into Intelligent Solutions
         </h2>
         <p className="text-white/80 text-base sm:text-xl font-poppins font-light mt-6 sm:mt-10 text-center max-w-6xl">
-          At Helekin, we add the perfect finishing touch to your products with
-          high-precision laser engraving. From custom logos on electronic
-          enclosures to detailed markings on PCBs and personalized hardware, our
-          technology ensures a clean, permanent, and professional result every
-          time.
+          At Helekin, we translate your complex schematics into robust,
+          manufacturable Printed Circuit Boards. Our expertise covers everything
+          from high-speed digital designs to sensitive analog layouts, ensuring
+          optimal performance, signal integrity, and reliability for your
+          electronic products.
         </p>
       </div>
 
       <div className="relative z-0 w-full flex flex-col bg-[url('/images/fafa.png')] bg-cover bg-center bg-no-repeat px-6 pb-30">
-        <div className="absolute inset-0 bg-black/50 backdrop-blur-sm z-0" />
+        <div className="absolute inset-0 bg-[#030303]/50 backdrop-blur-sm z-0" />
         <div className="flex justify-between items-baseline z-20">
           <div className="relative z-10 w-full max-w-screen px-6 mx-auto mt-20">
             <h1 className="text-3xl font-poppins font-semibold text-red-700 mb-2 text-center">
@@ -150,25 +150,25 @@ export default function Services() {
         </div>
         <div>
           <div className="mt-12 sm:mt-40 flex flex-col sm:flex-row items-center justify-center gap-5">
-            <div className="flex flex-col items-start h-[250px] w-full sm:w-[300px] bg-white/10 backdrop-blur-lg shadow-lg shadow-black/30 p-6 rounded-xl transition-all hover:scale-[1.02] duration-300"></div>
-            <div className="flex flex-col items-start h-[250px] w-full sm:w-[300px] bg-white/10 backdrop-blur-lg shadow-lg shadow-black/30 p-6 rounded-xl transition-all hover:scale-[1.02] duration-300 md:relative md:-top-30"></div>
-            <div className="flex flex-col items-start h-[250px] w-full sm:w-[300px] bg-white/10 backdrop-blur-lg shadow-lg shadow-black/30 p-6 rounded-xl transition-all hover:scale-[1.02] duration-300"></div>
+            <div className="flex flex-col items-start h-[250px] w-full sm:w-[300px] bg-white/10 backdrop-blur-lg shadow-lg shadow-[#030303]/30 p-6 rounded-xl transition-all hover:scale-[1.02] duration-300"></div>
+            <div className="flex flex-col items-start h-[250px] w-full sm:w-[300px] bg-white/10 backdrop-blur-lg shadow-lg shadow-[#030303]/30 p-6 rounded-xl transition-all hover:scale-[1.02] duration-300 md:relative md:-top-30"></div>
+            <div className="flex flex-col items-start h-[250px] w-full sm:w-[300px] bg-white/10 backdrop-blur-lg shadow-lg shadow-[#030303]/30 p-6 rounded-xl transition-all hover:scale-[1.02] duration-300"></div>
           </div>
         </div>
       </div>
 
-      <div className="relative z-10 w-full mx-auto text-center bg-black pt-24 px-6 sm:px-10">
+      <div className="relative z-10 w-full mx-auto text-center bg-[#030303] pt-24 px-6 sm:px-10">
         <h1 className="text-2xl sm:text-3xl font-poppins font-semibold text-red-700 mb-2 text-start">
-          Featured Engraving Projects
+          Featured PCB Layouts
         </h1>
         <p className="text-white/80 text-base sm:text-xl font-poppins font-light mt-5 mb-10 max-w-2xl text-start">
-          Our portfolio showcases the sharp detail and versatility of our
-          engraving services on a variety of materials and products.
+          Our portfolio showcases our precision and attention to detail in
+          creating complex, high-performance circuit boards.
         </p>
         <div className="mt-5 flex sm:flex-row flex-col items-center justify-center gap-5">
-          <div className="flex flex-col items-start h-[300px] w-full bg-white/10 backdrop-blur-lg shadow-xl shadow-black/30 p-6 rounded-3xl transition-all hover:scale-[1.02] duration-300"></div>
-          <div className="flex flex-col items-start h-[300px] w-full bg-white/10 backdrop-blur-lg shadow-xl shadow-black/30 p-6 rounded-3xl transition-all hover:scale-[1.02] duration-300"></div>
-          <div className="flex flex-col items-start h-[300px] w-full bg-white/10 backdrop-blur-lg shadow-xl shadow-black/30 p-6 rounded-3xl transition-all hover:scale-[1.02] duration-300"></div>
+          <div className="flex flex-col items-start h-[300px] w-full bg-white/10 backdrop-blur-lg shadow-xl shadow-[#030303]/30 p-6 rounded-3xl transition-all hover:scale-[1.02] duration-300"></div>
+          <div className="flex flex-col items-start h-[300px] w-full bg-white/10 backdrop-blur-lg shadow-xl shadow-[#030303]/30 p-6 rounded-3xl transition-all hover:scale-[1.02] duration-300"></div>
+          <div className="flex flex-col items-start h-[300px] w-full bg-white/10 backdrop-blur-lg shadow-xl shadow-[#030303]/30 p-6 rounded-3xl transition-all hover:scale-[1.02] duration-300"></div>
         </div>
 
         <div className="mt-20 flex flex-col sm:flex-row items-start justify-between gap-10 sm:gap-5">
@@ -177,42 +177,43 @@ export default function Services() {
               Transforming Ideas into Intelligent Solutions
             </h2>
             <p className="text-white/80 text-base sm:text-xl font-poppins font-light mt-6 sm:mt-10 text-left">
-              Our process is meticulous. We work with your design files to
-              calibrate our laser systems for the specific material, ensuring
-              optimal depth, contrast, and precision. Every piece undergoes a
-              quality check to guarantee it meets your exact specifications.
+              Our workflow ensures a seamless transition from concept to
+              reality. We begin with requirement analysis and schematic capture,
+              followed by component selection, layout and routing, and finally,
+              comprehensive Design for Manufacturability (DFM) checks to
+              guarantee a flawless production run.
             </p>
           </div>
 
           <div className="w-full sm:w-2/3 flex flex-col items-start">
             <div className="flex flex-col items-center justify-center md:items-center mt-2 gap-8 w-full">
-              <div className="flex items-center justify-between bg-white/10 backdrop-blur-lg shadow-lg shadow-black/30 p-6 w-full sm:w-3/4">
+              <div className="flex items-center justify-between bg-white/10 backdrop-blur-lg shadow-lg shadow-[#030303]/30 p-6 w-full sm:w-3/4">
                 <h1 className="font-poppins text-lg sm:text-2xl font-medium text-white">
-                  What materials can you engrave on?
+                  What design software do you use?
                 </h1>
                 <h1 className="font-poppins text-2xl sm:text-3xl font-medium text-white">
                   +
                 </h1>
               </div>
-              <div className="flex items-center justify-between bg-white/10 backdrop-blur-lg shadow-lg shadow-black/30 p-6 w-full sm:w-3/4">
+              <div className="flex items-center justify-between bg-white/10 backdrop-blur-lg shadow-lg shadow-[#030303]/30 p-6 w-full sm:w-3/4">
                 <h1 className="font-poppins text-lg sm:text-2xl font-medium text-white">
-                  What file formats do you accept for designs?
+                  What is the difference between schematic and layout?
                 </h1>
                 <h1 className="font-poppins text-2xl sm:text-3xl font-medium text-white">
                   +
                 </h1>
               </div>
-              <div className="flex items-center justify-between bg-white/10 backdrop-blur-lg shadow-lg shadow-black/30 p-6 w-full sm:w-3/4">
+              <div className="flex items-center justify-between bg-white/10 backdrop-blur-lg shadow-lg shadow-[#030303]/30 p-6 w-full sm:w-3/4">
                 <h1 className="font-poppins text-lg sm:text-2xl font-medium text-white">
-                  What is the maximum size for engraving?
+                  How do you handle high-speed signal routing?
                 </h1>
                 <h1 className="font-poppins text-2xl sm:text-3xl font-medium text-white">
                   +
                 </h1>
               </div>
-              <div className="flex items-center justify-between bg-white/10 backdrop-blur-lg shadow-lg shadow-black/30 p-6 w-full sm:w-3/4">
+              <div className="flex items-center justify-between bg-white/10 backdrop-blur-lg shadow-lg shadow-[#030303]/30 p-6 w-full sm:w-3/4">
                 <h1 className="font-poppins text-lg sm:text-2xl font-medium text-white">
-                  Can you engrave on curved surfaces?
+                  Can you manage the prototyping process?
                 </h1>
                 <h1 className="font-poppins text-2xl sm:text-3xl font-medium text-white">
                   +
@@ -223,11 +224,11 @@ export default function Services() {
         </div>
 
         <h1 className="font-poppins text-3xl sm:text-4xl text-white mb-4 mt-20">
-          Ready to Make Your Mark?
+          Ready to Bring Your Circuit to Life?
         </h1>
         <p className="text-white/80 mb-8 max-w-2xl mx-auto text-base sm:text-lg">
-          Add a professional, custom finish to your products. Let&#39;s discuss
-          your engraving needs and bring your branding to life.
+          From concept to a fully realized board, let our experts engineer the
+          electronic foundation for your next great product.
         </p>
         <Link href="/contact">
           <button className="bg-red-700 text-white font-semibold py-3 px-6 sm:px-8 rounded-lg hover:bg-red-800 transition-colors duration-300 text-base sm:text-lg cursor-pointer">
