@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import serviceData from "../../../../components/ServiceList.json";
+import serviceData from "../../../../../components/ServiceList.json";
 import React, { useEffect, useState } from "react";
 import Link from "next/link";
 
