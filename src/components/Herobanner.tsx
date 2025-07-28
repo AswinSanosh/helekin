@@ -33,9 +33,9 @@ export default function Hero() {
   ]
 
   return (
-    <div className="relative md:h-screen pt-30 w-full bg-[url('/svg/hero.svg')] bg-cover bg-center bg-no-repeat z-20 flex items-end justify-start overflow-x-hidden">
-      <div className="text-left p-10 px-5 md:px-10 text-white flex flex-col justify-end items-start w-full sm:pl-10 h-full">
-        <div className="relative">
+    <div className="relative h-screen pt-30 w-full bg-[url('/svg/hero.svg')] bg-cover bg-right sm:bg-center bg-no-repeat z-20 flex items-end justify-start overflow-x-hidden">
+      <div className="text-left p-10 px-5 md:px-10 text-white flex flex-col justify-end items-center sm:items-start w-full sm:pl-5 h-full">
+        <div className="sm:relative absolute top-10 sm:top-0 pt-10 px-5 sm:px-0">
           <h1 className="text-white heading-light max-heading-light-lg">
             Digital acceleration services
           </h1>
@@ -48,13 +48,12 @@ export default function Hero() {
               {displayedText}
             </h1>
           </div>
+          <h1 className="text-white subheading-extralight max-subheading-extralight-lg mb-4">
+            Design. Development. Consulting.
+          </h1>
         </div>
 
-        <h1 className="text-white subheading-extralight max-subheading-extralight-lg mb-4">
-          Design. Development. Consulting.
-        </h1>
-
-        <h1 className="text-white para-bold max-para-bold-md mt-5 mb-4">
+        <h1 className="text-white para-bold max-para-bold-md mt-5 px-3 sm:px-0">
           Why Choose Us?
         </h1>
 
