@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import serviceData from "@/components/ServiceList.json";
+import serviceData from "../../../../../components/ServiceList.json";
 import React, { useEffect, useState } from "react";
 import Link from "next/link";
 
@@ -58,7 +58,7 @@ export default function Services() {
           <div
             onMouseEnter={() => handleMouseEnter(section, i)}
             onMouseLeave={handleMouseLeave}
-            className="flex flex-col items-start h-[270px] w-full bg-white/10 backdrop-blur-lg shadow-lg shadow-black/30 p-6 rounded-xl transition-all hover:scale-[1.02] duration-300"
+            className="flex flex-col items-start h-[270px] w-full bg-white/10 backdrop-blur-lg shadow-lg shadow-[#030303]/30 p-6 rounded-xl transition-all hover:scale-[1.02] duration-300"
             style={{
               ...(isHovered
                 ? {
@@ -106,38 +106,36 @@ export default function Services() {
   return (
     <div>
       {/* Hero */}
-      <div className="h-180 w-full bg-[url('/svg/hero.svg')] bg-cover bg-center bg-no-repeat z-20">
-        <div className="absolute inset-0 bg-black/70 backdrop-blur-sm z-0 h-full" />
+      <div className="h-[90vh] w-full bg-[url('/svg/hero.svg')] bg-cover bg-center bg-no-repeat z-20">
+        <div className="absolute inset-0 bg-[#030303]/70 backdrop-blur-sm z-0 h-full" />
         <div className="absolute h-150 bottom-5 left-20">
           <div className="flex mb-4">
-            <h1 className="text-white text-6xl font-light font-poppins">IoT</h1>
+            <h1 className="text-white text-6xl font-light font-poppins">3D</h1>
             <h1 className="text-red-700 text-6xl font-light font-poppins px-4">
-              Integration
+              Modeling
             </h1>
           </div>
           <div className="w-2/5">
             <p className="text-white/80 text-xl font-light font-poppins mt-10">
-              We develop embedded systems with seamless IoT connectivity,
-              enabling remote monitoring and control through scalable cloud
-              platforms.
+              High-quality 3D models for visualization, animation, and real-time
+              rendering across industries.
             </p>
           </div>
         </div>
       </div>
-      <div className="relative z-10 w-full bg-black h-150 flex flex-col items-center justify-center text-white p-10">
+      <div className="relative z-10 w-full bg-[#030303] h-150 flex flex-col items-center justify-center text-white p-10">
         <h2 className="text-red-700 text-4xl md:text-4xl font-poppins font-medium">
           Transforming Ideas into Intelligent Solutions
         </h2>
         <p className="text-white/80 text-base md:text-xl font-poppins font-light mt-10 text-center">
-          At Helekin, we engineer end-to-end IoT solutions that bring your
-          physical products online. From firmware development on embedded
-          devices to building scalable cloud platforms for data ingestion and
-          analysis, we create a connected ecosystem that unlocks new
-          efficiencies and data-driven insights for your business.
+          At Helekin, we bring your concepts to life in three dimensions. Our
+          artists and technicians create detailed, photorealistic 3D models
+          suitable for product visualization, architectural walkthroughs,
+          animation, and integration into real-time game engines.
         </p>
       </div>
       <div className="relative z-0 w-full flex flex-col bg-[url('/images/fafa.png')] bg-cover bg-center bg-no-repeat px-6 pb-30">
-        <div className="absolute inset-0 bg-black/50 backdrop-blur-sm z-0" />
+        <div className="absolute inset-0 bg-[#030303]/50 backdrop-blur-sm z-0" />
         <div className="flex justify-between items-baseline z-20">
           <div className="relative z-10 w-full max-w-screen px-6 mx-auto mt-20">
             <h1 className="text-3xl font-poppins font-semibold text-red-700 mb-2 text-center">
@@ -147,24 +145,24 @@ export default function Services() {
         </div>
         <div>
           <div className="mt-20 sm:mt-40 flex sm:flex-row flex-col items-center justify-center gap-5">
-            <div className="flex flex-col items-start h-[250px] sm:w-[300px] w-full bg-white/10 backdrop-blur-lg shadow-lg shadow-black/30 p-6 rounded-xl transition-all hover:scale-[1.02] duration-300"></div>
-            <div className="flex flex-col items-start h-[250px] sm:w-[300px] w-full bg-white/10 backdrop-blur-lg shadow-lg shadow-black/30 p-6 rounded-xl transition-all hover:scale-[1.02] duration-300 md:relative md:-top-30"></div>
-            <div className="flex flex-col items-start h-[250px] sm:w-[300px] w-full bg-white/10 backdrop-blur-lg shadow-lg shadow-black/30 p-6 rounded-xl transition-all hover:scale-[1.02] duration-300"></div>
+            <div className="flex flex-col items-start h-[250px] sm:w-[300px] w-full bg-white/10 backdrop-blur-lg shadow-lg shadow-[#030303]/30 p-6 rounded-xl transition-all hover:scale-[1.02] duration-300"></div>
+            <div className="flex flex-col items-start h-[250px] sm:w-[300px] w-full bg-white/10 backdrop-blur-lg shadow-lg shadow-[#030303]/30 p-6 rounded-xl transition-all hover:scale-[1.02] duration-300 md:relative md:-top-30"></div>
+            <div className="flex flex-col items-start h-[250px] sm:w-[300px] w-full bg-white/10 backdrop-blur-lg shadow-lg shadow-[#030303]/30 p-6 rounded-xl transition-all hover:scale-[1.02] duration-300"></div>
           </div>
         </div>
       </div>
-      <div className="relative z-10 w-full mx-auto text-center bg-black pt-24">
+      <div className="relative z-10 w-full mx-auto text-center bg-[#030303] pt-24">
         <h1 className="text-3xl font-poppins font-semibold text-red-700 mb-2 text-start ml-10">
-          Featured IoT Solutions
+          Featured 3D Renders
         </h1>
         <p className="text-white/80 text-base md:text-xl font-poppins font-light mt-5 mb-10 max-w-2xl text-start ml-10">
-          Our portfolio demonstrates our capability in deploying smart,
-          connected devices that solve real-world problems.
+          Our portfolio demonstrates our commitment to artistic excellence and
+          technical precision in every model we create.
         </p>
         <div className="mt-5 flex sm:flex-row flex-col items-center justify-center gap-5 px-10">
-          <div className="flex flex-col items-start h-[300px] w-full bg-white/10 backdrop-blur-lg shadow-xl shadow-black/30 p-6 rounded-3xl transition-all hover:scale-[1.02] duration-300"></div>
-          <div className="flex flex-col items-start h-[300px] w-full bg-white/10 backdrop-blur-lg shadow-xl shadow-black/30 p-6 rounded-3xl transition-all hover:scale-[1.02] duration-300"></div>
-          <div className="flex flex-col items-start h-[300px] w-full bg-white/10 backdrop-blur-lg shadow-xl shadow-black/30 p-6 rounded-3xl transition-all hover:scale-[1.02] duration-300"></div>
+          <div className="flex flex-col items-start h-[300px] w-full bg-white/10 backdrop-blur-lg shadow-xl shadow-[#030303]/30 p-6 rounded-3xl transition-all hover:scale-[1.02] duration-300"></div>
+          <div className="flex flex-col items-start h-[300px] w-full bg-white/10 backdrop-blur-lg shadow-xl shadow-[#030303]/30 p-6 rounded-3xl transition-all hover:scale-[1.02] duration-300"></div>
+          <div className="flex flex-col items-start h-[300px] w-full bg-white/10 backdrop-blur-lg shadow-xl shadow-[#030303]/30 p-6 rounded-3xl transition-all hover:scale-[1.02] duration-300"></div>
         </div>
         <div className="mt-50 flex sm:flex-row flex-col items-start justify-betweem gap-5 px-20">
           <div className="w-1/3 flex flex-col">
@@ -172,41 +170,42 @@ export default function Services() {
               Transforming Ideas into Intelligent Solutions
             </h2>
             <p className="text-white/80 text-base md:text-xl font-poppins font-light mt-10 text-left">
-              Our framework covers the full IoT lifecycle: from hardware
-              prototyping and firmware development to selecting connectivity
-              protocols, building the cloud platform, and developing the final
-              application layer for data analytics and user interaction.
+              Our process begins with understanding your vision and gathering
+              references. We then proceed through block-out, high-poly
+              sculpting, retopology for optimization, and finally, texturing and
+              material creation to achieve the perfect look for your projects
+              needs.
             </p>
           </div>
           <div className="w-2/3 flex flex-col items-start">
             <div className="flex flex-col items-center justify-center md:items-center mt-2 gap-8 w-full">
-              <div className="flex items-center justify-between bg-white/10 backdrop-blur-lg shadow-lg shadow-black/30 p-6 md:w-3/4 w-full">
+              <div className="flex items-center justify-between bg-white/10 backdrop-blur-lg shadow-lg shadow-[#030303]/30 p-6 md:w-3/4 w-full">
                 <h1 className="font-poppins text-2xl font-medium text-white">
-                  Which wireless protocols do you use for IoT?
+                  What 3D modeling software do you specialize in?
                 </h1>
                 <h1 className="font-poppins text-3xl font-medium text-white">
                   +
                 </h1>
               </div>
-              <div className="flex items-center justify-between bg-white/10 backdrop-blur-lg shadow-lg shadow-black/30 p-6 md:w-3/4 w-full">
+              <div className="flex items-center justify-between bg-white/10 backdrop-blur-lg shadow-lg shadow-[#030303]/30 p-6 md:w-3/4 w-full">
                 <h1 className="font-poppins text-2xl font-medium text-white">
-                  How do you ensure the security of IoT devices?
+                  What file formats can you deliver the models in?
                 </h1>
                 <h1 className="font-poppins text-3xl font-medium text-white">
                   +
                 </h1>
               </div>
-              <div className="flex items-center justify-between bg-white/10 backdrop-blur-lg shadow-lg shadow-black/30 p-6 md:w-3/4 w-full">
+              <div className="flex items-center justify-between bg-white/10 backdrop-blur-lg shadow-lg shadow-[#030303]/30 p-6 md:w-3/4 w-full">
                 <h1 className="font-poppins text-2xl font-medium text-white">
-                  What cloud platforms do you use for IoT data?
+                  Can you create low-poly models for games?
                 </h1>
                 <h1 className="font-poppins text-3xl font-medium text-white">
                   +
                 </h1>
               </div>
-              <div className="flex items-center justify-between bg-white/10 backdrop-blur-lg shadow-lg shadow-black/30 p-6 md:w-3/4 w-full">
+              <div className="flex items-center justify-between bg-white/10 backdrop-blur-lg shadow-lg shadow-[#030303]/30 p-6 md:w-3/4 w-full">
                 <h1 className="font-poppins text-2xl font-medium text-white">
-                  Can you integrate IoT data with our existing software?
+                  Do you also provide animation and rigging services?
                 </h1>
                 <h1 className="font-poppins text-3xl font-medium text-white">
                   +
@@ -216,11 +215,11 @@ export default function Services() {
           </div>
         </div>
         <h1 className="font-poppins text-4xl text-white mb-4 mt-50">
-          Ready to Build a Connected Future?
+          Ready to Visualize Your Project?
         </h1>
         <p className="text-white/80 mb-8 max-w-2xl mx-auto">
-          Transform your business with intelligent devices and data-driven
-          insights. Lets start your IoT journey today.
+          From initial concept to final render, let our team build the stunning
+          3D assets your project deserves.
         </p>
         <Link href="/contact">
           <button className="bg-red-700 text-white font-semibold py-3 px-8 rounded-lg hover:bg-red-800 transition-colors duration-300 text-lg cursor-pointer">

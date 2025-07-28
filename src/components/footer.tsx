@@ -2,7 +2,7 @@ export default function Footer() {
   return (
     <footer className="bg-[#0e0e0e] text-white">
       {/* Contact CTA */}
-      <div className="bg-black/20 h-[300px] w-full flex flex-col items-center justify-center px-4 text-center">
+      <div className="bg-[#030303]/20 h-[300px] w-full flex flex-col items-center justify-center px-4 text-center">
         <h2 className="text-3xl font-semibold font-poppins">Need Assistance?</h2>
         <p className="text-lg text-gray-300 mt-2">We’re just a message away. Reach out for help or queries.</p>
         <button className="mt-4 bg-red-700 hover:bg-red-600 text-white py-2 px-6 rounded-full font-medium transition duration-300">

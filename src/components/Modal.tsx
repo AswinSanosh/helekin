@@ -20,13 +20,13 @@ export default function ServiceModal({ isOpen, onClose, service }: Props) {
     return (
         <Dialog open={isOpen} onClose={onClose} className="relative z-50">
             {/* Backdrop */}
-            <div className="fixed inset-0 bg-black/50 backdrop-blur-sm" aria-hidden="true" />
+            <div className="fixed inset-0 bg-[#030303]/50 backdrop-blur-sm" aria-hidden="true" />
 
             {/* Modal */}
             <div className="fixed inset-0 flex items-center justify-center p-4 m-auto h-full w-full">
-                <Dialog.Panel className="w-[800px] h-[500px] rounded-xl bg-black text-white shadow-xl overflow-hidden relative">
+                <Dialog.Panel className="ms:w-[50vw] w-[50vw] md:h-[75vh] h-[75vh] rounded-xl bg-[#030303] text-white shadow-xl overflow-hidden relative">
                     {/* Image Background */}
-                    <div className="relative w-full h-1/2">
+                    <div className="relative w-full h-1/3">
                         {/* Background Image */}
                         <Image
                             src={background}
@@ -36,7 +36,7 @@ export default function ServiceModal({ isOpen, onClose, service }: Props) {
                         />
 
                         {/* Gradient Overlay */}
-                        <div className="absolute inset-0 bg-gradient-to-b from-black/30 to-black z-10" />
+                        <div className="absolute inset-0 bg-gradient-to-b from-[#030303]/30 to-[#030303] z-10" />
 
                         {/* Icon on top */}
                         <div className="absolute top-4 left-4 bg-[#080808] p-2 rounded-full z-20">
@@ -47,8 +47,8 @@ export default function ServiceModal({ isOpen, onClose, service }: Props) {
 
                     {/* Text Content */}
                     <div className="p-6 space-y-3 m-6">
-                        <Dialog.Title className="text-red-700 text-4xl font-bold mb-8 font-poppins ">{title}</Dialog.Title>
-                        <p className="text-gray-300 text-lg font-poppins font-regular">{desc}</p>
+                        <Dialog.Title className="text-red-700 title-bold mb-8 ">{title}</Dialog.Title>
+                        <p className="text-gray-300 para-base">{desc}</p>
 
                         <div className="flex justify-between items-center pt-4">
                             {/* Placeholder icons */}
@@ -57,7 +57,7 @@ export default function ServiceModal({ isOpen, onClose, service }: Props) {
                                 <Image src="/icons/ai.png" alt="ai" width={20} height={20} />
                             </div>
                             <Link href={link}>
-                                <button className="bg-red-700 absolute bottom-5 right-5 hover:bg-white hover:text-red-700 transition-colors duration-300 text-white text-sm px-4 py-2 rounded-md">
+                                <button className="bg-red-700 subpara-base absolute bottom-5 right-5 hover:bg-white hover:text-red-700 transition-colors duration-300 text-white text-sm px-4 py-2 rounded-md">
                                     Learn More
                                 </button>
                             </Link>

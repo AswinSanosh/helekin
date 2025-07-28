@@ -1,19 +1,19 @@
-'use client';
+'use client'
 
-import React from 'react';
+import React from 'react'
 
 export default function Form() {
     return (
-        <section className="min-h-screen bg-black text-white md:px-12 flex items-center justify-center py-20 px-50">
-            <div className=" w-full flex flex-col md:flex-row gap-8 items-start justify-between">
+        <section className="min-h-screen-lg bg-[#030303] text-white lg:px-12 flex items-center justify-center px-10 py-20 md:py-50 ">
+            <div className="w-full flex flex-col lg:flex-row gap-8 items-start justify-between">
 
                 {/* Left: Form */}
-                <form className="w-full md:w-2/3 space-y-6 px-20">
+                <form className="w-full lg:w-2/3 space-y-6 md:px-20 ">
                     <h2 className="text-2xl md:text-3xl font-semibold">
                         Get in touch with our <span className="text-red-500">Experts</span>
                     </h2>
                     <p className="text-sm text-gray-400">
-                        Let&#39;s see how we can help enhance your user journey
+                        Let&#39;s see how we can help enhance your user journey.
                     </p>
 
                     {/* Name */}
@@ -79,14 +79,13 @@ export default function Form() {
                     </div>
                 </form>
 
-                {/* Right: Cards Illustration */}
-                {/* Right: Cards Illustration */}
-                <div className="hidden md:flex w-1/2 relative items-center justify-center m-auto p-20">
+                {/* Right: Cards Illustration (Desktop View) */}
+                <div className="hidden lg:flex w-1/2 relative items-center justify-center m-auto p-20">
                     <div className="bg-[url('/images/product2.png')] bg-no-repeat bg-center bg-cover h-[200px] w-[200px] rounded-3xl flex items-center justify-center -right-20 relative z-30"></div>
-                    <div className="bg-[url('/images/product1.png')] bg-no-repeat bg-center bg-cover h-[300px] w-[300px] rounded-3xl flex items-center justify-center drop-shadow-3xl shadow-black z-40"></div>
+                    <div className="bg-[url('/images/product1.png')] bg-no-repeat bg-center bg-cover h-[300px] w-[300px] rounded-3xl flex items-center justify-center drop-shadow-3xl shadow-[#030303] z-40"></div>
                     <div className="bg-[url('/images/product4.png')] bg-no-repeat bg-center bg-cover h-[200px] w-[200px] rounded-3xl flex items-center justify-center -left-20 relative z-30"></div>
                 </div>
             </div>
         </section>
-    );
+    )
 }

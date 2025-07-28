@@ -21,36 +21,97 @@
           "/svg/tools/django.svg",
           "/svg/tools/flask.svg",
           "/svg/tools/nextjs.svg"
-        ]
+        ],
+        "about-title": "About Web Development",
+        "about-desc": "Web Development is our specialized service tailored to deliver top-tier solutions using the latest technologies and industry best practices. We ensure each project stands out with custom development and performance in mind.",
+        "whatweoffer-images": [
+          "/images/offer1.png",
+          "/images/offer2.png",
+          "/images/offer3.png"
+        ],
+        "featured-projects": ["Project Alpha", "Project Beta", "Project Gamma"],
+        "featured-projects-desc": "Our team delivered impactful results in each project using our core technologies and creative strategies.",
+        "featured-projects-images": [
+          "/images/proj1.png",
+          "/images/proj2.png",
+          "/images/proj3.png"
+        ],
+        "approach-title": "Our Approach to Web Development",
+        "approach-desc": "We begin with client consultation, followed by planning, design, development, rigorous testing, and deployment to ensure your goals are met efficiently.",
+        "service-FAQ": [
+          {
+            "question": "What makes your Web Development service unique?",
+            "answer": "Our use of modern frameworks and performance-focused methodologies sets our Web Development apart."
+          },
+          {
+            "question": "Do you offer post-launch support for Web Development?",
+            "answer": "Yes, we provide complete post-launch support and maintenance."
+          }
+        ],
+        "consultQN": "Need help with your Web Development project?",
+        "consult-answer": "Reach out to us for a free consultation to explore how we can make your idea a reality."
       },
       {
         "title": "App Development",
-        "desc": "We craft high-performance Android and iOS apps with seamless functionality, elegant UI, and robust backends.",
+        "desc": "We create robust mobile and web applications tailored to your needs, ensuring seamless functionality and user engagement.",
         "background": "/images/appdev.png",
         "icon": "/svg/servicesvgs/appdev.svg",
-        "link": "/services/mobile-app-development",
+        "link": "/services/app-development",
         "tools": ["Flutter", "React Native", "Swift", "Kotlin", "Firebase"],
-        "tags": ["App Development", "Mobile", "iOS", "Android", "Software"],
+        "tags": [
+          "App Development",
+          "Mobile",
+          "Cross-Platform",
+          "Native",
+          "Software"
+        ],
         "tools-icons": [
           "/svg/tools/flutter.svg",
           "/svg/tools/reactnative.svg",
           "/svg/tools/swift.svg",
           "/svg/tools/kotlin.svg",
           "/svg/tools/firebase.svg"
-        ]
+        ],
+        "about-title": "About App Development",
+        "about-desc": "App Development is our specialized service tailored to deliver top-tier solutions using the latest technologies and industry best practices. We ensure each project stands out with custom development and performance in mind.",
+        "whatweoffer-images": [
+          "/images/offer1.png",
+          "/images/offer2.png",
+          "/images/offer3.png"
+        ],
+        "featured-projects": ["Project Alpha", "Project Beta", "Project Gamma"],
+        "featured-projects-desc": "Our team delivered impactful results in each project using our core technologies and creative strategies.",
+        "featured-projects-images": [
+          "/images/proj1.png",
+          "/images/proj2.png",
+          "/images/proj3.png"
+        ],
+        "approach-title": "Our Approach to App Development",
+        "approach-desc": "We begin with client consultation, followed by planning, design, development, rigorous testing, and deployment to ensure your goals are met efficiently.",
+        "service-FAQ": [
+          {
+            "question": "What makes your App Development service unique?",
+            "answer": "Our use of modern frameworks and performance-focused methodologies sets our App Development apart."
+          },
+          {
+            "question": "Do you offer post-launch support for App Development?",
+            "answer": "Yes, we provide complete post-launch support and maintenance."
+          }
+        ],
+        "consultQN": "Need help with your App Development project?",
+        "consult-answer": "Reach out to us for a free consultation to explore how we can make your idea a reality."
       },
       {
         "title": "UI/UX Designing",
-        "desc": "We design modern, user-centered digital interfaces with intuitive navigation and smooth interactions.",
+        "desc": "We craft intuitive and visually appealing user interfaces, prioritizing user experience and accessibility.",
         "background": "/images/uiux.png",
         "icon": "/svg/servicesvgs/uiux.svg",
         "link": "/services/ui-ux-designing",
-        "tools": ["Figma", "Adobe XD", "Sketch", "Framer", "Zeplin"],
+        "tools": ["Figma", "Adobe XD", "Sketch", "InVision"],
         "tags": [
-          "UI",
-          "UX",
+          "UI/UX",
           "Design",
-          "Wireframing",
+          "User Experience",
           "Prototyping",
           "Software"
         ],
@@ -58,122 +119,520 @@
           "/svg/tools/figma.svg",
           "/svg/tools/adobexd.svg",
           "/svg/tools/sketch.svg",
-          "/svg/tools/framer.svg",
-          "/svg/tools/zeplin.svg"
-        ]
+          "/svg/tools/invision.svg"
+        ],
+        "about-title": "About UI/UX Designing",
+        "about-desc": "UI/UX Designing is our specialized service tailored to deliver top-tier solutions using the latest technologies and industry best practices. We ensure each project stands out with custom development and performance in mind.",
+        "whatweoffer-images": [
+          "/images/offer1.png",
+          "/images/offer2.png",
+          "/images/offer3.png"
+        ],
+        "featured-projects": ["Project Alpha", "Project Beta", "Project Gamma"],
+        "featured-projects-desc": "Our team delivered impactful results in each project using our core technologies and creative strategies.",
+        "featured-projects-images": [
+          "/images/proj1.png",
+          "/images/proj2.png",
+          "/images/proj3.png"
+        ],
+        "approach-title": "Our Approach to UI/UX Designing",
+        "approach-desc": "We begin with client consultation, followed by planning, design, development, rigorous testing, and deployment to ensure your goals are met efficiently.",
+        "service-FAQ": [
+          {
+            "question": "What makes your UI/UX Designing service unique?",
+            "answer": "Our use of modern frameworks and performance-focused methodologies sets our UI/UX Designing apart."
+          },
+          {
+            "question": "Do you offer post-launch support for UI/UX Designing?",
+            "answer": "Yes, we provide complete post-launch support and maintenance."
+          }
+        ],
+        "consultQN": "Need help with your UI/UX Designing project?",
+        "consult-answer": "Reach out to us for a free consultation to explore how we can make your idea a reality."
       },
       {
         "title": "Poster Designing",
-        "desc": "We create compelling posters, banners, and visuals tailored for promotions, events, and brand awareness.",
+        "desc": "We design eye-catching posters for marketing and branding, tailored to convey your message effectively.",
         "background": "/images/poster.png",
         "icon": "/svg/servicesvgs/poster.svg",
         "link": "/services/poster-designing",
-        "tools": ["Adobe Photoshop", "Canva", "Illustrator", "Figma"],
-        "tags": ["Design", "Poster", "Graphics", "Marketing", "Software"],
+        "tools": ["Adobe Photoshop", "Canva", "Illustrator", "CorelDRAW"],
+        "tags": [
+          "Poster Design",
+          "Graphic Design",
+          "Branding",
+          "Marketing",
+          "Software"
+        ],
         "tools-icons": [
           "/svg/tools/photoshop.svg",
           "/svg/tools/canva.svg",
           "/svg/tools/illustrator.svg",
-          "/svg/tools/figma.svg"
-        ]
+          "/svg/tools/coreldraw.svg"
+        ],
+        "about-title": "About Poster Designing",
+        "about-desc": "Poster Designing is our specialized service tailored to deliver top-tier solutions using the latest technologies and industry best practices. We ensure each project stands out with custom development and performance in mind.",
+        "whatweoffer-images": [
+          "/images/offer1.png",
+          "/images/offer2.png",
+          "/images/offer3.png"
+        ],
+        "featured-projects": ["Project Alpha", "Project Beta", "Project Gamma"],
+        "featured-projects-desc": "Our team delivered impactful results in each project using our core technologies and creative strategies.",
+        "featured-projects-images": [
+          "/images/proj1.png",
+          "/images/proj2.png",
+          "/images/proj3.png"
+        ],
+        "approach-title": "Our Approach to Poster Designing",
+        "approach-desc": "We begin with client consultation, followed by planning, design, development, rigorous testing, and deployment to ensure your goals are met efficiently.",
+        "service-FAQ": [
+          {
+            "question": "What makes your Poster Designing service unique?",
+            "answer": "Our use of modern frameworks and performance-focused methodologies sets our Poster Designing apart."
+          },
+          {
+            "question": "Do you offer post-launch support for Poster Designing?",
+            "answer": "Yes, we provide complete post-launch support and maintenance."
+          }
+        ],
+        "consultQN": "Need help with your Poster Designing project?",
+        "consult-answer": "Reach out to us for a free consultation to explore how we can make your idea a reality."
       },
       {
         "title": "Search Engine Optimization",
-        "desc": "We optimize websites to rank higher on search engines using advanced SEO techniques for better visibility.",
+        "desc": "We optimize websites to rank higher on search engines, driving organic traffic and improving visibility.",
         "background": "/images/seo.png",
         "icon": "/svg/servicesvgs/seo.svg",
         "link": "/services/search-engine-optimization",
-        "tools": ["Google Analytics", "Ahrefs", "SEMRush", "Yoast", "Moz"],
-        "tags": ["SEO", "Marketing", "Search", "Optimization", "Software"],
+        "tools": ["Google Analytics", "SEMRush", "Ahrefs", "Moz"],
+        "tags": [
+          "SEO",
+          "Digital Marketing",
+          "Analytics",
+          "Optimization",
+          "Software"
+        ],
         "tools-icons": [
-          "/svg/tools/analytics.svg",
-          "/svg/tools/ahrefs.svg",
+          "/svg/tools/googleanalytics.svg",
           "/svg/tools/semrush.svg",
-          "/svg/tools/yoast.svg",
+          "/svg/tools/ahrefs.svg",
           "/svg/tools/moz.svg"
-        ]
+        ],
+        "about-title": "About Search Engine Optimization",
+        "about-desc": "Search Engine Optimization is our specialized service tailored to deliver top-tier solutions using the latest technologies and industry best practices. We ensure each project stands out with custom development and performance in mind.",
+        "whatweoffer-images": [
+          "/images/offer1.png",
+          "/images/offer2.png",
+          "/images/offer3.png"
+        ],
+        "featured-projects": ["Project Alpha", "Project Beta", "Project Gamma"],
+        "featured-projects-desc": "Our team delivered impactful results in each project using our core technologies and creative strategies.",
+        "featured-projects-images": [
+          "/images/proj1.png",
+          "/images/proj2.png",
+          "/images/proj3.png"
+        ],
+        "approach-title": "Our Approach to Search Engine Optimization",
+        "approach-desc": "We begin with client consultation, followed by planning, design, development, rigorous testing, and deployment to ensure your goals are met efficiently.",
+        "service-FAQ": [
+          {
+            "question": "What makes your SEO service unique?",
+            "answer": "Our use of modern frameworks and performance-focused methodologies sets our SEO apart."
+          },
+          {
+            "question": "Do you offer post-launch support for SEO?",
+            "answer": "Yes, we provide complete post-launch support and maintenance."
+          }
+        ],
+        "consultQN": "Need help with your SEO project?",
+        "consult-answer": "Reach out to us for a free consultation to explore how we can make your idea a reality."
       },
       {
         "title": "Social Media Marketing",
-        "desc": "We boost brand presence with strategic social campaigns across all major platforms to grow engagement.",
-        "background": "/images/smm.png",
-        "icon": "/svg/servicesvgs/smm.svg",
+        "desc": "We develop strategic social media campaigns to boost brand awareness and engage your audience effectively.",
+        "background": "/images/socialmedia.png",
+        "icon": "/svg/servicesvgs/socialmedia.svg",
         "link": "/services/social-media-marketing",
-        "tools": [
-          "Meta Business Suite",
-          "Buffer",
-          "Hootsuite",
-          "Canva",
-          "Analytics"
+        "tools": ["Hootsuite", "Buffer", "Canva", "Sprout Social"],
+        "tags": [
+          "Social Media",
+          "Marketing",
+          "Branding",
+          "Engagement",
+          "Software"
         ],
-        "tags": ["Marketing", "Social Media", "Branding", "SMM", "Software"],
         "tools-icons": [
-          "/svg/tools/meta.svg",
-          "/svg/tools/buffer.svg",
           "/svg/tools/hootsuite.svg",
+          "/svg/tools/buffer.svg",
           "/svg/tools/canva.svg",
-          "/svg/tools/analytics.svg"
-        ]
+          "/svg/tools/sproutsocial.svg"
+        ],
+        "about-title": "About Social Media Marketing",
+        "about-desc": "Social Media Marketing is our specialized service tailored to deliver top-tier solutions using the latest technologies and industry best practices. We ensure each project stands out with custom development and performance in mind.",
+        "whatweoffer-images": [
+          "/images/offer1.png",
+          "/images/offer2.png",
+          "/images/offer3.png"
+        ],
+        "featured-projects": ["Project Alpha", "Project Beta", "Project Gamma"],
+        "featured-projects-desc": "Our team delivered impactful results in each project using our core technologies and creative strategies.",
+        "featured-projects-images": [
+          "/images/proj1.png",
+          "/images/proj2.png",
+          "/images/proj3.png"
+        ],
+        "approach-title": "Our Approach to Social Media Marketing",
+        "approach-desc": "We begin with client consultation, followed by planning, design, development, rigorous testing, and deployment to ensure your goals are met efficiently.",
+        "service-FAQ": [
+          {
+            "question": "What makes your Social Media Marketing service unique?",
+            "answer": "Our use of modern frameworks and performance-focused methodologies sets our Social Media Marketing apart."
+          },
+          {
+            "question": "Do you offer post-launch support for Social Media Marketing?",
+            "answer": "Yes, we provide complete post-launch support and maintenance."
+          }
+        ],
+        "consultQN": "Need help with your Social Media Marketing project?",
+        "consult-answer": "Reach out to us for a free consultation to explore how we can make your idea a reality."
       },
       {
         "title": "Content Creation",
-        "desc": "We create high-quality content for digital platforms including blogs, social posts, and video scripts.",
-        "background": "/images/content.png",
-        "icon": "/svg/servicesvgs/content.svg",
+        "desc": "We produce engaging content, including blogs, videos, and graphics, to strengthen your brand and connect with audiences.",
+        "background": "/images/contentcreation.png",
+        "icon": "/svg/servicesvgs/contentcreation.svg",
         "link": "/services/content-creation",
-        "tools": ["Notion", "Grammarly", "ChatGPT", "Canva", "Google Docs"],
-        "tags": ["Content", "Writing", "Marketing", "Branding", "Software"],
+        "tools": ["Adobe Premiere", "Canva", "Grammarly", "WordPress"],
+        "tags": [
+          "Content Creation",
+          "Marketing",
+          "Branding",
+          "Multimedia",
+          "Software"
+        ],
         "tools-icons": [
-          "/svg/tools/notion.svg",
-          "/svg/tools/grammarly.svg",
-          "/svg/tools/chatgpt.svg",
+          "/svg/tools/premiere.svg",
           "/svg/tools/canva.svg",
-          "/svg/tools/docs.svg"
-        ]
+          "/svg/tools/grammarly.svg",
+          "/svg/tools/wordpress.svg"
+        ],
+        "about-title": "About Content Creation",
+        "about-desc": "Content Creation is our specialized service tailored to deliver top-tier solutions using the latest technologies and industry best practices. We ensure each project stands out with custom development and performance in mind.",
+        "whatweoffer-images": [
+          "/images/offer1.png",
+          "/images/offer2.png",
+          "/images/offer3.png"
+        ],
+        "featured-projects": ["Project Alpha", "Project Beta", "Project Gamma"],
+        "featured-projects-desc": "Our team delivered impactful results in each project using our core technologies and creative strategies.",
+        "featured-projects-images": [
+          "/images/proj1.png",
+          "/images/proj2.png",
+          "/images/proj3.png"
+        ],
+        "approach-title": "Our Approach to Content Creation",
+        "approach-desc": "We begin with client consultation, followed by planning, design, development, rigorous testing, and deployment to ensure your goals are met efficiently.",
+        "service-FAQ": [
+          {
+            "question": "What makes your Content Creation service unique?",
+            "answer": "Our use of modern frameworks and performance-focused methodologies sets our Content Creation apart."
+          },
+          {
+            "question": "Do you offer post-launch support for Content Creation?",
+            "answer": "Yes, we provide complete post-launch support and maintenance."
+          }
+        ],
+        "consultQN": "Need help with your Content Creation project?",
+        "consult-answer": "Reach out to us for a free consultation to explore how we can make your idea a reality."
       }
     ],
     "electronics_and_hardware": [
       {
-        "title": "PCB Design",
+        "title": "PCB Designing",
         "desc": "We design and prototype high-quality PCBs for commercial and industrial applications using modern EDA tools.",
-        "background": "/images/pcb.png",
+        "background": "/images/ServiceBackground/PCBdesign.jpg",
         "icon": "/svg/servicesvgs/pcb.svg",
-        "link": "/services/pcb-designing"
+        "link": "/services/pcb-designing",
+        "tools": ["KiCad", "Altium Designer", "Eagle", "EasyEDA"],
+        "tags": ["PCB", "Electronics", "Design", "EDA", "Hardware"],
+        "tools-icons": [
+          "/svg/tools/kicad.svg",
+          "/svg/tools/altium.svg",
+          "/svg/tools/eagle.svg",
+          "/svg/tools/easyeda.svg"
+        ],
+        "about-title": "About PCB Designing",
+        "about-desc": "PCB Designing is our specialized service tailored to deliver top-tier solutions using the latest technologies and industry best practices. We ensure each project stands out with custom development and performance in mind.",
+        "whatweoffer-images": [
+          "/images/offer1.png",
+          "/images/offer2.png",
+          "/images/offer3.png"
+        ],
+        "featured-projects": ["Project Alpha", "Project Beta", "Project Gamma"],
+        "featured-projects-desc": "Our team delivered impactful results in each project using our core technologies and creative strategies.",
+        "featured-projects-images": [
+          "/images/proj1.png",
+          "/images/proj2.png",
+          "/images/proj3.png"
+        ],
+        "approach-title": "Our Approach to PCB Designing",
+        "approach-desc": "We begin with client consultation, followed by planning, design, development, rigorous testing, and deployment to ensure your goals are met efficiently.",
+        "service-FAQ": [
+          {
+            "question": "What makes your PCB Designing service unique?",
+            "answer": "Our use of modern frameworks and performance-focused methodologies sets our PCB Designing apart."
+          },
+          {
+            "question": "Do you offer post-launch support for PCB Designing?",
+            "answer": "Yes, we provide complete post-launch support and maintenance."
+          }
+        ],
+        "consultQN": "Need help with your PCB Designing project?",
+        "consult-answer": "Reach out to us for a free consultation to explore how we can make your idea a reality."
       },
       {
         "title": "Laser Engraving",
-        "desc": "We provide precision laser engraving for enclosures, branding, PCB labeling, and personalized hardware.",
-        "background": "/images/laser.png",
-        "icon": "/svg/servicesvgs/laser.svg",
-        "link": "/services/laser-engraving"
+        "desc": "We provide precise laser engraving services for custom designs on various materials for industrial and artistic applications.",
+        "background": "/images/laserengraving.png",
+        "icon": "/svg/servicesvgs/laserengraving.svg",
+        "link": "/services/laser-engraving",
+        "tools": ["LightBurn", "Trotec JobControl", "LaserGRBL", "Inkscape"],
+        "tags": [
+          "Laser Engraving",
+          "Fabrication",
+          "Design",
+          "Hardware",
+          "Customization"
+        ],
+        "tools-icons": [
+          "/svg/tools/lightburn.svg",
+          "/svg/tools/trotec.svg",
+          "/svg/tools/lasergrbl.svg",
+          "/svg/tools/inkscape.svg"
+        ],
+        "about-title": "About Laser Engraving",
+        "about-desc": "Laser Engraving is our specialized service tailored to deliver top-tier solutions using the latest technologies and industry best practices. We ensure each project stands out with custom development and performance in mind.",
+        "whatweoffer-images": [
+          "/images/offer1.png",
+          "/images/offer2.png",
+          "/images/offer3.png"
+        ],
+        "featured-projects": ["Project Alpha", "Project Beta", "Project Gamma"],
+        "featured-projects-desc": "Our team delivered impactful results in each project using our core technologies and creative strategies.",
+        "featured-projects-images": [
+          "/images/proj1.png",
+          "/images/proj2.png",
+          "/images/proj3.png"
+        ],
+        "approach-title": "Our Approach to Laser Engraving",
+        "approach-desc": "We begin with client consultation, followed by planning, design, development, rigorous testing, and deployment to ensure your goals are met efficiently.",
+        "service-FAQ": [
+          {
+            "question": "What makes your Laser Engraving service unique?",
+            "answer": "Our use of modern frameworks and performance-focused methodologies sets our Laser Engraving apart."
+          },
+          {
+            "question": "Do you offer post-launch support for Laser Engraving?",
+            "answer": "Yes, we provide complete post-launch support and maintenance."
+          }
+        ],
+        "consultQN": "Need help with your Laser Engraving project?",
+        "consult-answer": "Reach out to us for a free consultation to explore how we can make your idea a reality."
       },
       {
-        "title": "Hardware Assembling",
-        "desc": "We assemble electronics using soldering, testing, and integration of components with clean wiring practices.",
-        "background": "/images/assembling.png",
-        "icon": "/svg/servicesvgs/assembling.svg",
-        "link": "/services/hardware-assembling"
+        "title": "Electronics & Hardware Assembling",
+        "desc": "We offer professional assembly services for electronics and hardware, ensuring precision and reliability.",
+        "background": "/images/electronicsassembly.png",
+        "icon": "/svg/servicesvgs/electronicsassembly.svg",
+        "link": "/services/electronics-hardware-assembling",
+        "tools": [
+          "Soldering Stations",
+          "Multimeters",
+          "SMT Machines",
+          "ESD Tools"
+        ],
+        "tags": [
+          "Electronics",
+          "Hardware",
+          "Assembly",
+          "Manufacturing",
+          "Prototyping"
+        ],
+        "tools-icons": [
+          "/svg/tools/soldering.svg",
+          "/svg/tools/multimeter.svg",
+          "/svg/tools/smt.svg",
+          "/svg/tools/esdtools.svg"
+        ],
+        "about-title": "About Electronics & Hardware Assembling",
+        "about-desc": "Electronics & Hardware Assembling is our specialized service tailored to deliver top-tier solutions using the latest technologies and industry best practices. We ensure each project stands out with custom development and performance in mind.",
+        "whatweoffer-images": [
+          "/images/offer1.png",
+          "/images/offer2.png",
+          "/images/offer3.png"
+        ],
+        "featured-projects": ["Project Alpha", "Project Beta", "Project Gamma"],
+        "featured-projects-desc": "Our team delivered impactful results in each project using our core technologies and creative strategies.",
+        "featured-projects-images": [
+          "/images/proj1.png",
+          "/images/proj2.png",
+          "/images/proj3.png"
+        ],
+        "approach-title": "Our Approach to Electronics & Hardware Assembling",
+        "approach-desc": "We begin with client consultation, followed by planning, design, development, rigorous testing, and deployment to ensure your goals are met efficiently.",
+        "service-FAQ": [
+          {
+            "question": "What makes your Electronics & Hardware Assembling service unique?",
+            "answer": "Our use of modern frameworks and performance-focused methodologies sets our Electronics & Hardware Assembling apart."
+          },
+          {
+            "question": "Do you offer post-launch support for Electronics & Hardware Assembling?",
+            "answer": "Yes, we provide complete post-launch support and maintenance."
+          }
+        ],
+        "consultQN": "Need help with your Electronics & Hardware Assembling project?",
+        "consult-answer": "Reach out to us for a free consultation to explore how we can make your idea a reality."
       },
       {
         "title": "IoT Integration",
-        "desc": "We build smart IoT systems with cloud connectivity, sensor data collection, and embedded programming.",
-        "background": "/images/iot-bg.png",
+        "desc": "We develop and integrate IoT solutions to connect devices and enable smart, data-driven applications.",
+        "background": "/images/iot.png",
         "icon": "/svg/servicesvgs/iot.svg",
-        "link": "/services/iot-integration"
+        "link": "/services/iot-integration",
+        "tools": ["Arduino", "Raspberry Pi", "ESP32", "MQTT"],
+        "tags": [
+          "IoT",
+          "Electronics",
+          "Integration",
+          "Smart Devices",
+          "Hardware"
+        ],
+        "tools-icons": [
+          "/svg/tools/arduino.svg",
+          "/svg/tools/raspberrypi.svg",
+          "/svg/tools/esp32.svg",
+          "/svg/tools/mqtt.svg"
+        ],
+        "about-title": "About IoT Integration",
+        "about-desc": "IoT Integration is our specialized service tailored to deliver top-tier solutions using the latest technologies and industry best practices. We ensure each project stands out with custom development and performance in mind.",
+        "whatweoffer-images": [
+          "/images/offer1.png",
+          "/images/offer2.png",
+          "/images/offer3.png"
+        ],
+        "featured-projects": ["Project Alpha", "Project Beta", "Project Gamma"],
+        "featured-projects-desc": "Our team delivered impactful results in each project using our core technologies and creative strategies.",
+        "featured-projects-images": [
+          "/images/proj1.png",
+          "/images/proj2.png",
+          "/images/proj3.png"
+        ],
+        "approach-title": "Our Approach to IoT Integration",
+        "approach-desc": "We begin with client consultation, followed by planning, design, development, rigorous testing, and deployment to ensure your goals are met efficiently.",
+        "service-FAQ": [
+          {
+            "question": "What makes your IoT Integration service unique?",
+            "answer": "Our use of modern frameworks and performance-focused methodologies sets our IoT Integration apart."
+          },
+          {
+            "question": "Do you offer post-launch support for IoT Integration?",
+            "answer": "Yes, we provide complete post-launch support and maintenance."
+          }
+        ],
+        "consultQN": "Need help with your IoT Integration project?",
+        "consult-answer": "Reach out to us for a free consultation to explore how we can make your idea a reality."
       },
       {
         "title": "PLC Programming",
-        "desc": "We develop PLC-based automation for industries using Siemens, Allen Bradley, Delta, and other platforms.",
+        "desc": "We program PLCs for industrial automation, ensuring efficient control and monitoring of machinery.",
         "background": "/images/plc.png",
         "icon": "/svg/servicesvgs/plc.svg",
-        "link": "/services/plc-programming"
+        "link": "/services/plc-programming",
+        "tools": [
+          "Siemens TIA Portal",
+          "Allen-Bradley RSLogix",
+          "Mitsubishi GX Works",
+          "Codesys"
+        ],
+        "tags": ["PLC", "Automation", "Programming", "Industrial", "Hardware"],
+        "tools-icons": [
+          "/svg/tools/siemens.svg",
+          "/svg/tools/allenbradley.svg",
+          "/svg/tools/mitsubishi.svg",
+          "/svg/tools/codesys.svg"
+        ],
+        "about-title": "About PLC Programming",
+        "about-desc": "PLC Programming is our specialized service tailored to deliver top-tier solutions using the latest technologies and industry best practices. We ensure each project stands out with custom development and performance in mind.",
+        "whatweoffer-images": [
+          "/images/offer1.png",
+          "/images/offer2.png",
+          "/images/offer3.png"
+        ],
+        "featured-projects": ["Project Alpha", "Project Beta", "Project Gamma"],
+        "featured-projects-desc": "Our team delivered impactful results in each project using our core technologies and creative strategies.",
+        "featured-projects-images": [
+          "/images/proj1.png",
+          "/images/proj2.png",
+          "/images/proj3.png"
+        ],
+        "approach-title": "Our Approach to PLC Programming",
+        "approach-desc": "We begin with client consultation, followed by planning, design, development, rigorous testing, and deployment to ensure your goals are met efficiently.",
+        "service-FAQ": [
+          {
+            "question": "What makes your PLC Programming service unique?",
+            "answer": "Our use of modern frameworks and performance-focused methodologies sets our PLC Programming apart."
+          },
+          {
+            "question": "Do you offer post-launch support for PLC Programming?",
+            "answer": "Yes, we provide complete post-launch support and maintenance."
+          }
+        ],
+        "consultQN": "Need help with your PLC Programming project?",
+        "consult-answer": "Reach out to us for a free consultation to explore how we can make your idea a reality."
       },
       {
         "title": "SCADA Designing",
-        "desc": "We design SCADA systems for industrial monitoring, control, and data acquisition in real-time.",
+        "desc": "We design SCADA systems for real-time monitoring and control of industrial processes.",
         "background": "/images/scada.png",
         "icon": "/svg/servicesvgs/scada.svg",
-        "link": "/services/scada-designing"
+        "link": "/services/scada-designing",
+        "tools": ["Ignition", "WinCC", "Wonderware", "FactoryTalk"],
+        "tags": ["SCADA", "Automation", "Monitoring", "Industrial", "Hardware"],
+        "tools-icons": [
+          "/svg/tools/ignition.svg",
+          "/svg/tools/wincc.svg",
+          "/svg/tools/wonderware.svg",
+          "/svg/tools/factorytalk.svg"
+        ],
+        "about-title": "About SCADA Designing",
+        "about-desc": "SCADA Designing is our specialized service tailored to deliver top-tier solutions using the latest technologies and industry best practices. We ensure each project stands out with custom development and performance in mind.",
+        "whatweoffer-images": [
+          "/images/offer1.png",
+          "/images/offer2.png",
+          "/images/offer3.png"
+        ],
+        "featured-projects": ["Project Alpha", "Project Beta", "Project Gamma"],
+        "featured-projects-desc": "Our team delivered impactful results in each project using our core technologies and creative strategies.",
+        "featured-projects-images": [
+          "/images/proj1.png",
+          "/images/proj2.png",
+          "/images/proj3.png"
+        ],
+        "approach-title": "Our Approach to SCADA Designing",
+        "approach-desc": "We begin with client consultation, followed by planning, design, development, rigorous testing, and deployment to ensure your goals are met efficiently.",
+        "service-FAQ": [
+          {
+            "question": "What makes your SCADA Designing service unique?",
+            "answer": "Our use of modern frameworks and performance-focused methodologies sets our SCADA Designing apart."
+          },
+          {
+            "question": "Do you offer post-launch support for SCADA Designing?",
+            "answer": "Yes, we provide complete post-launch support and maintenance."
+          }
+        ],
+        "consultQN": "Need help with your SCADA Designing project?",
+        "consult-answer": "Reach out to us for a free consultation to explore how we can make your idea a reality."
       }
     ],
     "threed": [
@@ -182,28 +641,178 @@
         "desc": "We create detailed CAD models for mechanical parts and prototypes using industry-grade design software.",
         "background": "/images/3dmodel.png",
         "icon": "/svg/servicesvgs/3dmodel.svg",
-        "link": "/services/3d-modeling"
+        "link": "/services/3d-modeling",
+        "tools": ["Fusion 360", "SolidWorks", "AutoCAD", "TinkerCAD"],
+        "tags": ["CAD", "3D Modeling", "Design", "Mechanical", "Prototyping"],
+        "tools-icons": [
+          "/svg/tools/fusion360.svg",
+          "/svg/tools/solidworks.svg",
+          "/svg/tools/autocad.svg",
+          "/svg/tools/tinkercad.svg"
+        ],
+        "about-title": "About CAD Designing & 3D Modeling",
+        "about-desc": "CAD Designing & 3D Modeling is our specialized service tailored to deliver top-tier solutions using the latest technologies and industry best practices. We ensure each project stands out with custom development and performance in mind.",
+        "whatweoffer-images": [
+          "/images/offer1.png",
+          "/images/offer2.png",
+          "/images/offer3.png"
+        ],
+        "featured-projects": ["Project Alpha", "Project Beta", "Project Gamma"],
+        "featured-projects-desc": "Our team delivered impactful results in each project using our core technologies and creative strategies.",
+        "featured-projects-images": [
+          "/images/proj1.png",
+          "/images/proj2.png",
+          "/images/proj3.png"
+        ],
+        "approach-title": "Our Approach to CAD Designing & 3D Modeling",
+        "approach-desc": "We begin with client consultation, followed by planning, design, development, rigorous testing, and deployment to ensure your goals are met efficiently.",
+        "service-FAQ": [
+          {
+            "question": "What makes your CAD Designing & 3D Modeling service unique?",
+            "answer": "Our use of modern frameworks and performance-focused methodologies sets our CAD Designing & 3D Modeling apart."
+          },
+          {
+            "question": "Do you offer post-launch support for CAD Designing & 3D Modeling?",
+            "answer": "Yes, we provide complete post-launch support and maintenance."
+          }
+        ],
+        "consultQN": "Need help with your CAD Designing & 3D Modeling project?",
+        "consult-answer": "Reach out to us for a free consultation to explore how we can make your idea a reality."
       },
       {
         "title": "3D Printing & Polishing",
-        "desc": "We offer high-quality 3D prints using FDM/SLA with surface finishing for functional and visual parts.",
-        "background": "/images/3dprint.png",
-        "icon": "/svg/servicesvgs/3dprint.svg",
-        "link": "/services/3d-printing"
+        "desc": "We provide high-precision 3D printing and polishing services to create functional prototypes and finished products.",
+        "background": "/images/3dprinting.png",
+        "icon": "/svg/servicesvgs/3dprinting.svg",
+        "link": "/services/3d-printing-polishing",
+        "tools": ["Cura", "PrusaSlicer", "Simplify3D", "Meshmixer"],
+        "tags": [
+          "3D Printing",
+          "Polishing",
+          "Prototyping",
+          "Manufacturing",
+          "3D"
+        ],
+        "tools-icons": [
+          "/svg/tools/cura.svg",
+          "/svg/tools/prusaslicer.svg",
+          "/svg/tools/simplify3d.svg",
+          "/svg/tools/meshmixer.svg"
+        ],
+        "about-title": "About 3D Printing & Polishing",
+        "about-desc": "3D Printing & Polishing is our specialized service tailored to deliver top-tier solutions using the latest technologies and industry best practices. We ensure each project stands out with custom development and performance in mind.",
+        "whatweoffer-images": [
+          "/images/offer1.png",
+          "/images/offer2.png",
+          "/images/offer3.png"
+        ],
+        "featured-projects": ["Project Alpha", "Project Beta", "Project Gamma"],
+        "featured-projects-desc": "Our team delivered impactful results in each project using our core technologies and creative strategies.",
+        "featured-projects-images": [
+          "/images/proj1.png",
+          "/images/proj2.png",
+          "/images/proj3.png"
+        ],
+        "approach-title": "Our Approach to 3D Printing & Polishing",
+        "approach-desc": "We begin with client consultation, followed by planning, design, development, rigorous testing, and deployment to ensure your goals are met efficiently.",
+        "service-FAQ": [
+          {
+            "question": "What makes your 3D Printing & Polishing service unique?",
+            "answer": "Our use of modern frameworks and performance-focused methodologies sets our 3D Printing & Polishing apart."
+          },
+          {
+            "question": "Do you offer post-launch support for 3D Printing & Polishing?",
+            "answer": "Yes, we provide complete post-launch support and maintenance."
+          }
+        ],
+        "consultQN": "Need help with your 3D Printing & Polishing project?",
+        "consult-answer": "Reach out to us for a free consultation to explore how we can make your idea a reality."
       },
       {
         "title": "Software & Electronics Prototyping",
-        "desc": "We integrate 3D printed enclosures with embedded circuits for fast and reliable product prototyping.",
+        "desc": "We develop integrated prototypes combining software and electronics for innovative product development.",
         "background": "/images/prototyping.png",
         "icon": "/svg/servicesvgs/prototyping.svg",
-        "link": "/services/software-electronics-prototyping"
+        "link": "/services/software-electronics-prototyping",
+        "tools": ["Arduino", "Raspberry Pi", "Fusion 360", "PlatformIO"],
+        "tags": ["Prototyping", "Software", "Electronics", "Integration", "3D"],
+        "tools-icons": [
+          "/svg/tools/arduino.svg",
+          "/svg/tools/raspberrypi.svg",
+          "/svg/tools/fusion360.svg",
+          "/svg/tools/platformio.svg"
+        ],
+        "about-title": "About Software & Electronics Prototyping",
+        "about-desc": "Software & Electronics Prototyping is our specialized service tailored to deliver top-tier solutions using the latest technologies and industry best practices. We ensure each project stands out with custom development and performance in mind.",
+        "whatweoffer-images": [
+          "/images/offer1.png",
+          "/images/offer2.png",
+          "/images/offer3.png"
+        ],
+        "featured-projects": ["Project Alpha", "Project Beta", "Project Gamma"],
+        "featured-projects-desc": "Our team delivered impactful results in each project using our core technologies and creative strategies.",
+        "featured-projects-images": [
+          "/images/proj1.png",
+          "/images/proj2.png",
+          "/images/proj3.png"
+        ],
+        "approach-title": "Our Approach to Software & Electronics Prototyping",
+        "approach-desc": "We begin with client consultation, followed by planning, design, development, rigorous testing, and deployment to ensure your goals are met efficiently.",
+        "service-FAQ": [
+          {
+            "question": "What makes your Software & Electronics Prototyping service unique?",
+            "answer": "Our use of modern frameworks and performance-focused methodologies sets our Software & Electronics Prototyping apart."
+          },
+          {
+            "question": "Do you offer post-launch support for Software & Electronics Prototyping?",
+            "answer": "Yes, we provide complete post-launch support and maintenance."
+          }
+        ],
+        "consultQN": "Need help with your Software & Electronics Prototyping project?",
+        "consult-answer": "Reach out to us for a free consultation to explore how we can make your idea a reality."
       },
       {
         "title": "Simulation & Analysis",
-        "desc": "We run FEA, CFD, and thermal simulations to validate designs before production and ensure reliability.",
+        "desc": "We perform simulations and analyses to optimize designs and predict performance for 3D models and systems.",
         "background": "/images/simulation.png",
-        "icon": "/svg/servicesvgs/analysis.svg",
-        "link": "/services/simulation-analysis"
+        "icon": "/svg/servicesvgs/simulation.svg",
+        "link": "/services/simulation-analysis",
+        "tools": ["ANSYS", "COMSOL", "SolidWorks Simulation", "MATLAB"],
+        "tags": ["Simulation", "Analysis", "3D Modeling", "Optimization", "3D"],
+        "tools-icons": [
+          "/svg/tools/ansys.svg",
+          "/svg/tools/comsol.svg",
+          "/svg/tools/solidworks.svg",
+          "/svg/tools/matlab.svg"
+        ],
+        "about-title": "About Simulation & Analysis",
+        "about-desc": "Simulation & Analysis is our specialized service tailored to deliver top-tier solutions using the latest technologies and industry best practices. We ensure each project stands out with custom development and performance in mind.",
+        "whatweoffer-images": [
+          "/images/offer1.png",
+          "/images/offer2.png",
+          "/images/offer3.png"
+        ],
+        "featured-projects": ["Project Alpha", "Project Beta", "Project Gamma"],
+        "featured-projects-desc": "Our team delivered impactful results in each project using our core technologies and creative strategies.",
+        "featured-projects-images": [
+          "/images/proj1.png",
+          "/images/proj2.png",
+          "/images/proj3.png"
+        ],
+        "approach-title": "Our Approach to Simulation & Analysis",
+        "approach-desc": "We begin with client consultation, followed by planning, design, development, rigorous testing, and deployment to ensure your goals are met efficiently.",
+        "service-FAQ": [
+          {
+            "question": "What makes your Simulation & Analysis service unique?",
+            "answer": "Our use of modern frameworks and performance-focused methodologies sets our Simulation & Analysis apart."
+          },
+          {
+            "question": "Do you offer post-launch support for Simulation & Analysis?",
+            "answer": "Yes, we provide complete post-launch support and maintenance."
+          }
+        ],
+        "consultQN": "Need help with your Simulation & Analysis project?",
+        "consult-answer": "Reach out to us for a free consultation to explore how we can make your idea a reality."
       }
     ]
   }

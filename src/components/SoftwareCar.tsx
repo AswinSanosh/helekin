@@ -1,82 +1,80 @@
 'use client';
 
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { motion, useAnimation } from 'framer-motion';
 import Image from 'next/image';
-import Link from 'next/link';
 import serviceData from './ServiceList.json';
 import ServiceModal from './Modal';
 import { Service } from '@/types/Service';
 
-const CARD_WIDTH = 300;
-const CARD_GAP = 40;
-const VISIBLE_CARDS = 3;
-
-interface ServiceModalProps {
-  isOpen: boolean;
-  onClose: () => void;
-  service: Service | null;
-}
-
-
 export default function SoftwareServicesCarousel() {
-  const [visibleCards, setVisibleCards] = useState(VISIBLE_CARDS);
-  const [index, setIndex] = useState(0);
+  const services: Service[] = serviceData.servicesList.software;
+  const CARD_COUNT = services.length;
+  const MIDDLE_INDEX = CARD_COUNT + 1;
+
+  const [currentIndex, setCurrentIndex] = useState(MIDDLE_INDEX);
   const [hovering, setHovering] = useState(false);
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
-
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const [selectedService, setSelectedService] = useState<Service | null>(null);
+  const [isCooldown, setIsCooldown] = useState(false);
+  const [initialX, setInitialX] = useState<number | null>(null);
 
   const controls = useAnimation();
-  const containerRef = useRef(null);
 
-  const services: Service[] = serviceData.servicesList.software;
-  const allCards: Service[] = [...services, ...services];
-  const [selectedService, setSelectedService] = useState<Service | null>(null);
-
+  // Clone items for infinite scroll illusion
+  const allCards: Service[] = [
+    services[services.length - 5],
+    services[services.length - 4],
+    services[services.length - 3],
+    services[services.length - 2],
+    services[services.length - 1],
+    ...services,
+    ...services,
+    ...services,
+    ...services,
+    ...services,
+    services[0],
+    services[1],
+    services[2],
+    services[3],
+    services[4],
+  ];
 
   useEffect(() => {
-    const handleResize = () => {
-      const width = window.innerWidth - 40;
-      const cards = Math.floor(width / (CARD_WIDTH + CARD_GAP));
-      setVisibleCards(cards);
-    };
-    handleResize();
-    window.addEventListener('resize', handleResize);
-    return () => window.removeEventListener('resize', handleResize);
+    if (typeof window !== 'undefined') {
+      const vw25 = window.innerWidth * 0.25;
+      const gap = 40;
+      const cardWidthWithGap = vw25 + gap;
+      const calculatedX = -MIDDLE_INDEX * cardWidthWithGap + 50;
+      setInitialX(calculatedX);
+    }
   }, []);
 
-  const shift = () => {
-    const total = services.length;
-    const newIndex = (index + 1) % total;
-    setIndex(newIndex);
-    controls.start({
-      x: -newIndex * (CARD_WIDTH + CARD_GAP),
-      transition: { duration: 0.6, ease: 'easeInOut' },
-    });
-  };
-
   useEffect(() => {
-    if (hovering) return;
-    const interval = setInterval(() => shift(), 3000);
+    if (hovering || typeof window === 'undefined' || window.innerWidth < 768) return;
+    const interval = setInterval(() => {
+      if (!isCooldown) {
+        setCurrentIndex((prev) => prev + 1);
+      }
+    }, 2000);
     return () => clearInterval(interval);
-  }, [index, hovering]);
+  }, [hovering, isCooldown]);
 
   const handlePrev = () => {
-    const total = services.length;
-    const newIndex = (index - 1 + total) % total;
-    setIndex(newIndex);
-    controls.start({
-      x: -newIndex * (CARD_WIDTH + CARD_GAP),
-      transition: { duration: 0.6, ease: 'easeInOut' },
-    });
+    if (isCooldown) return;
+    setIsCooldown(true);
+    setCurrentIndex((prev) => prev - 1);
+    setTimeout(() => setIsCooldown(false), 700);
   };
 
   const handleNext = () => {
-    shift();
+    if (isCooldown) return;
+    setCurrentIndex((prev) => prev + 1);
+    setIsCooldown(true);
+    setTimeout(() => setIsCooldown(false), 700);
   };
 
-  // ✅ Open modal on card click
   const handleCardClick = (service: Service) => {
     setSelectedService(service);
     setIsModalOpen(true);
@@ -87,115 +85,164 @@ export default function SoftwareServicesCarousel() {
     setSelectedService(null);
   };
 
+  useEffect(() => {
+    if (initialX === null || typeof window === 'undefined') return;
+
+    const vw25 = window.innerWidth * 0.25;
+    const gap = 40;
+    const cardWidthWithGap = vw25 + gap;
+    const targetX = -currentIndex * cardWidthWithGap + 50;
+
+    controls
+      .start({
+        x: targetX,
+        transition: { duration: 0.6, ease: 'easeInOut' },
+      })
+      .then(() => {
+        if (currentIndex >= CARD_COUNT * 2 + 1) {
+          setCurrentIndex(MIDDLE_INDEX);
+          controls.set({ x: -MIDDLE_INDEX * cardWidthWithGap + 50 });
+        } else if (currentIndex <= 0) {
+          setCurrentIndex(CARD_COUNT);
+          controls.set({ x: -CARD_COUNT * cardWidthWithGap + 50 });
+        }
+      });
+
+    return () => controls.stop();
+  }, [currentIndex, controls, CARD_COUNT, initialX]);
+
+  if (initialX === null) return null; // Prevent SSR hydration mismatch
+
   return (
-    <div
-      className="relative w-full mt-10 overflow-hidden px-10 m-auto"
-      onMouseEnter={() => setHovering(true)}
-      onMouseLeave={() => setHovering(false)}
-    >
-      <motion.div
-        ref={containerRef}
-        className="flex"
-        animate={controls}
-        initial={{ x: 0 }}
-        style={{ width: `${allCards.length * (CARD_WIDTH + CARD_GAP)}px` }}
+    <div className="relative w-full py-20 flex items-center justify-center">
+      <div
+        className="relative flex items-center max-w-[90vw] w-full"
+        onMouseEnter={() => setHovering(true)}
+        onMouseLeave={() => setHovering(false)}
       >
-        {allCards.map((service, idx) => {
-          const isHovered = hoveredIndex === idx;
-          return (
-            <div
-              key={idx}
-              className="w-full cursor-pointer"
-              onClick={() => handleCardClick(service)}
-            >
-              <div
-                onMouseEnter={() => setHoveredIndex(idx)}
-                onMouseLeave={() => setHoveredIndex(null)}
-                className="w-[300px] h-[300px] bg-black text-white rounded-xl text-center text-sm mr-10 flex-shrink-0 hover:w-[500px] transition-all duration-300 "
-                style={
-                  isHovered
-                    ? {
-                      backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(${service.background})`,
-                      backgroundSize: 'cover',
-                      backgroundPosition: 'center',
-                      backgroundRepeat: 'no-repeat',
-                      backdropFilter: 'blur(10px)',
-                    }
-                    : {}
-                }
-              >
-                <div className="flex flex-col justify-start w-[300px] h-[300px] hover:w-[500px] transition-all duration-300">
+        <button
+          onClick={handlePrev}
+          className="hidden md:flex z-20 p-2 h-[300px] w-[50px] items-center justify-center rounded-l-2xl hover:bg-red-700 bg-[#030303] transition-all duration-300"
+          aria-label="Previous"
+          disabled={isCooldown}
+        >
+          <Image
+            src="/svg/arrow-left.svg"
+            alt="Previous"
+            width={16}
+            height={16}
+            unoptimized
+            loading="lazy"
+            className="hover:scale-[1.2] transition-all duration-300"
+          />
+        </button>
+
+        <div className="flex-1 overflow-hidden">
+          <motion.div
+            className="flex relative"
+            animate={controls}
+            initial={{ x: initialX }}
+            style={{
+              minWidth: 'max-content',
+              gap: '40px',
+            }}
+          >
+            {allCards.map((service, idx) => {
+              const isHovered = hoveredIndex === idx;
+              return (
+                <div
+                  key={idx}
+                  className="cursor-pointer flex-shrink-0"
+                  onClick={() => handleCardClick(service)}
+                  onMouseEnter={() => setHoveredIndex(idx)}
+                  onMouseLeave={() => setHoveredIndex(null)}
+                  style={{
+                    width: '25vw',
+                    minWidth: '25vw',
+                    height: '300px',
+                  }}
+                >
                   <div
-                    className="rounded-full bg-white/20 w-20 h-20 flex justify-center items-center p-2 mb-2 relative top-5 left-5"
+                    className="w-full h-full bg-white/10 backdrop-blur-2xl shadow-2xl shadow-[#030303]/30 text-white rounded-xl text-sm transition-all duration-300 relative"
                     style={
                       isHovered
                         ? {
-                          backgroundColor: '#A50424',
-                          backdropFilter: 'blur(10px)',
-                        }
+                            backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(${service.background})`,
+                            backgroundSize: 'cover',
+                            backgroundPosition: 'center',
+                            backgroundRepeat: 'no-repeat',
+                            backdropFilter: 'blur(10px)',
+                          }
                         : {}
                     }
                   >
-                    <Image
-                      src={service.icon}
-                      alt={service.title}
-                      width={50}
-                      height={50}
-                      className="mx-auto mb-2"
-                    />
-                  </div>
-                  <div className="text-left relative m-5 top-5 transition-all duration-300">
-                    <h2
-                      className={`transition-all duration-300 text-2xl font-poppins font-semibold ${isHovered ? 'text-red-700' : 'text-white'
-                        }`}
-                    >
-                      {service.title}
-                    </h2>
-                    <p
-                      className={`transition-all duration-300 font-poppins font-light ${isHovered ? 'text-lg' : 'text-md'
-                        }`}
-                    >
-                      {service.desc}
-                    </p>
+                    <div className="flex flex-col justify-start w-full h-full px-5">
+                      <div
+                        className="rounded-full bg-white/20 w-20 h-20 flex justify-center items-center p-2 mb-2 relative top-5 left-5"
+                        style={
+                          isHovered
+                            ? {
+                                backgroundColor: '#A50424',
+                                backdropFilter: 'blur(10px)',
+                              }
+                            : {}
+                        }
+                      >
+                        <Image
+                          src={service.icon}
+                          alt={service.title}
+                          width={50}
+                          height={50}
+                          className="mx-auto mb-2"
+                        />
+                      </div>
+                      <div className="text-left relative m-5 top-5 transition-all duration-300">
+                        <h1
+                          className={`transition-all duration-500 text-2xl font-poppins font-semibold ${
+                            isHovered ? 'text-[#A50424]' : 'text-white'
+                          }`}
+                        >
+                          {service.title}
+                        </h1>
+                        <p
+                          className={`transition-all duration-800 font-poppins font-light ${
+                            isHovered ? 'text-lg md:font-semibold' : 'text-md'
+                          }`}
+                        >
+                          {service.desc}
+                        </p>
+                      </div>
+                    </div>
                   </div>
                 </div>
-              </div>
-            </div>
-          );
-        })}
-      </motion.div>
+              );
+            })}
+          </motion.div>
+        </div>
 
-      <button
-        onClick={handlePrev}
-        className="absolute top-1/2 left-0 -translate-y-1/2 bg-transparent p-2 h-[300px] w-[50px] transition duration-300"
-      >
-        <Image
-          src={'/svg/arrow-left.svg'}
-          alt="<"
-          width={16}
-          height={16}
-          unoptimized
-          loading="lazy"
-          className="hover:scale-[1.2] transition-all duration-300"
-        />
-      </button>
-      <button
-        onClick={handleNext}
-        className="absolute top-1/2 right-0 -translate-y-1/2 bg-transparent p-2 h-[300px] w-[50px] transition duration-300"
-      >
-        <Image
-          src={'/svg/arrow-right.svg'}
-          alt=">"
-          width={16}
-          height={16}
-          unoptimized
-          loading="lazy"
-          className="hover:scale-[1.2] transition-all duration-300"
-        />
-      </button>
+        <button
+          onClick={handleNext}
+          className="hidden md:flex z-20 p-2 h-[300px] w-[50px] items-center justify-center rounded-r-2xl hover:bg-red-700 bg-[#030303] transition-all duration-300"
+          aria-label="Next"
+          disabled={isCooldown}
+        >
+          <Image
+            src="/svg/arrow-right.svg"
+            alt="Next"
+            width={16}
+            height={16}
+            unoptimized
+            loading="lazy"
+            className="hover:scale-[1.2] transition-all duration-300"
+          />
+        </button>
+      </div>
 
-      {/* ✅ Modal rendered at end of DOM */}
-      <ServiceModal isOpen={isModalOpen} onClose={handleModalClose} service={selectedService} />
+      <ServiceModal
+        isOpen={isModalOpen}
+        onClose={handleModalClose}
+        service={selectedService}
+      />
     </div>
   );
 }
