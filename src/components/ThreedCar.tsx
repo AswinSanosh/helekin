@@ -1,36 +1,62 @@
 'use client';
 
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { motion, useAnimation } from 'framer-motion';
 import Image from 'next/image';
 import serviceData from './ServiceList.json';
 import ServiceModal from './Modal';
 import { Service } from '@/types/Service';
 
-export default function SoftwareServicesCarousel() {
+export default function ThreedServicesCarousel() {
   const services: Service[] = serviceData.servicesList.threed;
-  const LOOP_OFFSET = services.length;
-  const allCards: Service[] = [...services, ...services, ...services]; // triple for infinite
+  const CARD_COUNT = services.length;
+  const MIDDLE_INDEX = CARD_COUNT + 1; // because of added clone at the start
 
-  const [index, setIndex] = useState(LOOP_OFFSET); // start at middle
+  const [currentIndex, setCurrentIndex] = useState(MIDDLE_INDEX);
   const [hovering, setHovering] = useState(false);
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [selectedService, setSelectedService] = useState<Service | null>(null);
+  const [isCooldown, setIsCooldown] = useState(false);
 
   const controls = useAnimation();
 
-  // Auto-advance
+  // Clone last and first for looping illusion
+  const allCards: Service[] = [ // third last
+    services[services.length - 2], // second last
+    services[services.length - 1], // last
+    ...services,
+    ...services,
+    services[0], // first
+    services[1], // second
+  ];
+
+
   useEffect(() => {
     if (hovering || typeof window === 'undefined' || window.innerWidth < 768) return;
     const interval = setInterval(() => {
-      setIndex((prev) => prev + 1);
-    }, 3000);
+      if (!isCooldown) {
+        setCurrentIndex((prev) => prev + 1);
+      }
+    }, 2000);
     return () => clearInterval(interval);
-  }, [hovering]);
+  }, [hovering, isCooldown]);
 
-  const handlePrev = () => setIndex((prev) => prev - 1);
-  const handleNext = () => setIndex((prev) => prev + 1);
+  const handlePrev = () => {
+    if (isCooldown) return;
+    setIsCooldown(true);
+
+    setCurrentIndex((prev) => prev - 1);
+
+    setTimeout(() => setIsCooldown(false), 700);
+  };
+
+  const handleNext = () => {
+    if (isCooldown) return;
+    setCurrentIndex((prev) => prev + 1);
+    setIsCooldown(true);
+    setTimeout(() => setIsCooldown(false), 700);
+  };
 
   const handleCardClick = (service: Service) => {
     setSelectedService(service);
@@ -42,43 +68,42 @@ export default function SoftwareServicesCarousel() {
     setSelectedService(null);
   };
 
-  // Calculate card width and offset
   useEffect(() => {
     const vw25 = typeof window !== 'undefined' ? window.innerWidth * 0.25 : 300;
     const gap = 40;
     const cardWidthWithGap = vw25 + gap;
-    const targetX = -index * cardWidthWithGap + 50; // align card after left arrow
+    const targetX = -currentIndex * cardWidthWithGap + 50;
 
-    controls.start({
-      x: targetX,
-      transition: { duration: 0.6, ease: 'easeInOut' },
-    });
+    controls
+      .start({
+        x: targetX,
+        transition: { duration: 0.6, ease: 'easeInOut' },
+      })
+      .then(() => {
+        if (currentIndex >= CARD_COUNT * 2 + 1) {
+          setCurrentIndex(MIDDLE_INDEX);
+          controls.set({ x: -MIDDLE_INDEX * cardWidthWithGap + 50 });
+        } else if (currentIndex <= 0) {
+          setCurrentIndex(CARD_COUNT);
+          controls.set({ x: -CARD_COUNT * cardWidthWithGap + 50 });
+        }
+      });
 
-    // Reset loop
-    if (index >= LOOP_OFFSET * 2) {
-      setTimeout(() => {
-        setIndex(LOOP_OFFSET);
-        controls.set({ x: -LOOP_OFFSET * cardWidthWithGap + 50 });
-      }, 600);
-    }
-
-    if (index < LOOP_OFFSET) {
-      setTimeout(() => {
-        setIndex(LOOP_OFFSET);
-        controls.set({ x: -LOOP_OFFSET * cardWidthWithGap + 50 });
-      }, 600);
-    }
-  }, [index, controls]);
+    return () => controls.stop();
+  }, [currentIndex, controls, CARD_COUNT]);
 
   return (
     <div className="relative w-full py-20 flex items-center justify-center">
-      {/* Full container with arrows and carousel */}
-      <div className="relative flex items-center max-w-[90vw] w-full">
-        {/* Left Arrow */}
+      <div
+        className="relative flex items-center max-w-[90vw] w-full"
+        onMouseEnter={() => setHovering(true)}
+        onMouseLeave={() => setHovering(false)}
+      >
         <button
           onClick={handlePrev}
           className="hidden md:flex z-20 p-2 h-[300px] w-[50px] items-center justify-center rounded-l-2xl hover:bg-red-700 bg-black transition-all duration-300"
           aria-label="Previous"
+          disabled={isCooldown}
         >
           <Image
             src="/svg/arrow-left.svg"
@@ -91,20 +116,14 @@ export default function SoftwareServicesCarousel() {
           />
         </button>
 
-        {/* Carousel - directly adjacent to arrows */}
-        <div
-          className="flex-1 overflow-hidden"
-          style={{ marginLeft: 0, marginRight: 0 }}
-          onMouseEnter={() => setHovering(true)}
-          onMouseLeave={() => setHovering(false)}
-        >
+        <div className="flex-1 overflow-hidden">
           <motion.div
             className="flex relative"
             animate={controls}
             initial={{
               x: (() => {
                 const vw25 = typeof window !== 'undefined' ? window.innerWidth * 0.25 : 300;
-                return -LOOP_OFFSET * (vw25 + 40) + 50;
+                return -MIDDLE_INDEX * (vw25 + 40) + 50;
               })(),
             }}
             style={{
@@ -132,12 +151,12 @@ export default function SoftwareServicesCarousel() {
                     style={
                       isHovered
                         ? {
-                            backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(${service.background})`,
-                            backgroundSize: 'cover',
-                            backgroundPosition: 'center',
-                            backgroundRepeat: 'no-repeat',
-                            backdropFilter: 'blur(10px)',
-                          }
+                          backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(${service.background})`,
+                          backgroundSize: 'cover',
+                          backgroundPosition: 'center',
+                          backgroundRepeat: 'no-repeat',
+                          backdropFilter: 'blur(10px)',
+                        }
                         : {}
                     }
                   >
@@ -147,9 +166,9 @@ export default function SoftwareServicesCarousel() {
                         style={
                           isHovered
                             ? {
-                                backgroundColor: '#A50424',
-                                backdropFilter: 'blur(10px)',
-                              }
+                              backgroundColor: '#A50424',
+                              backdropFilter: 'blur(10px)',
+                            }
                             : {}
                         }
                       >
@@ -163,16 +182,14 @@ export default function SoftwareServicesCarousel() {
                       </div>
                       <div className="text-left relative m-5 top-5 transition-all duration-300">
                         <h1
-                          className={`transition-all duration-500 text-2xl font-poppins font-semibold ${
-                            isHovered ? 'text-[#A50424]' : 'text-white'
-                          }`}
+                          className={`transition-all duration-500 text-2xl font-poppins font-semibold ${isHovered ? 'text-[#A50424]' : 'text-white'
+                            }`}
                         >
                           {service.title}
                         </h1>
                         <p
-                          className={`transition-all duration-800 font-poppins font-light ${
-                            isHovered ? 'text-lg md:font-semibold' : 'text-md'
-                          }`}
+                          className={`transition-all duration-800 font-poppins font-light ${isHovered ? 'text-lg md:font-semibold' : 'text-md'
+                            }`}
                         >
                           {service.desc}
                         </p>
@@ -185,11 +202,11 @@ export default function SoftwareServicesCarousel() {
           </motion.div>
         </div>
 
-        {/* Right Arrow */}
         <button
           onClick={handleNext}
           className="hidden md:flex z-20 p-2 h-[300px] w-[50px] items-center justify-center rounded-r-2xl hover:bg-red-700 bg-black transition-all duration-300"
           aria-label="Next"
+          disabled={isCooldown}
         >
           <Image
             src="/svg/arrow-right.svg"
@@ -203,7 +220,6 @@ export default function SoftwareServicesCarousel() {
         </button>
       </div>
 
-      {/* Modal */}
       <ServiceModal
         isOpen={isModalOpen}
         onClose={handleModalClose}
