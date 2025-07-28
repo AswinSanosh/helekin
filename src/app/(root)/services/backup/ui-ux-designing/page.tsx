@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import serviceData from "../../../../components/ServiceList.json";
+import serviceData from "../../../../../components/ServiceList.json";
 import React, { useEffect, useState } from "react";
 import Link from "next/link";
 
@@ -108,19 +108,19 @@ export default function Services() {
     <div>
       <div className="relative h-[90vh] sm:h-180 w-full bg-[url('/svg/hero.svg')] bg-cover bg-center bg-no-repeat z-20 flex items-center">
         <div className="absolute inset-0 bg-[#030303]/70 backdrop-blur-sm z-0" />
-        <div className="relative z-10 text-white w-full px-6 sm:px-10 max-w-6xl">
+        <div className="relative z-10 text-white w-full px-6 sm:px-10 max-w-4xl">
           <div className="mb-4 flex flex-col sm:flex-row gap-3">
             <h1 className="text-4xl sm:text-6xl font-light font-poppins">
-              Electronics &
+              UI/UX
             </h1>
             <h1 className="text-4xl sm:text-6xl text-red-700 font-light font-poppins">
-              Hardware Assembly
+              Designing
             </h1>
           </div>
           <div className="w-full sm:w-3/4">
             <p className="text-white/80 text-base sm:text-lg font-light font-poppins mt-4 sm:mt-6">
-              We assemble electronics using soldering, testing, and integration
-              of components with clean wiring practices.
+              We design modern, user-centered digital interfaces with intuitive
+              navigation and smooth interactions.
             </p>
           </div>
         </div>
@@ -130,12 +130,11 @@ export default function Services() {
         <h2 className="text-red-700 text-3xl sm:text-4xl font-poppins font-medium text-center">
           Transforming Ideas into Intelligent Solutions
         </h2>
-        <p className="text-white/80 text-base sm:text-xl font-poppins font-light mt-6 sm:mt-10 text-center max-w-6xl">
-          At Helekin, we bring your hardware designs to life with expert
-          assembly services. Our skilled technicians handle everything from
-          intricate PCB soldering to complete system integration, ensuring every
-          connection is secure and every component functions perfectly according
-          to your specifications.
+        <p className="text-white/80 text-base sm:text-xl font-poppins font-light mt-6 sm:mt-10 text-center">
+          At Helekin, our UI/UX design process is rooted in deep user
+          understanding. We blend aesthetic appeal with functional clarity,
+          transforming complex challenges into simple, elegant solutions that
+          are both a joy to use and effective at driving business outcomes.
         </p>
       </div>
 
@@ -159,11 +158,11 @@ export default function Services() {
 
       <div className="relative z-10 w-full mx-auto text-center bg-[#030303] pt-24 px-6 sm:px-10">
         <h1 className="text-2xl sm:text-3xl font-poppins font-semibold text-red-700 mb-2 text-start">
-          Featured Assembled Products
+          Featured Design Projects
         </h1>
         <p className="text-white/80 text-base sm:text-xl font-poppins font-light mt-5 mb-10 max-w-2xl text-start">
-          Our portfolio showcases our meticulous attention to detail in building
-          robust and reliable electronic devices and systems.
+          Our portfolio showcases our dedication to creating beautiful,
+          functional, and memorable user experiences.
         </p>
         <div className="mt-5 flex sm:flex-row flex-col items-center justify-center gap-5">
           <div className="flex flex-col items-start h-[300px] w-full bg-white/10 backdrop-blur-lg shadow-xl shadow-[#030303]/30 p-6 rounded-3xl transition-all hover:scale-[1.02] duration-300"></div>
@@ -177,11 +176,11 @@ export default function Services() {
               Transforming Ideas into Intelligent Solutions
             </h2>
             <p className="text-white/80 text-base sm:text-xl font-poppins font-light mt-6 sm:mt-10 text-left">
-              Our assembly process emphasizes quality and precision. We follow
-              your schematics and Bill of Materials (BOM) meticulously,
-              performing component verification, professional soldering, and
-              rigorous functional testing at every stage to guarantee a
-              high-quality final product.
+              Our iterative design process ensures a final product that truly
+              resonates with your audience. We move from discovery and user
+              research to wireframing, prototyping, and user testing, refining
+              every detail to ensure a seamless and intuitive flow from start to
+              finish.
             </p>
           </div>
 
@@ -189,7 +188,7 @@ export default function Services() {
             <div className="flex flex-col items-center justify-center md:items-center mt-2 gap-8 w-full">
               <div className="flex items-center justify-between bg-white/10 backdrop-blur-lg shadow-lg shadow-[#030303]/30 p-6 w-full sm:w-3/4">
                 <h1 className="font-poppins text-lg sm:text-2xl font-medium text-white">
-                  What types of soldering do you perform?
+                  What is the difference between UI and UX?
                 </h1>
                 <h1 className="font-poppins text-2xl sm:text-3xl font-medium text-white">
                   +
@@ -197,7 +196,7 @@ export default function Services() {
               </div>
               <div className="flex items-center justify-between bg-white/10 backdrop-blur-lg shadow-lg shadow-[#030303]/30 p-6 w-full sm:w-3/4">
                 <h1 className="font-poppins text-lg sm:text-2xl font-medium text-white">
-                  Can you source the components for our assembly?
+                  How do you conduct user research?
                 </h1>
                 <h1 className="font-poppins text-2xl sm:text-3xl font-medium text-white">
                   +
@@ -205,7 +204,7 @@ export default function Services() {
               </div>
               <div className="flex items-center justify-between bg-white/10 backdrop-blur-lg shadow-lg shadow-[#030303]/30 p-6 w-full sm:w-3/4">
                 <h1 className="font-poppins text-lg sm:text-2xl font-medium text-white">
-                  What is your quality control and testing process?
+                  What design tools do you use?
                 </h1>
                 <h1 className="font-poppins text-2xl sm:text-3xl font-medium text-white">
                   +
@@ -213,7 +212,7 @@ export default function Services() {
               </div>
               <div className="flex items-center justify-between bg-white/10 backdrop-blur-lg shadow-lg shadow-[#030303]/30 p-6 w-full sm:w-3/4">
                 <h1 className="font-poppins text-lg sm:text-2xl font-medium text-white">
-                  Do you handle small-batch and prototype assembly?
+                  Do you create design systems and style guides?
                 </h1>
                 <h1 className="font-poppins text-2xl sm:text-3xl font-medium text-white">
                   +
@@ -224,11 +223,11 @@ export default function Services() {
         </div>
 
         <h1 className="font-poppins text-3xl sm:text-4xl text-white mb-4 mt-20">
-          Ready to Build Your Hardware?
+          Ready to Elevate Your Design?
         </h1>
         <p className="text-white/80 mb-8 max-w-2xl mx-auto text-base sm:text-lg">
-          From a single prototype to a small production run, let our expert
-          technicians assemble your electronic hardware with precision and care.
+          Let&#39;s craft a user experience that delights your audience and sets
+          your product apart from the competition.
         </p>
         <Link href="/contact">
           <button className="bg-red-700 text-white font-semibold py-3 px-6 sm:px-8 rounded-lg hover:bg-red-800 transition-colors duration-300 text-base sm:text-lg cursor-pointer">

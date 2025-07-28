@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import serviceData from "../../../../components/ServiceList.json";
+import serviceData from "../../../../../components/ServiceList.json";
 import React, { useEffect, useState } from "react";
 import Link from "next/link";
 
@@ -111,16 +111,16 @@ export default function Services() {
         <div className="relative z-10 text-white w-full px-6 sm:px-10 max-w-4xl">
           <div className="mb-4 flex flex-col sm:flex-row gap-3">
             <h1 className="text-4xl sm:text-6xl font-light font-poppins">
-              PCB
+              Content
             </h1>
             <h1 className="text-4xl sm:text-6xl text-red-700 font-light font-poppins">
-              Designing
+              Creation
             </h1>
           </div>
           <div className="w-full sm:w-3/4">
             <p className="text-white/80 text-base sm:text-lg font-light font-poppins mt-4 sm:mt-6">
-              Designing and prototyping of PCBs using industry-grade tools for
-              commercial and industrial applications.
+              We create high-quality content for digital platforms including
+              blogs, social posts, and video scripts.
             </p>
           </div>
         </div>
@@ -130,12 +130,12 @@ export default function Services() {
         <h2 className="text-red-700 text-3xl sm:text-4xl font-poppins font-medium text-center">
           Transforming Ideas into Intelligent Solutions
         </h2>
-        <p className="text-white/80 text-base sm:text-xl font-poppins font-light mt-6 sm:mt-10 text-center max-w-6xl">
-          At Helekin, we translate your complex schematics into robust,
-          manufacturable Printed Circuit Boards. Our expertise covers everything
-          from high-speed digital designs to sensitive analog layouts, ensuring
-          optimal performance, signal integrity, and reliability for your
-          electronic products.
+        <p className="text-white/80 text-base sm:text-xl font-poppins font-light mt-6 sm:mt-10 text-center ">
+          At Helekin, we craft compelling narratives that resonate with your
+          audience and build brand authority. From insightful blog articles to
+          engaging video scripts, our content is strategically designed to
+          inform, entertain, and convert, fueling your entire marketing
+          ecosystem.
         </p>
       </div>
 
@@ -159,11 +159,11 @@ export default function Services() {
 
       <div className="relative z-10 w-full mx-auto text-center bg-[#030303] pt-24 px-6 sm:px-10">
         <h1 className="text-2xl sm:text-3xl font-poppins font-semibold text-red-700 mb-2 text-start">
-          Featured PCB Layouts
+          Featured Content Pieces
         </h1>
         <p className="text-white/80 text-base sm:text-xl font-poppins font-light mt-5 mb-10 max-w-2xl text-start">
-          Our portfolio showcases our precision and attention to detail in
-          creating complex, high-performance circuit boards.
+          Our portfolio showcases our versatility in creating impactful content
+          that captures attention and delivers a clear, persuasive message.
         </p>
         <div className="mt-5 flex sm:flex-row flex-col items-center justify-center gap-5">
           <div className="flex flex-col items-start h-[300px] w-full bg-white/10 backdrop-blur-lg shadow-xl shadow-[#030303]/30 p-6 rounded-3xl transition-all hover:scale-[1.02] duration-300"></div>
@@ -177,11 +177,10 @@ export default function Services() {
               Transforming Ideas into Intelligent Solutions
             </h2>
             <p className="text-white/80 text-base sm:text-xl font-poppins font-light mt-6 sm:mt-10 text-left">
-              Our workflow ensures a seamless transition from concept to
-              reality. We begin with requirement analysis and schematic capture,
-              followed by component selection, layout and routing, and finally,
-              comprehensive Design for Manufacturability (DFM) checks to
-              guarantee a flawless production run.
+              Our content process is built on a foundation of research and
+              strategy. We identify your audience&#39;s needs, conduct keyword
+              research, and develop a content strategy before moving to writing,
+              editing, and optimization, ensuring every piece serves a purpose.
             </p>
           </div>
 
@@ -189,7 +188,7 @@ export default function Services() {
             <div className="flex flex-col items-center justify-center md:items-center mt-2 gap-8 w-full">
               <div className="flex items-center justify-between bg-white/10 backdrop-blur-lg shadow-lg shadow-[#030303]/30 p-6 w-full sm:w-3/4">
                 <h1 className="font-poppins text-lg sm:text-2xl font-medium text-white">
-                  What design software do you use?
+                  Do you provide content strategy services?
                 </h1>
                 <h1 className="font-poppins text-2xl sm:text-3xl font-medium text-white">
                   +
@@ -197,7 +196,7 @@ export default function Services() {
               </div>
               <div className="flex items-center justify-between bg-white/10 backdrop-blur-lg shadow-lg shadow-[#030303]/30 p-6 w-full sm:w-3/4">
                 <h1 className="font-poppins text-lg sm:text-2xl font-medium text-white">
-                  What is the difference between schematic and layout?
+                  Is your content optimized for SEO?
                 </h1>
                 <h1 className="font-poppins text-2xl sm:text-3xl font-medium text-white">
                   +
@@ -205,7 +204,7 @@ export default function Services() {
               </div>
               <div className="flex items-center justify-between bg-white/10 backdrop-blur-lg shadow-lg shadow-[#030303]/30 p-6 w-full sm:w-3/4">
                 <h1 className="font-poppins text-lg sm:text-2xl font-medium text-white">
-                  How do you handle high-speed signal routing?
+                  Can you write for a highly technical audience?
                 </h1>
                 <h1 className="font-poppins text-2xl sm:text-3xl font-medium text-white">
                   +
@@ -213,7 +212,7 @@ export default function Services() {
               </div>
               <div className="flex items-center justify-between bg-white/10 backdrop-blur-lg shadow-lg shadow-[#030303]/30 p-6 w-full sm:w-3/4">
                 <h1 className="font-poppins text-lg sm:text-2xl font-medium text-white">
-                  Can you manage the prototyping process?
+                  What is your revision and approval process?
                 </h1>
                 <h1 className="font-poppins text-2xl sm:text-3xl font-medium text-white">
                   +
@@ -224,11 +223,11 @@ export default function Services() {
         </div>
 
         <h1 className="font-poppins text-3xl sm:text-4xl text-white mb-4 mt-20">
-          Ready to Bring Your Circuit to Life?
+          Ready to Tell Your Story?
         </h1>
         <p className="text-white/80 mb-8 max-w-2xl mx-auto text-base sm:text-lg">
-          From concept to a fully realized board, let our experts engineer the
-          electronic foundation for your next great product.
+          Let&#39;s create content that builds trust, drives engagement, and
+          grows your business. Connect with our creative team today.
         </p>
         <Link href="/contact">
           <button className="bg-red-700 text-white font-semibold py-3 px-6 sm:px-8 rounded-lg hover:bg-red-800 transition-colors duration-300 text-base sm:text-lg cursor-pointer">

@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import serviceData from "../../../../components/ServiceList.json";
+import serviceData from "../../../../../components/ServiceList.json";
 import React, { useEffect, useState } from "react";
 import Link from "next/link";
 
@@ -111,16 +111,16 @@ export default function Services() {
         <div className="relative z-10 text-white w-full px-6 sm:px-10 max-w-4xl">
           <div className="mb-4 flex flex-col sm:flex-row gap-3">
             <h1 className="text-4xl sm:text-6xl font-light font-poppins">
-              Laser
+              Poster
             </h1>
             <h1 className="text-4xl sm:text-6xl text-red-700 font-light font-poppins">
-              Engraving
+              Designing
             </h1>
           </div>
           <div className="w-full sm:w-3/4">
             <p className="text-white/80 text-base sm:text-lg font-light font-poppins mt-4 sm:mt-6">
-              We provide precision laser engraving for enclosures, branding, PCB
-              labeling, and personalized hardware.
+              We create compelling posters, banners, and visuals tailored for
+              promotions, events, and brand awareness.
             </p>
           </div>
         </div>
@@ -130,12 +130,11 @@ export default function Services() {
         <h2 className="text-red-700 text-3xl sm:text-4xl font-poppins font-medium text-center">
           Transforming Ideas into Intelligent Solutions
         </h2>
-        <p className="text-white/80 text-base sm:text-xl font-poppins font-light mt-6 sm:mt-10 text-center max-w-6xl">
-          At Helekin, we add the perfect finishing touch to your products with
-          high-precision laser engraving. From custom logos on electronic
-          enclosures to detailed markings on PCBs and personalized hardware, our
-          technology ensures a clean, permanent, and professional result every
-          time.
+        <p className="text-white/80 text-base sm:text-xl font-poppins font-light mt-6 sm:mt-10 text-center">
+          At Helekin, we capture your message in a single, powerful image. Our
+          graphic design team specializes in creating eye-catching posters and
+          promotional materials that grab attention, communicate clearly, and
+          drive action for your campaigns and events.
         </p>
       </div>
 
@@ -159,11 +158,11 @@ export default function Services() {
 
       <div className="relative z-10 w-full mx-auto text-center bg-[#030303] pt-24 px-6 sm:px-10">
         <h1 className="text-2xl sm:text-3xl font-poppins font-semibold text-red-700 mb-2 text-start">
-          Featured Engraving Projects
+          Featured Poster Designs
         </h1>
         <p className="text-white/80 text-base sm:text-xl font-poppins font-light mt-5 mb-10 max-w-2xl text-start">
-          Our portfolio showcases the sharp detail and versatility of our
-          engraving services on a variety of materials and products.
+          Our portfolio showcases a diverse range of styles and concepts, each
+          crafted to meet the unique marketing goals of our clients.
         </p>
         <div className="mt-5 flex sm:flex-row flex-col items-center justify-center gap-5">
           <div className="flex flex-col items-start h-[300px] w-full bg-white/10 backdrop-blur-lg shadow-xl shadow-[#030303]/30 p-6 rounded-3xl transition-all hover:scale-[1.02] duration-300"></div>
@@ -177,10 +176,10 @@ export default function Services() {
               Transforming Ideas into Intelligent Solutions
             </h2>
             <p className="text-white/80 text-base sm:text-xl font-poppins font-light mt-6 sm:mt-10 text-left">
-              Our process is meticulous. We work with your design files to
-              calibrate our laser systems for the specific material, ensuring
-              optimal depth, contrast, and precision. Every piece undergoes a
-              quality check to guarantee it meets your exact specifications.
+              Our creative process starts with a deep dive into your brand and
+              campaign objectives. We move from concept sketching and mood
+              boarding to digital illustration and final print-ready production,
+              ensuring every design element aligns with your message.
             </p>
           </div>
 
@@ -188,7 +187,7 @@ export default function Services() {
             <div className="flex flex-col items-center justify-center md:items-center mt-2 gap-8 w-full">
               <div className="flex items-center justify-between bg-white/10 backdrop-blur-lg shadow-lg shadow-[#030303]/30 p-6 w-full sm:w-3/4">
                 <h1 className="font-poppins text-lg sm:text-2xl font-medium text-white">
-                  What materials can you engrave on?
+                  What information do you need to start a design?
                 </h1>
                 <h1 className="font-poppins text-2xl sm:text-3xl font-medium text-white">
                   +
@@ -196,7 +195,7 @@ export default function Services() {
               </div>
               <div className="flex items-center justify-between bg-white/10 backdrop-blur-lg shadow-lg shadow-[#030303]/30 p-6 w-full sm:w-3/4">
                 <h1 className="font-poppins text-lg sm:text-2xl font-medium text-white">
-                  What file formats do you accept for designs?
+                  Can you handle printing and delivery?
                 </h1>
                 <h1 className="font-poppins text-2xl sm:text-3xl font-medium text-white">
                   +
@@ -204,7 +203,7 @@ export default function Services() {
               </div>
               <div className="flex items-center justify-between bg-white/10 backdrop-blur-lg shadow-lg shadow-[#030303]/30 p-6 w-full sm:w-3/4">
                 <h1 className="font-poppins text-lg sm:text-2xl font-medium text-white">
-                  What is the maximum size for engraving?
+                  What file formats will I receive?
                 </h1>
                 <h1 className="font-poppins text-2xl sm:text-3xl font-medium text-white">
                   +
@@ -212,7 +211,7 @@ export default function Services() {
               </div>
               <div className="flex items-center justify-between bg-white/10 backdrop-blur-lg shadow-lg shadow-[#030303]/30 p-6 w-full sm:w-3/4">
                 <h1 className="font-poppins text-lg sm:text-2xl font-medium text-white">
-                  Can you engrave on curved surfaces?
+                  Do you design for both digital and print?
                 </h1>
                 <h1 className="font-poppins text-2xl sm:text-3xl font-medium text-white">
                   +
@@ -223,11 +222,12 @@ export default function Services() {
         </div>
 
         <h1 className="font-poppins text-3xl sm:text-4xl text-white mb-4 mt-20">
-          Ready to Make Your Mark?
+          Ready to Make an Impact?
         </h1>
         <p className="text-white/80 mb-8 max-w-2xl mx-auto text-base sm:text-lg">
-          Add a professional, custom finish to your products. Let&#39;s discuss
-          your engraving needs and bring your branding to life.
+          Capture your audience&#39;s attention with a stunning poster.
+          Let&#39;s create a visual masterpiece for your next event or
+          promotion.
         </p>
         <Link href="/contact">
           <button className="bg-red-700 text-white font-semibold py-3 px-6 sm:px-8 rounded-lg hover:bg-red-800 transition-colors duration-300 text-base sm:text-lg cursor-pointer">

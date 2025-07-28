@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import serviceData from "../../../../components/ServiceList.json";
+import serviceData from "../../../../../components/ServiceList.json";
 import React, { useEffect, useState } from "react";
 import Link from "next/link";
 
@@ -112,13 +112,13 @@ export default function Services() {
           <div className="flex mb-4">
             <h1 className="text-white text-6xl font-light font-poppins">3D</h1>
             <h1 className="text-red-700 text-6xl font-light font-poppins px-4">
-              Modeling
+              Printing
             </h1>
           </div>
           <div className="w-2/5">
             <p className="text-white/80 text-xl font-light font-poppins mt-10">
-              High-quality 3D models for visualization, animation, and real-time
-              rendering across industries.
+              Rapid prototyping and small-batch production using FDM, SLA, and
+              SLS 3D printing technologies.
             </p>
           </div>
         </div>
@@ -128,10 +128,10 @@ export default function Services() {
           Transforming Ideas into Intelligent Solutions
         </h2>
         <p className="text-white/80 text-base md:text-xl font-poppins font-light mt-10 text-center">
-          At Helekin, we bring your concepts to life in three dimensions. Our
-          artists and technicians create detailed, photorealistic 3D models
-          suitable for product visualization, architectural walkthroughs,
-          animation, and integration into real-time game engines.
+          At Helekin, we turn your digital designs into tangible objects. We
+          offer a range of 3D printing services for rapid prototyping,
+          functional parts, and detailed models, helping you iterate faster and
+          bring your products to market with confidence.
         </p>
       </div>
       <div className="relative z-0 w-full flex flex-col bg-[url('/images/fafa.png')] bg-cover bg-center bg-no-repeat px-6 pb-30">
@@ -153,35 +153,35 @@ export default function Services() {
       </div>
       <div className="relative z-10 w-full mx-auto text-center bg-[#030303] pt-24">
         <h1 className="text-3xl font-poppins font-semibold text-red-700 mb-2 text-start ml-10">
-          Featured 3D Renders
+          Featured 3D Prints
         </h1>
         <p className="text-white/80 text-base md:text-xl font-poppins font-light mt-5 mb-10 max-w-2xl text-start ml-10">
-          Our portfolio demonstrates our commitment to artistic excellence and
-          technical precision in every model we create.
+          Our portfolio highlights our commitment to quality, precision, and
+          material excellence in every object we produce.
         </p>
         <div className="mt-5 flex sm:flex-row flex-col items-center justify-center gap-5 px-10">
           <div className="flex flex-col items-start h-[300px] w-full bg-white/10 backdrop-blur-lg shadow-xl shadow-[#030303]/30 p-6 rounded-3xl transition-all hover:scale-[1.02] duration-300"></div>
           <div className="flex flex-col items-start h-[300px] w-full bg-white/10 backdrop-blur-lg shadow-xl shadow-[#030303]/30 p-6 rounded-3xl transition-all hover:scale-[1.02] duration-300"></div>
           <div className="flex flex-col items-start h-[300px] w-full bg-white/10 backdrop-blur-lg shadow-xl shadow-[#030303]/30 p-6 rounded-3xl transition-all hover:scale-[1.02] duration-300"></div>
         </div>
-        <div className="mt-50 flex sm:flex-row flex-col items-start justify-betweem gap-5 px-20">
+        <div className="mt-50 flex sm:flex-row flex-col items-start justify-between gap-5 px-20">
           <div className="w-1/3 flex flex-col">
             <h2 className="text-red-700 text-4xl md:text-4xl font-poppins font-medium text-left">
               Transforming Ideas into Intelligent Solutions
             </h2>
             <p className="text-white/80 text-base md:text-xl font-poppins font-light mt-10 text-left">
-              Our process begins with understanding your vision and gathering
-              references. We then proceed through block-out, high-poly
-              sculpting, retopology for optimization, and finally, texturing and
-              material creation to achieve the perfect look for your projects
-              needs.
+              Our process is simple. You provide the 3D model, and we handle the
+              rest. Well help you select the right material and printing
+              technology for your needs, then manage the printing,
+              post-processing, and quality assurance to deliver a perfect
+              physical part.
             </p>
           </div>
           <div className="w-2/3 flex flex-col items-start">
             <div className="flex flex-col items-center justify-center md:items-center mt-2 gap-8 w-full">
               <div className="flex items-center justify-between bg-white/10 backdrop-blur-lg shadow-lg shadow-[#030303]/30 p-6 md:w-3/4 w-full">
                 <h1 className="font-poppins text-2xl font-medium text-white">
-                  What 3D modeling software do you specialize in?
+                  What is the difference between FDM, SLA, and SLS?
                 </h1>
                 <h1 className="font-poppins text-3xl font-medium text-white">
                   +
@@ -189,7 +189,7 @@ export default function Services() {
               </div>
               <div className="flex items-center justify-between bg-white/10 backdrop-blur-lg shadow-lg shadow-[#030303]/30 p-6 md:w-3/4 w-full">
                 <h1 className="font-poppins text-2xl font-medium text-white">
-                  What file formats can you deliver the models in?
+                  What materials can you print with?
                 </h1>
                 <h1 className="font-poppins text-3xl font-medium text-white">
                   +
@@ -197,7 +197,7 @@ export default function Services() {
               </div>
               <div className="flex items-center justify-between bg-white/10 backdrop-blur-lg shadow-lg shadow-[#030303]/30 p-6 md:w-3/4 w-full">
                 <h1 className="font-poppins text-2xl font-medium text-white">
-                  Can you create low-poly models for games?
+                  What is the maximum size you can print?
                 </h1>
                 <h1 className="font-poppins text-3xl font-medium text-white">
                   +
@@ -205,7 +205,7 @@ export default function Services() {
               </div>
               <div className="flex items-center justify-between bg-white/10 backdrop-blur-lg shadow-lg shadow-[#030303]/30 p-6 md:w-3/4 w-full">
                 <h1 className="font-poppins text-2xl font-medium text-white">
-                  Do you also provide animation and rigging services?
+                  Do you offer post-processing and finishing?
                 </h1>
                 <h1 className="font-poppins text-3xl font-medium text-white">
                   +
@@ -215,11 +215,11 @@ export default function Services() {
           </div>
         </div>
         <h1 className="font-poppins text-4xl text-white mb-4 mt-50">
-          Ready to Visualize Your Project?
+          Ready to Make Your Idea Real?
         </h1>
         <p className="text-white/80 mb-8 max-w-2xl mx-auto">
-          From initial concept to final render, let our team build the stunning
-          3D assets your project deserves.
+          From a single prototype to a small production run, let our 3D printing
+          services bring your designs to life.
         </p>
         <Link href="/contact">
           <button className="bg-red-700 text-white font-semibold py-3 px-8 rounded-lg hover:bg-red-800 transition-colors duration-300 text-lg cursor-pointer">

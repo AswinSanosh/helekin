@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import serviceData from "../../../../components/ServiceList.json";
+import serviceData from "../../../../../components/ServiceList.json";
 import React, { useEffect, useState } from "react";
 import Link from "next/link";
 
@@ -111,16 +111,16 @@ export default function Services() {
         <div className="relative z-10 text-white w-full px-6 sm:px-10 max-w-4xl">
           <div className="mb-4 flex flex-col sm:flex-row gap-3">
             <h1 className="text-4xl sm:text-6xl font-light font-poppins">
-              Content
+              App
             </h1>
             <h1 className="text-4xl sm:text-6xl text-red-700 font-light font-poppins">
-              Creation
+              Development
             </h1>
           </div>
           <div className="w-full sm:w-3/4">
             <p className="text-white/80 text-base sm:text-lg font-light font-poppins mt-4 sm:mt-6">
-              We create high-quality content for digital platforms including
-              blogs, social posts, and video scripts.
+              We craft high-performance Android and iOS apps with seamless
+              functionality, elegant UI, and robust backends.
             </p>
           </div>
         </div>
@@ -130,12 +130,12 @@ export default function Services() {
         <h2 className="text-red-700 text-3xl sm:text-4xl font-poppins font-medium text-center">
           Transforming Ideas into Intelligent Solutions
         </h2>
-        <p className="text-white/80 text-base sm:text-xl font-poppins font-light mt-6 sm:mt-10 text-center ">
-          At Helekin, we craft compelling narratives that resonate with your
-          audience and build brand authority. From insightful blog articles to
-          engaging video scripts, our content is strategically designed to
-          inform, entertain, and convert, fueling your entire marketing
-          ecosystem.
+        <p className="text-white/80 text-base sm:text-xl font-poppins font-light mt-6 sm:mt-10 text-center">
+          At Helekin, we specialize in turning your ideas into powerful mobile
+          applications. Whether it&#39;s a native iOS, Android, or
+          cross-platform app, we leverage cutting-edge technology to build fast,
+          secure, and user-friendly mobile experiences that keep your audience
+          connected, wherever they are.
         </p>
       </div>
 
@@ -159,13 +159,13 @@ export default function Services() {
 
       <div className="relative z-10 w-full mx-auto text-center bg-[#030303] pt-24 px-6 sm:px-10">
         <h1 className="text-2xl sm:text-3xl font-poppins font-semibold text-red-700 mb-2 text-start">
-          Featured Content Pieces
+          Featured Mobile Apps
         </h1>
         <p className="text-white/80 text-base sm:text-xl font-poppins font-light mt-5 mb-10 max-w-2xl text-start">
-          Our portfolio showcases our versatility in creating impactful content
-          that captures attention and delivers a clear, persuasive message.
+          Our portfolio highlights our expertise in mobile app innovation and
+          creating seamless, user-centric designs.
         </p>
-        <div className="mt-5 flex sm:flex-row flex-col items-center justify-center gap-5">
+        <div className="mt-5 flex sm:flex-row flex-col items-center justify-center gap-5 px-10 ">
           <div className="flex flex-col items-start h-[300px] w-full bg-white/10 backdrop-blur-lg shadow-xl shadow-[#030303]/30 p-6 rounded-3xl transition-all hover:scale-[1.02] duration-300"></div>
           <div className="flex flex-col items-start h-[300px] w-full bg-white/10 backdrop-blur-lg shadow-xl shadow-[#030303]/30 p-6 rounded-3xl transition-all hover:scale-[1.02] duration-300"></div>
           <div className="flex flex-col items-start h-[300px] w-full bg-white/10 backdrop-blur-lg shadow-xl shadow-[#030303]/30 p-6 rounded-3xl transition-all hover:scale-[1.02] duration-300"></div>
@@ -177,10 +177,11 @@ export default function Services() {
               Transforming Ideas into Intelligent Solutions
             </h2>
             <p className="text-white/80 text-base sm:text-xl font-poppins font-light mt-6 sm:mt-10 text-left">
-              Our content process is built on a foundation of research and
-              strategy. We identify your audience&#39;s needs, conduct keyword
-              research, and develop a content strategy before moving to writing,
-              editing, and optimization, ensuring every piece serves a purpose.
+              We design and develop with a mobile-first mindset, focusing on
+              performance, usability across diverse devices, and optimizing for
+              the unique challenges of the mobile ecosystem. Our process
+              includes rigorous testing, performance tuning, and navigating the
+              app store submission process for you.
             </p>
           </div>
 
@@ -188,7 +189,7 @@ export default function Services() {
             <div className="flex flex-col items-center justify-center md:items-center mt-2 gap-8 w-full">
               <div className="flex items-center justify-between bg-white/10 backdrop-blur-lg shadow-lg shadow-[#030303]/30 p-6 w-full sm:w-3/4">
                 <h1 className="font-poppins text-lg sm:text-2xl font-medium text-white">
-                  Do you provide content strategy services?
+                  Native or Cross-Platform: Which is right for me?
                 </h1>
                 <h1 className="font-poppins text-2xl sm:text-3xl font-medium text-white">
                   +
@@ -196,7 +197,7 @@ export default function Services() {
               </div>
               <div className="flex items-center justify-between bg-white/10 backdrop-blur-lg shadow-lg shadow-[#030303]/30 p-6 w-full sm:w-3/4">
                 <h1 className="font-poppins text-lg sm:text-2xl font-medium text-white">
-                  Is your content optimized for SEO?
+                  How do you handle app store submissions?
                 </h1>
                 <h1 className="font-poppins text-2xl sm:text-3xl font-medium text-white">
                   +
@@ -204,7 +205,7 @@ export default function Services() {
               </div>
               <div className="flex items-center justify-between bg-white/10 backdrop-blur-lg shadow-lg shadow-[#030303]/30 p-6 w-full sm:w-3/4">
                 <h1 className="font-poppins text-lg sm:text-2xl font-medium text-white">
-                  Can you write for a highly technical audience?
+                  What is your process for testing mobile apps?
                 </h1>
                 <h1 className="font-poppins text-2xl sm:text-3xl font-medium text-white">
                   +
@@ -212,7 +213,7 @@ export default function Services() {
               </div>
               <div className="flex items-center justify-between bg-white/10 backdrop-blur-lg shadow-lg shadow-[#030303]/30 p-6 w-full sm:w-3/4">
                 <h1 className="font-poppins text-lg sm:text-2xl font-medium text-white">
-                  What is your revision and approval process?
+                  Can you integrate my app with existing systems?
                 </h1>
                 <h1 className="font-poppins text-2xl sm:text-3xl font-medium text-white">
                   +
@@ -223,11 +224,11 @@ export default function Services() {
         </div>
 
         <h1 className="font-poppins text-3xl sm:text-4xl text-white mb-4 mt-20">
-          Ready to Tell Your Story?
+          Ready to build your app?
         </h1>
         <p className="text-white/80 mb-8 max-w-2xl mx-auto text-base sm:text-lg">
-          Let&#39;s create content that builds trust, drives engagement, and
-          grows your business. Connect with our creative team today.
+          Let&#39;s bring your mobile app idea to life with a beautiful
+          interface and powerful functionality that captivates users.
         </p>
         <Link href="/contact">
           <button className="bg-red-700 text-white font-semibold py-3 px-6 sm:px-8 rounded-lg hover:bg-red-800 transition-colors duration-300 text-base sm:text-lg cursor-pointer">
