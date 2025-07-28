@@ -10,9 +10,12 @@ export default function About() {
       <div className="relative h-[90vh] sm:h-180 w-full bg-[url('/svg/hero.svg')] bg-cover bg-center bg-no-repeat z-20 flex items-center">
         <div className="absolute inset-0 bg-[#030303]/70 backdrop-blur-sm z-0" />
         <div className="relative z-10 text-white w-full px-6 sm:px-10 max-w-4xl">
-          <div className="mb-4 flex flex-col sm:flex-row gap-3">
-            <h1 className="text-4xl sm:text-6xl font-light font-poppins">About</h1>
-            <h1 className="text-4xl sm:text-6xl text-red-700 font-light font-poppins">Helekin</h1>
+          <div className="mb-4 flex flex-col gap-3">
+            <h1 className="text-4xl sm:text-6xl font-light font-poppins">From Concept to Creation</h1>
+            <div className='flex '>
+              <h1 className="text-4xl sm:text-6xl font-light font-poppins">We Build&nbsp;</h1>
+              <h1 className="text-4xl sm:text-6xl text-red-700 font-light font-poppins">What Matters</h1>
+            </div>
           </div>
           <div className="w-full">
             <p className="text-white/80 text-base sm:text-lg font-light font-poppins mt-4 sm:mt-6">

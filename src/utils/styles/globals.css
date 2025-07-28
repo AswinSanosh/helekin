@@ -63,6 +63,19 @@ input[type="submit"],
   transform: rotate(180deg);
 }
 
+@keyframes timerBar {
+  from {
+    width: 100%;
+  }
+  to {
+    width: 0%;
+  }
+}
+
+.animate-timerBar {
+  animation: timerBar 3s linear forwards;
+}
+
 
 @font-face {
   font-family: 'Poppins';
