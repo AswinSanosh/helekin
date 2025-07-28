@@ -17,7 +17,7 @@ interface ToastClientProps extends ToastOptions {
 export default function ToastClient({
   message,
   type = 'info',
-  autoClose = 3000,
+  autoClose = 1500,
   progressBarColor,
   ...rest
 }: ToastClientProps) {
