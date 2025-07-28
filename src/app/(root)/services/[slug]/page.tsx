@@ -1,49 +1,49 @@
-// app/services/[slug]/page.tsx
-
 import { notFound } from 'next/navigation';
-import { getAllServices, getServiceBySlug } from '@/lib/getServiceData';
+import { getAllServices, getServiceBySlug, Service } from '@/lib/getServiceData';
+import type { Metadata } from 'next';
 import Link from 'next/link';
 
-// 1️⃣ Export dynamicParams: true if you want fallback routing support (optional but recommended)
+// ✅ Correctly type params as Promise
+type Props = {
+  params: Promise<{ slug: string }>;
+};
+
 export const dynamicParams = true;
 
-// 2️⃣ Static generation of paths
 export async function generateStaticParams() {
   const services = getAllServices();
-  return services.map((service) => ({
-    slug: service.link?.split('/').pop(),
-  }));
+  return services.map((service) => {
+    const slug = service.link?.split('/').pop();
+    return {
+      slug: slug || '',
+    };
+  });
 }
 
-// 3️⃣ Optionally set SEO metadata (recommended for production)
-export async function generateMetadata({ params }: { params: { slug: string } }) {
-  const service = getServiceBySlug(params.slug);
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const { slug } = await params;
+  const service = await getServiceBySlug(slug);
+
   if (!service) {
     return {
       title: 'Service Not Found | Helekin',
     };
   }
+
   return {
     title: `${service.title} | Helekin`,
     description: service['about-desc'],
   };
 }
 
-// 4️⃣ Page component
-
-interface Props {
-  params: {
-    slug: string;
-  };
-}
-
-export default function ServicePage({ params }: Props) {
-  const service = getServiceBySlug(params.slug);
+export default async function ServicePage({ params }: Props) {
+  const { slug } = await params;
+  const service = await getServiceBySlug(slug);
 
   if (!service) return notFound();
 
   return (
-    <div>
+    <div className="flex flex-col">
       {/* Hero Section */}
       <div
         className="background relative h-[90vh] sm:h-180 w-full bg-cover bg-center bg-no-repeat z-20 flex items-center"
@@ -89,9 +89,7 @@ export default function ServicePage({ params }: Props) {
           {service['whatweoffer-images'].map((img, i) => (
             <div
               key={i}
-              className={`flex flex-col items-start h-[250px] w-full sm:w-[300px] bg-white/10 backdrop-blur-lg shadow-lg shadow-[#030303]/30 p-6 rounded-xl transition-all hover:scale-[1.02] duration-300 ${
-                i === 1 ? 'md:relative md:-top-30' : ''
-              }`}
+              className={`flex flex-col items-start h-[250px] w-full sm:w-[300px] bg-white/10 backdrop-blur-lg shadow-lg shadow-[#030303]/30 p-6 rounded-xl transition-all hover:scale-[1.02] duration-300 ${i === 1 ? 'md:relative md:-top-30' : ''}`}
               style={{
                 backgroundImage: `url(${img})`,
                 backgroundSize: 'cover',
@@ -123,9 +121,11 @@ export default function ServicePage({ params }: Props) {
             />
           ))}
         </div>
+      </div>
 
-        {/* Our Approach */}
-        <div className="mt-50 flex flex-col sm:flex-row items-start justify-between gap-10 sm:gap-5">
+      {/* Our Approach */}
+      <div className="relative z-10 w-screen mx-auto bg-[#030303] px-6 sm:px-10 py-20 md:pt-50">
+        <div className="max-w-screen-xl mx-auto flex flex-col sm:flex-row items-start justify-between gap-10 sm:gap-20">
           <div className="w-full sm:w-1/3 flex flex-col">
             <h2 className="text-red-700 text-3xl sm:text-4xl font-poppins font-medium text-left">
               {service['approach-title']}
@@ -136,12 +136,12 @@ export default function ServicePage({ params }: Props) {
           </div>
 
           {/* FAQ */}
-          <div className="w-full sm:w-2/3 flex flex-col items-start">
-            <div className="flex flex-col items-center justify-center md:items-center mt-2 gap-8 w-full">
+          <div className="w-full sm:w-2/3 flex flex-col items-end justify-end">
+            <div className="flex flex-col items-center sm:items-start mt-2 gap-8 w-full">
               {service['service-FAQ'].map((faq, i) => (
                 <div
                   key={i}
-                  className="flex items-center justify-between bg-white/10 backdrop-blur-lg shadow-lg shadow-[#030303]/30 p-6 w-full sm:w-3/4"
+                  className="flex items-center justify-between bg-white/10 backdrop-blur-lg shadow-lg shadow-[#030303]/30 p-6 w-full sm:w-full"
                 >
                   <h1 className="font-poppins text-lg sm:text-2xl font-medium text-white">
                     {faq.question}
@@ -154,16 +154,18 @@ export default function ServicePage({ params }: Props) {
             </div>
           </div>
         </div>
+      </div>
 
-        {/* Call to Action */}
-        <h1 className="font-poppins text-3xl sm:text-4xl text-white mb-4 mt-50">
+      {/* Call to Action */}
+      <div className="relative z-10 w-full bg-[#030303] py-20 px-6 sm:px-10 text-center">
+        <h1 className="font-poppins text-3xl sm:text-4xl text-white mb-4">
           {service.consultQN}
         </h1>
         <p className="text-white/80 mb-8 max-w-2xl mx-auto text-base sm:text-lg">
           {service['consult-answer']}
         </p>
         <Link href="/contact">
-          <button className="bg-red-700 mb-50 text-white font-semibold py-3 px-6 sm:px-8 rounded-lg hover:bg-red-800 transition-colors duration-300 text-base sm:text-lg cursor-pointer">
+          <button className="bg-red-700 text-white font-semibold py-3 px-6 sm:px-8 rounded-lg hover:bg-red-800 transition-colors duration-300 text-base sm:text-lg cursor-pointer">
             Schedule a Consultation
           </button>
         </Link>
