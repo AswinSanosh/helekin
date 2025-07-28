@@ -47,7 +47,7 @@ export default function Navbar() {
   return (
     <>
       {/* Mobile Top Bar (Logo + Burger) */}
-      <div className="xl:hidden fixed top-0 left-0 w-full z-50 bg-[#111111] flex items-center justify-between px-4 py-3">
+      <div className="xl:hidden fixed top-0 left-0 w-full z-50 bg-[#030303] flex items-center justify-between px-4 py-3">
         <Link href="/" className="flex items-center">
           <Image
             src="/images/logowrite.png"
