@@ -10,7 +10,7 @@ import { Service } from '@/types/Service';
 export default function ThreedServicesCarousel() {
   const services: Service[] = serviceData.servicesList.threed;
   const CARD_COUNT = services.length;
-  const MIDDLE_INDEX = CARD_COUNT + 1; // because of added clone at the start
+  const MIDDLE_INDEX = CARD_COUNT + 1;
 
   const [currentIndex, setCurrentIndex] = useState(MIDDLE_INDEX);
   const [hovering, setHovering] = useState(false);
@@ -18,19 +18,34 @@ export default function ThreedServicesCarousel() {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [selectedService, setSelectedService] = useState<Service | null>(null);
   const [isCooldown, setIsCooldown] = useState(false);
+  const [initialX, setInitialX] = useState<number | null>(null);
 
   const controls = useAnimation();
 
-  // Clone last and first for looping illusion
-  const allCards: Service[] = [ // third last
-    services[services.length - 2], // second last
-    services[services.length - 1], // last
+  // Clone items for infinite scroll illusion
+  const allCards: Service[] = [
+    services[services.length - 3],
+    services[services.length - 2],
+    services[services.length - 1],
     ...services,
     ...services,
-    services[0], // first
-    services[1], // second
+    ...services,
+    ...services,
+    ...services,
+    services[0],
+    services[1],
+    services[2],
   ];
 
+  useEffect(() => {
+    if (typeof window !== 'undefined') {
+      const vw25 = window.innerWidth * 0.25;
+      const gap = 40;
+      const cardWidthWithGap = vw25 + gap;
+      const calculatedX = -MIDDLE_INDEX * cardWidthWithGap + 50;
+      setInitialX(calculatedX);
+    }
+  }, []);
 
   useEffect(() => {
     if (hovering || typeof window === 'undefined' || window.innerWidth < 768) return;
@@ -45,9 +60,7 @@ export default function ThreedServicesCarousel() {
   const handlePrev = () => {
     if (isCooldown) return;
     setIsCooldown(true);
-
     setCurrentIndex((prev) => prev - 1);
-
     setTimeout(() => setIsCooldown(false), 700);
   };
 
@@ -69,7 +82,9 @@ export default function ThreedServicesCarousel() {
   };
 
   useEffect(() => {
-    const vw25 = typeof window !== 'undefined' ? window.innerWidth * 0.25 : 300;
+    if (initialX === null || typeof window === 'undefined') return;
+
+    const vw25 = window.innerWidth * 0.25;
     const gap = 40;
     const cardWidthWithGap = vw25 + gap;
     const targetX = -currentIndex * cardWidthWithGap + 50;
@@ -90,7 +105,9 @@ export default function ThreedServicesCarousel() {
       });
 
     return () => controls.stop();
-  }, [currentIndex, controls, CARD_COUNT]);
+  }, [currentIndex, controls, CARD_COUNT, initialX]);
+
+  if (initialX === null) return null; // Prevent SSR hydration mismatch
 
   return (
     <div className="relative w-full py-20 flex items-center justify-center">
@@ -120,12 +137,7 @@ export default function ThreedServicesCarousel() {
           <motion.div
             className="flex relative"
             animate={controls}
-            initial={{
-              x: (() => {
-                const vw25 = typeof window !== 'undefined' ? window.innerWidth * 0.25 : 300;
-                return -MIDDLE_INDEX * (vw25 + 40) + 50;
-              })(),
-            }}
+            initial={{ x: initialX }}
             style={{
               minWidth: 'max-content',
               gap: '40px',
@@ -151,12 +163,12 @@ export default function ThreedServicesCarousel() {
                     style={
                       isHovered
                         ? {
-                          backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(${service.background})`,
-                          backgroundSize: 'cover',
-                          backgroundPosition: 'center',
-                          backgroundRepeat: 'no-repeat',
-                          backdropFilter: 'blur(10px)',
-                        }
+                            backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(${service.background})`,
+                            backgroundSize: 'cover',
+                            backgroundPosition: 'center',
+                            backgroundRepeat: 'no-repeat',
+                            backdropFilter: 'blur(10px)',
+                          }
                         : {}
                     }
                   >
@@ -166,9 +178,9 @@ export default function ThreedServicesCarousel() {
                         style={
                           isHovered
                             ? {
-                              backgroundColor: '#A50424',
-                              backdropFilter: 'blur(10px)',
-                            }
+                                backgroundColor: '#A50424',
+                                backdropFilter: 'blur(10px)',
+                              }
                             : {}
                         }
                       >
@@ -182,14 +194,16 @@ export default function ThreedServicesCarousel() {
                       </div>
                       <div className="text-left relative m-5 top-5 transition-all duration-300">
                         <h1
-                          className={`transition-all duration-500 text-2xl font-poppins font-semibold ${isHovered ? 'text-[#A50424]' : 'text-white'
-                            }`}
+                          className={`transition-all duration-500 text-2xl font-poppins font-semibold ${
+                            isHovered ? 'text-[#A50424]' : 'text-white'
+                          }`}
                         >
                           {service.title}
                         </h1>
                         <p
-                          className={`transition-all duration-800 font-poppins font-light ${isHovered ? 'text-lg md:font-semibold' : 'text-md'
-                            }`}
+                          className={`transition-all duration-800 font-poppins font-light ${
+                            isHovered ? 'text-lg md:font-semibold' : 'text-md'
+                          }`}
                         >
                           {service.desc}
                         </p>

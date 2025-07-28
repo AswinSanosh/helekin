@@ -40,9 +40,9 @@ export default function Hero() {
             Digital acceleration services
           </h1>
 
-          <div className="flex gap-2 sm:gap-3 justify-bottom sm:flex-nowrap max-w-[90vw] sm:max-w-[50vw] max-h-[50vh]">
+          <div className="flex sm:gap-3 justify-bottom sm:flex-nowrap max-w-[90vw] sm:max-w-[50vw] max-h-[50vh]">
             <h1 className="text-white heading-light max-heading-light-lg mb-4 flex-shrink-0">
-              for
+              for&nbsp;
             </h1>
             <h1 className="text-red-700 heading-light max-heading-light-lg mb-4 flex-shrink-0">
               {displayedText}
