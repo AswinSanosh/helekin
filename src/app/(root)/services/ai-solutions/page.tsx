@@ -55,7 +55,7 @@ export default function Services() {
           <div
             onMouseEnter={() => handleMouseEnter(section, i)}
             onMouseLeave={handleMouseLeave}
-            className="flex flex-col items-start h-[270px] w-full bg-white/10 backdrop-blur-lg shadow-lg shadow-black/30 p-6 rounded-xl transition-all hover:scale-[1.02] duration-300"
+            className="flex flex-col items-start h-[270px] w-full bg-white/10 backdrop-blur-lg shadow-lg shadow-[#030303]/30 p-6 rounded-xl transition-all hover:scale-[1.02] duration-300"
             style={{
               ...(isHovered
                 ? {
@@ -100,7 +100,7 @@ export default function Services() {
       {/* Hero */}
       <div className="relative h-180 w-full bg-[url('/svg/hero.svg')] bg-cover bg-center bg-no-repeat z-20 flex items-center">
         {/* Tint Overlay */}
-        <div className="absolute inset-0 bg-black/70 backdrop-blur-sm z-0" />
+        <div className="absolute inset-0 bg-[#030303]/70 backdrop-blur-sm z-0" />
 
         {/* Content on Left Center */}
         <div className="relative z-10 text-white w-full px-10 max-w-4xl">
@@ -116,7 +116,7 @@ export default function Services() {
           </div>
         </div>
       </div>
-      <div className="relative z-10 w-full bg-black h-150 flex flex-col items-center justify-center text-white p-10">
+      <div className="relative z-10 w-full bg-[#030303] h-150 flex flex-col items-center justify-center text-white p-10">
         <h2 className="text-red-700 text-4xl md:text-4xl font-poppins font-medium">
           Transforming Ideas into Intelligent Solutions
         </h2>
@@ -125,7 +125,7 @@ export default function Services() {
         </p>
       </div>
       <div className="relative z-0 w-full flex flex-col bg-[url('/images/fafa.png')] bg-cover bg-center bg-no-repeat px-6 pb-30">
-        <div className="absolute inset-0 bg-black/50 backdrop-blur-sm z-0" />
+        <div className="absolute inset-0 bg-[#030303]/50 backdrop-blur-sm z-0" />
 
         <div className='flex justify-between items-baseline z-20'>
           <div className="relative z-10 w-full max-w-screen px-6 mx-auto mt-20">
@@ -134,19 +134,19 @@ export default function Services() {
         </div>
         <div>
           <div className='mt-20 sm:mt-40 flex sm:flex-row flex-col items-center justify-center gap-5 '>
-            <div className="flex flex-col items-start h-[250px] sm:w-[300px] w-full bg-white/10 backdrop-blur-lg shadow-lg shadow-black/30 p-6 rounded-xl transition-all hover:scale-[1.02] duration-300">
+            <div className="flex flex-col items-start h-[250px] sm:w-[300px] w-full bg-white/10 backdrop-blur-lg shadow-lg shadow-[#030303]/30 p-6 rounded-xl transition-all hover:scale-[1.02] duration-300">
 
             </div>
-            <div className="flex flex-col items-start h-[250px] sm:w-[300px] w-full bg-white/10 backdrop-blur-lg shadow-lg shadow-black/30 p-6 rounded-xl transition-all hover:scale-[1.02] duration-300 md:relative md:-top-30">
+            <div className="flex flex-col items-start h-[250px] sm:w-[300px] w-full bg-white/10 backdrop-blur-lg shadow-lg shadow-[#030303]/30 p-6 rounded-xl transition-all hover:scale-[1.02] duration-300 md:relative md:-top-30">
 
             </div>
-            <div className="flex flex-col items-start h-[250px] sm:w-[300px] w-full bg-white/10 backdrop-blur-lg shadow-lg shadow-black/30 p-6 rounded-xl transition-all hover:scale-[1.02] duration-300">
+            <div className="flex flex-col items-start h-[250px] sm:w-[300px] w-full bg-white/10 backdrop-blur-lg shadow-lg shadow-[#030303]/30 p-6 rounded-xl transition-all hover:scale-[1.02] duration-300">
 
             </div>
           </div>
         </div>
       </div>
-      <div className="relative z-10 w-full mx-auto text-center bg-black pt-24">
+      <div className="relative z-10 w-full mx-auto text-center bg-[#030303] pt-24">
         <h1 className="text-3xl font-poppins font-semibold text-red-700 mb-2 text-start ml-10">
           Featured Products
         </h1>
@@ -154,13 +154,13 @@ export default function Services() {
           Carefully Crafted Masterpieces that are designed to solve real-world problems.
         </p>
         <div className='mt-5 flex sm:flex-row flex-col items-center justify-center gap-5 px-10 '>
-          <div className="flex flex-col items-start h-[300px] w-full bg-white/10 backdrop-blur-lg shadow-xl shadow-black/30 p-6 rounded-3xl transition-all hover:scale-[1.02] duration-300">
+          <div className="flex flex-col items-start h-[300px] w-full bg-white/10 backdrop-blur-lg shadow-xl shadow-[#030303]/30 p-6 rounded-3xl transition-all hover:scale-[1.02] duration-300">
 
           </div>
-          <div className="flex flex-col items-start h-[300px] w-full bg-white/10 backdrop-blur-lg shadow-xl shadow-black/30 p-6 rounded-3xl transition-all hover:scale-[1.02] duration-300">
+          <div className="flex flex-col items-start h-[300px] w-full bg-white/10 backdrop-blur-lg shadow-xl shadow-[#030303]/30 p-6 rounded-3xl transition-all hover:scale-[1.02] duration-300">
 
           </div>
-          <div className="flex flex-col items-start h-[300px] w-full bg-white/10 backdrop-blur-lg shadow-xl shadow-black/30 p-6 rounded-3xl transition-all hover:scale-[1.02] duration-300">
+          <div className="flex flex-col items-start h-[300px] w-full bg-white/10 backdrop-blur-lg shadow-xl shadow-[#030303]/30 p-6 rounded-3xl transition-all hover:scale-[1.02] duration-300">
 
           </div>
         </div>
@@ -175,19 +175,19 @@ export default function Services() {
           </div>
           <div className='w-2/3 flex flex-col items-start'>
             <div className="flex flex-col items-center justify-center md:items-center mt-2 gap-8 w-full">
-              <div className='flex items-center justify-between bg-white/10 backdrop-blur-lg shadow-lg shadow-black/30 p-6 md:w-3/4 w-full'>
+              <div className='flex items-center justify-between bg-white/10 backdrop-blur-lg shadow-lg shadow-[#030303]/30 p-6 md:w-3/4 w-full'>
                 <h1 className='font-poppins text-2xl font-medium text-white'>What are the security standards you follow for web designing?</h1>
                 <h1 className='font-poppins text-3xl font-medium text-white'>+</h1>
               </div>
-              <div className='flex items-center justify-between bg-white/10 backdrop-blur-lg shadow-lg shadow-black/30 p-6 md:w-3/4 w-full'>
+              <div className='flex items-center justify-between bg-white/10 backdrop-blur-lg shadow-lg shadow-[#030303]/30 p-6 md:w-3/4 w-full'>
                 <h1 className='font-poppins text-2xl font-medium text-white'>How do you choose the languages for the projects?</h1>
                 <h1 className='font-poppins text-3xl font-medium text-white'>+</h1>
               </div>
-              <div className='flex items-center justify-between bg-white/10 backdrop-blur-lg shadow-lg shadow-black/30 p-6 md:w-3/4 w-full'>
+              <div className='flex items-center justify-between bg-white/10 backdrop-blur-lg shadow-lg shadow-[#030303]/30 p-6 md:w-3/4 w-full'>
                 <h1 className='font-poppins text-2xl font-medium text-white'>What are the security standards you follow for web designing?</h1>
                 <h1 className='font-poppins text-3xl font-medium text-white'>+</h1>
               </div>
-              <div className='flex items-center justify-between bg-white/10 backdrop-blur-lg shadow-lg shadow-black/30 p-6 md:w-3/4 w-full'>
+              <div className='flex items-center justify-between bg-white/10 backdrop-blur-lg shadow-lg shadow-[#030303]/30 p-6 md:w-3/4 w-full'>
                 <h1 className='font-poppins text-2xl font-medium text-white'>What are the security standards you follow for web designing?</h1>
                 <h1 className='font-poppins text-3xl font-medium text-white'>+</h1>
               </div>

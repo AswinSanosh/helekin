@@ -4,7 +4,7 @@ import Link from 'next/link';
 
 export default function Products() {
   return (
-    <div className="relative z-0 min-h-auto w-full flex flex-col bg-black bg-cover bg-center bg-no-repeat px-6 pb-30">
+    <div className="relative z-0 min-h-auto w-full flex flex-col bg-[#030303] bg-cover bg-center bg-no-repeat px-6 pb-30">
       <div className="relative z-10 w-full max-w-screen px-6 mx-auto mt-20">
         <h1 className="text-3xl font-poppins font-semibold text-red-700 mb-2">
           Products
@@ -31,7 +31,7 @@ export default function Products() {
         </div>
         <div className='mt-20 flex flex-row items-center justify-center'>
           <div className="bg-[url('/images/product2.png')] bg-no-repeat bg-center bg-cover md:h-[400px] h-[150px] w-[400px] rounded-3xl flex items-center justify-center -right-10 relative z-30"></div>
-          <div className="bg-[url('/images/product1.png')] bg-no-repeat bg-center bg-cover md:h-[500px] h-[200px] w-[500px] rounded-3xl flex items-center justify-center drop-shadow-3xl shadow-black z-40"></div>
+          <div className="bg-[url('/images/product1.png')] bg-no-repeat bg-center bg-cover md:h-[500px] h-[200px] w-[500px] rounded-3xl flex items-center justify-center drop-shadow-3xl shadow-[#030303] z-40"></div>
           <div className="bg-[url('/images/product4.png')] bg-no-repeat bg-center bg-cover md:h-[400px] h-[150px] w-[400px] rounded-3xl flex items-center justify-center -left-10 relative z-30"></div>
         </div>
       </div>

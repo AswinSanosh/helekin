@@ -101,7 +101,7 @@ export default function ThreedServicesCarousel() {
       >
         <button
           onClick={handlePrev}
-          className="hidden md:flex z-20 p-2 h-[300px] w-[50px] items-center justify-center rounded-l-2xl hover:bg-red-700 bg-black transition-all duration-300"
+          className="hidden md:flex z-20 p-2 h-[300px] w-[50px] items-center justify-center rounded-l-2xl hover:bg-red-700 bg-[#030303] transition-all duration-300"
           aria-label="Previous"
           disabled={isCooldown}
         >
@@ -147,7 +147,7 @@ export default function ThreedServicesCarousel() {
                   }}
                 >
                   <div
-                    className="w-full h-full bg-white/10 backdrop-blur-2xl shadow-2xl shadow-black/30 text-white rounded-xl text-sm transition-all duration-300 relative"
+                    className="w-full h-full bg-white/10 backdrop-blur-2xl shadow-2xl shadow-[#030303]/30 text-white rounded-xl text-sm transition-all duration-300 relative"
                     style={
                       isHovered
                         ? {
@@ -204,7 +204,7 @@ export default function ThreedServicesCarousel() {
 
         <button
           onClick={handleNext}
-          className="hidden md:flex z-20 p-2 h-[300px] w-[50px] items-center justify-center rounded-r-2xl hover:bg-red-700 bg-black transition-all duration-300"
+          className="hidden md:flex z-20 p-2 h-[300px] w-[50px] items-center justify-center rounded-r-2xl hover:bg-red-700 bg-[#030303] transition-all duration-300"
           aria-label="Next"
           disabled={isCooldown}
         >

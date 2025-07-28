@@ -33,7 +33,7 @@ const Contact = () => {
   return (
     <section
       ref={ref}
-      className="min-h-screen bg-black text-white px-6 md:px-16 py-20 flex items-center justify-center"
+      className="min-h-screen bg-[#030303] text-white px-6 md:px-16 py-20 flex items-center justify-center"
     >
       <motion.div
         initial="hidden"
@@ -43,7 +43,7 @@ const Contact = () => {
           visible: { opacity: 1, y: 0 }
         }}
         transition={{ duration: 0.6 }}
-        className="max-w-4xl w-full bg-[#1c1c1c] p-10 rounded-2xl shadow-xl"
+        className="max-w-4xl w-full bg-black p-10 rounded-2xl shadow-xl"
       >
         <h2 className="text-4xl font-bold text-red-600 font-poppins mb-8 text-center">
           Get in Touch
@@ -56,7 +56,7 @@ const Contact = () => {
               placeholder="Your Name"
               value={formData.name}
               onChange={handleChange}
-              className="w-full p-4 bg-black border border-gray-600 rounded-md text-white placeholder-gray-400 focus:outline-none focus:border-red-600"
+              className="w-full p-4 bg-[#030303] border border-gray-600 rounded-md text-white placeholder-gray-400 focus:outline-none focus:border-red-600"
               required
             />
             <input
@@ -65,7 +65,7 @@ const Contact = () => {
               placeholder="Your Email"
               value={formData.email}
               onChange={handleChange}
-              className="w-full p-4 bg-black border border-gray-600 rounded-md text-white placeholder-gray-400 focus:outline-none focus:border-red-600"
+              className="w-full p-4 bg-[#030303] border border-gray-600 rounded-md text-white placeholder-gray-400 focus:outline-none focus:border-red-600"
               required
             />
           </div>
@@ -75,7 +75,7 @@ const Contact = () => {
             placeholder="Your Message"
             value={formData.message}
             onChange={handleChange}
-            className="w-full p-4 bg-black border border-gray-600 rounded-md text-white placeholder-gray-400 focus:outline-none focus:border-red-600"
+            className="w-full p-4 bg-[#030303] border border-gray-600 rounded-md text-white placeholder-gray-400 focus:outline-none focus:border-red-600"
             required
           ></textarea>
           <button
