@@ -1,6 +1,7 @@
 import type {Config} from "tailwindcss";
 import tailwindcssAnimate from "tailwindcss-animate";
 import typography from "@tailwindcss/typography";
+import scrollbarHide from 'tailwind-scrollbar-hide';
 
 const config: Config = {
     content: [
@@ -52,6 +53,7 @@ const config: Config = {
     plugins: [
         tailwindcssAnimate,
         typography,
+        scrollbarHide,
     ],
 };
 

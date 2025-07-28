@@ -12,10 +12,10 @@ export default function Accordion({ question, answer }: AccordionProps) {
   const [isOpen, setIsOpen] = useState(false)
 
   return (
-    <div className="bg-[#1e1e1e] border border-[#333] mb-4">
+    <div className="bg-[#1e1e1e] border border-[#333] mb-4 w-full">
       <button
         onClick={() => setIsOpen(!isOpen)}
-        className="w-full h-[11vh] flex justify-between items-center px-6 py-4 text-left"
+        className="w-full h-[100px] flex justify-between items-center px-6 py-6 text-left"
       >
         <h1 className={twMerge("accordion", "text-white subheading-base")}>
           {question}

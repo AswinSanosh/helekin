@@ -6,7 +6,7 @@ export default function Aboutbanner() {
   return (
     <div
       className="
-        w-full bg-black flex flex-col md:flex-row
+        w-full bg-[#030303] flex flex-col md:flex-row
         items-center justify-center gap-20
         py-10 md:py-20 px-4 md:px-10
 
@@ -48,7 +48,7 @@ export default function Aboutbanner() {
           As a startup driven by innovation and agility, we craft tailored digital solutions
           that solve real problems and unlock new opportunities. From building powerful digital
           experiences to scaling your ideas, we&#39;re here to support your journey every step of
-          the way. Our mission is simple to empower businesses worldwide with the tools,
+          the way. Our mission is simple - to empower businesses worldwide with the tools,
           technology, and creativity they need to grow.
         </p>
 
@@ -56,7 +56,7 @@ export default function Aboutbanner() {
           href="/about"
           className="
             inline-block bg-white/20 border border-white rounded-xl
-            px-6 py-3 text-base md:text-lg font-poppins
+            md:px-6 md:py-3 px-3 py-2 text-base md:text-lg font-poppins
             hover:bg-white hover:text-red-700
             transition-colors duration-300 ease-in-out
           "
