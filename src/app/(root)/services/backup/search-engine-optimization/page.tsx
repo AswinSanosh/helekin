@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import serviceData from "../../../../components/ServiceList.json";
+import serviceData from "../../../../../components/ServiceList.json";
 import React, { useEffect, useState } from "react";
 import Link from "next/link";
 
@@ -111,16 +111,16 @@ export default function Services() {
         <div className="relative z-10 text-white w-full px-6 sm:px-10 max-w-4xl">
           <div className="mb-4 flex flex-col sm:flex-row gap-3">
             <h1 className="text-4xl sm:text-6xl font-light font-poppins">
-              UI/UX
+              Search Engine
             </h1>
             <h1 className="text-4xl sm:text-6xl text-red-700 font-light font-poppins">
-              Designing
+              Optimization
             </h1>
           </div>
           <div className="w-full sm:w-3/4">
             <p className="text-white/80 text-base sm:text-lg font-light font-poppins mt-4 sm:mt-6">
-              We design modern, user-centered digital interfaces with intuitive
-              navigation and smooth interactions.
+              We optimize websites to rank higher on search engines using
+              advanced SEO techniques for better visibility.
             </p>
           </div>
         </div>
@@ -131,10 +131,11 @@ export default function Services() {
           Transforming Ideas into Intelligent Solutions
         </h2>
         <p className="text-white/80 text-base sm:text-xl font-poppins font-light mt-6 sm:mt-10 text-center">
-          At Helekin, our UI/UX design process is rooted in deep user
-          understanding. We blend aesthetic appeal with functional clarity,
-          transforming complex challenges into simple, elegant solutions that
-          are both a joy to use and effective at driving business outcomes.
+          At Helekin, we elevate your online presence by driving organic traffic
+          to your website. Our comprehensive SEO strategies focus on technical
+          optimization, quality content, and authoritative link building to
+          ensure you don&#39;t just rank, but dominate the search results for
+          your target keywords.
         </p>
       </div>
 
@@ -158,11 +159,12 @@ export default function Services() {
 
       <div className="relative z-10 w-full mx-auto text-center bg-[#030303] pt-24 px-6 sm:px-10">
         <h1 className="text-2xl sm:text-3xl font-poppins font-semibold text-red-700 mb-2 text-start">
-          Featured Design Projects
+          Featured SEO Case Studies
         </h1>
         <p className="text-white/80 text-base sm:text-xl font-poppins font-light mt-5 mb-10 max-w-2xl text-start">
-          Our portfolio showcases our dedication to creating beautiful,
-          functional, and memorable user experiences.
+          Our portfolio showcases our proven success in boosting rankings,
+          increasing organic traffic, and delivering measurable results for
+          clients across industries.
         </p>
         <div className="mt-5 flex sm:flex-row flex-col items-center justify-center gap-5">
           <div className="flex flex-col items-start h-[300px] w-full bg-white/10 backdrop-blur-lg shadow-xl shadow-[#030303]/30 p-6 rounded-3xl transition-all hover:scale-[1.02] duration-300"></div>
@@ -176,11 +178,11 @@ export default function Services() {
               Transforming Ideas into Intelligent Solutions
             </h2>
             <p className="text-white/80 text-base sm:text-xl font-poppins font-light mt-6 sm:mt-10 text-left">
-              Our iterative design process ensures a final product that truly
-              resonates with your audience. We move from discovery and user
-              research to wireframing, prototyping, and user testing, refining
-              every detail to ensure a seamless and intuitive flow from start to
-              finish.
+              Our data-driven approach begins with a thorough audit of your site
+              and a deep competitor analysis. We then craft a bespoke strategy
+              covering on-page, off-page, and technical SEO, followed by
+              continuous monitoring and reporting to adapt to the ever-changing
+              search landscape.
             </p>
           </div>
 
@@ -188,7 +190,7 @@ export default function Services() {
             <div className="flex flex-col items-center justify-center md:items-center mt-2 gap-8 w-full">
               <div className="flex items-center justify-between bg-white/10 backdrop-blur-lg shadow-lg shadow-[#030303]/30 p-6 w-full sm:w-3/4">
                 <h1 className="font-poppins text-lg sm:text-2xl font-medium text-white">
-                  What is the difference between UI and UX?
+                  How long does it take to see SEO results?
                 </h1>
                 <h1 className="font-poppins text-2xl sm:text-3xl font-medium text-white">
                   +
@@ -196,7 +198,7 @@ export default function Services() {
               </div>
               <div className="flex items-center justify-between bg-white/10 backdrop-blur-lg shadow-lg shadow-[#030303]/30 p-6 w-full sm:w-3/4">
                 <h1 className="font-poppins text-lg sm:text-2xl font-medium text-white">
-                  How do you conduct user research?
+                  What is the difference between on-page and off-page SEO?
                 </h1>
                 <h1 className="font-poppins text-2xl sm:text-3xl font-medium text-white">
                   +
@@ -204,7 +206,7 @@ export default function Services() {
               </div>
               <div className="flex items-center justify-between bg-white/10 backdrop-blur-lg shadow-lg shadow-[#030303]/30 p-6 w-full sm:w-3/4">
                 <h1 className="font-poppins text-lg sm:text-2xl font-medium text-white">
-                  What design tools do you use?
+                  Do you guarantee a #1 ranking on Google?
                 </h1>
                 <h1 className="font-poppins text-2xl sm:text-3xl font-medium text-white">
                   +
@@ -212,7 +214,7 @@ export default function Services() {
               </div>
               <div className="flex items-center justify-between bg-white/10 backdrop-blur-lg shadow-lg shadow-[#030303]/30 p-6 w-full sm:w-3/4">
                 <h1 className="font-poppins text-lg sm:text-2xl font-medium text-white">
-                  Do you create design systems and style guides?
+                  What metrics do you use to measure success?
                 </h1>
                 <h1 className="font-poppins text-2xl sm:text-3xl font-medium text-white">
                   +
@@ -223,11 +225,11 @@ export default function Services() {
         </div>
 
         <h1 className="font-poppins text-3xl sm:text-4xl text-white mb-4 mt-20">
-          Ready to Elevate Your Design?
+          Ready to Climb the Ranks?
         </h1>
         <p className="text-white/80 mb-8 max-w-2xl mx-auto text-base sm:text-lg">
-          Let&#39;s craft a user experience that delights your audience and sets
-          your product apart from the competition.
+          Let&#39;s increase your visibility and attract more customers. Get a
+          comprehensive SEO strategy tailored for your business.
         </p>
         <Link href="/contact">
           <button className="bg-red-700 text-white font-semibold py-3 px-6 sm:px-8 rounded-lg hover:bg-red-800 transition-colors duration-300 text-base sm:text-lg cursor-pointer">

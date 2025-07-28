@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import serviceData from "../../../../components/ServiceList.json";
+import serviceData from "../../../../../components/ServiceList.json";
 import React, { useEffect, useState } from "react";
 import Link from "next/link";
 
@@ -111,16 +111,16 @@ export default function Services() {
         <div className="relative z-10 text-white w-full px-6 sm:px-10 max-w-4xl">
           <div className="mb-4 flex flex-col sm:flex-row gap-3">
             <h1 className="text-4xl sm:text-6xl font-light font-poppins">
-              Search Engine
+              PCB
             </h1>
             <h1 className="text-4xl sm:text-6xl text-red-700 font-light font-poppins">
-              Optimization
+              Designing
             </h1>
           </div>
           <div className="w-full sm:w-3/4">
             <p className="text-white/80 text-base sm:text-lg font-light font-poppins mt-4 sm:mt-6">
-              We optimize websites to rank higher on search engines using
-              advanced SEO techniques for better visibility.
+              Designing and prototyping of PCBs using industry-grade tools for
+              commercial and industrial applications.
             </p>
           </div>
         </div>
@@ -130,12 +130,12 @@ export default function Services() {
         <h2 className="text-red-700 text-3xl sm:text-4xl font-poppins font-medium text-center">
           Transforming Ideas into Intelligent Solutions
         </h2>
-        <p className="text-white/80 text-base sm:text-xl font-poppins font-light mt-6 sm:mt-10 text-center">
-          At Helekin, we elevate your online presence by driving organic traffic
-          to your website. Our comprehensive SEO strategies focus on technical
-          optimization, quality content, and authoritative link building to
-          ensure you don&#39;t just rank, but dominate the search results for
-          your target keywords.
+        <p className="text-white/80 text-base sm:text-xl font-poppins font-light mt-6 sm:mt-10 text-center max-w-6xl">
+          At Helekin, we translate your complex schematics into robust,
+          manufacturable Printed Circuit Boards. Our expertise covers everything
+          from high-speed digital designs to sensitive analog layouts, ensuring
+          optimal performance, signal integrity, and reliability for your
+          electronic products.
         </p>
       </div>
 
@@ -159,12 +159,11 @@ export default function Services() {
 
       <div className="relative z-10 w-full mx-auto text-center bg-[#030303] pt-24 px-6 sm:px-10">
         <h1 className="text-2xl sm:text-3xl font-poppins font-semibold text-red-700 mb-2 text-start">
-          Featured SEO Case Studies
+          Featured PCB Layouts
         </h1>
         <p className="text-white/80 text-base sm:text-xl font-poppins font-light mt-5 mb-10 max-w-2xl text-start">
-          Our portfolio showcases our proven success in boosting rankings,
-          increasing organic traffic, and delivering measurable results for
-          clients across industries.
+          Our portfolio showcases our precision and attention to detail in
+          creating complex, high-performance circuit boards.
         </p>
         <div className="mt-5 flex sm:flex-row flex-col items-center justify-center gap-5">
           <div className="flex flex-col items-start h-[300px] w-full bg-white/10 backdrop-blur-lg shadow-xl shadow-[#030303]/30 p-6 rounded-3xl transition-all hover:scale-[1.02] duration-300"></div>
@@ -178,11 +177,11 @@ export default function Services() {
               Transforming Ideas into Intelligent Solutions
             </h2>
             <p className="text-white/80 text-base sm:text-xl font-poppins font-light mt-6 sm:mt-10 text-left">
-              Our data-driven approach begins with a thorough audit of your site
-              and a deep competitor analysis. We then craft a bespoke strategy
-              covering on-page, off-page, and technical SEO, followed by
-              continuous monitoring and reporting to adapt to the ever-changing
-              search landscape.
+              Our workflow ensures a seamless transition from concept to
+              reality. We begin with requirement analysis and schematic capture,
+              followed by component selection, layout and routing, and finally,
+              comprehensive Design for Manufacturability (DFM) checks to
+              guarantee a flawless production run.
             </p>
           </div>
 
@@ -190,7 +189,7 @@ export default function Services() {
             <div className="flex flex-col items-center justify-center md:items-center mt-2 gap-8 w-full">
               <div className="flex items-center justify-between bg-white/10 backdrop-blur-lg shadow-lg shadow-[#030303]/30 p-6 w-full sm:w-3/4">
                 <h1 className="font-poppins text-lg sm:text-2xl font-medium text-white">
-                  How long does it take to see SEO results?
+                  What design software do you use?
                 </h1>
                 <h1 className="font-poppins text-2xl sm:text-3xl font-medium text-white">
                   +
@@ -198,7 +197,7 @@ export default function Services() {
               </div>
               <div className="flex items-center justify-between bg-white/10 backdrop-blur-lg shadow-lg shadow-[#030303]/30 p-6 w-full sm:w-3/4">
                 <h1 className="font-poppins text-lg sm:text-2xl font-medium text-white">
-                  What is the difference between on-page and off-page SEO?
+                  What is the difference between schematic and layout?
                 </h1>
                 <h1 className="font-poppins text-2xl sm:text-3xl font-medium text-white">
                   +
@@ -206,7 +205,7 @@ export default function Services() {
               </div>
               <div className="flex items-center justify-between bg-white/10 backdrop-blur-lg shadow-lg shadow-[#030303]/30 p-6 w-full sm:w-3/4">
                 <h1 className="font-poppins text-lg sm:text-2xl font-medium text-white">
-                  Do you guarantee a #1 ranking on Google?
+                  How do you handle high-speed signal routing?
                 </h1>
                 <h1 className="font-poppins text-2xl sm:text-3xl font-medium text-white">
                   +
@@ -214,7 +213,7 @@ export default function Services() {
               </div>
               <div className="flex items-center justify-between bg-white/10 backdrop-blur-lg shadow-lg shadow-[#030303]/30 p-6 w-full sm:w-3/4">
                 <h1 className="font-poppins text-lg sm:text-2xl font-medium text-white">
-                  What metrics do you use to measure success?
+                  Can you manage the prototyping process?
                 </h1>
                 <h1 className="font-poppins text-2xl sm:text-3xl font-medium text-white">
                   +
@@ -225,11 +224,11 @@ export default function Services() {
         </div>
 
         <h1 className="font-poppins text-3xl sm:text-4xl text-white mb-4 mt-20">
-          Ready to Climb the Ranks?
+          Ready to Bring Your Circuit to Life?
         </h1>
         <p className="text-white/80 mb-8 max-w-2xl mx-auto text-base sm:text-lg">
-          Let&#39;s increase your visibility and attract more customers. Get a
-          comprehensive SEO strategy tailored for your business.
+          From concept to a fully realized board, let our experts engineer the
+          electronic foundation for your next great product.
         </p>
         <Link href="/contact">
           <button className="bg-red-700 text-white font-semibold py-3 px-6 sm:px-8 rounded-lg hover:bg-red-800 transition-colors duration-300 text-base sm:text-lg cursor-pointer">
