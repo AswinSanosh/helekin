@@ -8,7 +8,7 @@ export default function Contact() {
     const [isHovered, setIsHovered] = useState(false);
 
     return (
-        <div className="fixed bottom-10 right-10 z-50">
+        <div className="fixed sm:bottom-10 sm:right-10 bottom-3 right-3 z-50">
             <div className="flex flex-col items-end">
                 {/* Contact Icon (Trigger Hover) */}
                 <div
@@ -22,7 +22,7 @@ export default function Contact() {
                             alt="Contact"
                             width={70}
                             height={70}
-                            className="transition-transform duration-300 hover:scale-110"
+                            className="transition-transform duration-300 hover:scale-110 sm:w-auto w-12"
                         />
                     </Link>
 
