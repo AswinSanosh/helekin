@@ -20,11 +20,11 @@ export default function ServiceModal({ isOpen, onClose, service }: Props) {
     return (
         <Dialog open={isOpen} onClose={onClose} className="relative z-50">
             {/* Backdrop */}
-            <div className="fixed inset-0 bg-black/50 backdrop-blur-sm" aria-hidden="true" />
+            <div className="fixed inset-0 bg-[#030303]/50 backdrop-blur-sm" aria-hidden="true" />
 
             {/* Modal */}
             <div className="fixed inset-0 flex items-center justify-center p-4 m-auto h-full w-full">
-                <Dialog.Panel className="ms:w-[50vw] w-[50vw] md:h-[75vh] h-[75vh] rounded-xl bg-black text-white shadow-xl overflow-hidden relative">
+                <Dialog.Panel className="ms:w-[50vw] w-[50vw] md:h-[75vh] h-[75vh] rounded-xl bg-[#030303] text-white shadow-xl overflow-hidden relative">
                     {/* Image Background */}
                     <div className="relative w-full h-1/3">
                         {/* Background Image */}
@@ -36,7 +36,7 @@ export default function ServiceModal({ isOpen, onClose, service }: Props) {
                         />
 
                         {/* Gradient Overlay */}
-                        <div className="absolute inset-0 bg-gradient-to-b from-black/30 to-black z-10" />
+                        <div className="absolute inset-0 bg-gradient-to-b from-[#030303]/30 to-[#030303] z-10" />
 
                         {/* Icon on top */}
                         <div className="absolute top-4 left-4 bg-[#080808] p-2 rounded-full z-20">

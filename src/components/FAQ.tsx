@@ -4,7 +4,7 @@ import Accordion from './GenericAccordion';
 
 export default function FAQPage() {
   return (
-    <section className="min-h-full bg-black px-4 md:py-10 md:px-16 text-white pb-30 md:pb-60">
+    <section className="min-h-full bg-[#030303] px-4 md:py-10 md:px-16 text-white pb-30 md:pb-60">
       <h1 className='title-bold text-center justify-between text-red-700 mb-10'>FAQs</h1>
       <div className='w-[75vw] mx-auto'>
         <Accordion

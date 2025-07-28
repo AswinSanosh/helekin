@@ -23,7 +23,7 @@ export default function NotFound() {
   }, [secondsLeft, router])
 
   return (
-    <div className="flex min-h-screen items-center justify-center bg-black text-white px-6">
+    <div className="flex min-h-screen items-center justify-center bg-[#030303] text-white px-6">
       <div className="text-center">
         <h1 className="text-7xl font-bold text-red-500 mb-4">404</h1>
         <p className="text-2xl mb-2">Page Not Found</p>

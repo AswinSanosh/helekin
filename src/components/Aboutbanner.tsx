@@ -6,7 +6,7 @@ export default function Aboutbanner() {
   return (
     <div
       className="
-        w-full bg-black flex flex-col md:flex-row
+        w-full bg-[#030303] flex flex-col md:flex-row
         items-center justify-center gap-20
         py-10 md:py-20 px-4 md:px-10
 
