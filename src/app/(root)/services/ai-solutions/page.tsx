@@ -98,7 +98,7 @@ export default function Services() {
   return (
     <div>
       {/* Hero */}
-      <div className="relative h-180 w-full bg-[url('/svg/hero.svg')] bg-cover bg-center bg-no-repeat z-20 flex items-center">
+      <div className="relative h-[90vh] w-full bg-[url('/svg/hero.svg')] bg-cover bg-center bg-no-repeat z-20 flex items-center">
         {/* Tint Overlay */}
         <div className="absolute inset-0 bg-[#030303]/70 backdrop-blur-sm z-0" />
 

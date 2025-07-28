@@ -7,7 +7,7 @@ export default function About() {
   return (
     <div>
       {/* Hero */}
-      <div className="relative h-[550px] sm:h-180 w-full bg-[url('/svg/hero.svg')] bg-cover bg-center bg-no-repeat z-20 flex items-center">
+      <div className="relative h-[90vh] sm:h-180 w-full bg-[url('/svg/hero.svg')] bg-cover bg-center bg-no-repeat z-20 flex items-center">
         <div className="absolute inset-0 bg-[#030303]/70 backdrop-blur-sm z-0" />
         <div className="relative z-10 text-white w-full px-6 sm:px-10 max-w-4xl">
           <div className="mb-4 flex flex-col sm:flex-row gap-3">

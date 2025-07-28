@@ -106,7 +106,7 @@ export default function Services() {
   return (
     <div>
       {/* Hero */}
-      <div className="h-180 w-full bg-[url('/svg/hero.svg')] bg-cover bg-center bg-no-repeat z-20">
+      <div className="h-[90vh] w-full bg-[url('/svg/hero.svg')] bg-cover bg-center bg-no-repeat z-20">
         <div className="absolute inset-0 bg-[#030303]/70 backdrop-blur-sm z-0 h-full" />
         <div className="absolute h-150 bottom-5 left-20">
           <div className="flex mb-4">
