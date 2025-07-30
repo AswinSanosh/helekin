@@ -109,7 +109,7 @@ export default function HardwareServicesCarousel() {
       });
 
     return () => controls.stop();
-  }, [currentIndex, controls, CARD_COUNT, initialX]);
+  }, [currentIndex, controls, CARD_COUNT, initialX, MIDDLE_INDEX]);
 
   if (initialX === null) return null; // Prevent SSR hydration mismatch
 

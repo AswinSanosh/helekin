@@ -2,6 +2,7 @@ import { notFound } from 'next/navigation';
 import { getAllServices, getServiceBySlug, Service } from '@/lib/getServiceData';
 import type { Metadata } from 'next';
 import Link from 'next/link';
+import Accordion from '@/components/GenericAccordion';
 
 // ✅ Correctly type params as Promise
 type Props = {
@@ -136,20 +137,14 @@ export default async function ServicePage({ params }: Props) {
           </div>
 
           {/* FAQ */}
-          <div className="w-full sm:w-2/3 flex flex-col items-end justify-end">
-            <div className="flex flex-col items-center sm:items-start mt-2 gap-8 w-full">
+          <div className="w-full sm:w-2/3 flex flex-col items-start">
+            <div className="flex flex-col items-center sm:items-start mt-2 gap-4 w-full">
               {service['service-FAQ'].map((faq, i) => (
-                <div
+                <Accordion
                   key={i}
-                  className="flex items-center justify-between bg-white/10 backdrop-blur-lg shadow-lg shadow-[#030303]/30 p-6 w-full sm:w-full"
-                >
-                  <h1 className="font-poppins text-lg sm:text-2xl font-medium text-white">
-                    {faq.question}
-                  </h1>
-                  <h1 className="font-poppins text-2xl sm:text-3xl font-medium text-white">
-                    +
-                  </h1>
-                </div>
+                  question={faq.question}
+                  answer={faq.answer}
+                />
               ))}
             </div>
           </div>

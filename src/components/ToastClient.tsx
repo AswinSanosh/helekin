@@ -17,7 +17,7 @@ interface ToastClientProps extends ToastOptions {
 export default function ToastClient({
   message,
   type = 'info',
-  autoClose = 3000,
+  autoClose = 1500,
   progressBarColor,
   ...rest
 }: ToastClientProps) {
@@ -25,7 +25,7 @@ export default function ToastClient({
 
   useEffect(() => {
     const isMobile = window.innerWidth < 768
-    const resolvedPosition: ToastPosition = isMobile ? 'top-center' : 'bottom-right'
+    const resolvedPosition: ToastPosition = isMobile ? 'bottom-center' : 'top-right'
 
     setContainerClass(isMobile ? 'pt-20 px-5' : 'p-6')
 
