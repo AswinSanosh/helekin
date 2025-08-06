@@ -41,7 +41,7 @@ export default function SoftwareServicesCarousel() {
     services[4],
   ];
 
-  useEffect(() => {
+  useEffect(() => {     
     if (typeof window !== 'undefined') {
       const vw25 = window.innerWidth * 0.25;
       const gap = 40;

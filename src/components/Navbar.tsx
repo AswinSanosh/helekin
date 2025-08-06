@@ -98,7 +98,7 @@ export default function Navbar() {
               font-poppins text-white text-lg font-light
               text-center whitespace-nowrap flex-nowrap
               transition-colors duration-300
-              ${isAtTop ? 'bg-white/3' : 'bg-[#030303]/30'}
+              ${isAtTop ? 'bg-white/5' : 'bg-[#030303]/30'}
             `}
           >
             {navLinks.map(({ href, label }) => (
