@@ -55,7 +55,7 @@
         "title": "App Development",
         "desc": "We create robust mobile and web applications tailored to your needs, ensuring seamless functionality and user engagement.",
         "background": "/images/appdev.png",
-        "icon": "/svg/servicesvgs/appdev.svg",
+        "icon": "/svg/app_development_icon.svg",
         "link": "/services/app-development",
         "tools": ["Flutter", "React Native", "Swift", "Kotlin", "Firebase"],
         "tags": [
@@ -105,7 +105,7 @@
         "title": "UI/UX Designing",
         "desc": "We craft intuitive and visually appealing user interfaces, prioritizing user experience and accessibility.",
         "background": "/images/uiux.png",
-        "icon": "/svg/servicesvgs/uiux.svg",
+        "icon": "/svg/uiux_icon.svg",
         "link": "/services/ui-ux-designing",
         "tools": ["Figma", "Adobe XD", "Sketch", "InVision"],
         "tags": [
@@ -154,7 +154,7 @@
         "title": "Poster Designing",
         "desc": "We design eye-catching posters for marketing and branding, tailored to convey your message effectively.",
         "background": "/images/poster.png",
-        "icon": "/svg/servicesvgs/poster.svg",
+        "icon": "/svg/poster-svgrepo-com.svg",
         "link": "/services/poster-designing",
         "tools": ["Adobe Photoshop", "Canva", "Illustrator", "CorelDRAW"],
         "tags": [
@@ -203,7 +203,7 @@
         "title": "Search Engine Optimization",
         "desc": "We optimize websites to rank higher on search engines, driving organic traffic and improving visibility.",
         "background": "/images/seo.png",
-        "icon": "/svg/servicesvgs/seo.svg",
+        "icon": "/svg/seo_icon.svg",
         "link": "/services/search-engine-optimization",
         "tools": ["Google Analytics", "SEMRush", "Ahrefs", "Moz"],
         "tags": [
@@ -252,7 +252,7 @@
         "title": "Social Media Marketing",
         "desc": "We develop strategic social media campaigns to boost brand awareness and engage your audience effectively.",
         "background": "/images/socialmedia.png",
-        "icon": "/svg/servicesvgs/socialmedia.svg",
+        "icon": "/svg/marketing_icon.svg",
         "link": "/services/social-media-marketing",
         "tools": ["Hootsuite", "Buffer", "Canva", "Sprout Social"],
         "tags": [
@@ -301,7 +301,7 @@
         "title": "Content Creation",
         "desc": "We produce engaging content, including blogs, videos, and graphics, to strengthen your brand and connect with audiences.",
         "background": "/images/contentcreation.png",
-        "icon": "/svg/servicesvgs/contentcreation.svg",
+        "icon": "/svg/content_creation_icon.svg",
         "link": "/services/content-creation",
         "tools": ["Adobe Premiere", "Canva", "Grammarly", "WordPress"],
         "tags": [
@@ -352,7 +352,7 @@
         "title": "PCB Designing",
         "desc": "We design and prototype high-quality PCBs for commercial and industrial applications using modern EDA tools.",
         "background": "/images/ServiceBackground/PCBdesign.jpg",
-        "icon": "/svg/servicesvgs/pcb.svg",
+        "icon": "/svg/servicesvgs/pcb designing.svg",
         "link": "/services/pcb-designing",
         "tools": ["KiCad", "Altium Designer", "Eagle", "EasyEDA"],
         "tags": ["PCB", "Electronics", "Design", "EDA", "Hardware"],
@@ -394,8 +394,8 @@
       {
         "title": "Laser Engraving",
         "desc": "We provide precise laser engraving services for custom designs on various materials for industrial and artistic applications.",
-        "background": "/images/laserengraving.png",
-        "icon": "/svg/servicesvgs/laserengraving.svg",
+        "background": "/images/laseregraving.png",
+        "icon": "/svg/servicesvgs/laser engraving.svg",
         "link": "/services/laser-engraving",
         "tools": ["LightBurn", "Trotec JobControl", "LaserGRBL", "Inkscape"],
         "tags": [
@@ -444,7 +444,7 @@
         "title": "Electronics & Hardware Assembling",
         "desc": "We offer professional assembly services for electronics and hardware, ensuring precision and reliability.",
         "background": "/images/electronicsassembly.png",
-        "icon": "/svg/servicesvgs/electronicsassembly.svg",
+        "icon": "/svg/servicesvgs/hardware assembling.svg",
         "link": "/services/electronics-hardware-assembling",
         "tools": [
           "Soldering Stations",
@@ -547,7 +547,7 @@
         "title": "PLC Programming",
         "desc": "We program PLCs for industrial automation, ensuring efficient control and monitoring of machinery.",
         "background": "/images/plc.png",
-        "icon": "/svg/servicesvgs/plc.svg",
+        "icon": "/svg/servicesvgs/plc programming.svg",
         "link": "/services/plc-programming",
         "tools": [
           "Siemens TIA Portal",
@@ -640,7 +640,7 @@
         "title": "CAD Designing & 3D Modeling",
         "desc": "We create detailed CAD models for mechanical parts and prototypes using industry-grade design software.",
         "background": "/images/3dmodel.png",
-        "icon": "/svg/servicesvgs/3dmodel.svg",
+        "icon": "/svg/servicesvgs/cad des.svg",
         "link": "/services/3d-modeling",
         "tools": ["Fusion 360", "SolidWorks", "AutoCAD", "TinkerCAD"],
         "tags": ["CAD", "3D Modeling", "Design", "Mechanical", "Prototyping"],
@@ -683,7 +683,7 @@
         "title": "3D Printing & Polishing",
         "desc": "We provide high-precision 3D printing and polishing services to create functional prototypes and finished products.",
         "background": "/images/3dprinting.png",
-        "icon": "/svg/servicesvgs/3dprinting.svg",
+        "icon": "/svg/servicesvgs/3d printing and polishing.svg",
         "link": "/services/3d-printing-polishing",
         "tools": ["Cura", "PrusaSlicer", "Simplify3D", "Meshmixer"],
         "tags": [
@@ -732,7 +732,7 @@
         "title": "Software & Electronics Prototyping",
         "desc": "We develop integrated prototypes combining software and electronics for innovative product development.",
         "background": "/images/prototyping.png",
-        "icon": "/svg/servicesvgs/prototyping.svg",
+        "icon": "/svg/servicesvgs/electroinics prototyping.svg",
         "link": "/services/software-electronics-prototyping",
         "tools": ["Arduino", "Raspberry Pi", "Fusion 360", "PlatformIO"],
         "tags": ["Prototyping", "Software", "Electronics", "Integration", "3D"],
@@ -775,7 +775,7 @@
         "title": "Simulation & Analysis",
         "desc": "We perform simulations and analyses to optimize designs and predict performance for 3D models and systems.",
         "background": "/images/simulation.png",
-        "icon": "/svg/servicesvgs/simulation.svg",
+        "icon": "/svg/servicesvgs/analysis fea.svg",
         "link": "/services/simulation-analysis",
         "tools": ["ANSYS", "COMSOL", "SolidWorks Simulation", "MATLAB"],
         "tags": ["Simulation", "Analysis", "3D Modeling", "Optimization", "3D"],
