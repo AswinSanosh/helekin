@@ -174,7 +174,7 @@ export default function ThreedServicesCarousel() {
                   >
                     <div className="flex flex-col justify-start w-full h-full px-5">
                       <div
-                        className="rounded-full bg-white/20 w-20 h-20 flex justify-center items-center p-2 mb-2 relative top-5 left-5"
+                        className="rounded-full bg-white/20 w-17 h-17 flex justify-center items-center p-2 mb-2 relative top-5 left-5"
                         style={
                           isHovered
                             ? {
@@ -189,7 +189,7 @@ export default function ThreedServicesCarousel() {
                           alt={service.title}
                           width={50}
                           height={50}
-                          className="mx-auto mb-2"
+                          className="m-auto mb-2 h-12 w-12 object-contain"
                         />
                       </div>
                       <div className="text-left relative m-5 top-5 transition-all duration-300">

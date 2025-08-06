@@ -147,7 +147,7 @@ export default function Services() {
           <div className="relative w-full max-w-sm mr-20 max-sm:mr-0 max-sm:max-w-full">
             <div className="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
               <Image
-                src="/images/search.svg"
+                src="/svg/search.svg"
                 width={20}
                 height={20}
                 alt="Search"
