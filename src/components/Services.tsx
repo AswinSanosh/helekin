@@ -23,11 +23,11 @@ export default function Services() {
 
             <Link
               href="/services"
-              className="md:inline-block bg-white/20 border border-white rounded-xl hidden m-auto
-                md:px-6 md:py-3 px-3 py-2 text-base md:text-lg font-poppins
-                hover:bg-white hover:text-red-700
-                transition-colors duration-300 ease-in-out text-white
-                cursor-pointer"
+              className="md:inline-block bg-white/20 border border-white rounded-xl hidden
+              md:px-6 md:py-3 px-3 py-2 text-base md:text-lg font-poppins
+              hover:bg-white hover:text-red-700
+              transition-colors duration-300 ease-in-out text-white
+              cursor-pointer relative items-end ml-auto"
             >
               View All
             </Link>

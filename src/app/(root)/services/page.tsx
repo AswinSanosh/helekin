@@ -87,6 +87,7 @@ export default function Services() {
                 alt={service.title}
                 width={40}
                 height={40}
+                className="w-full h-full object-contain p-1"
               />
             </div>
             <h2

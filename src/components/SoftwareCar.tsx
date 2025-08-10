@@ -193,7 +193,7 @@ export default function SoftwareServicesCarousel() {
                           alt={service.title}
                           width={50}
                           height={50}
-                          className="m-auto mb-2 h-12 w-12 object-contain"
+                          className="m-auto h-12 w-12 object-contain p-1"
                         />
                       </div>
                       <div className="text-left relative m-5 top-5 transition-all duration-300">
