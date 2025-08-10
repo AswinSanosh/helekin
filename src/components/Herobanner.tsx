@@ -54,7 +54,7 @@ export default function Hero() {
           </h1>
         </div>
 
-        <h1 className="text-white para-bold max-para-bold-md mt-5 px-3 sm:px-0 mx-auto">
+        <h1 className="text-white para-bold max-para-bold-md mt-5 px-3 sm:px-0 mx-auto md:mx-0">
           Why Choose Us?
         </h1>
 
