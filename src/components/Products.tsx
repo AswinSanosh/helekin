@@ -4,7 +4,7 @@ import Link from 'next/link';
 
 export default function Products() {
   return (
-    <div className="relative z-0 min-h-auto w-full flex flex-col bg-[#030303] bg-cover bg-center bg-no-repeat px-6 pb-30">
+    <div className="relative z-0 min-h-auto w-full flex flex-col bg-gradient-to-br from-[#131313] to-black  bg-center bg-no-repeat px-6 pb-30">
       <div className="relative z-10 w-full max-w-screen px-6 mx-auto mt-20">
         <h1 className="text-3xl font-poppins font-semibold text-red-700 mb-2">
           Products
