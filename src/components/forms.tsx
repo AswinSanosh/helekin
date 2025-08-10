@@ -89,7 +89,7 @@ export default function Form() {
     }
 
     return (
-        <section className="relative py-16 bg-gradient-to-br from-gray-900 to-gray-800 overflow-hidden">
+        <section className="relative py-16 bg-gradient-to-br from-[#222222] to-black overflow-hidden">
             <div className="absolute inset-0 bg-[url('/grid.svg')] opacity-10"></div>
             
             <div className="container mx-auto px-4 relative z-10">
@@ -97,7 +97,7 @@ export default function Form() {
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.6 }}
-                    className="max-w-6xl mx-auto bg-gray-800/50 backdrop-blur-lg rounded-2xl shadow-2xl overflow-hidden border border-gray-700/30"
+                    className="max-w-6xl mx-auto bg-white/10 backdrop-blur-lg rounded-2xl shadow-2xl overflow-hidden border border-gray-700/30"
                 >
                     <div className="grid grid-cols-1 lg:grid-cols-2">
                         {/* Form Section */}
