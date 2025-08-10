@@ -25,7 +25,7 @@ export default function Aboutbanner() {
           alt="Helekin Logo"
           className="
             /* responsive heights */
-            xl:h-120 h-60 w-auto md:h-48 md:mt-0 mt-10
+            xl:h-80 h-60 w-auto md:h-48 md:mt-0 mt-10
 
             /* smooth resizing */
             transition-all duration-200 ease-in-out
