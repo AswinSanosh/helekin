@@ -595,7 +595,7 @@
         "title": "SCADA Designing",
         "desc": "We design SCADA systems for real-time monitoring and control of industrial processes.",
         "background": "/images/scada.png",
-        "icon": "/svg/servicesvgs/scada.svg",
+        "icon": "/svg/servicesvgs/Scada_icon.svg",
         "link": "/services/scada-designing",
         "tools": ["Ignition", "WinCC", "Wonderware", "FactoryTalk"],
         "tags": ["SCADA", "Automation", "Monitoring", "Industrial", "Hardware"],
