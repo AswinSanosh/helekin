@@ -1,6 +1,20 @@
-import Link from 'next/link';
-import Image from 'next/image';
-// new comment heere
+"use client";
+
+import Link from "next/link";
+import Image from "next/image";
+import { motion } from "framer-motion";
+
+// Logo animation
+const logoVariants = {
+  hidden: { opacity: 0, x: -50 },
+  visible: { opacity: 1, y: 0, transition: { duration: 1, ease: "easeOut" as const } },
+};
+
+// Content animation (entire block moves together)
+const contentBlockVariants = {
+  hidden: { opacity: 0, x: 50 },
+  visible: { opacity: 1, x: 0, transition: { duration: 1, ease: "easeOut" as const } },
+};
 
 export default function Aboutbanner() {
   return (
@@ -9,47 +23,56 @@ export default function Aboutbanner() {
         w-full bg-[#030303] flex flex-col md:flex-row
         items-center justify-center gap-20
         py-10 md:py-20 px-4 md:px-10
-
-        /* smooth out all changing properties */
         transition-all duration-500 ease-in-out
       "
     >
       {/* Logo */}
-      <div className="flex-shrink-0 text-center">
+      <motion.div
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: false }}
+        variants={logoVariants}
+        className="flex-shrink-0 text-center"
+      >
         <Image
           width={60}
           height={100}
           unoptimized
-          loading='lazy'
+          loading="lazy"
           src="/images/logo.png"
           alt="Helekin Logo"
           className="
-            /* responsive heights */
             xl:h-80 h-60 w-auto md:h-48 md:mt-0 mt-10
-
-            /* smooth resizing */
             transition-all duration-200 ease-in-out
-
             mx-auto
           "
         />
-      </div>
+      </motion.div>
 
-      {/* Content */}
-      <div className="text-white w-full md:w-3/5 p-5 space-y-6">
+      {/* Content as one block */}
+      <motion.div
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: false }}
+        variants={contentBlockVariants}
+        className="text-white w-full md:w-3/5 p-5 space-y-6"
+      >
         <h2 className="text-red-700 text-3xl md:text-4xl font-poppins font-medium">
           About Us
         </h2>
+
         <h1 className="text-white text-2xl md:text-4xl font-poppins font-semibold leading-tight">
           Empowering Global Growth Through Smart Digital Solutions
         </h1>
+
         <p className="text-white/80 specialpara-base">
-          At Helekin, we&#39;re passionate about helping businesses thrive in the digital age.
-          As a startup driven by innovation and agility, we craft tailored digital solutions
-          that solve real problems and unlock new opportunities. From building powerful digital
-          experiences to scaling your ideas, we&#39;re here to support your journey every step of
-          the way. Our mission is simple - to empower businesses worldwide with the tools,
-          technology, and creativity they need to grow.
+          At Helekin, we&#39;re passionate about helping businesses thrive in
+          the digital age. As a startup driven by innovation and agility, we
+          craft tailored digital solutions that solve real problems and unlock
+          new opportunities. From building powerful digital experiences to
+          scaling your ideas, we&#39;re here to support your journey every step
+          of the way. Our mission is simple — to empower businesses worldwide
+          with the tools, technology, and creativity they need to grow.
         </p>
 
         <Link
@@ -63,7 +86,7 @@ export default function Aboutbanner() {
         >
           Learn More
         </Link>
-      </div>
+      </motion.div>
     </div>
   );
 }

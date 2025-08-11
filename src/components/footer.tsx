@@ -1,72 +1,178 @@
-export default function Footer() {
+import { Button } from "@/components/ui/button";
+import { 
+  Phone, 
+  Mail, 
+  MapPin, 
+  FileText, 
+  MessageSquare, 
+  Users, 
+  Facebook, 
+  Twitter, 
+  Instagram, 
+  Youtube, 
+  MessageCircle,
+  ArrowRight
+} from "lucide-react";
+
+const Footer = () => {
+  const contactInfo = [
+    { icon: Phone, text: "+91 98765 43210", href: "tel:+919876543210" },
+    { icon: Mail, text: "support@helekin.com", href: "mailto:support@helekin.com" },
+    { icon: MapPin, text: "Chennai, India", href: "#" },
+  ];
+
+  const supportLinks = [
+    { icon: FileText, text: "FAQs", href: "#" },
+    { icon: MessageSquare, text: "Raise a Complaint", href: "#" },
+    { icon: Users, text: "Community Forum", href: "#" },
+  ];
+
+  const quickLinks = [
+    { text: "About Us", href: "#" },
+    { text: "Projects", href: "#" },
+    { text: "Services", href: "#" },
+    { text: "Careers", href: "#" },
+  ];
+
+  const socialLinks = [
+    { icon: Facebook, href: "#", hoverColor: "hover:text-blue-500" },
+    { icon: Twitter, href: "#", hoverColor: "hover:text-gray-300" },
+    { icon: Instagram, href: "#", hoverColor: "hover:text-pink-500" },
+    { icon: Youtube, href: "#", hoverColor: "hover:text-red-500" },
+    { icon: MessageCircle, href: "#", hoverColor: "hover:text-green-400" },
+  ];
+
+  const legalLinks = [
+    { text: "Privacy Policy", href: "#" },
+    { text: "Terms & Conditions", href: "#" },
+    { text: "Sitemap", href: "#" },
+  ];
+
   return (
-    <footer className="bg-[#0e0e0e] text-white">
-      {/* Contact CTA */}
-      <div className="bg-[#030303]/20 h-[300px] w-full flex flex-col items-center justify-center px-4 text-center">
-        <h2 className="text-3xl font-semibold font-poppins">Need Assistance?</h2>
-        <p className="text-lg text-gray-300 mt-2">We’re just a message away. Reach out for help or queries.</p>
-        <button className="mt-4 bg-red-700 hover:bg-red-600 text-white py-2 px-6 rounded-full font-medium transition duration-300">
-          Contact Support
-        </button>
-      </div>
+    <footer className="bg-gradient-to-b from-[#070707] to-black border-t border-white/10 text-white">
 
-      {/* Divider */}
-      <div className="border-t border-gray-700 w-full" />
+      {/* Main Footer Content */}
+      <div className="container mx-auto px-6 py-12">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12">
+          
+          {/* Contact Information */}
+          <div className="space-y-6">
+            <h3 className="text-xl font-semibold text-white mb-4">
+              Contact
+            </h3>
+            <div className="space-y-4">
+              {contactInfo.map((item, index) => (
+                <a
+                  key={index}
+                  href={item.href}
+                  className="flex items-center gap-3 text-[hsl(220,9%,65%)] hover:text-[hsl(0,84%,55%)] transition-colors duration-200 group"
+                >
+                  <item.icon className="h-5 w-5 text-[hsl(0,84%,55%)] group-hover:scale-110 transition-transform" />
+                  <span className="group-hover:translate-x-1 transition-transform">
+                    {item.text}
+                  </span>
+                </a>
+              ))}
+            </div>
+          </div>
 
-      {/* Main Footer Section */}
-      <div className="max-w-7xl mx-auto py-12 px-4 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8 text-sm text-gray-300">
-        
-        {/* Contact Info */}
-        <div>
-          <h3 className="text-white font-semibold mb-3">Contact</h3>
-          <p>📞 +91 98765 43210</p>
-          <p>📧 support@helekin.com</p>
-          <p>📍 Chennai, India</p>
-        </div>
+          {/* Support Links */}
+          <div className="space-y-6">
+            <h3 className="text-xl font-semibold text-white mb-4">
+              Support
+            </h3>
+            <div className="space-y-4">
+              {supportLinks.map((item, index) => (
+                <a
+                  key={index}
+                  href={item.href}
+                  className="flex items-center gap-3 text-[hsl(220,9%,65%)] hover:text-[hsl(0,84%,55%)] transition-colors duration-200 group"
+                >
+                  <item.icon className="h-5 w-5 text-[hsl(0,84%,55%)] group-hover:scale-110 transition-transform" />
+                  <span className="group-hover:translate-x-1 transition-transform">
+                    {item.text}
+                  </span>
+                </a>
+              ))}
+            </div>
+          </div>
 
-        {/* Help Desk */}
-        <div>
-          <h3 className="text-white font-semibold mb-3">Support</h3>
-          <p>📄 <a href="#" className="hover:underline">FAQs</a></p>
-          <p>📬 <a href="#" className="hover:underline">Raise a Complaint</a></p>
-          <p>💬 <a href="#" className="hover:underline">Community Forum</a></p>
-        </div>
+          {/* Quick Links */}
+          <div className="space-y-6">
+            <h3 className="text-xl font-semibold text-white mb-4">
+              Quick Links
+            </h3>
+            <div className="space-y-4">
+              {quickLinks.map((item, index) => (
+                <a
+                  key={index}
+                  href={item.href}
+                  className="block text-[hsl(220,9%,65%)] hover:text-[hsl(0,84%,55%)] transition-colors duration-200 hover:translate-x-1 transform"
+                >
+                  {item.text}
+                </a>
+              ))}
+            </div>
+          </div>
 
-        {/* Quick Links */}
-        <div>
-          <h3 className="text-white font-semibold mb-3">Quick Links</h3>
-          <p><a href="#" className="hover:underline">About Us</a></p>
-          <p><a href="#" className="hover:underline">Projects</a></p>
-          <p><a href="#" className="hover:underline">Services</a></p>
-          <p><a href="#" className="hover:underline">Careers</a></p>
-        </div>
-
-        {/* Social Media */}
-        <div>
-          <h3 className="text-white font-semibold mb-3">Follow Us</h3>
-          <div className="flex space-x-4 text-xl">
-            <a href="#"><i className="fab fa-facebook-f hover:text-blue-500"></i></a>
-            <a href="#"><i className="fab fa-x-twitter hover:text-gray-400"></i></a>
-            <a href="#"><i className="fab fa-instagram hover:text-pink-500"></i></a>
-            <a href="#"><i className="fab fa-youtube hover:text-red-600"></i></a>
-            <a href="#"><i className="fab fa-whatsapp hover:text-green-400"></i></a>
-            <a href="#"><i className="fab fa-discord hover:text-indigo-400"></i></a>
+          {/* Social Media */}
+          <div className="space-y-6">
+            <h3 className="text-xl font-semibold text-white mb-4">
+              Follow Us
+            </h3>
+            <div className="flex flex-wrap gap-4">
+              {socialLinks.map((item, index) => (
+                <a
+                  key={index}
+                  href={item.href}
+                  className={`p-3 bg-[hsl(220,13%,15%)] rounded-lg text-[hsl(220,9%,65%)] ${item.hoverColor} transition-all duration-200 hover:scale-110 hover:shadow-lg group`}
+                >
+                  <item.icon className="h-6 w-6" />
+                </a>
+              ))}
+            </div>
+            
+            {/* Newsletter Signup */}
+            <div className="pt-6">
+              <p className="text-[hsl(220,9%,65%)] mb-3">Stay updated with our latest news</p>
+              <div className="flex gap-2">
+                <input
+                  type="email"
+                  placeholder="Enter your email"
+                  className="flex-1 px-3 py-2 bg-[hsl(220,13%,15%)] border border-white/10 rounded-lg text-white placeholder:text-[hsl(220,9%,65%)] focus:outline-none focus:ring-2 focus:ring-[hsl(0,84%,55%)/0.5]"
+                />
+                <Button size="sm" className="bg-[hsl(0,84%,55%)] hover:bg-[hsl(0,84%,50%)]">
+                  <ArrowRight className="h-4 w-4" />
+                </Button>
+              </div>
+            </div>
           </div>
         </div>
       </div>
 
-      {/* Divider */}
-      <div className="border-t border-gray-700 w-full" />
-
       {/* Bottom Footer */}
-      <div className="max-w-7xl mx-auto px-4 py-4 flex flex-col md:flex-row justify-between items-center text-xs text-gray-400">
-        <p>© 2025 Helekin. All rights reserved.</p>
-        <div className="flex space-x-6 mt-2 md:mt-0">
-          <a href="#" className="hover:underline">Privacy Policy</a>
-          <a href="#" className="hover:underline">Terms & Conditions</a>
-          <a href="#" className="hover:underline">Sitemap</a>
+      <div className="border-t border-white/10 bg-[hsl(220,13%,6%)/0.5]">
+        <div className="container mx-auto px-6 py-6">
+          <div className="flex flex-col md:flex-row justify-between items-center gap-4">
+            <p className="text-[hsl(220,9%,65%)] text-sm">
+              © 2025 Helekin. All rights reserved.
+            </p>
+            <div className="flex flex-wrap gap-6">
+              {legalLinks.map((item, index) => (
+                <a
+                  key={index}
+                  href={item.href}
+                  className="text-sm text-[hsl(220,9%,65%)] hover:text-[hsl(0,84%,55%)] transition-colors duration-200"
+                >
+                  {item.text}
+                </a>
+              ))}
+            </div>
+          </div>
         </div>
       </div>
     </footer>
   );
-}
+};
+
+export default Footer;
