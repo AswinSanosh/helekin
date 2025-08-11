@@ -290,7 +290,7 @@ export default function Form() {
                         </div>
 
                         {/* Visual Section */}
-                        <div className="hidden lg:flex items-center justify-center bg-gradient-to-br from-gray-900 to-red-900/30 p-12 relative">
+                        <div className="hidden lg:flex items-center justify-center bg-gradient-to-br from-[#171717] via-[#171717] to-red-900/30 p-12 relative">
                             <div className="absolute inset-0 opacity-20 bg-[url('/noise.png')]"></div>
                             <div className="relative z-10 text-center">
                                 <motion.div
