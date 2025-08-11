@@ -5,8 +5,8 @@ import ThreedServicesCarousel from './ThreedCar';
 
 export default function Services() {
   return (
-    <div className="relative z-0 min-h-auto w-full flex flex-col bg-[url('/images/fafa.png')] bg-cover bg-center bg-no-repeat px-6 pb-30">
-      <div className="absolute inset-0 bg-[#030303]/70 backdrop-blur-sm z-0" />
+    <div className="relative z-0 min-h-full w-full flex flex-col bg-[url('/images/fafa.png')] bg-cover bg-center bg-no-repeat px-6 pb-30">
+      <div className="absolute inset-0 bg-[#030303]/95 backdrop-blur-sm z-0 h-full w-full" />
       <div className="w-full m-auto">
         <div className="relative z-10 w-full max-w-screen px-6 mx-auto mt-20">
           <h1 className="text-3xl font-poppins font-semibold text-red-700 mb-2">
