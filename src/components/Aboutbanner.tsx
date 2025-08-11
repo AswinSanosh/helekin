@@ -55,7 +55,7 @@ export default function Aboutbanner() {
         <Link
           href="/about"
           className="
-            inline-block bg-white/20 border border-white rounded-xl
+            inline-block bg-[#070707]/10 border border-[#F2F2F2]/30 rounded-md
             md:px-6 md:py-3 px-3 py-2 text-base md:text-lg font-poppins
             hover:bg-white hover:text-red-700
             transition-colors duration-300 ease-in-out

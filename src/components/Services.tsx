@@ -7,7 +7,6 @@ export default function Services() {
   return (
     <div className="relative z-0 min-h-auto w-full flex flex-col bg-[url('/images/fafa.png')] bg-cover bg-center bg-no-repeat px-6 pb-30">
       <div className="absolute inset-0 bg-[#030303]/70 backdrop-blur-sm z-0" />
-
       <div className="w-full m-auto">
         <div className="relative z-10 w-full max-w-screen px-6 mx-auto mt-20">
           <h1 className="text-3xl font-poppins font-semibold text-red-700 mb-2">
@@ -23,7 +22,7 @@ export default function Services() {
 
             <Link
               href="/services"
-              className="md:inline-block bg-white/20 border border-white rounded-xl hidden
+              className="md:inline-block bg-[#070707]/10 border border-[#F2F2F2]/30 rounded-md hidden
               md:px-6 md:py-3 px-3 py-2 text-base md:text-lg font-poppins
               hover:bg-white hover:text-red-700
               transition-colors duration-300 ease-in-out text-white

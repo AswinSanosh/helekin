@@ -34,6 +34,7 @@ export default function Hero() {
 
   return (
     <div className="relative h-[90vh] md:h-screen pt-30 w-full bg-[url('/images/hero.png')] bg-cover bg-right sm:bg-center bg-no-repeat z-20 flex items-end justify-start overflow-x-hidden text-justify">
+      <div className="absolute inset-0 bg-gradient-to-br from-black to-transparent backdrop-blur-sm opacity-97 -z-10" />
 
       <div className="text-left p-10 px-5 md:px-10 text-white flex flex-col justify-end items-center sm:items-start w-full md:w-2/3 sm:pl-5 h-full">
         <div className="sm:relative absolute top-10 sm:top-0 pt-10 px-5 sm:px-0">
@@ -63,7 +64,7 @@ export default function Hero() {
           {whyChooseUs.map((item, idx) => (
             <div
               key={idx}
-              className="bg-white/10 rounded-lg h-auto md:h-[140px] w-full md:w-[250px] shadow-lg shadow-[#030303]/30 backdrop-blur-sm p-3"
+              className="bg-[#070707]/30 border border-[#F2F2F2]/30 rounded-md h-auto md:h-[140px] w-full md:w-[250px] shadow-lg shadow-[#030303]/30 backdrop-blur-sm p-3"
             >
               <h1 className="text-white para-semibold max-para-semibold-md">{item.title}</h1>
               <p className="text-white subpara-light max-subpara-light-md mt-1">{item.desc}</p>
@@ -88,7 +89,7 @@ export default function Hero() {
 
         {/* CTA Button */}
         <div className="flex justify-center md:justify-start w-full items-center text-center">
-          <button className="bg-red-800 rounded-xl w-[80%] md:w-50 p-4 subheading-light md:text-3xl mt-8 hover:cursor-pointer hover:bg-white hover:text-red-700 duration-300 font-poppins mx-auto md:mx-0">
+          <button className="bg-red-900 rounded-md w-[80%] md:w-50 p-4 subheading-light md:text-3xl mt-8 hover:cursor-pointer hover:bg-white hover:text-red-700 duration-300 font-poppins mx-auto md:mx-0">
             Get Quote
           </button>
         </div>

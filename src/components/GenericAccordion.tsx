@@ -12,7 +12,7 @@ export default function Accordion({ question, answer }: AccordionProps) {
   const [isOpen, setIsOpen] = useState(false)
 
   return (
-    <div className="bg-[#1e1e1e] border border-[#333] mb-4 w-full rounded-lg hover:scale-100 transition duration-300 ease-in-out cursor-pointer">
+    <div className="bg-[#070707] border border-[#191919] mb-4 w-full rounded-lg hover:scale-100 transition duration-300 ease-in-out cursor-pointer">
       <button
         onClick={() => setIsOpen(!isOpen)}
         className="w-full h-[100px] flex justify-between items-center px-6 py-6 text-left"
