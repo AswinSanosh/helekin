@@ -93,12 +93,12 @@ export default function Navbar() {
           `}
         >
           <div
-            className={`z-20 top-8 py-2 px-5 shadow-lg shadow-[#030303]/30 rounded-lg backdrop-blur-2xl
+            className={`z-20 top-8 py-2 px-5 shadow-lg shadow-[#030303]/30 backdrop-blur-2xl
               flex items-center justify-between gap-16
               font-poppins text-white text-lg font-light
               text-center whitespace-nowrap flex-nowrap
               transition-colors duration-300
-              ${isAtTop ? 'bg-white/5' : 'bg-[#030303]/30'}
+              bg-[#070707]/30 border border-1.5 border-[#F2F2F2]/10 rounded-md
             `}
           >
             {navLinks.map(({ href, label }) => (
