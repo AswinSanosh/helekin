@@ -118,7 +118,7 @@ export default function ThreedServicesCarousel() {
       >
         <button
           onClick={handlePrev}
-          className="hidden md:flex z-20 p-2 h-[300px] w-[50px] items-center justify-center rounded-l-2xl hover:bg-red-700 bg-[#030303] transition-all duration-300"
+          className="hidden md:flex z-20 p-2 h-[300px] w-[50px] items-center justify-center hover:bg-red-700 bg-[#030303] rounded-l-md border border-[#F2F2F2]/30 transition-all duration-300"
           aria-label="Previous"
           disabled={isCooldown}
         >
@@ -218,7 +218,7 @@ export default function ThreedServicesCarousel() {
 
         <button
           onClick={handleNext}
-          className="hidden md:flex z-20 p-2 h-[300px] w-[50px] items-center justify-center rounded-r-2xl hover:bg-red-700 bg-[#030303] transition-all duration-300"
+          className="hidden md:flex z-20 p-2 h-[300px] w-[50px] items-center justify-center hover:bg-red-700 bg-[#030303] rounded-r-md border border-[#F2F2F2]/30 transition-all duration-300"
           aria-label="Next"
           disabled={isCooldown}
         >
