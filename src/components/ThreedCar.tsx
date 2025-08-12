@@ -118,7 +118,7 @@ export default function ThreedServicesCarousel() {
       >
         <button
           onClick={handlePrev}
-          className="hidden md:flex z-20 p-2 h-[300px] w-[50px] items-center justify-center rounded-l-2xl hover:bg-red-700 bg-[#030303] transition-all duration-300"
+          className="hidden md:flex z-20 p-2 h-[300px] w-[50px] items-center justify-center hover:bg-red-700 bg-[#030303] rounded-l-md border border-[#F2F2F2]/30 transition-all duration-300"
           aria-label="Previous"
           disabled={isCooldown}
         >
@@ -159,7 +159,7 @@ export default function ThreedServicesCarousel() {
                   }}
                 >
                   <div
-                    className="w-full h-full bg-white/10 backdrop-blur-2xl shadow-2xl shadow-[#030303]/30 text-white rounded-xl text-sm transition-all duration-300 relative"
+                    className="w-full h-full bg-[#070707]/30 border border-[#F2F2F2]/30 rounded-md backdrop-blur-2xl shadow-2xl shadow-[#030303]/30 text-white text-sm transition-all duration-300 relative"
                     style={
                       isHovered
                         ? {
@@ -174,7 +174,7 @@ export default function ThreedServicesCarousel() {
                   >
                     <div className="flex flex-col justify-start w-full h-full px-5">
                       <div
-                        className="rounded-full bg-white/20 w-17 h-17 flex justify-center items-center p-2 mb-2 relative top-5 left-5"
+                        className="rounded-full bg-white/10 border border-[#F2F2F2]/30 w-17 h-17 flex justify-center items-center p-2 mb-2 relative top-5 left-5"
                         style={
                           isHovered
                             ? {
@@ -218,7 +218,7 @@ export default function ThreedServicesCarousel() {
 
         <button
           onClick={handleNext}
-          className="hidden md:flex z-20 p-2 h-[300px] w-[50px] items-center justify-center rounded-r-2xl hover:bg-red-700 bg-[#030303] transition-all duration-300"
+          className="hidden md:flex z-20 p-2 h-[300px] w-[50px] items-center justify-center hover:bg-red-700 bg-[#030303] rounded-r-md border border-[#F2F2F2]/30 transition-all duration-300"
           aria-label="Next"
           disabled={isCooldown}
         >

@@ -6,14 +6,14 @@ import { motion } from "framer-motion";
 
 // Logo animation
 const logoVariants = {
-  hidden: { opacity: 0, x: -50 },
+  hidden: { opacity: 0, y: 50 },
   visible: { opacity: 1, y: 0, transition: { duration: 1, ease: "easeOut" as const } },
 };
 
 // Content animation (entire block moves together)
 const contentBlockVariants = {
-  hidden: { opacity: 0, x: 50 },
-  visible: { opacity: 1, x: 0, transition: { duration: 1, ease: "easeOut" as const } },
+  hidden: { opacity: 0, y: 50 },
+  visible: { opacity: 1, y: 0, transition: { duration: 1, ease: "easeOut" as const, when: "beforeChildren", staggerChildren: 0.1  } },
 };
 
 export default function Aboutbanner() {
@@ -23,7 +23,7 @@ export default function Aboutbanner() {
         w-full bg-[#030303] flex flex-col md:flex-row
         items-center justify-center gap-20
         py-10 md:py-20 px-4 md:px-10
-        transition-all duration-500 ease-in-out
+        transition-all duration-500 ease-in-out border-b-1 border-[#F2F2F2]/20 border-t-1
       "
     >
       {/* Logo */}

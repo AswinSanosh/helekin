@@ -75,7 +75,7 @@ export default function Form() {
     return (
         <section
             ref={sectionRef}
-            className="relative py-16 bg-gradient-to-b from-[#070707] to-black border-t border-white/10 overflow-hidden"
+            className="relative py-16 bg-gradient-to-b from-[#070707] to-black border-t border-white/20 overflow-hidden"
         >
             <div className="absolute inset-0 bg-[url('/grid.svg')] opacity-10"></div>
 
