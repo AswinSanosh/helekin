@@ -133,16 +133,16 @@ const Footer = () => {
             </div>
             
             {/* Newsletter Signup */}
-            <div className="pt-6 max-w-screen mx-auto md:px-0 px-1">
+            <div className="pt-6 max-w-screen-sm">
               <p className="text-[hsl(220,9%,65%)] mb-3">Stay updated with our latest news</p>
-              <div className="flex md:gap-2 gap-1 mx-auto px-1 max-w-screen">
+              <div className="flex md:gap-2 gap-1 mx-auto px-1 max-w-full">
                 <input
                   type="email"
                   placeholder="Enter your email"
-                  className="flex-1 px-3 py-2 bg-[hsl(220,13%,15%)] border border-white/10 rounded-md text-white placeholder:text-[hsl(220,9%,65%)] focus:outline-none focus:ring-2 focus:ring-[hsl(0,84%,55%)/0.5]"
+                  className="flex-1 w-4/5  px-3 py-2 bg-[hsl(220,13%,15%)] border border-white/10 rounded-md text-white placeholder:text-[hsl(220,9%,65%)] focus:outline-none focus:ring-2 focus:ring-[hsl(0,84%,55%)/0.5]"
                 />
-                <Button className="bg-[hsl(0,84%,55%)] hover:bg-[hsl(0,84%,50%)]">
-                  <ArrowRight className="h-full w-4" />
+                <Button className="bg-[hsl(0,84%,55%)] hover:bg-[hsl(0,84%,50%)] w-1/5">
+                  <ArrowRight className="h-full w-5 m-auto" />
                 </Button>
               </div>
             </div>
