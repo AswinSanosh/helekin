@@ -33,7 +33,7 @@ export default function Hero() {
   ]
 
   return (
-    <div className="relative h-[90vh] md:h-screen pt-30 w-full bg-[url('/images/hero.png')] bg-cover bg-right sm:bg-center bg-no-repeat z-20 flex items-end justify-start overflow-x-hidden text-justify">
+    <div className="relative min-h-[90vh] md:h-screen pt-30 w-full bg-[url('/images/hero.png')] bg-cover bg-right sm:bg-center bg-no-repeat z-20 flex items-end justify-start overflow-x-hidden text-justify">
       <div className="absolute inset-0 bg-gradient-to-br from-black to-transparent backdrop-blur-sm opacity-97 -z-10" />
 
       <div className="text-left p-10 px-5 md:px-10 text-white flex flex-col justify-end items-center sm:items-start w-full md:w-2/3 sm:pl-5 h-full">
