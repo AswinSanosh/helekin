@@ -133,9 +133,9 @@ const Footer = () => {
             </div>
             
             {/* Newsletter Signup */}
-            <div className="pt-6 max-w-screen-sm mx-auto md:px-0 px-1">
+            <div className="pt-6 max-w-screen mx-auto md:px-0 px-1">
               <p className="text-[hsl(220,9%,65%)] mb-3">Stay updated with our latest news</p>
-              <div className="flex gap-2">
+              <div className="flex md:gap-2 gap-1 mx-auto px-1 max-w-screen">
                 <input
                   type="email"
                   placeholder="Enter your email"
