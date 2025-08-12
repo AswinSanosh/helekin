@@ -84,7 +84,7 @@ export default function Form() {
                     initial="hidden"
                     animate={isInView ? 'visible' : 'hidden'}
                     variants={containerVariants}
-                    className="max-w-6xl mx-auto bg-white/10 backdrop-blur-lg rounded-2xl shadow-2xl overflow-hidden border border-gray-700/30"
+                    className="max-w-6xl mx-auto backdrop-blur-lg shadow-2xl overflow-hidden bg-[#070707]/30 border border-[#F2F2F2]/30 rounded-md"
                 >
                     <div className="grid grid-cols-1 lg:grid-cols-2">
                         {/* Form Section */}
@@ -118,7 +118,7 @@ export default function Form() {
                                                     value={formData.name}
                                                     onChange={handleChange}
                                                     required
-                                                    className="w-full px-4 py-3 bg-gray-700/50 border border-gray-600 rounded-lg focus:ring-2 focus:ring-red-500 focus:border-transparent text-white placeholder-gray-400 transition-all duration-200"
+                                                    className="w-full px-4 py-3 bg-[#222222]/30 border border-[#F2F2F2]/30 rounded-md focus:ring-2 focus:ring-red-500 focus:border-transparent text-white placeholder-gray-400 transition-all duration-200"
                                                     placeholder="Your name"
                                                 />
                                             </motion.div>
@@ -132,7 +132,7 @@ export default function Form() {
                                                     value={formData.phone}
                                                     onChange={handleChange}
                                                     required
-                                                    className="w-full px-4 py-3 bg-gray-700/50 border border-gray-600 rounded-lg focus:ring-2 focus:ring-red-500 focus:border-transparent text-white placeholder-gray-400 transition-all duration-200"
+                                                    className="w-full px-4 py-3 bg-[#222222]/30 border border-[#F2F2F2]/30 rounded-md focus:ring-2 focus:ring-red-500 focus:border-transparent text-white placeholder-gray-400 transition-all duration-200"
                                                     placeholder="+91 1234567890"
                                                 />
                                             </motion.div>
@@ -146,7 +146,7 @@ export default function Form() {
                                                         name="services"
                                                         value={formData.services}
                                                         onChange={handleChange}
-                                                        className="w-full px-4 py-3 bg-gray-700/50 border border-gray-600 rounded-lg focus:ring-2 focus:ring-red-500 focus:border-transparent text-white placeholder-gray-400 transition-all duration-200"
+                                                        className="w-full px-4 py-3 bg-[#222222]/30 border border-[#F2F2F2]/30 rounded-md focus:ring-2 focus:ring-red-500 focus:border-transparent text-white placeholder-gray-400 transition-all duration-200"
                                                         placeholder="Web development, design, etc."
                                                     />
                                                 </div>
@@ -157,7 +157,7 @@ export default function Form() {
                                                         name="company"
                                                         value={formData.company}
                                                         onChange={handleChange}
-                                                        className="w-full px-4 py-3 bg-gray-700/50 border border-gray-600 rounded-lg focus:ring-2 focus:ring-red-500 focus:border-transparent text-white placeholder-gray-400 transition-all duration-200"
+                                                        className="w-full px-4 py-3 bg-[#222222]/30 border border-[#F2F2F2]/30 rounded-md focus:ring-2 focus:ring-red-500 focus:border-transparent text-white placeholder-gray-400 transition-all duration-200"
                                                         placeholder="Your company"
                                                     />
                                                 </div>
@@ -172,7 +172,7 @@ export default function Form() {
                                                     onChange={handleChange}
                                                     required
                                                     rows={4}
-                                                    className="w-full px-4 py-3 bg-gray-700/50 border border-gray-600 rounded-lg focus:ring-2 focus:ring-red-500 focus:border-transparent text-white placeholder-gray-400 transition-all duration-200"
+                                                    className="w-full px-4 py-3 bg-[#222222]/30 border border-[#F2F2F2]/30 rounded-md focus:ring-2 focus:ring-red-500 focus:border-transparent text-white placeholder-gray-400 transition-all duration-200"
                                                     placeholder="Describe your project needs..."
                                                 ></textarea>
                                             </motion.div>
@@ -195,7 +195,7 @@ export default function Form() {
                                                 <button
                                                     type="submit"
                                                     disabled={status === 'submitting'}
-                                                    className="w-full flex items-center justify-center px-6 py-3.5 bg-gradient-to-r from-red-600 to-red-700 hover:from-red-700 hover:to-red-800 text-white font-medium rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-0.5"
+                                                    className="w-full flex items-center justify-center px-6 py-3.5 bg-red-900 hover:bg-white text-white hover:text-red-900 font-medium rounded-lg shadow-lg hover:shadow-xl transition-all duration-300"
                                                 >
                                                     {status === 'submitting' ? (
                                                         <>
@@ -237,7 +237,7 @@ export default function Form() {
                             initial="hidden"
                             animate={isInView ? 'visible' : 'hidden'}
                             variants={containerVariants}
-                            className="hidden lg:flex items-center justify-center bg-gradient-to-br from-[#171717] via-[#171717] to-red-900/30 p-12 relative"
+                            className="hidden lg:flex items-center justify-center bg-gradient-to-br from-[#070707] via-[#171717] to-red-900/30 p-12 relative border-l border-[#F2F2F2]/5"
                         >
                             <div className="absolute inset-0 opacity-20 bg-[url('/noise.png')]"></div>
                             <div className="relative z-10 text-center">

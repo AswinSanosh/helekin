@@ -4,6 +4,7 @@ import Image from "next/image";
 import serviceData from "../../../components/ServiceList.json";
 import React, { useEffect, useState } from "react";
 import Link from "next/link";
+import { motion } from "framer-motion";
 
 interface Service {
   title: string;
@@ -55,10 +56,14 @@ export default function Services() {
 
       return (
         <Link href={service.link || "#"} key={i} className="w-full">
-          <div
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: i * 0.1 }}
+            viewport={{ once: false }}
             onMouseEnter={() => handleMouseEnter(section, i)}
             onMouseLeave={handleMouseLeave}
-            className="flex flex-col items-start h-[270px] w-full bg-white/10 backdrop-blur-lg shadow-lg shadow-black/30 p-6 rounded-xl transition-all hover:scale-[1.02] duration-300"
+            className="flex flex-col items-start h-[270px] w-full backdrop-blur-lg shadow-lg shadow-black/30 p-6 bg-[#070707]/30 border border-[#F2F2F2]/30 rounded-md transition-all hover:scale-[1.02] duration-300"
             style={{
               ...(isHovered
                 ? {
@@ -101,7 +106,7 @@ export default function Services() {
             <p className="text-white/80 text-sm max-sm:text-xs">
               {service.desc}
             </p>
-          </div>
+          </motion.div>
         </Link>
       );
     });
@@ -110,42 +115,74 @@ export default function Services() {
     <div>
       {/* Hero */}
       <div className="relative h-[90vh] w-full bg-[url('/svg/hero.svg')] bg-cover bg-center bg-no-repeat z-20 flex items-center">
-        <div className="absolute inset-0 bg-black/70 backdrop-blur-sm z-0" />
+        <div className="absolute inset-0 bg-black/70 backdrop-blur-sm z-0 " />
         <div className="relative z-10 text-white w-full px-10 max-w-4xl max-sm:px-4">
-          <div className="mb-4 flex flex-row gap-3 max-sm:flex-col max-sm:gap-1">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: false }}
+            className="mb-4 flex flex-row gap-3 max-sm:flex-col max-sm:gap-1"
+          >
             <h1 className="text-white text-6xl font-extralight font-poppins max-sm:text-4xl">
               Crafting
             </h1>
             <h1 className="text-red-700 text-6xl font-light font-poppins px-4 max-sm:px-0 max-sm:text-4xl">
               Experiences
             </h1>
-          </div>
+          </motion.div>
 
-          <h1 className="text-white text-6xl font-extralight font-poppins max-sm:text-4xl">
+          <motion.h1
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+            viewport={{ once: false }}
+            className="text-white text-6xl font-extralight font-poppins max-sm:text-4xl"
+          >
             That Evoke Emotions
-          </h1>
-          <div className="w-3/4 max-sm:w-full">
+          </motion.h1>
+
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.4 }}
+            viewport={{ once: false }}
+            className="w-3/4 max-sm:w-full"
+          >
             <p className="text-white/60 text-lg font-extralight font-poppins mt-4 max-sm:text-sm">
               End to end solution for our customers tailored to their needs is
               what makes us different. Not only it saves cost, but makes it easy
               for the customers to engage with our solutions.
             </p>
-          </div>
+          </motion.div>
         </div>
       </div>
 
       {/* Services Section */}
       <div className="relative z-0 w-full flex flex-col bg-[url('/images/fafa.png')] bg-cover bg-center bg-no-repeat px-6 pb-30 max-sm:px-4">
-        <div className="absolute inset-0 bg-black/50 backdrop-blur-sm z-0" />
+        <div className="absolute inset-0 bg-[#030303]/95 backdrop-blur-sm z-0 h-full w-full" />
 
         {/* Heading + Search */}
         <div className="flex justify-between items-baseline z-20 max-sm:flex-col max-sm:gap-6 max-sm:items-start">
-          <div className="relative z-10 w-full max-w-screen px-6 mx-auto mt-20 max-sm:px-0">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: false }}
+            className="relative z-10 w-full max-w-screen px-6 mx-auto mt-20 max-sm:px-0"
+          >
             <h1 className="text-3xl font-poppins font-semibold text-red-700 mb-2 max-sm:text-2xl">
               Our Services
             </h1>
-          </div>
-          <div className="relative w-full max-w-sm mr-20 max-sm:mr-0 max-sm:max-w-full">
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+            viewport={{ once: false }}
+            className="relative w-full max-w-sm mr-20 max-sm:mr-0 max-sm:max-w-full"
+          >
             <div className="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
               <Image
                 src="/svg/search.svg"
@@ -156,17 +193,23 @@ export default function Services() {
             </div>
             <input
               type="text"
-              className="w-full text-center pl-10 pr-4 py-2 bg-white/20 rounded-md focus:outline-none focus:border-1 focus:border-red-700 text-white placeholder-white/70"
+              className="w-full text-center pl-10 pr-4 py-2 bg-[#070707]/30 border border-[#F2F2F2]/30 rounded-md focus:outline-none focus:border-1 focus:border-red-700 text-white placeholder-white/70"
               placeholder="Search Services"
               value={searchTerm}
               onChange={(e) => setSearchTerm(e.target.value)}
             />
-          </div>
+          </motion.div>
         </div>
 
         {/* Filtered or Categorized Services */}
         {searchTerm.trim() && (
-          <div className="relative z-10 w-full max-w-screen px-6 mx-auto mt-16 max-sm:px-0">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: false }}
+            className="relative z-10 w-full max-w-screen px-6 mx-auto mt-16 max-sm:px-0"
+          >
             <h1 className="font-poppins text-2xl text-white mb-4 max-sm:text-xl">
               Related Services
             </h1>
@@ -184,40 +227,55 @@ export default function Services() {
                 "search"
               )}
             </div>
-          </div>
+          </motion.div>
         )}
 
         {!searchTerm.trim() && (
           <>
-            {/* Software Section */}
-            <div className="relative z-10 w-full max-w-screen px-6 mx-auto mt-16 max-sm:px-0">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: false }}
+              className="relative z-10 w-full max-w-screen px-6 mx-auto mt-16 max-sm:px-0"
+            >
               <h1 className="font-poppins text-2xl text-white mb-4 max-sm:text-xl">
                 Software Services
               </h1>
               <div className="grid gap-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 max-sm:grid-cols-1">
                 {renderServiceCards(Softservices, "software")}
               </div>
-            </div>
+            </motion.div>
 
-            {/* Hardware Section */}
-            <div className="relative z-10 w-full max-w-screen px-6 mx-auto mt-16 max-sm:px-0">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: false }}
+              className="relative z-10 w-full max-w-screen px-6 mx-auto mt-16 max-sm:px-0"
+            >
               <h1 className="font-poppins text-2xl text-white mb-4 max-sm:text-xl">
                 Electronics and Hardware Services
               </h1>
               <div className="grid gap-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 max-sm:grid-cols-1">
                 {renderServiceCards(Hardservices, "hardware")}
               </div>
-            </div>
+            </motion.div>
 
-            {/* 3D Printing Section */}
-            <div className="relative z-10 w-full max-w-screen px-6 mx-auto mt-16 mb-20 max-sm:px-0">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: false }}
+              className="relative z-10 w-full max-w-screen px-6 mx-auto mt-16 mb-20 max-sm:px-0"
+            >
               <h1 className="font-poppins text-2xl text-white mb-4 max-sm:text-xl">
                 3D Printing Services
               </h1>
               <div className="grid gap-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 max-sm:grid-cols-1">
                 {renderServiceCards(ThreeDservices, "threed")}
               </div>
-            </div>
+            </motion.div>
           </>
         )}
       </div>

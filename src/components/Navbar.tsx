@@ -38,21 +38,21 @@ export default function Navbar() {
   return (
     <>
       {/* Mobile Top Bar */}
-      <div className="xl:hidden fixed top-0 left-0 w-full h-[50px] z-50 bg-[#070707] border-b border-[#F2F2F2]/20 backdrop-blur-md flex items-center justify-between px-5 py-4 shadow-md">
+      <div className="xl:hidden fixed top-0 left-0 w-full h-[50px] z-50 bg-[#070707] border-b border-[#F2F2F2]/20 backdrop-blur-md flex items-center justify-between px-2 py-4 shadow-md">
         <Link href="/" className="flex items-center gap-2">
           <Image
-            src="/images/logowrite.png"
+            src="/svg/logowithname.svg"
             alt="logo"
             width={110}
             height={40}
             priority
-            className="h-8 w-auto"
+            className="h-7 w-22"
           />
         </Link>
         <button
           onClick={() => setIsSidebarOpen(true)}
           aria-label="Open menu"
-          className="p-2 rounded-md hover:bg-white/10 transition"
+          className="p-2 rounded-md hover:bg-white/10 transition duration-300 hover:cursor-pointer "
         >
           <Image
             src="/svg/burger.svg"
@@ -60,7 +60,7 @@ export default function Navbar() {
             width={28}
             height={28}
             priority
-            className="w-7 h-7"
+            className="w-6 h-6"
           />
         </button>
       </div>
@@ -74,7 +74,7 @@ export default function Navbar() {
               alt="logo"
               width={100}
               height={100}
-              className="lg:h-10 w-auto h-6"
+              className="lg:h-9 w-auto h-6"
             />
           </Link>
         </div>
