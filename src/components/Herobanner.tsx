@@ -36,8 +36,8 @@ export default function Hero() {
     <div className="relative min-h-[90vh] md:h-screen pt-30 w-full bg-[url('/images/hero.png')] bg-cover bg-right sm:bg-center bg-no-repeat z-20 flex items-end justify-start overflow-x-hidden text-justify">
       <div className="absolute inset-0 bg-gradient-to-br from-black to-transparent backdrop-blur-sm opacity-97 -z-10" />
 
-      <div className="text-left p-10 px-5 md:px-10 text-white flex flex-col justify-end items-center sm:items-start w-full md:w-2/3 sm:pl-5 h-full">
-        <div className="sm:relative absolute top-10 sm:top-0 pt-10 px-5 sm:px-0">
+      <div className="text-left p-10 px-5 md:px-10 text-white flex flex-col justify-end items-start w-full md:w-2/3 sm:pl-5 h-full">
+        <div className="">
           <h1 className="text-white heading-light max-heading-light-lg ">
             Digital acceleration services
           </h1>
@@ -55,7 +55,7 @@ export default function Hero() {
           </h1>
         </div>
 
-        <h1 className="text-white para-bold max-para-bold-md mt-5 px-3 sm:px-0 mx-auto md:mx-0">
+        <h1 className="text-white para-bold max-para-bold-md mt-5 sm:px-0 md:mx-0">
           Why Choose Us?
         </h1>
 
@@ -74,11 +74,11 @@ export default function Hero() {
 
         {/* Mobile Carousel */}
         <div className="md:hidden w-full overflow-x-auto mt-3">
-          <div className="flex gap-4 px-2 w-max">
+          <div className="flex gap-4 w-max">
             {whyChooseUs.map((item, idx) => (
               <div
                 key={idx}
-                className="flex-shrink-0 bg-[#070707]/30 border border-[#F2F2F2]/30 rounded-md h-auto sm:w-[250px] w-[85vw]  shadow-lg shadow-[#030303]/30 backdrop-blur-sm p-3"
+                className="flex-shrink-0 bg-[#070707]/30 border border-[#F2F2F2]/30 rounded-md h-auto sm:w-[250px] w-[89vw]  shadow-lg shadow-[#030303]/30 backdrop-blur-sm p-3"
               >
                 <h1 className="text-white para-semibold max-para-semibold-md">{item.title}</h1>
                 <p className="text-white subpara-light max-subpara-light-md mt-1">{item.desc}</p>
