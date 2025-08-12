@@ -4,7 +4,29 @@ import Link from 'next/link';
 import Accordion from '@/components/GenericAccordion';
 import { motion } from 'framer-motion';
 
-export default function MotionServicePage({ service }: { service: any }) {
+// Define types for FAQ and Service
+type FAQItem = {
+  question: string;
+  answer: string;
+};
+
+type ServiceData = {
+  background: string;
+  title: string;
+  desc: string;
+  'about-title': string;
+  'about-desc': string;
+  'whatweoffer-images': string[];
+  'featured-projects-desc': string;
+  'featured-projects-images': string[];
+  'approach-title': string;
+  'approach-desc': string;
+  'service-FAQ': FAQItem[];
+  consultQN: string;
+  'consult-answer': string;
+};
+
+export default function MotionServicePage({ service }: { service: ServiceData }) {
   const fadeInUp = {
     hidden: { opacity: 0, y: 30 },
     visible: { opacity: 1, y: 0 },
@@ -89,7 +111,7 @@ export default function MotionServicePage({ service }: { service: any }) {
           </h1>
         </motion.div>
         <div className="mt-12 sm:mt-40 flex flex-col sm:flex-row items-center justify-center gap-5">
-          {service['whatweoffer-images'].map((img: string, i: number) => (
+          {service['whatweoffer-images'].map((img, i) => (
             <motion.div
               key={i}
               initial="hidden"
@@ -131,7 +153,7 @@ export default function MotionServicePage({ service }: { service: any }) {
           {service['featured-projects-desc']}
         </motion.p>
         <div className="featured-projects-images mt-5 flex sm:flex-row flex-col items-center justify-center gap-5">
-          {service['featured-projects-images'].map((img: string, i: number) => (
+          {service['featured-projects-images'].map((img, i) => (
             <motion.div
               key={i}
               initial="hidden"
@@ -179,7 +201,7 @@ export default function MotionServicePage({ service }: { service: any }) {
           {/* FAQ */}
           <div className="w-full sm:w-2/3 flex flex-col items-start">
             <div className="flex flex-col items-center sm:items-start mt-2 gap-4 w-full">
-              {service['service-FAQ'].map((faq: any, i: number) => (
+              {service['service-FAQ'].map((faq, i) => (
                 <motion.div
                   key={i}
                   initial="hidden"
