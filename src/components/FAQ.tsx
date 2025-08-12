@@ -23,7 +23,7 @@ const itemVariants = {
 
 export default function FAQPage() {
   return (
-    <section className="relative py-16 bg-gradient-to-b from-[#070707] to-black border-t border-white/10 overflow-hidden">
+    <section className="relative py-16 bg-gradient-to-b from-[#070707] to-black border-t border-white/20 overflow-hidden">
       {/* Grid overlay */}
       <div className="absolute inset-0 bg-[url('/grid.svg')] opacity-10"></div>
       {/* Noise overlay */}

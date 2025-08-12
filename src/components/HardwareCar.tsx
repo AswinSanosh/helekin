@@ -163,7 +163,7 @@ export default function HardwareServicesCarousel() {
                   }}
                 >
                   <div
-                    className="w-full h-full bg-white/10 backdrop-blur-2xl shadow-2xl shadow-[#030303]/30 text-white rounded-xl text-sm transition-all duration-300 relative"
+                    className="w-full h-full bg-[#070707]/30 border border-[#F2F2F2]/30 rounded-md backdrop-blur-2xl shadow-2xl shadow-[#030303]/30 text-white text-sm transition-all duration-300 relative"
                     style={
                       isHovered
                         ? {
@@ -178,7 +178,7 @@ export default function HardwareServicesCarousel() {
                   >
                     <div className="flex flex-col justify-start w-full h-full px-5">
                       <div
-                        className="rounded-full bg-white/20 w-17 h-17 flex justify-center items-center p-2 mb-2 relative top-5 left-5"
+                        className="rounded-full bg-white/10 border border-[#F2F2F2]/30 w-17 h-17 flex justify-center items-center p-2 mb-2 relative top-5 left-5"
                         style={
                           isHovered
                             ? {

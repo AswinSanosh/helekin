@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 
 export default function Products() {
   return (
-    <div className="relative z-0 min-h-auto h-full w-full flex flex-col bg-gradient-to-b from-[#070707] to-black border-t border-white/10 bg-center bg-no-repeat px-6 pb-30">
+    <div className=" h-full w-full flex flex-col bg-gradient-to-b from-[#070707] to-black px-6 pb-30">
       <div className="relative z-10 w-full max-w-screen px-6 mx-auto pt-20">
         {/* Title */}
         <motion.h1
@@ -64,9 +64,9 @@ export default function Products() {
           className="mt-20 flex flex-row items-center justify-center gap-6"
         >
           {[
-            "bg-[url('/images/product2.png')] md:h-[400px] h-[150px] w-[400px] relative -right-20 z-0",
-            "bg-[url('/images/product1.png')] md:h-[500px] h-[200px] w-[500px] z-20",
-            "bg-[url('/images/product4.png')] md:h-[400px] h-[150px] w-[400px] relative -left-20 z-0",
+            "bg-[url('/images/product2.png')] md:h-[400px] h-[150px] md:w-[400px] w-[100px] relative md:-right-20 -right-10 z-0",
+            "bg-[url('/images/product1.png')] md:h-[500px] h-[200px] md:w-[500px] w-[200px] relative z-20",
+            "bg-[url('/images/product4.png')] md:h-[400px] h-[150px] md:w-[400px] w-[100px] relative md:-left-20 -left-10 z-0",
           ].map((classes, i) => (
             <motion.div
               key={i}
@@ -76,7 +76,7 @@ export default function Products() {
               }}
               whileHover={{ scale: 1.02 }}
               transition={{ type: "spring", stiffness: 200, damping: 15 }}
-              className={`${classes} bg-no-repeat bg-center bg-cover rounded-3xl flex items-center justify-center drop-shadow-3xl shadow-[#030303]`}
+              className={`${classes} bg-no-repeat bg-center bg-cover rounded-xl flex items-center justify-center drop-shadow-3xl shadow-[#030303]`}
             />
           ))}
         </motion.div>

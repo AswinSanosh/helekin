@@ -78,7 +78,7 @@ export default function Hero() {
             {whyChooseUs.map((item, idx) => (
               <div
                 key={idx}
-                className="flex-shrink-0 bg-white/10 rounded-lg h-auto sm:w-[250px] w-[85vw]  shadow-lg shadow-[#030303]/30 backdrop-blur-sm p-3"
+                className="flex-shrink-0 bg-[#070707]/30 border border-[#F2F2F2]/30 rounded-md h-auto sm:w-[250px] w-[85vw]  shadow-lg shadow-[#030303]/30 backdrop-blur-sm p-3"
               >
                 <h1 className="text-white para-semibold max-para-semibold-md">{item.title}</h1>
                 <p className="text-white subpara-light max-subpara-light-md mt-1">{item.desc}</p>

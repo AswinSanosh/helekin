@@ -49,7 +49,7 @@ const Footer = () => {
   ];
 
   return (
-    <footer className="bg-gradient-to-b from-[#070707] to-black border-t border-white/10 text-white">
+    <footer className="bg-gradient-to-b from-[#070707] to-black border-t border-white/20 text-white">
 
       {/* Main Footer Content */}
       <div className="container mx-auto px-6 py-12">
