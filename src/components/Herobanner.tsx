@@ -34,14 +34,17 @@ export default function Hero() {
 
   return (
     <div className="relative min-h-[90vh] md:h-screen pt-30 w-full bg-[url('/images/hero.png')] bg-cover bg-right sm:bg-center bg-no-repeat z-20 flex items-end justify-start overflow-x-hidden text-justify">
-      <div className="absolute inset-0 bg-gradient-to-br from-black to-transparent backdrop-blur-sm opacity-97 -z-10" />
+      <div className="absolute inset-0 bg-gradient-to-tr from-[#000000] via-[#00000090] to-transparent  opacity-97 -z-10" />
 
+      {/* Hero Banner Content */}
       <div className="text-left p-10 px-5 md:px-10 text-white flex flex-col justify-end items-start w-full md:w-2/3 sm:pl-5 h-full">
-        <div className="">
+        <div>
+          {/* Main Heading */}
           <h1 className="text-white heading-light max-heading-light-lg ">
             Digital acceleration services
           </h1>
 
+          {/* Animated Subheading */}
           <div className="flex sm:gap-3 justify-bottom sm:flex-nowrap max-w-[90vw] sm:max-w-[50vw] max-h-[50vh]">
             <h1 className="text-white heading-light max-heading-light-lg mb-4 flex-shrink-0">
               for&nbsp;
@@ -55,6 +58,7 @@ export default function Hero() {
           </h1>
         </div>
 
+        {/* Why Choose Us Section */}
         <h1 className="text-white para-bold max-para-bold-md mt-5 sm:px-0 md:mx-0">
           Why Choose Us?
         </h1>
@@ -87,12 +91,12 @@ export default function Hero() {
           </div>
         </div>
 
-        {/* CTA Button */}
+        {/* CTA Button 
         <div className="flex justify-center md:justify-start w-full items-center text-center">
           <button className="bg-red-900 rounded-md w-[80%] md:w-50 p-4 subheading-light md:text-3xl mt-8 hover:cursor-pointer hover:bg-white hover:text-red-700 duration-300 font-poppins mx-auto md:mx-0">
-            Get Quote
+        Get Quote
           </button>
-        </div>
+        </div>*/}
       </div>
     </div>
   )
