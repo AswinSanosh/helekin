@@ -7,7 +7,7 @@ import serviceData from './ServiceList.json';
 import ServiceModal from './Modal';
 import { Service } from '@/types/Service';
 
-export default function ThreedServicesCarousel() {
+export default function SoftwareServicesCarousel() {
   const services: Service[] = serviceData.servicesList.threed;
   const CARD_COUNT = services.length;
   const MIDDLE_INDEX = CARD_COUNT + 1;
@@ -37,7 +37,7 @@ export default function ThreedServicesCarousel() {
     services[2],
   ];
 
-  useEffect(() => {
+  useEffect(() => {     
     if (typeof window !== 'undefined') {
       const vw25 = window.innerWidth * 0.25;
       const gap = 40;
@@ -172,9 +172,9 @@ export default function ThreedServicesCarousel() {
                         : {}
                     }
                   >
-                    <div className="flex flex-col justify-start w-full h-full px-5">
+                    <div className="flex flex-col justify-start w-full h-full lg:px-5 px-2">
                       <div
-                        className="rounded-full bg-white/10 border border-[#F2F2F2]/30 w-17 h-17 flex justify-center items-center p-2 mb-2 relative top-5 left-5"
+                        className="rounded-full bg-white/10 border border-[#F2F2F2]/30 w-17 h-17 flex justify-center items-center lg:p-2 p-1 lg:mb-2 relative lg:top-5 top-2 lg:left-5 left-2"
                         style={
                           isHovered
                             ? {
@@ -192,9 +192,9 @@ export default function ThreedServicesCarousel() {
                           className="m-auto h-12 w-12 object-contain p-1"
                         />
                       </div>
-                      <div className="text-left relative m-5 top-5 transition-all duration-300">
+                      <div className="text-left relative lg:m-5 m-2 top-5 transition-all duration-300">
                         <h1
-                          className={`transition-all duration-500 text-2xl font-poppins font-semibold ${
+                          className={`transition-all duration-500 lg:text-2xl text-lg font-poppins font-semibold ${
                             isHovered ? 'text-[#A50424]' : 'text-white'
                           }`}
                         >
@@ -202,7 +202,7 @@ export default function ThreedServicesCarousel() {
                         </h1>
                         <p
                           className={`transition-all duration-800 font-poppins font-light ${
-                            isHovered ? 'text-lg md:font-semibold' : 'text-md'
+                            isHovered ? 'lg:text-lg text-sm' : 'text-md'
                           }`}
                         >
                           {service.desc}
@@ -218,7 +218,7 @@ export default function ThreedServicesCarousel() {
 
         <button
           onClick={handleNext}
-          className="hidden md:flex z-20 p-2 h-[300px] w-[50px] items-center justify-center hover:bg-red-700 bg-[#030303] rounded-r-md border border-[#F2F2F2]/20 transition-all duration-300"
+          className="hidden md:flex z-20 p-2 h-[300px] w-[50px] items-center justify-center  hover:bg-red-700 bg-[#030303] rounded-r-md border border-[#F2F2F2]/20 transition-all duration-300"
           aria-label="Next"
           disabled={isCooldown}
         >
