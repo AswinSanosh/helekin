@@ -6,6 +6,7 @@ import Image from 'next/image';
 import serviceData from './ServiceList.json';
 import ServiceModal from './Modal';
 import { Service } from '@/types/Service';
+import Loading from '../app/(root)/loading';
 
 export default function SoftwareServicesCarousel() {
   const services: Service[] = serviceData.servicesList.software;
@@ -19,21 +20,58 @@ export default function SoftwareServicesCarousel() {
   const [selectedService, setSelectedService] = useState<Service | null>(null);
   const [isCooldown, setIsCooldown] = useState(false);
   const [initialX, setInitialX] = useState<number | null>(null);
+  const [isPageLoaded, setIsPageLoaded] = useState(false);
 
   const controls = useAnimation();
 
   // Clone items for infinite scroll illusion
-  const allCards: Service[] = [
+  const allCards: Service[] = React.useMemo(() => [
+    services[services.length - 5],
+    services[services.length - 4],
     services[services.length - 3],
     services[services.length - 2],
     services[services.length - 1],
     ...services,
     ...services,
     ...services,
+    ...services,
+    ...services,
     services[0],
     services[1],
     services[2],
-  ];
+    services[3],
+    services[4],
+  ], [services]);
+
+  // Preload all images (icons + background images)
+  useEffect(() => {
+    const imageUrls = [
+      ...allCards.map((s) => s.icon),
+      ...allCards.map((s) => s.background),
+      '/svg/arrow-left.svg',
+      '/svg/arrow-right.svg'
+    ];
+
+    let loadedCount = 0;
+
+    const handleLoad = () => {
+      loadedCount++;
+      if (loadedCount === imageUrls.length) {
+        setIsPageLoaded(true);
+      }
+    };
+
+    imageUrls.forEach((src) => {
+      const img = new window.Image();
+      img.src = src;
+      if (img.complete) {
+        handleLoad();
+      } else {
+        img.onload = handleLoad;
+        img.onerror = handleLoad;
+      }
+    });
+  }, [allCards]);
 
   useEffect(() => {
     if (typeof window !== 'undefined') {
@@ -105,7 +143,7 @@ export default function SoftwareServicesCarousel() {
     return () => controls.stop();
   }, [currentIndex, controls, CARD_COUNT, initialX, MIDDLE_INDEX]);
 
-  if (initialX === null) return null; // Prevent SSR hydration mismatch
+  if (!isPageLoaded || initialX === null) return <Loading />;
 
   return (
     <div className="relative w-full py-20 flex items-center justify-center">
@@ -162,12 +200,12 @@ export default function SoftwareServicesCarousel() {
                       isHovered
                         ? window.innerWidth >= 1024
                           ? {
-                            backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(${service.background})`,
-                            backgroundSize: 'cover',
-                            backgroundPosition: 'center',
-                            backgroundRepeat: 'no-repeat',
-                            backdropFilter: 'blur(10px)',
-                          }
+                              backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(${service.background})`,
+                              backgroundSize: 'cover',
+                              backgroundPosition: 'center',
+                              backgroundRepeat: 'no-repeat',
+                              backdropFilter: 'blur(10px)',
+                            }
                           : {}
                         : {}
                     }
@@ -178,9 +216,9 @@ export default function SoftwareServicesCarousel() {
                         style={
                           isHovered
                             ? {
-                              backgroundColor: '#A50424',
-                              backdropFilter: 'blur(10px)',
-                            }
+                                backgroundColor: '#A50424',
+                                backdropFilter: 'blur(10px)',
+                              }
                             : {}
                         }
                       >
@@ -194,14 +232,16 @@ export default function SoftwareServicesCarousel() {
                       </div>
                       <div className="text-left relative lg:m-5 m-2 top-5 transition-all duration-300">
                         <h1
-                          className={`transition-all duration-500 lg:text-2xl text-lg font-poppins font-semibold ${isHovered ? 'text-[#ff0033]' : 'text-white'
-                            }`}
+                          className={`transition-all duration-500 lg:text-2xl text-lg font-poppins font-semibold ${
+                            isHovered ? 'text-[#ff0033]' : 'text-white'
+                          }`}
                         >
                           {service.title}
                         </h1>
                         <p
-                          className={`transition-all duration-800 font-poppins font-light ${isHovered ? 'lg:text-lg text-sm' : 'text-md'
-                            }`}
+                          className={`transition-all duration-800 font-poppins font-light ${
+                            isHovered ? 'lg:text-lg text-sm' : 'text-md'
+                          }`}
                         >
                           {service.desc}
                         </p>
