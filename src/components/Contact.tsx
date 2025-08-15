@@ -31,7 +31,7 @@ export default function Contact() {
                         className={`absolute bottom-full right-0 flex flex-col items-end gap-2 transition-all duration-500 ease-in-out overflow-hidden 
               ${isHovered ? 'max-h-[300px] opacity-100' : 'max-h-0 opacity-0'}`}
                     >
-                        <Link href="+918943963650">
+                        <Link href="https://wa.me/+918943963650">
                             <Image
                                 src="/svg/Whatsapp.svg"
                                 alt="Whatsapp"
