@@ -497,7 +497,7 @@
       {
         "title": "IoT Integration",
         "desc": "We develop and integrate IoT solutions to connect devices and enable smart, data-driven applications.",
-        "background": "/images/iot.png",
+        "background": "/images/ServiceBackground/IOT.jpg",
         "icon": "/svg/servicesvgs/iot.svg",
         "link": "/services/iot-integration",
         "tools": ["Arduino", "Raspberry Pi", "ESP32", "MQTT"],
@@ -546,7 +546,7 @@
       {
         "title": "PLC Programming",
         "desc": "We program PLCs for industrial automation, ensuring efficient control and monitoring of machinery.",
-        "background": "/images/plc.png",
+        "background": "/images/ServiceBackground/PLC.jpeg",
         "icon": "/svg/servicesvgs/plc programming.svg",
         "link": "/services/plc-programming",
         "tools": [
@@ -594,7 +594,7 @@
       {
         "title": "SCADA Designing",
         "desc": "We design SCADA systems for real-time monitoring and control of industrial processes.",
-        "background": "/images/scada.png",
+        "background": "/images/ServiceBackground/SCADA.jpg",
         "icon": "/svg/servicesvgs/Scada_icon.svg",
         "link": "/services/scada-designing",
         "tools": ["Ignition", "WinCC", "Wonderware", "FactoryTalk"],
@@ -731,7 +731,7 @@
       {
         "title": "Software & Electronics Prototyping",
         "desc": "We develop integrated prototypes combining software and electronics for innovative product development.",
-        "background": "/images/prototyping.png",
+        "background": "/images/ServiceBackground/eandsproto.jpg",
         "icon": "/svg/servicesvgs/electroinics prototyping.svg",
         "link": "/services/software-electronics-prototyping",
         "tools": ["Arduino", "Raspberry Pi", "Fusion 360", "PlatformIO"],
@@ -774,7 +774,7 @@
       {
         "title": "Simulation & Analysis",
         "desc": "We perform simulations and analyses to optimize designs and predict performance for 3D models and systems.",
-        "background": "/images/simulation.png",
+        "background": "/images/ServiceBackground/simuandana.jpg",
         "icon": "/svg/servicesvgs/analysis fea.svg",
         "link": "/services/simulation-analysis",
         "tools": ["ANSYS", "COMSOL", "SolidWorks Simulation", "MATLAB"],
