@@ -8,7 +8,7 @@ export default function Contact() {
   return (
     <div className="flex flex-col">
       {/* Hero Section */}
-      <div className="relative h-[60vh] w-full bg-[url('/svg/hero.svg')] bg-cover bg-center bg-no-repeat flex items-center justify-left pl-6">
+      <div className="relative h-[60vh] w-full bg-[url('/images/hero.png')] bg-cover bg-center bg-no-repeat flex items-center justify-left pl-6">
         <div className="absolute inset-0 bg-[#030303]/70 backdrop-blur-sm" />
         <div className="relative z-10 text-left text-white px-6 max-w-3xl">
           <motion.h1
