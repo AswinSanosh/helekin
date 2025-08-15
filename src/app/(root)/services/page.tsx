@@ -287,7 +287,7 @@ export default function Services() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
               viewport={{ once: false }}
-              className="relative z-10 w-full max-w-screen px-6 mx-auto mt-16 max-sm:px-0"
+              className="relative z-10 w-full max-w-screen px-6 mx-auto mt-16 max-sm:px-0 "
             >
               <h1 className="font-poppins text-2xl text-white mb-4 max-sm:text-xl">
                 Software Services
