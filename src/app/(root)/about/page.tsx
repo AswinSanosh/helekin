@@ -164,7 +164,7 @@ export default function About() {
       </div>
 
       {/* Client Projects */}
-      <div className="relative z-10 w-full mx-auto text-center bg-gradient-to-b from-[#070707] to-black border-t border-white/20 py-24">
+      {/* <div className="relative z-10 w-full mx-auto text-center bg-gradient-to-b from-[#070707] to-black border-t border-white/20 py-24">
         <motion.h1
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -187,7 +187,9 @@ export default function About() {
             />
           ))}
         </div>
-      </div>
+      </div> */}
+
+
     </div>
   );
 }
