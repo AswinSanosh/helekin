@@ -24,21 +24,15 @@ export default function SoftwareServicesCarousel() {
 
   // Clone items for infinite scroll illusion
   const allCards: Service[] = [
-    services[services.length - 5],
-    services[services.length - 4],
     services[services.length - 3],
     services[services.length - 2],
     services[services.length - 1],
     ...services,
     ...services,
     ...services,
-    ...services,
-    ...services,
     services[0],
     services[1],
     services[2],
-    services[3],
-    services[4],
   ];
 
   useEffect(() => {     
