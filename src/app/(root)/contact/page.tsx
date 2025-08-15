@@ -27,7 +27,7 @@ export default function Contact() {
             viewport={{ once: false }}
             className="text-white/80 text-base sm:text-lg font-light"
           >
-            Have a project in mind or just want to say hello?  
+            Have a project in mind or just want to say hello?
             Fill out the form or reach out through the details below.
           </motion.p>
         </div>
@@ -51,7 +51,9 @@ export default function Contact() {
               <h2 className="text-red-700 text-2xl font-medium mb-2">
                 {item.title}
               </h2>
-              <p className="text-white/70">{item.text}</p>
+              <a href={item.href} className="text-white/70 hover:underline">
+                {item.text}
+              </a>
             </motion.div>
           ))}
         </div>
