@@ -2,6 +2,7 @@ import { notFound } from 'next/navigation';
 import { getAllServices, getServiceBySlug } from '@/lib/getServiceData';
 import type { Metadata } from 'next';
 import MotionServicePage from '../../../../components/MotionServicePage'; // ✅ client component
+import Script from 'next/script';
 
 type Props = {
   params: Promise<{ slug: string }>;
@@ -42,5 +43,24 @@ export default async function ServicePage({ params }: Props) {
   if (!service) return notFound();
 
   // ✅ Pass service data to client component
-  return <MotionServicePage service={service} />;
+  return (
+    <div>
+      <head>
+        {/* Google Analytics */}
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-EFC5PVB5DW"
+          strategy="afterInteractive"
+        />
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-EFC5PVB5DW');
+          `}
+        </Script>
+      </head>
+      <MotionServicePage service={service} />
+    </div>
+  );
 }
