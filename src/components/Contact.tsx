@@ -31,7 +31,7 @@ export default function Contact() {
                         className={`absolute bottom-full right-0 flex flex-col items-end gap-2 transition-all duration-500 ease-in-out overflow-hidden 
               ${isHovered ? 'max-h-[300px] opacity-100' : 'max-h-0 opacity-0'}`}
                     >
-                        <Link href="/Whatsapp">
+                        <Link href="+918943963650">
                             <Image
                                 src="/svg/Whatsapp.svg"
                                 alt="Whatsapp"
@@ -40,7 +40,7 @@ export default function Contact() {
                                 className="transition-transform duration-300 hover:scale-110"
                             />
                         </Link>
-                        <Link href="/Linkedin">
+                        {/*<Link href="/Linkedin">
                             <Image
                                 src="/svg/LinkedIn.svg"
                                 alt="LinkedIn"
@@ -48,8 +48,8 @@ export default function Contact() {
                                 height={70}
                                 className="transition-transform duration-300 hover:scale-110"
                             />
-                        </Link>
-                        <Link href="/instagram">
+                        </Link>*/}
+                        <Link href="https://www.instagram.com/helekin.tech/">
                             <Image
                                 src="/svg/Instagram.svg"
                                 alt="Instagram"
