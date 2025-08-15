@@ -74,7 +74,7 @@ export default function Aboutbanner() {
           height={100}
           unoptimized
           loading="lazy"
-          src="/images/logo.png"
+          src="/images/logos/logo.webp"
           alt="Helekin Logo"
           className="
             xl:h-80 h-60 w-auto md:h-48 md:mt-0 mt-10
