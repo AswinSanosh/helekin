@@ -67,14 +67,18 @@ export default function Services() {
             className="flex flex-col items-start h-[270px] w-full backdrop-blur-lg shadow-lg shadow-black/30 p-6 bg-[#070707]/30 border border-[#F2F2F2]/30 rounded-md transition-all hover:scale-[1.02] duration-300"
             style={{
               ...(isHovered
-                ? {
+                ? window.innerWidth >= 1024
+                  ? {
                     backgroundImage: `linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(${service.background})`,
                     backgroundSize: "cover",
                     backgroundPosition: "center",
                   }
-                : {
+                  : {
                     backgroundColor: "rgba(255,255,255,0.05)",
-                  }),
+                  }
+                : {
+                  backgroundColor: "rgba(255,255,255,0.05)",
+                }),
             }}
           >
             <div
@@ -82,9 +86,9 @@ export default function Services() {
               style={
                 isHovered
                   ? {
-                      backgroundColor: "#A50424",
-                      backdropFilter: "blur(10px)",
-                    }
+                    backgroundColor: "#A50424",
+                    backdropFilter: "blur(10px)",
+                  }
                   : {}
               }
             >

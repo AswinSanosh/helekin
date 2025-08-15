@@ -41,7 +41,7 @@ export default function SoftwareServicesCarousel() {
     services[4],
   ];
 
-  useEffect(() => {     
+  useEffect(() => {
     if (typeof window !== 'undefined') {
       const vw25 = window.innerWidth * 0.25;
       const gap = 40;
@@ -166,13 +166,15 @@ export default function SoftwareServicesCarousel() {
                     className="w-full h-full bg-[#070707]/30 border border-[#F2F2F2]/30 rounded-md backdrop-blur-2xl shadow-2xl shadow-[#030303]/30 text-white text-sm transition-all duration-300 relative"
                     style={
                       isHovered
-                        ? {
+                        ? window.innerWidth >= 1024
+                          ? {
                             backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(${service.background})`,
                             backgroundSize: 'cover',
                             backgroundPosition: 'center',
                             backgroundRepeat: 'no-repeat',
                             backdropFilter: 'blur(10px)',
                           }
+                          : {}
                         : {}
                     }
                   >
@@ -182,9 +184,9 @@ export default function SoftwareServicesCarousel() {
                         style={
                           isHovered
                             ? {
-                                backgroundColor: '#A50424',
-                                backdropFilter: 'blur(10px)',
-                              }
+                              backgroundColor: '#A50424',
+                              backdropFilter: 'blur(10px)',
+                            }
                             : {}
                         }
                       >
@@ -198,16 +200,14 @@ export default function SoftwareServicesCarousel() {
                       </div>
                       <div className="text-left relative lg:m-5 m-2 top-5 transition-all duration-300">
                         <h1
-                          className={`transition-all duration-500 lg:text-2xl text-lg font-poppins font-semibold ${
-                            isHovered ? 'text-[#ff0033]' : 'text-white'
-                          }`}
+                          className={`transition-all duration-500 lg:text-2xl text-lg font-poppins font-semibold ${isHovered ? 'text-[#ff0033]' : 'text-white'
+                            }`}
                         >
                           {service.title}
                         </h1>
                         <p
-                          className={`transition-all duration-800 font-poppins font-light ${
-                            isHovered ? 'lg:text-lg text-sm' : 'text-md'
-                          }`}
+                          className={`transition-all duration-800 font-poppins font-light ${isHovered ? 'lg:text-lg text-sm' : 'text-md'
+                            }`}
                         >
                           {service.desc}
                         </p>
