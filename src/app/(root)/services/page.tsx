@@ -98,7 +98,7 @@ export default function Services() {
             <h2
               className="text-white text-2xl font-semibold mb-2 max-sm:text-xl max-sm:leading-snug"
               style={{
-                color: isHovered ? "#A50424" : "white",
+                color: isHovered ? "red" : "white",
               }}
             >
               {service.title}
