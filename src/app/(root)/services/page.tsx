@@ -28,6 +28,21 @@ export default function Services() {
   } | null>(null);
   const [index, setIndex] = useState(0);
 
+  const [isLoading, setIsLoading] = useState(true);
+
+  useEffect(() => {
+    const handleFullLoad = () => {
+      setIsLoading(false);
+    };
+
+    if (document.readyState === "complete") {
+      handleFullLoad();
+    } else {
+      window.addEventListener("load", handleFullLoad);
+      return () => window.removeEventListener("load", handleFullLoad);
+    }
+  }, []);
+
   useEffect(() => {
     if (hovering) return;
     const interval = setInterval(() => shift(), 3000);
@@ -69,16 +84,16 @@ export default function Services() {
               ...(isHovered
                 ? window.innerWidth >= 1024
                   ? {
-                    backgroundImage: `linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(${service.background})`,
-                    backgroundSize: "cover",
-                    backgroundPosition: "center",
-                  }
+                      backgroundImage: `linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(${service.background})`,
+                      backgroundSize: "cover",
+                      backgroundPosition: "center",
+                    }
                   : {
-                    backgroundColor: "rgba(255,255,255,0.05)",
-                  }
+                      backgroundColor: "rgba(255,255,255,0.05)",
+                    }
                 : {
-                  backgroundColor: "rgba(255,255,255,0.05)",
-                }),
+                    backgroundColor: "rgba(255,255,255,0.05)",
+                  }),
             }}
           >
             <div
@@ -86,9 +101,9 @@ export default function Services() {
               style={
                 isHovered
                   ? {
-                    backgroundColor: "#A50424",
-                    backdropFilter: "blur(10px)",
-                  }
+                      backgroundColor: "#A50424",
+                      backdropFilter: "blur(10px)",
+                    }
                   : {}
               }
             >
@@ -116,23 +131,29 @@ export default function Services() {
       );
     });
 
+  // ✅ Loading overlay
+  if (isLoading) {
+    return (
+      <div
+        style={{
+          position: "fixed",
+          inset: 0,
+          background: "#000",
+          color: "#fff",
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
+          zIndex: 9999,
+          fontSize: "1.5rem",
+        }}
+      >
+        Loading...
+      </div>
+    );
+  }
+
   return (
     <div>
-      <head>
-        {/* Google Analytics */}
-        <Script
-          src="https://www.googletagmanager.com/gtag/js?id=G-EFC5PVB5DW"
-          strategy="afterInteractive"
-        />
-        <Script id="google-analytics" strategy="afterInteractive">
-          {`
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-            gtag('config', 'G-EFC5PVB5DW');
-          `}
-        </Script>
-      </head>
       {/* Hero */}
       <div className="relative h-[90vh] w-full bg-[url('/images/hero.png')] bg-cover bg-center bg-no-repeat z-20 flex items-center">
         <div className="absolute inset-0 bg-black/70 backdrop-blur-sm z-0 " />
