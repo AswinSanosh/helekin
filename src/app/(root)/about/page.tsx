@@ -8,21 +8,6 @@ import Script from "next/script";
 export default function About() {
   return (
     <div>
-      <head>
-        {/* Google Analytics */}
-        <Script
-          src="https://www.googletagmanager.com/gtag/js?id=G-EFC5PVB5DW"
-          strategy="afterInteractive"
-        />
-        <Script id="google-analytics" strategy="afterInteractive">
-          {`
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-            gtag('config', 'G-EFC5PVB5DW');
-          `}
-        </Script>
-      </head>
       {/* Hero */}
       <div className="relative h-[90vh] sm:h-180 w-full bg-[url('/images/hero.png')] bg-cover bg-center bg-no-repeat z-20 flex items-center">
         <div className="absolute inset-0 bg-[#030303]/70 backdrop-blur-sm z-0" />
