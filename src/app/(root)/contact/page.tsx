@@ -3,10 +3,26 @@
 import React from "react";
 import Link from "next/link";
 import { motion } from "framer-motion";
+import Script from "next/script";
 
 export default function Contact() {
   return (
     <div className="flex flex-col">
+      <head>
+        {/* Google Analytics */}
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-EFC5PVB5DW"
+          strategy="afterInteractive"
+        />
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-EFC5PVB5DW');
+          `}
+        </Script>
+      </head>
       {/* Hero Section */}
       <div className="relative h-[60vh] w-full bg-[url('/images/hero.png')] bg-cover bg-center bg-no-repeat flex items-center justify-left pl-6">
         <div className="absolute inset-0 bg-[#030303]/70 backdrop-blur-sm" />
@@ -27,7 +43,7 @@ export default function Contact() {
             viewport={{ once: false }}
             className="text-white/80 text-base sm:text-lg font-light"
           >
-            Have a project in mind or just want to say hello?  
+            Have a project in mind or just want to say hello?
             Fill out the form or reach out through the details below.
           </motion.p>
         </div>
@@ -37,9 +53,9 @@ export default function Contact() {
       <div className="bg-[#030303] border-[#F2F2F2]/20 border-t-1 text-white py-16 px-6 sm:px-10">
         <div className="max-w-5xl mx-auto grid grid-cols-1 sm:grid-cols-3 gap-10 text-center">
           {[
-            { title: "Email", text: "contact@helekin.com" },
-            { title: "Phone", text: "+91 89439 63650" },
-            { title: "Location", text: "123 Creative Street, NY" },
+            { title: "Email", text: "contact@helekin.in", href: "mailto:contact@helekin.in" },
+            { title: "Phone", text: "+91 89439 63650", href: "tel:+918943963650" },
+            { title: "Location", text: "Kottayam, Kerala, India", href: "/map" },
           ].map((item, i) => (
             <motion.div
               key={item.title}
@@ -51,7 +67,9 @@ export default function Contact() {
               <h2 className="text-red-700 text-2xl font-medium mb-2">
                 {item.title}
               </h2>
-              <p className="text-white/70">{item.text}</p>
+              <a href={item.href} className="text-white/70 hover:underline">
+                {item.text}
+              </a>
             </motion.div>
           ))}
         </div>

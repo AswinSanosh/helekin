@@ -5,6 +5,7 @@ import serviceData from "../../../components/ServiceList.json";
 import React, { useEffect, useState } from "react";
 import Link from "next/link";
 import { motion } from "framer-motion";
+import Script from "next/script";
 
 interface Service {
   title: string;
@@ -66,14 +67,18 @@ export default function Services() {
             className="flex flex-col items-start h-[270px] w-full backdrop-blur-lg shadow-lg shadow-black/30 p-6 bg-[#070707]/30 border border-[#F2F2F2]/30 rounded-md transition-all hover:scale-[1.02] duration-300"
             style={{
               ...(isHovered
-                ? {
+                ? window.innerWidth >= 1024
+                  ? {
                     backgroundImage: `linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(${service.background})`,
                     backgroundSize: "cover",
                     backgroundPosition: "center",
                   }
-                : {
+                  : {
                     backgroundColor: "rgba(255,255,255,0.05)",
-                  }),
+                  }
+                : {
+                  backgroundColor: "rgba(255,255,255,0.05)",
+                }),
             }}
           >
             <div
@@ -81,9 +86,9 @@ export default function Services() {
               style={
                 isHovered
                   ? {
-                      backgroundColor: "#A50424",
-                      backdropFilter: "blur(10px)",
-                    }
+                    backgroundColor: "#A50424",
+                    backdropFilter: "blur(10px)",
+                  }
                   : {}
               }
             >
@@ -98,7 +103,7 @@ export default function Services() {
             <h2
               className="text-white text-2xl font-semibold mb-2 max-sm:text-xl max-sm:leading-snug"
               style={{
-                color: isHovered ? "#A50424" : "white",
+                color: isHovered ? "red" : "white",
               }}
             >
               {service.title}
@@ -113,6 +118,21 @@ export default function Services() {
 
   return (
     <div>
+      <head>
+        {/* Google Analytics */}
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-EFC5PVB5DW"
+          strategy="afterInteractive"
+        />
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-EFC5PVB5DW');
+          `}
+        </Script>
+      </head>
       {/* Hero */}
       <div className="relative h-[90vh] w-full bg-[url('/images/hero.png')] bg-cover bg-center bg-no-repeat z-20 flex items-center">
         <div className="absolute inset-0 bg-black/70 backdrop-blur-sm z-0 " />

@@ -4,6 +4,7 @@
 import Link from 'next/link'
 import { useEffect, useState } from 'react'
 import { useRouter } from 'next/navigation'
+import Script from 'next/script'
 
 export default function ProductPage() {
     const router = useRouter()
@@ -24,6 +25,21 @@ export default function ProductPage() {
 
     return (
         <div className="flex min-h-screen items-center justify-center bg-[#030303] text-white px-6">
+            <head>
+                {/* Google Analytics */}
+                <Script
+                    src="https://www.googletagmanager.com/gtag/js?id=G-EFC5PVB5DW"
+                    strategy="afterInteractive"
+                />
+                <Script id="google-analytics" strategy="afterInteractive">
+                    {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-EFC5PVB5DW');
+          `}
+                </Script>
+            </head>
             <div className="text-center">
                 <h1 className="text-7xl font-bold text-red-500 mb-4">Coming Soon</h1>
                 <p className="mb-6 text-sm text-gray-400 max-w-lg mx-auto">

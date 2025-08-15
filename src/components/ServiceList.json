@@ -153,7 +153,7 @@
       {
         "title": "Poster Designing",
         "desc": "We design eye-catching posters for marketing and branding, tailored to convey your message effectively.",
-        "background": "/images/ServiceBackground/pos.png",
+        "background": "/images/ServiceBackground/pos.jpg",
         "icon": "/svg/servicesvgs/poster-desing.png",
         "link": "/services/poster-designing",
         "tools": ["Adobe Photoshop", "Canva", "Illustrator", "CorelDRAW"],
@@ -546,7 +546,7 @@
       {
         "title": "PLC Programming",
         "desc": "We program PLCs for industrial automation, ensuring efficient control and monitoring of machinery.",
-        "background": "/images/ServiceBackground/PLC.jpeg",
+        "background": "/images/ServiceBackground/PLC.jpg",
         "icon": "/svg/servicesvgs/plc programming.svg",
         "link": "/services/plc-programming",
         "tools": [

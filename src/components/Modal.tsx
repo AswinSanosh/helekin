@@ -52,10 +52,10 @@ export default function ServiceModal({ isOpen, onClose, service }: Props) {
 
                         <div className="flex justify-between items-center pt-4">
                             {/* Placeholder icons */}
-                            <div className="flex gap-2">
+                            {/*<div className="flex gap-2">
                                 <Image src="/icons/grid.png" alt="grid" width={20} height={20} />
                                 <Image src="/icons/ai.png" alt="ai" width={20} height={20} />
-                            </div>
+                            </div>*/}
                             <Link href={link}>
                                 <button className="bg-red-700 subpara-base absolute bottom-5 right-5 hover:bg-white hover:text-red-700 transition-colors duration-300 text-white text-sm px-4 py-2 rounded-md">
                                     Learn More
