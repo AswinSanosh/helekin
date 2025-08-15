@@ -546,7 +546,7 @@
       {
         "title": "PLC Programming",
         "desc": "We program PLCs for industrial automation, ensuring efficient control and monitoring of machinery.",
-        "background": "/images/ServiceBackground/PLC.jpeg",
+        "background": "/images/ServiceBackground/PLC.jpg",
         "icon": "/svg/servicesvgs/plc programming.svg",
         "link": "/services/plc-programming",
         "tools": [
