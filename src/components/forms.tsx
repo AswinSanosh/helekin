@@ -195,7 +195,7 @@ export default function Form() {
                                                 <button
                                                     type="submit"
                                                     disabled={status === 'submitting'}
-                                                    className="w-full flex items-center justify-center px-6 py-3.5 bg-red-900 hover:bg-white text-white hover:text-red-900 font-medium rounded-lg shadow-lg hover:shadow-xl transition-all duration-300"
+                                                    className="w-full flex items-center justify-center px-6 py-3.5 bg-red-700 hover:bg-white text-white hover:text-red-700 font-medium rounded-lg shadow-lg hover:shadow-xl transition-all duration-300"
                                                 >
                                                     {status === 'submitting' ? (
                                                         <>
