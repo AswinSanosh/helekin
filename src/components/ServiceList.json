@@ -251,7 +251,7 @@
       {
         "title": "Social Media Marketing",
         "desc": "We develop strategic social media campaigns to boost brand awareness and engage your audience effectively.",
-        "background": "/images/Social_media_marketing.jpeg",
+        "background": "/images/ServiceBackground/Social_media_marketing.jpeg",
         "icon": "/svg/marketing_icon.svg",
         "link": "/services/social-media-marketing",
         "tools": ["Hootsuite", "Buffer", "Canva", "Sprout Social"],
