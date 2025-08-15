@@ -94,8 +94,9 @@ export default function MotionServicePage({ service }: { service: ServiceData })
           {service['about-desc']}
         </motion.p>
       </div>
-
+      
       {/* What We Offer */}
+      {/*
       <div className="relative z-0 w-full flex flex-col bg-[url('/images/fafa.png')] bg-cover bg-center bg-no-repeat px-6 pb-30">
         <div className="absolute inset-0 bg-[#030303]/95 backdrop-blur-sm z-0 h-full w-full" />
         <motion.div
@@ -130,7 +131,6 @@ export default function MotionServicePage({ service }: { service: ServiceData })
         </div>
       </div>
 
-      {/* Featured Projects */}
       <div className="relative z-10 w-full mx-auto text-center bg-gradient-to-b from-[#070707] to-black border-t border-white/20 py-24 px-6 sm:px-10">
         <motion.h1
           initial="hidden"
@@ -170,7 +170,7 @@ export default function MotionServicePage({ service }: { service: ServiceData })
             />
           ))}
         </div>
-      </div>
+      </div> */}
 
       {/* Our Approach */}
       <div className="relative z-10 w-screen mx-auto bg-[#030303] px-6 sm:px-10 py-20 md:pt-50">
