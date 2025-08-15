@@ -5,8 +5,8 @@ import serviceData from "../../../components/ServiceList.json";
 import React, { useEffect, useState } from "react";
 import Link from "next/link";
 import { motion } from "framer-motion";
-import Script from "next/script";
 import Loading from "./loading";
+
 interface Service {
   title: string;
   desc: string;
@@ -30,8 +30,34 @@ export default function Services() {
 
   const [isLoading, setIsLoading] = useState(true);
 
+  // helper function for preloading
+  const preloadImages = (srcArray: string[]) => {
+    return Promise.all(
+      srcArray.map(
+        (src) =>
+          new Promise<void>((resolve) => {
+            const img = document.createElement("img");
+            img.src = src;
+            img.onload = () => resolve();
+            img.onerror = () => resolve();
+          })
+      )
+    );
+  };
+
   useEffect(() => {
-    const handleFullLoad = () => {
+    const handleFullLoad = async () => {
+      // collect all image URLs (background + icons)
+      const allImages = [
+        ...Softservices.map((s) => s.background),
+        ...Softservices.map((s) => s.icon),
+        ...Hardservices.map((s) => s.background),
+        ...Hardservices.map((s) => s.icon),
+        ...ThreeDservices.map((s) => s.background),
+        ...ThreeDservices.map((s) => s.icon),
+      ].filter(Boolean);
+
+      await preloadImages(allImages);
       setIsLoading(false);
     };
 
@@ -132,9 +158,7 @@ export default function Services() {
     });
 
   if (isLoading) {
-    return (
-      <Loading />
-    );
+    return <Loading />;
   }
 
   return (
