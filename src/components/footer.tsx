@@ -22,30 +22,30 @@ const Footer = () => {
   ];
 
   const supportLinks = [
-    { icon: FileText, text: "FAQs", href: "#" },
-    { icon: MessageSquare, text: "Raise a Complaint", href: "#" },
-    { icon: Users, text: "Community Forum", href: "#" },
+    { icon: FileText, text: "FAQs", href: "/FAQ" },
+    { icon: MessageSquare, text: "Raise a Complaint", href: "/Raise-a-Complaint" },
+    { icon: Users, text: "Community Forum", href: "/Community" },
   ];
 
   const quickLinks = [
-    { text: "About Us", href: "#" },
-    { text: "Projects", href: "#" },
-    { text: "Services", href: "#" },
-    { text: "Careers", href: "#" },
+    { text: "About Us", href: "/about" },
+    { text: "Projects", href: "/projects" },
+    { text: "Services", href: "/services" },
+    { text: "Careers", href: "/Careers" },
   ];
 
   const socialLinks = [
-    { icon: Facebook, href: "#", hoverColor: "hover:text-blue-500" },
-    { icon: Twitter, href: "#", hoverColor: "hover:text-gray-300" },
-    { icon: Instagram, href: "#", hoverColor: "hover:text-pink-500" },
-    { icon: Youtube, href: "#", hoverColor: "hover:text-red-500" },
-    { icon: MessageCircle, href: "#", hoverColor: "hover:text-green-400" },
+    { icon: Facebook, href: "/facebook", hoverColor: "hover:text-blue-500" },
+    { icon: Twitter, href: "/twitter", hoverColor: "hover:text-gray-300" },
+    { icon: Instagram, href: "https://www.instagram.com/helekin.tech/", hoverColor: "hover:text-pink-500" },
+    { icon: Youtube, href: "/youtube", hoverColor: "hover:text-red-500" },
+    { icon: MessageCircle, href: "+918943963650", hoverColor: "hover:text-green-400" },
   ];
 
   const legalLinks = [
-    { text: "Privacy Policy", href: "#" },
-    { text: "Terms & Conditions", href: "#" },
-    { text: "Sitemap", href: "#" },
+    { text: "Privacy Policy", href: "/policy" },
+    { text: "Terms & Conditions", href: "/termsandcondition" },
+    { text: "Sitemap", href: "/sitemap" },
   ];
 
   return (
