@@ -6,7 +6,7 @@ import React, { useEffect, useState } from "react";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import Script from "next/script";
-
+import Loading from "./loading";
 interface Service {
   title: string;
   desc: string;
@@ -131,24 +131,9 @@ export default function Services() {
       );
     });
 
-  // ✅ Loading overlay
   if (isLoading) {
     return (
-      <div
-        style={{
-          position: "fixed",
-          inset: 0,
-          background: "#000",
-          color: "#fff",
-          display: "flex",
-          alignItems: "center",
-          justifyContent: "center",
-          zIndex: 9999,
-          fontSize: "1.5rem",
-        }}
-      >
-        Loading...
-      </div>
+      <Loading />
     );
   }
 
