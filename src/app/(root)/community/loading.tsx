@@ -7,7 +7,7 @@ export default function Loading() {
         <Image
           width={170} // reduced from 60
           height={170}
-          src="/svg/loading.svg"
+          src="/images/loading.png"
           alt="Loading"
         />
       </div>
