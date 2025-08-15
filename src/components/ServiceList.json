@@ -153,7 +153,7 @@
       {
         "title": "Poster Designing",
         "desc": "We design eye-catching posters for marketing and branding, tailored to convey your message effectively.",
-        "background": "/images/ServiceBackground/poster_designing.jpeg",
+        "background": "/images/ServiceBackground/pos.png",
         "icon": "/svg/servicesvgs/poster-desing.png",
         "link": "/services/poster-designing",
         "tools": ["Adobe Photoshop", "Canva", "Illustrator", "CorelDRAW"],
@@ -202,7 +202,7 @@
       {
         "title": "Search Engine Optimization",
         "desc": "We optimize websites to rank higher on search engines, driving organic traffic and improving visibility.",
-        "background": "/images/seo.png",
+        "background": "/images/ServiceBackground/SEO.jpeg",
         "icon": "/svg/seo_icon.svg",
         "link": "/services/search-engine-optimization",
         "tools": ["Google Analytics", "SEMRush", "Ahrefs", "Moz"],
@@ -300,7 +300,7 @@
       {
         "title": "Content Creation",
         "desc": "We produce engaging content, including blogs, videos, and graphics, to strengthen your brand and connect with audiences.",
-        "background": "/images/contentcreation.png",
+        "background": "/images/ServiceBackground/content.jpeg",
         "icon": "/svg/content_creation_icon.svg",
         "link": "/services/content-creation",
         "tools": ["Adobe Premiere", "Canva", "Grammarly", "WordPress"],
