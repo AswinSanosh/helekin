@@ -176,7 +176,7 @@ export default function SoftwareServicesCarousel() {
                         : {}
                     }
                   >
-                    <div className="flex flex-col justify-start w-full h-full lg:px-5 px-2">
+                    <div className="flex flex-col justify-start w-full h-full lg:px-5 px-2 bg-black/30">
                       <div
                         className="rounded-full bg-white/10 border border-[#F2F2F2]/30 w-17 h-17 flex justify-center items-center lg:p-2 p-1 lg:mb-2 relative lg:top-5 top-2 lg:left-5 left-2"
                         style={
@@ -199,7 +199,7 @@ export default function SoftwareServicesCarousel() {
                       <div className="text-left relative lg:m-5 m-2 top-5 transition-all duration-300">
                         <h1
                           className={`transition-all duration-500 lg:text-2xl text-lg font-poppins font-semibold ${
-                            isHovered ? 'text-[#A50424]' : 'text-white'
+                            isHovered ? 'text-[#ff0033]' : 'text-white'
                           }`}
                         >
                           {service.title}
