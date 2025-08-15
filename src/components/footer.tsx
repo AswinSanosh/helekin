@@ -17,7 +17,7 @@ import {
 const Footer = () => {
   const contactInfo = [
     { icon: Phone, text: "+91 89439 63650", href: "tel:+918943963650" },
-    { icon: Mail, text: "support@helekin.in", href: "mailto:support@helekin.com" },
+    { icon: Mail, text: "support@helekin.in", href: "mailto:support@helekin.in" },
     { icon: MapPin, text: "Kerala, India", href: "#" },
   ];
 
