@@ -122,7 +122,7 @@ export default function SoftwareServicesCarousel() {
       >
         <button
           onClick={handlePrev}
-          className="hidden md:flex z-20 p-2 h-[300px] w-[50px] items-center justify-center rounded-l-2xl hover:bg-red-700 bg-[#030303] transition-all duration-300"
+          className="hidden md:flex z-20 p-2 h-[300px] w-[50px] items-center justify-center hover:bg-red-700 bg-[#030303] rounded-l-md border border-[#F2F2F2]/20 transition-all duration-300"
           aria-label="Previous"
           disabled={isCooldown}
         >
@@ -163,7 +163,7 @@ export default function SoftwareServicesCarousel() {
                   }}
                 >
                   <div
-                    className="w-full h-full bg-white/10 backdrop-blur-2xl shadow-2xl shadow-[#030303]/30 text-white rounded-xl text-sm transition-all duration-300 relative"
+                    className="w-full h-full bg-[#070707]/30 border border-[#F2F2F2]/30 rounded-md backdrop-blur-2xl shadow-2xl shadow-[#030303]/30 text-white text-sm transition-all duration-300 relative"
                     style={
                       isHovered
                         ? {
@@ -176,9 +176,9 @@ export default function SoftwareServicesCarousel() {
                         : {}
                     }
                   >
-                    <div className="flex flex-col justify-start w-full h-full px-5">
+                    <div className="flex flex-col justify-start w-full h-full lg:px-5 px-2 bg-black/30">
                       <div
-                        className="rounded-full bg-white/20 w-17 h-17 flex justify-center items-center p-2 mb-2 relative top-5 left-5"
+                        className="rounded-full bg-white/10 border border-[#F2F2F2]/30 w-17 h-17 flex justify-center items-center lg:p-2 p-1 lg:mb-2 relative lg:top-5 top-2 lg:left-5 left-2"
                         style={
                           isHovered
                             ? {
@@ -193,20 +193,20 @@ export default function SoftwareServicesCarousel() {
                           alt={service.title}
                           width={50}
                           height={50}
-                          className="m-auto mb-2 h-12 w-12 object-contain"
+                          className="m-auto h-12 w-12 object-contain p-1"
                         />
                       </div>
-                      <div className="text-left relative m-5 top-5 transition-all duration-300">
+                      <div className="text-left relative lg:m-5 m-2 top-5 transition-all duration-300">
                         <h1
-                          className={`transition-all duration-500 text-2xl font-poppins font-semibold ${
-                            isHovered ? 'text-[#A50424]' : 'text-white'
+                          className={`transition-all duration-500 lg:text-2xl text-lg font-poppins font-semibold ${
+                            isHovered ? 'text-[#ff0033]' : 'text-white'
                           }`}
                         >
                           {service.title}
                         </h1>
                         <p
                           className={`transition-all duration-800 font-poppins font-light ${
-                            isHovered ? 'text-lg md:font-semibold' : 'text-md'
+                            isHovered ? 'lg:text-lg text-sm' : 'text-md'
                           }`}
                         >
                           {service.desc}
@@ -222,7 +222,7 @@ export default function SoftwareServicesCarousel() {
 
         <button
           onClick={handleNext}
-          className="hidden md:flex z-20 p-2 h-[300px] w-[50px] items-center justify-center rounded-r-2xl hover:bg-red-700 bg-[#030303] transition-all duration-300"
+          className="hidden md:flex z-20 p-2 h-[300px] w-[50px] items-center justify-center  hover:bg-red-700 bg-[#030303] rounded-r-md border border-[#F2F2F2]/20 transition-all duration-300"
           aria-label="Next"
           disabled={isCooldown}
         >

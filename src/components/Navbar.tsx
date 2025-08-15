@@ -9,7 +9,6 @@ export default function Navbar() {
   const pathname = usePathname()
   const [hidden, setHidden] = useState(false)
   const [isSidebarOpen, setIsSidebarOpen] = useState(false)
-  const [isAtTop, setIsAtTop] = useState(true)
 
   const lastY = useRef(0)
 
@@ -17,21 +16,13 @@ export default function Navbar() {
     const handleScroll = () => {
       const currentY = window.scrollY
       if (currentY > lastY.current && currentY > 10) {
-        setHidden(true) // scroll down
+        setHidden(true)
       } else if (currentY < lastY.current) {
-        setHidden(false) // scroll up
+        setHidden(false)
       }
       lastY.current = currentY
     }
 
-    window.addEventListener('scroll', handleScroll)
-    return () => window.removeEventListener('scroll', handleScroll)
-  }, [])
-
-  useEffect(() => {
-    const handleScroll = () => {
-      setIsAtTop(window.scrollY >= window.innerHeight ? false : true)
-    }
     window.addEventListener('scroll', handleScroll)
     return () => window.removeEventListener('scroll', handleScroll)
   }, [])
@@ -46,41 +37,44 @@ export default function Navbar() {
 
   return (
     <>
-      {/* Mobile Top Bar (Logo + Burger) */}
-      <div className="xl:hidden fixed top-0 left-0 w-full z-50 bg-[#030303] flex items-center justify-between px-4 py-3">
-        <Link href="/" className="flex items-center">
+      {/* Mobile Top Bar */}
+      <div className="xl:hidden fixed top-0 left-0 w-full h-[50px] z-50 bg-[#070707] border-b border-[#F2F2F2]/20 backdrop-blur-md flex items-center justify-between px-2 py-4 shadow-md">
+        <Link href="/" className="flex items-center gap-2">
           <Image
-            src="/images/logowrite.png"
+            src="/svg/logowithname.svg"
             alt="logo"
-            width={80}
-            height={80}
-            loading="lazy"
-            className="h-6 w-auto"
+            width={110}
+            height={40}
+            priority
+            className="h-7 w-22"
           />
         </Link>
-        <button onClick={() => setIsSidebarOpen(true)}>
+        <button
+          onClick={() => setIsSidebarOpen(true)}
+          aria-label="Open menu"
+          className="p-2 rounded-md hover:bg-white/10 transition duration-300 hover:cursor-pointer "
+        >
           <Image
-            width={24}
-            height={24}
-            loading="lazy"
             src="/svg/burger.svg"
             alt="menu"
-            className={`w-6 h-6 transition ${isSidebarOpen ? 'text-red-700 font-medium' : 'text-white'}`}
+            width={28}
+            height={28}
+            priority
+            className="w-6 h-6"
           />
         </button>
       </div>
 
-      {/* Desktop Nav */}
+      {/* Desktop Nav (unchanged) */}
       <div className="flex justify-between absolute top-0 left-0 w-full z-40">
         <div className="max-w-[300px] w-full h-auto absolute md:top-10 md:left-10 top-8 left-3 xl:flex hidden">
-          <Link href="/" className="flex items-center gap-1 md:gap-3 text-center align-middle">
+          <Link href="/" className="flex items-center gap-1 md:gap-3">
             <Image
               src="/images/logowrite.png"
               alt="logo"
               width={100}
               height={100}
-              loading="lazy"
-              className="lg:h-10 w-auto h-6"
+              className="lg:h-9 w-auto h-6"
             />
           </Link>
         </div>
@@ -93,20 +87,17 @@ export default function Navbar() {
           `}
         >
           <div
-            className={`z-20 top-8 py-2 px-5 shadow-lg shadow-[#030303]/30 rounded-lg backdrop-blur-2xl
+            className="z-20 top-8 py-2 px-5 shadow-lg shadow-[#030303]/30 backdrop-blur-2xl
               flex items-center justify-between gap-16
               font-poppins text-white text-lg font-light
-              text-center whitespace-nowrap flex-nowrap
-              transition-colors duration-300
-              ${isAtTop ? 'bg-white/5' : 'bg-[#030303]/30'}
-            `}
+              bg-[#070707]/30 border border-[#F2F2F2]/10 rounded-md"
           >
             {navLinks.map(({ href, label }) => (
               <Link
                 key={href}
                 href={href}
                 className={`no-underline transition hover:text-white/60 ${
-                  pathname === href ? 'text-red-500 font-medium font-poppins' : 'text-white'
+                  pathname === href ? 'text-red-500 font-medium' : 'text-white'
                 }`}
               >
                 {label}
@@ -116,28 +107,38 @@ export default function Navbar() {
         </nav>
       </div>
 
-      {/* Sidebar for Mobile */}
+      {/* Mobile Sidebar */}
       <div
-        className={`fixed xl:hidden top-0 right-0 h-full w-64 bg-[#030303]/20 backdrop-blur-xl shadow-lg shadow-[#030303]/30 z-50 transform transition-transform duration-300 ease-in-out
+        className={`fixed xl:hidden top-0 right-0 h-full w-72 max-w-[85%] bg-[#030303]/95 backdrop-blur-xl shadow-lg z-50 transform transition-transform duration-300 ease-in-out
           ${isSidebarOpen ? 'translate-x-0' : 'translate-x-full'}
         `}
       >
-        {/* Close Icon */}
-        <div className="fixed top-4 right-4 z-50">
-          <button onClick={() => setIsSidebarOpen(false)}>
-            <Image width={10} height={10} loading="lazy" src="/svg/close.svg" alt="close" className="w-8 h-6" />
+        {/* Close Button */}
+        <div className="flex justify-end p-4">
+          <button
+            onClick={() => setIsSidebarOpen(false)}
+            aria-label="Close menu"
+            className="p-2 rounded-md hover:bg-white/10 transition"
+          >
+            <Image
+              src="/svg/close.svg"
+              alt="close"
+              width={24}
+              height={24}
+              priority
+            />
           </button>
         </div>
 
-        {/* Sidebar Links */}
-        <div className="mt-24 flex flex-col gap-6 px-6 text-white font-poppins font-regular text-lg xl:hidden">
+        {/* Links */}
+        <div className="mt-4 flex flex-col gap-6 px-6 text-white font-poppins font-medium text-lg overflow-y-auto">
           {navLinks.map(({ href, label }) => (
             <Link
               key={href}
               href={href}
               onClick={() => setIsSidebarOpen(false)}
-              className={`no-underline transition ${
-                pathname === href ? 'text-red-700 font-medium' : 'text-white'
+              className={`transition ${
+                pathname === href ? 'text-red-500' : 'hover:text-red-400'
               }`}
             >
               {label}
