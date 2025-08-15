@@ -5,6 +5,7 @@ import Navbar from "../../components/Navbar";
 import Footer from "../../components/footer";
 import Contact from "../../components/Contact";
 import Forms from "../../components/forms";
+import { Analytics } from "@vercel/analytics/next"
 
 export const metadata: Metadata = {
   title: 'Helekin',
@@ -27,6 +28,7 @@ export default function RootLayout({
         <div className="overflow-x-hidden ">
           <Navbar />
           {children}
+          <Analytics />
           <Contact />
           <Forms />
           <Footer />
