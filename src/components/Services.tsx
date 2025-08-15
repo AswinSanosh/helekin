@@ -1,12 +1,54 @@
-'use client'
+'use client';
 
-import Link from 'next/link'
-import SoftwareServicesCarousel from './SoftwareCar'
-import HardwareServicesCarousel from './HardwareCar'
-import ThreedServicesCarousel from './ThreedCar'
-import { motion } from 'framer-motion'
+import Link from 'next/link';
+import SoftwareServicesCarousel from './SoftwareCar';
+import HardwareServicesCarousel from './HardwareCar';
+import ThreedServicesCarousel from './ThreedCar';
+import { motion } from 'framer-motion';
+import Loading from '../app/(root)/loading';
+import { useState, useEffect } from 'react';
 
 export default function Services() {
+  const [isLoading, setIsLoading] = useState(true);
+
+  useEffect(() => {
+    // Collect static background + all carousel images
+    const imageUrls: string[] = [
+      '/images/fafa.png',
+      // You can add known image URLs used inside your carousels here if possible
+      // If your carousel components fetch images dynamically, you might preload them inside those components instead
+    ];
+
+    let loadedCount = 0;
+    const totalImages = imageUrls.length;
+
+    if (totalImages === 0) {
+      setIsLoading(false);
+      return;
+    }
+
+    imageUrls.forEach((src) => {
+      const img = new Image();
+      img.src = src;
+      img.onload = () => {
+        loadedCount++;
+        if (loadedCount === totalImages) {
+          setIsLoading(false);
+        }
+      };
+      img.onerror = () => {
+        loadedCount++;
+        if (loadedCount === totalImages) {
+          setIsLoading(false);
+        }
+      };
+    });
+  }, []);
+
+  if (isLoading) {
+    return <Loading />;
+  }
+
   return (
     <div className="relative z-0 min-h-full w-full flex flex-col bg-[url('/images/fafa.png')] bg-cover bg-center bg-no-repeat px-6 pb-30">
       <div className="absolute inset-0 bg-[#030303]/95 backdrop-blur-sm z-0 h-full w-full" />
@@ -112,5 +154,5 @@ export default function Services() {
         </motion.div>
       </div>
     </div>
-  )
+  );
 }

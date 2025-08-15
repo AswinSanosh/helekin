@@ -1,8 +1,10 @@
 "use client";
 
+import { useEffect, useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { motion } from "framer-motion";
+import Loading from "../app/(root)/loading"; // Import your loading component
 
 // Logo animation
 const logoVariants = {
@@ -13,10 +15,43 @@ const logoVariants = {
 // Content animation (entire block moves together)
 const contentBlockVariants = {
   hidden: { opacity: 0, y: 50 },
-  visible: { opacity: 1, y: 0, transition: { duration: 1, ease: "easeOut" as const, when: "beforeChildren", staggerChildren: 0.1  } },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: { duration: 1, ease: "easeOut" as const, when: "beforeChildren", staggerChildren: 0.1 },
+  },
 };
 
 export default function Aboutbanner() {
+  const [isLoaded, setIsLoaded] = useState(false);
+
+  useEffect(() => {
+    const imagesToLoad = ["/images/logo.png"];
+    let loadedCount = 0;
+
+    imagesToLoad.forEach((src) => {
+      const img = new window.Image();
+      img.src = src;
+      img.onload = () => {
+        loadedCount++;
+        if (loadedCount === imagesToLoad.length) {
+          setIsLoaded(true);
+        }
+      };
+      img.onerror = () => {
+        // Even if an image fails, still count it so UI isn't stuck forever
+        loadedCount++;
+        if (loadedCount === imagesToLoad.length) {
+          setIsLoaded(true);
+        }
+      };
+    });
+  }, []);
+
+  if (!isLoaded) {
+    return <Loading />;
+  }
+
   return (
     <div
       className="

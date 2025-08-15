@@ -2,8 +2,43 @@
 
 import Link from "next/link";
 import { motion } from "framer-motion";
+import { useState, useEffect } from "react";
+import Loading from "../app/(root)/loading";
 
 export default function Products() {
+  const [isLoaded, setIsLoaded] = useState(false);
+
+  useEffect(() => {
+    const imageUrls = [
+      "/images/product2.png",
+      "/images/product1.png",
+      "/images/product4.png",
+    ];
+
+    let loadedCount = 0;
+    imageUrls.forEach((url) => {
+      const img = new Image();
+      img.src = url;
+      img.onload = () => {
+        loadedCount++;
+        if (loadedCount === imageUrls.length) {
+          setIsLoaded(true);
+        }
+      };
+      img.onerror = () => {
+        // Even if an image fails, count it as loaded to avoid blocking forever
+        loadedCount++;
+        if (loadedCount === imageUrls.length) {
+          setIsLoaded(true);
+        }
+      };
+    });
+  }, []);
+
+  if (!isLoaded) {
+    return <Loading />;
+  }
+
   return (
     <div className=" h-full w-full flex flex-col bg-gradient-to-b from-[#070707] to-black px-6 pb-30">
       <div className="relative z-10 w-full max-w-screen px-6 mx-auto pt-20">
