@@ -394,7 +394,7 @@
       {
         "title": "Laser Engraving",
         "desc": "We provide precise laser engraving services for custom designs on various materials for industrial and artistic applications.",
-        "background": "/images/laseregraving.png",
+        "background": "/images/ServiceBackground/laser.jpg",
         "icon": "/svg/servicesvgs/laser engraving.svg",
         "link": "/services/laser-engraving",
         "tools": ["LightBurn", "Trotec JobControl", "LaserGRBL", "Inkscape"],
