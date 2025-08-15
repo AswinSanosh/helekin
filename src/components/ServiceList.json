@@ -4,7 +4,7 @@
       {
         "title": "Web Development",
         "desc": "We build responsive websites and apps with smooth user experiences, optimized for performance and scalability.",
-        "background": "/images/fafa.png",
+        "background": "/images/ServiceBackground/web_development.jpeg",
         "icon": "/svg/servicesvgs/Webdev.svg",
         "link": "/services/web-development",
         "tools": ["React", "Node.js", "Django", "Flask", "Next.js"],
@@ -54,7 +54,7 @@
       {
         "title": "App Development",
         "desc": "We create robust mobile and web applications tailored to your needs, ensuring seamless functionality and user engagement.",
-        "background": "/images/appdev.png",
+        "background": "/images/ServiceBackground/app-develop.jpeg",
         "icon": "/svg/app_development_icon.svg",
         "link": "/services/app-development",
         "tools": ["Flutter", "React Native", "Swift", "Kotlin", "Firebase"],
@@ -104,7 +104,7 @@
       {
         "title": "UI/UX Designing",
         "desc": "We craft intuitive and visually appealing user interfaces, prioritizing user experience and accessibility.",
-        "background": "/images/uiux.png",
+        "background": "/images/ServiceBackground/app.jpg",
         "icon": "/svg/uiux_icon.svg",
         "link": "/services/ui-ux-designing",
         "tools": ["Figma", "Adobe XD", "Sketch", "InVision"],
@@ -153,8 +153,8 @@
       {
         "title": "Poster Designing",
         "desc": "We design eye-catching posters for marketing and branding, tailored to convey your message effectively.",
-        "background": "/images/poster.png",
-        "icon": "/svg/poster-svgrepo-com.svg",
+        "background": "/images/ServiceBackground/poster_designing.jpeg",
+        "icon": "/svg/servicesvgs/poster-desing.png",
         "link": "/services/poster-designing",
         "tools": ["Adobe Photoshop", "Canva", "Illustrator", "CorelDRAW"],
         "tags": [
@@ -251,7 +251,7 @@
       {
         "title": "Social Media Marketing",
         "desc": "We develop strategic social media campaigns to boost brand awareness and engage your audience effectively.",
-        "background": "/images/socialmedia.png",
+        "background": "/images/Social_media_marketing.jpeg",
         "icon": "/svg/marketing_icon.svg",
         "link": "/services/social-media-marketing",
         "tools": ["Hootsuite", "Buffer", "Canva", "Sprout Social"],
@@ -443,7 +443,7 @@
       {
         "title": "Electronics & Hardware Assembling",
         "desc": "We offer professional assembly services for electronics and hardware, ensuring precision and reliability.",
-        "background": "/images/electronicsassembly.png",
+        "background": "/images/ServiceBackground/eandh.jpg",
         "icon": "/svg/servicesvgs/hardware assembling.svg",
         "link": "/services/electronics-hardware-assembling",
         "tools": [
@@ -639,7 +639,7 @@
       {
         "title": "CAD Designing & 3D Modeling",
         "desc": "We create detailed CAD models for mechanical parts and prototypes using industry-grade design software.",
-        "background": "/images/3dmodel.png",
+        "background": "/images/ServiceBackground/3d-modelling.jpeg",
         "icon": "/svg/servicesvgs/cad des.svg",
         "link": "/services/3d-modeling",
         "tools": ["Fusion 360", "SolidWorks", "AutoCAD", "TinkerCAD"],
@@ -682,7 +682,7 @@
       {
         "title": "3D Printing & Polishing",
         "desc": "We provide high-precision 3D printing and polishing services to create functional prototypes and finished products.",
-        "background": "/images/3dprinting.png",
+        "background": "/images/ServiceBackground/3d-print.jpg",
         "icon": "/svg/servicesvgs/3d printing and polishing.svg",
         "link": "/services/3d-printing-polishing",
         "tools": ["Cura", "PrusaSlicer", "Simplify3D", "Meshmixer"],
