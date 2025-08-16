@@ -60,7 +60,7 @@ export default function Hero() {
           </h1>
 
           {/* Animated Subheading */}
-          <div className="flex sm:gap-3 justify-bottom sm:flex-nowrap max-w-[90vw] sm:max-w-[50vw] max-h-[50vh]">
+          <div className="flex  justify-bottom sm:flex-nowrap max-w-[90vw] sm:max-w-[50vw] max-h-[50vh]">
             <h1 className="text-white heading-light max-heading-light-lg mb-4 flex-shrink-0">
               for&nbsp;
             </h1>
