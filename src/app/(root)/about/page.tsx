@@ -9,7 +9,7 @@ export default function About() {
   return (
     <div>
       {/* Hero */}
-      <div className="relative h-[90vh] sm:h-180 w-full bg-[url('/images/hero.png')] bg-cover bg-center bg-no-repeat z-20 flex items-center">
+      <div className="relative h-[90vh] sm:h-180 w-full bg-[url('/images-webp/hero.webp')] bg-cover bg-center bg-no-repeat z-20 flex items-center">
         <div className="absolute inset-0 bg-[#030303]/70 backdrop-blur-sm z-0" />
 
         <div className="relative z-10 text-white w-full px-6 sm:px-10 max-w-4xl">
@@ -40,7 +40,7 @@ export default function About() {
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.4 }}
-              viewport={{ once: false}}
+              viewport={{ once: false }}
               className="text-white/80 text-base sm:text-lg font-light font-poppins mt-4 sm:mt-6"
             >
               From the first sketch to the final product, we transform ideas
@@ -67,7 +67,7 @@ export default function About() {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.2 }}
-          viewport={{ once: false}}
+          viewport={{ once: false }}
           className="text-white/80 text-base md:text-xl font-poppins font-light mt-10 text-center "
         >
           We are a creative tech studio dedicated to turning ideas into
@@ -84,7 +84,7 @@ export default function About() {
       </div>
 
       {/* Core Values */}
-      <div className="relative z-0 w-full flex flex-col bg-[url('/images/fafa.png')] bg-cover bg-center bg-no-repeat px-6 pb-30">
+      <div className="relative z-0 w-full flex flex-col bg-[url('/images-webp/fafa.webp')] bg-cover bg-center bg-no-repeat px-6 pb-30">
         <div className="absolute inset-0 bg-[#030303]/95 backdrop-blur-sm z-0" />
         <div className="flex justify-between items-baseline z-20">
           <div className="relative z-10 w-full max-w-screen px-6 mx-auto mt-20">
@@ -165,7 +165,7 @@ export default function About() {
       </div>
 
       {/* Client Projects */}
-      <div className="relative z-10 w-full mx-auto text-center bg-gradient-to-b from-[#070707] to-black border-t border-white/20 py-24">
+      {/* <div className="relative z-10 w-full mx-auto text-center bg-gradient-to-b from-[#070707] to-black border-t border-white/20 py-24">
         <motion.h1
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -188,7 +188,7 @@ export default function About() {
             />
           ))}
         </div>
-      </div>
+      </div> */}
     </div>
   );
 }

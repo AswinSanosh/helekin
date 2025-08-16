@@ -4,7 +4,7 @@
       {
         "title": "Web Development",
         "desc": "We build responsive websites and apps with smooth user experiences, optimized for performance and scalability.",
-        "background": "/images/ServiceBackground/web_development.jpeg",
+        "background": "/images-webp/ServiceBackground/web_development.webp",
         "icon": "/svg/servicesvgs/Webdev.svg",
         "link": "/services/web-development",
         "tools": ["React", "Node.js", "Django", "Flask", "Next.js"],
@@ -54,7 +54,7 @@
       {
         "title": "App Development",
         "desc": "We create robust mobile and web applications tailored to your needs, ensuring seamless functionality and user engagement.",
-        "background": "/images/ServiceBackground/app-develop.jpeg",
+        "background": "/images-webp/ServiceBackground/app-develop.webp",
         "icon": "/svg/app_development_icon.svg",
         "link": "/services/app-development",
         "tools": ["Flutter", "React Native", "Swift", "Kotlin", "Firebase"],
@@ -104,7 +104,7 @@
       {
         "title": "UI/UX Designing",
         "desc": "We craft intuitive and visually appealing user interfaces, prioritizing user experience and accessibility.",
-        "background": "/images/ServiceBackground/app.jpg",
+        "background": "/images-webp/ServiceBackground/app.webp",
         "icon": "/svg/uiux_icon.svg",
         "link": "/services/ui-ux-designing",
         "tools": ["Figma", "Adobe XD", "Sketch", "InVision"],
@@ -153,7 +153,7 @@
       {
         "title": "Poster Designing",
         "desc": "We design eye-catching posters for marketing and branding, tailored to convey your message effectively.",
-        "background": "/images/ServiceBackground/pos.jpg",
+        "background": "/images-webp/ServiceBackground/pos.webp",
         "icon": "/svg/servicesvgs/poster-desing.png",
         "link": "/services/poster-designing",
         "tools": ["Adobe Photoshop", "Canva", "Illustrator", "CorelDRAW"],
@@ -202,7 +202,7 @@
       {
         "title": "Search Engine Optimization",
         "desc": "We optimize websites to rank higher on search engines, driving organic traffic and improving visibility.",
-        "background": "/images/ServiceBackground/SEO.jpeg",
+        "background": "/images-webp/ServiceBackground/SEO.webp",
         "icon": "/svg/seo_icon.svg",
         "link": "/services/search-engine-optimization",
         "tools": ["Google Analytics", "SEMRush", "Ahrefs", "Moz"],
@@ -251,7 +251,7 @@
       {
         "title": "Social Media Marketing",
         "desc": "We develop strategic social media campaigns to boost brand awareness and engage your audience effectively.",
-        "background": "/images/ServiceBackground/Social_media_marketing.jpeg",
+        "background": "/images-webp/ServiceBackground/Social_media_marketing.webp",
         "icon": "/svg/marketing_icon.svg",
         "link": "/services/social-media-marketing",
         "tools": ["Hootsuite", "Buffer", "Canva", "Sprout Social"],
@@ -300,7 +300,7 @@
       {
         "title": "Content Creation",
         "desc": "We produce engaging content, including blogs, videos, and graphics, to strengthen your brand and connect with audiences.",
-        "background": "/images/ServiceBackground/content.jpeg",
+        "background": "/images-webp/ServiceBackground/content.webp",
         "icon": "/svg/content_creation_icon.svg",
         "link": "/services/content-creation",
         "tools": ["Adobe Premiere", "Canva", "Grammarly", "WordPress"],
@@ -351,7 +351,7 @@
       {
         "title": "PCB Designing",
         "desc": "We design and prototype high-quality PCBs for commercial and industrial applications using modern EDA tools.",
-        "background": "/images/ServiceBackground/PCBdesign.jpg",
+        "background": "/images-webp/ServiceBackground/PCBdesign.webp",
         "icon": "/svg/servicesvgs/pcb designing.svg",
         "link": "/services/pcb-designing",
         "tools": ["KiCad", "Altium Designer", "Eagle", "EasyEDA"],
@@ -394,7 +394,7 @@
       {
         "title": "Laser Engraving",
         "desc": "We provide precise laser engraving services for custom designs on various materials for industrial and artistic applications.",
-        "background": "/images/ServiceBackground/laser.jpg",
+        "background": "/images-webp/ServiceBackground/laser.webp",
         "icon": "/svg/servicesvgs/laser engraving.svg",
         "link": "/services/laser-engraving",
         "tools": ["LightBurn", "Trotec JobControl", "LaserGRBL", "Inkscape"],
@@ -443,7 +443,7 @@
       {
         "title": "Electronics & Hardware Assembling",
         "desc": "We offer professional assembly services for electronics and hardware, ensuring precision and reliability.",
-        "background": "/images/ServiceBackground/eandh.jpg",
+        "background": "/images-webp/ServiceBackground/eandh.webp",
         "icon": "/svg/servicesvgs/hardware assembling.svg",
         "link": "/services/electronics-hardware-assembling",
         "tools": [
@@ -497,7 +497,7 @@
       {
         "title": "IoT Integration",
         "desc": "We develop and integrate IoT solutions to connect devices and enable smart, data-driven applications.",
-        "background": "/images/ServiceBackground/IOT.jpg",
+        "background": "/images-webp/ServiceBackground/IOT.webp",
         "icon": "/svg/servicesvgs/iot.svg",
         "link": "/services/iot-integration",
         "tools": ["Arduino", "Raspberry Pi", "ESP32", "MQTT"],
@@ -546,7 +546,7 @@
       {
         "title": "PLC Programming",
         "desc": "We program PLCs for industrial automation, ensuring efficient control and monitoring of machinery.",
-        "background": "/images/ServiceBackground/PLC.jpg",
+        "background": "/images-webp/ServiceBackground/PLC.webp",
         "icon": "/svg/servicesvgs/plc programming.svg",
         "link": "/services/plc-programming",
         "tools": [
@@ -594,7 +594,7 @@
       {
         "title": "SCADA Designing",
         "desc": "We design SCADA systems for real-time monitoring and control of industrial processes.",
-        "background": "/images/ServiceBackground/SCADA.jpg",
+        "background": "/images-webp/ServiceBackground/SCADA.webp",
         "icon": "/svg/servicesvgs/Scada_icon.svg",
         "link": "/services/scada-designing",
         "tools": ["Ignition", "WinCC", "Wonderware", "FactoryTalk"],
@@ -639,7 +639,7 @@
       {
         "title": "CAD Designing & 3D Modeling",
         "desc": "We create detailed CAD models for mechanical parts and prototypes using industry-grade design software.",
-        "background": "/images/ServiceBackground/3d-modelling.jpeg",
+        "background": "/images-webp/ServiceBackground/3d-modelling.webp",
         "icon": "/svg/servicesvgs/cad des.svg",
         "link": "/services/3d-modeling",
         "tools": ["Fusion 360", "SolidWorks", "AutoCAD", "TinkerCAD"],
@@ -682,7 +682,7 @@
       {
         "title": "3D Printing & Polishing",
         "desc": "We provide high-precision 3D printing and polishing services to create functional prototypes and finished products.",
-        "background": "/images/ServiceBackground/3d-print.jpg",
+        "background": "/images-webp/ServiceBackground/3d-print.webp",
         "icon": "/svg/servicesvgs/3d printing and polishing.svg",
         "link": "/services/3d-printing-polishing",
         "tools": ["Cura", "PrusaSlicer", "Simplify3D", "Meshmixer"],
@@ -731,7 +731,7 @@
       {
         "title": "Software & Electronics Prototyping",
         "desc": "We develop integrated prototypes combining software and electronics for innovative product development.",
-        "background": "/images/ServiceBackground/eandsproto.jpg",
+        "background": "/images-webp/ServiceBackground/eandsproto.webp",
         "icon": "/svg/servicesvgs/electroinics prototyping.svg",
         "link": "/services/software-electronics-prototyping",
         "tools": ["Arduino", "Raspberry Pi", "Fusion 360", "PlatformIO"],
@@ -774,7 +774,7 @@
       {
         "title": "Simulation & Analysis",
         "desc": "We perform simulations and analyses to optimize designs and predict performance for 3D models and systems.",
-        "background": "/images/ServiceBackground/simuandana.jpg",
+        "background": "/images-webp/ServiceBackground/simuandana.webp",
         "icon": "/svg/servicesvgs/analysis fea.svg",
         "link": "/services/simulation-analysis",
         "tools": ["ANSYS", "COMSOL", "SolidWorks Simulation", "MATLAB"],

@@ -141,7 +141,7 @@ export default function Services() {
         </p>
       </div>
 
-      <div className="relative z-0 w-full flex flex-col bg-[url('/images/fafa.png')] bg-cover bg-center bg-no-repeat px-6 pb-30">
+      <div className="relative z-0 w-full flex flex-col bg-[url('/images-webp/fafa.webp')] bg-cover bg-center bg-no-repeat px-6 pb-30">
         <div className="absolute inset-0 bg-[#030303]/50 backdrop-blur-sm z-0" />
         <div className="flex justify-between items-baseline z-20">
           <div className="relative z-10 w-full max-w-screen px-6 mx-auto mt-20">

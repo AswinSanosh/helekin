@@ -1,54 +1,54 @@
-'use client'
+"use client";
 
-import { useEffect, useState } from 'react'
-import Loading from '../app/(root)/loading'
+import { useEffect, useState } from "react";
+import Loading from "../app/(root)/loading";
 
 export default function Hero() {
-  const fullText = 'business growth.'
-  const [displayedText, setDisplayedText] = useState('')
-  const [index, setIndex] = useState(0)
-  const [isLoading, setIsLoading] = useState(true)
+  const fullText = "business growth.";
+  const [displayedText, setDisplayedText] = useState("");
+  const [index, setIndex] = useState(0);
+  const [isLoading, setIsLoading] = useState(true);
 
   // Preload background image
   useEffect(() => {
-    const img = new Image()
-    img.src = '/images/hero.png'
-    img.onload = () => setIsLoading(false)
-    img.onerror = () => setIsLoading(false)
-  }, [])
+    const img = new Image();
+    img.src = "/images-webp/hero.webp";
+    img.onload = () => setIsLoading(false);
+    img.onerror = () => setIsLoading(false);
+  }, []);
 
   // Typing animation
   useEffect(() => {
     if (index < fullText.length) {
       const timeout = setTimeout(() => {
-        setDisplayedText((prev) => prev + fullText[index])
-        setIndex((prev) => prev + 1)
-      }, 50)
-      return () => clearTimeout(timeout)
+        setDisplayedText((prev) => prev + fullText[index]);
+        setIndex((prev) => prev + 1);
+      }, 50);
+      return () => clearTimeout(timeout);
     }
-  }, [index, fullText])
+  }, [index, fullText]);
 
   const whyChooseUs = [
     {
-      title: 'Built for Startups',
-      desc: 'We understand the unique challenges startups face and tailor our solutions to help you succeed.',
+      title: "Built for Startups",
+      desc: "We understand the unique challenges startups face and tailor our solutions to help you succeed.",
     },
     {
-      title: 'Expert Team',
-      desc: 'Our team of experts brings years of experience in digital acceleration.',
+      title: "Expert Team",
+      desc: "Our team of experts brings years of experience in digital acceleration.",
     },
     {
-      title: 'End-to-End Service',
-      desc: 'We provide customized solutions that fit your specific needs and goals.',
+      title: "End-to-End Service",
+      desc: "We provide customized solutions that fit your specific needs and goals.",
     },
-  ]
+  ];
 
   if (isLoading) {
-    return <Loading />
+    return <Loading />;
   }
 
   return (
-    <div className="relative min-h-[90vh] lg:h-screen pt-30 w-full bg-[url('/images/hero.png')] bg-cover bg-right sm:bg-center bg-no-repeat z-20 flex items-end justify-start overflow-x-hidden text-justify">
+    <div className="relative min-h-[90vh] lg:h-screen pt-30 w-full bg-[url('/images-webp/hero.webp')] bg-cover bg-right sm:bg-center bg-no-repeat z-20 flex items-end justify-start overflow-x-hidden text-justify">
       <div className="absolute inset-0 bg-gradient-to-tr from-[#000000] via-[#00000090] to-transparent  opacity-97 -z-10" />
 
       {/* Hero Banner Content */}
@@ -85,8 +85,12 @@ export default function Hero() {
               key={idx}
               className="bg-[#070707]/30 border border-[#F2F2F2]/30 rounded-md h-auto md:h-[140px] w-full md:w-[250px] shadow-lg shadow-[#030303]/30 backdrop-blur-sm p-3"
             >
-              <h1 className="text-white para-semibold max-para-semibold-md">{item.title}</h1>
-              <p className="text-white subpara-light max-subpara-light-md mt-1">{item.desc}</p>
+              <h1 className="text-white para-semibold max-para-semibold-md">
+                {item.title}
+              </h1>
+              <p className="text-white subpara-light max-subpara-light-md mt-1">
+                {item.desc}
+              </p>
             </div>
           ))}
         </div>
@@ -99,8 +103,12 @@ export default function Hero() {
                 key={idx}
                 className="flex-shrink-0 bg-[#070707]/30 border border-[#F2F2F2]/30 rounded-md h-auto sm:w-[250px] w-[89vw]  shadow-lg shadow-[#030303]/30 backdrop-blur-sm p-3"
               >
-                <h1 className="text-white para-semibold max-para-semibold-md">{item.title}</h1>
-                <p className="text-white subpara-light max-subpara-light-md mt-1">{item.desc}</p>
+                <h1 className="text-white para-semibold max-para-semibold-md">
+                  {item.title}
+                </h1>
+                <p className="text-white subpara-light max-subpara-light-md mt-1">
+                  {item.desc}
+                </p>
               </div>
             ))}
           </div>
@@ -114,5 +122,5 @@ export default function Hero() {
         </div>*/}
       </div>
     </div>
-  )
+  );
 }
