@@ -7,9 +7,12 @@ import Image from 'next/image'
 import {
   Home,
   Users,
+  User,
   BriefcaseBusiness,
   Contact,
   Boxes,
+  UserPlus,
+  LogIn, LogOut, Settings, Menu, X, ChevronDown, ChevronUp
 } from 'lucide-react'
 
 export default function Navbar() {
@@ -45,7 +48,7 @@ export default function Navbar() {
     <>
       {/* Mobile Top Logo */}
       <div
-        className={`xl:hidden fixed top-0 left-0 w-full h-[50px] z-50 flex items-center justify-start px-4 bg-[#070707]/70 border border-[#F2F2F2]/30 backdrop-blur-md shadow-md transition-transform duration-300 ${hidden ? '-translate-y-full' : 'translate-y-0'
+        className={`xl:hidden fixed top-0 left-0 w-full h-[50px] z-50 flex items-center justify-start px-4 bg-[#070707]/70 border border-[#F2F2F2]/5 backdrop-blur-sm  transition-transform duration-300 ${hidden ? '-translate-y-full' : 'translate-y-0'
           }`}
       >
         <Link href="/" className="flex items-center gap-2">
@@ -62,13 +65,15 @@ export default function Navbar() {
           href={'SignUp'}
           className="ml-auto text-white hover:text-red-500 transition-all duration-300"
         >
-          <h1>SignUp</h1>
+          <div>
+            <User className="h-6 w-6 text-white" />
+          </div>
         </Link>
       </div>
 
       {/* Mobile Bottom Navbar */}
       <div
-        className={`xl:hidden fixed left-1/2 -translate-x-1/2 w-full h-[55px] z-40 bg-[#070707]/70 border border-[#F2F2F2]/30 backdrop-blur-md flex items-center justify-around px-4 shadow-md transition-all duration-300 ${hidden ? 'top-0 rounded-b-md' : 'top-[50px] rounded-none'
+        className={`xl:hidden fixed left-1/2 -translate-x-1/2 w-full h-[55px] z-40 bg-[#070707]/70 border-b border-[#F2F2F2]/20 backdrop-blur-sm flex items-center justify-around px-4 shadow-md transition-all duration-300 ${hidden ? 'top-0 rounded-b-md' : 'top-[50px] rounded-none'
           }`}
       >
         {navLinks.map(({ href, icon: Icon }) => (
