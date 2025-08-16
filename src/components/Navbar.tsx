@@ -7,10 +7,10 @@ import Image from 'next/image'
 import {
   Home,
   Users,
-  Settings,
-  Box,
-  Headphones,
-} from 'lucide-react' // icons package
+  BriefcaseBusiness,
+  Contact,
+  Boxes,
+} from 'lucide-react'
 
 export default function Navbar() {
   const pathname = usePathname()
@@ -36,18 +36,17 @@ export default function Navbar() {
   const navLinks = [
     { href: '/', icon: Home, label: 'Home' },
     { href: '/about', icon: Users, label: 'About Us' },
-    { href: '/services', icon: Settings, label: 'Services' },
-    { href: '/products', icon: Box, label: 'Products' },
-    { href: '/contact', icon: Headphones, label: 'Contact Us' },
+    { href: '/services', icon: BriefcaseBusiness, label: 'Services' },
+    { href: '/products', icon: Boxes, label: 'Products' },
+    { href: '/contact', icon: Contact, label: 'Contact Us' },
   ]
 
   return (
     <>
       {/* Mobile Top Logo */}
       <div
-        className={`xl:hidden fixed top-0 left-0 w-full h-[50px] z-50 flex items-center justify-start px-4 bg-[#070707]/70 border border-[#F2F2F2]/30 backdrop-blur-md shadow-md transition-transform duration-300 ${
-          hidden ? '-translate-y-full' : 'translate-y-0'
-        }`}
+        className={`xl:hidden fixed top-0 left-0 w-full h-[50px] z-50 flex items-center justify-start px-4 bg-[#070707]/70 border border-[#F2F2F2]/30 backdrop-blur-md shadow-md transition-transform duration-300 ${hidden ? '-translate-y-full' : 'translate-y-0'
+          }`}
       >
         <Link href="/" className="flex items-center gap-2">
           <Image
@@ -69,21 +68,19 @@ export default function Navbar() {
 
       {/* Mobile Bottom Navbar */}
       <div
-        className={`xl:hidden fixed left-1/2 -translate-x-1/2 w-full h-[55px] z-40 bg-[#070707]/70 border border-[#F2F2F2]/30 backdrop-blur-md flex items-center justify-around px-4 shadow-md transition-all duration-300 ${
-          hidden ? 'top-0 rounded-b-md' : 'top-[50px] rounded-none'
-        }`}
+        className={`xl:hidden fixed left-1/2 -translate-x-1/2 w-full h-[55px] z-40 bg-[#070707]/70 border border-[#F2F2F2]/30 backdrop-blur-md flex items-center justify-around px-4 shadow-md transition-all duration-300 ${hidden ? 'top-0 rounded-b-md' : 'top-[50px] rounded-none'
+          }`}
       >
         {navLinks.map(({ href, icon: Icon }) => (
           <Link
             key={href}
             href={href}
-            className={`flex flex-col items-center justify-center transition ${
-              pathname === href
+            className={`flex flex-col items-center justify-center transition ${pathname === href
                 ? 'text-red-500'
                 : 'text-white hover:text-red-400'
-            }`}
+              }`}
           >
-            <Icon size={27} strokeWidth={1.8} />
+            <Icon size={25} strokeWidth={1.8} />
           </Link>
         ))}
       </div>
@@ -119,11 +116,10 @@ export default function Navbar() {
               <Link
                 key={href}
                 href={href}
-                className={`no-underline transition hover:text-white/60 ${
-                  pathname === href
+                className={`no-underline transition hover:text-white/60 ${pathname === href
                     ? 'text-red-500 font-medium'
                     : 'text-white'
-                }`}
+                  }`}
               >
                 {label}
               </Link>
