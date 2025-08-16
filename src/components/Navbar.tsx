@@ -44,7 +44,11 @@ export default function Navbar() {
   return (
     <>
       {/* Mobile Top Logo */}
-      <div className="xl:hidden absolute top-0 left-0 w-full h-[50px] z-50 flex items-center justify-start px-4">
+      <div
+        className={`xl:hidden fixed top-0 left-0 w-full h-[50px] z-50 flex items-center justify-start px-4 bg-[#070707]/70 border border-[#F2F2F2]/30 backdrop-blur-md shadow-md transition-transform duration-300 ${
+          hidden ? '-translate-y-full' : 'translate-y-0'
+        }`}
+      >
         <Link href="/" className="flex items-center gap-2">
           <Image
             src="/svg/logowithname.svg"
@@ -55,16 +59,28 @@ export default function Navbar() {
             className="md:h-7 w-auto h-5"
           />
         </Link>
+        <Link
+          href={'SignUp'}
+          className="ml-auto text-white hover:text-red-500 transition-all duration-300"
+        >
+          <h1>SignUp</h1>
+        </Link>
       </div>
 
       {/* Mobile Bottom Navbar */}
-      <div className="xl:hidden fixed bottom-2 left-1/2 -translate-x-1/2 w-[97vw] h-[55px] z-50 bg-[#070707]/70 border border-[#F2F2F2]/30 backdrop-blur-md flex items-center justify-around px-4 shadow-md rounded-md">
-        {navLinks.map(({ href, icon: Icon, label }) => (
+      <div
+        className={`xl:hidden fixed left-1/2 -translate-x-1/2 w-full h-[55px] z-40 bg-[#070707]/70 border border-[#F2F2F2]/30 backdrop-blur-md flex items-center justify-around px-4 shadow-md transition-all duration-300 ${
+          hidden ? 'top-0 rounded-b-md' : 'top-[50px] rounded-none'
+        }`}
+      >
+        {navLinks.map(({ href, icon: Icon }) => (
           <Link
             key={href}
             href={href}
             className={`flex flex-col items-center justify-center transition ${
-              pathname === href ? 'text-red-500' : 'text-white hover:text-red-400'
+              pathname === href
+                ? 'text-red-500'
+                : 'text-white hover:text-red-400'
             }`}
           >
             <Icon size={27} strokeWidth={1.8} />
@@ -104,7 +120,9 @@ export default function Navbar() {
                 key={href}
                 href={href}
                 className={`no-underline transition hover:text-white/60 ${
-                  pathname === href ? 'text-red-500 font-medium' : 'text-white'
+                  pathname === href
+                    ? 'text-red-500 font-medium'
+                    : 'text-white'
                 }`}
               >
                 {label}

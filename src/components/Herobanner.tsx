@@ -52,7 +52,7 @@ export default function Hero() {
       <div className="absolute inset-0 bg-gradient-to-tr from-[#000000] via-[#00000090] to-transparent  opacity-97 -z-10" />
 
       {/* Hero Banner Content */}
-      <div className="text-left p-10 pb-35 lg:pb-10 px-5 md:px-10 text-white flex flex-col justify-end items-start w-full md:w-2/3 sm:pl-5 h-full">
+      <div className="text-left p-10 pb-20 lg:pb-10 px-5 md:px-10 text-white flex flex-col justify-end items-start w-full md:w-2/3 sm:pl-5 h-full">
         <div>
           {/* Main Heading */}
           <h1 className="text-white heading-light max-heading-light-lg ">
