@@ -8,21 +8,6 @@ import Script from "next/script";
 export default function Contact() {
   return (
     <div className="flex flex-col">
-      <head>
-        {/* Google Analytics */}
-        <Script
-          src="https://www.googletagmanager.com/gtag/js?id=G-EFC5PVB5DW"
-          strategy="afterInteractive"
-        />
-        <Script id="google-analytics" strategy="afterInteractive">
-          {`
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-            gtag('config', 'G-EFC5PVB5DW');
-          `}
-        </Script>
-      </head>
       {/* Hero Section */}
       <div className="relative h-[60vh] w-full bg-[url('/images/hero.png')] bg-cover bg-center bg-no-repeat flex items-center justify-left pl-6">
         <div className="absolute inset-0 bg-[#030303]/70 backdrop-blur-sm" />
@@ -55,7 +40,7 @@ export default function Contact() {
           {[
             { title: "Email", text: "contact@helekin.in", href: "mailto:contact@helekin.in" },
             { title: "Phone", text: "+91 89439 63650", href: "tel:+918943963650" },
-            { title: "Location", text: "Kottayam, Kerala, India", href: "/map" },
+            { title: "Location", text: "Kottayam, Kerala, India", href: "https://maps.app.goo.gl/GT2JakYezeSM9Uh17" },
           ].map((item, i) => (
             <motion.div
               key={item.title}

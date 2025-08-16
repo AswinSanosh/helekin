@@ -5,7 +5,7 @@ import serviceData from "../../../components/ServiceList.json";
 import React, { useEffect, useState } from "react";
 import Link from "next/link";
 import { motion } from "framer-motion";
-import Script from "next/script";
+import Loading from "./loading";
 
 interface Service {
   title: string;
@@ -27,6 +27,47 @@ export default function Services() {
     index: number;
   } | null>(null);
   const [index, setIndex] = useState(0);
+
+  const [isLoading, setIsLoading] = useState(true);
+
+  // helper function for preloading
+  const preloadImages = (srcArray: string[]) => {
+    return Promise.all(
+      srcArray.map(
+        (src) =>
+          new Promise<void>((resolve) => {
+            const img = document.createElement("img");
+            img.src = src;
+            img.onload = () => resolve();
+            img.onerror = () => resolve();
+          })
+      )
+    );
+  };
+
+  useEffect(() => {
+    const handleFullLoad = async () => {
+      // collect all image URLs (background + icons)
+      const allImages = [
+        ...Softservices.map((s) => s.background),
+        ...Softservices.map((s) => s.icon),
+        ...Hardservices.map((s) => s.background),
+        ...Hardservices.map((s) => s.icon),
+        ...ThreeDservices.map((s) => s.background),
+        ...ThreeDservices.map((s) => s.icon),
+      ].filter(Boolean);
+
+      await preloadImages(allImages);
+      setIsLoading(false);
+    };
+
+    if (document.readyState === "complete") {
+      handleFullLoad();
+    } else {
+      window.addEventListener("load", handleFullLoad);
+      return () => window.removeEventListener("load", handleFullLoad);
+    }
+  }, []);
 
   useEffect(() => {
     if (hovering) return;
@@ -69,16 +110,16 @@ export default function Services() {
               ...(isHovered
                 ? window.innerWidth >= 1024
                   ? {
-                    backgroundImage: `linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(${service.background})`,
-                    backgroundSize: "cover",
-                    backgroundPosition: "center",
-                  }
+                      backgroundImage: `linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(${service.background})`,
+                      backgroundSize: "cover",
+                      backgroundPosition: "center",
+                    }
                   : {
-                    backgroundColor: "rgba(255,255,255,0.05)",
-                  }
+                      backgroundColor: "rgba(255,255,255,0.05)",
+                    }
                 : {
-                  backgroundColor: "rgba(255,255,255,0.05)",
-                }),
+                    backgroundColor: "rgba(255,255,255,0.05)",
+                  }),
             }}
           >
             <div
@@ -86,9 +127,9 @@ export default function Services() {
               style={
                 isHovered
                   ? {
-                    backgroundColor: "#A50424",
-                    backdropFilter: "blur(10px)",
-                  }
+                      backgroundColor: "#A50424",
+                      backdropFilter: "blur(10px)",
+                    }
                   : {}
               }
             >
@@ -116,23 +157,12 @@ export default function Services() {
       );
     });
 
+  if (isLoading) {
+    return <Loading />;
+  }
+
   return (
     <div>
-      <head>
-        {/* Google Analytics */}
-        <Script
-          src="https://www.googletagmanager.com/gtag/js?id=G-EFC5PVB5DW"
-          strategy="afterInteractive"
-        />
-        <Script id="google-analytics" strategy="afterInteractive">
-          {`
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-            gtag('config', 'G-EFC5PVB5DW');
-          `}
-        </Script>
-      </head>
       {/* Hero */}
       <div className="relative h-[90vh] w-full bg-[url('/images/hero.png')] bg-cover bg-center bg-no-repeat z-20 flex items-center">
         <div className="absolute inset-0 bg-black/70 backdrop-blur-sm z-0 " />
@@ -257,7 +287,7 @@ export default function Services() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
               viewport={{ once: false }}
-              className="relative z-10 w-full max-w-screen px-6 mx-auto mt-16 max-sm:px-0"
+              className="relative z-10 w-full max-w-screen px-6 mx-auto mt-16 max-sm:px-0 "
             >
               <h1 className="font-poppins text-2xl text-white mb-4 max-sm:text-xl">
                 Software Services

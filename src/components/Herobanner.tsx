@@ -1,12 +1,23 @@
 'use client'
 
 import { useEffect, useState } from 'react'
+import Loading from '../app/(root)/loading'
 
 export default function Hero() {
   const fullText = 'business growth.'
   const [displayedText, setDisplayedText] = useState('')
   const [index, setIndex] = useState(0)
+  const [isLoading, setIsLoading] = useState(true)
 
+  // Preload background image
+  useEffect(() => {
+    const img = new Image()
+    img.src = '/images/hero.png'
+    img.onload = () => setIsLoading(false)
+    img.onerror = () => setIsLoading(false)
+  }, [])
+
+  // Typing animation
   useEffect(() => {
     if (index < fullText.length) {
       const timeout = setTimeout(() => {
@@ -31,6 +42,10 @@ export default function Hero() {
       desc: 'We provide customized solutions that fit your specific needs and goals.',
     },
   ]
+
+  if (isLoading) {
+    return <Loading />
+  }
 
   return (
     <div className="relative min-h-[90vh] lg:h-screen pt-30 w-full bg-[url('/images/hero.png')] bg-cover bg-right sm:bg-center bg-no-repeat z-20 flex items-end justify-start overflow-x-hidden text-justify">
@@ -91,7 +106,7 @@ export default function Hero() {
           </div>
         </div>
 
-        {/* CTA Button 
+        {/* CTA Button (commented out)
         <div className="flex justify-center md:justify-start w-full items-center text-center">
           <button className="bg-red-900 rounded-md w-[80%] md:w-50 p-4 subheading-light md:text-3xl mt-8 hover:cursor-pointer hover:bg-white hover:text-red-700 duration-300 font-poppins mx-auto md:mx-0">
         Get Quote

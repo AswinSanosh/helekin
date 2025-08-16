@@ -1,10 +1,12 @@
 'use client';
 
+import { useEffect, useState } from 'react';
 import { Dialog } from '@headlessui/react';
 import { AiOutlineClose } from 'react-icons/ai';
 import Image from 'next/image';
 import Link from 'next/link';
 import { Service } from '../types/Service'; // ✅ Use your actual import path
+import Loading from '../app/(root)/loading'; // ✅ Import your Loading component
 
 interface Props {
     isOpen: boolean;
@@ -13,9 +15,38 @@ interface Props {
 }
 
 export default function ServiceModal({ isOpen, onClose, service }: Props) {
+    const [isImagesLoaded, setIsImagesLoaded] = useState(false);
+
+    useEffect(() => {
+        if (!service) return;
+
+        const imageSources = [service.background, service.icon];
+        let loadedCount = 0;
+
+        const handleLoad = () => {
+            loadedCount++;
+            if (loadedCount === imageSources.length) {
+                setIsImagesLoaded(true);
+            }
+        };
+
+        imageSources.forEach(src => {
+            const img = new window.Image();
+            img.src = src;
+            img.onload = handleLoad;
+            img.onerror = handleLoad; // fail-safe in case an image fails
+        });
+
+    }, [service]);
+
     if (!service) return null;
 
     const { title, desc, background, icon, link } = service;
+
+    // Show loading until images are fully loaded
+    if (!isImagesLoaded) {
+        return <Loading />;
+    }
 
     return (
         <Dialog open={isOpen} onClose={onClose} className="relative z-50">
@@ -44,18 +75,12 @@ export default function ServiceModal({ isOpen, onClose, service }: Props) {
                         </div>
                     </div>
 
-
                     {/* Text Content */}
                     <div className="p-6 space-y-3 m-6">
                         <Dialog.Title className="text-red-700 title-bold mb-8 ">{title}</Dialog.Title>
                         <p className="text-gray-300 para-base">{desc}</p>
 
                         <div className="flex justify-between items-center pt-4">
-                            {/* Placeholder icons */}
-                            {/*<div className="flex gap-2">
-                                <Image src="/icons/grid.png" alt="grid" width={20} height={20} />
-                                <Image src="/icons/ai.png" alt="ai" width={20} height={20} />
-                            </div>*/}
                             <Link href={link}>
                                 <button className="bg-red-700 subpara-base absolute bottom-5 right-5 hover:bg-white hover:text-red-700 transition-colors duration-300 text-white text-sm px-4 py-2 rounded-md">
                                     Learn More
