@@ -6,8 +6,9 @@ import Image from 'next/image';
 import serviceData from './ServiceList.json';
 import ServiceModal from './Modal';
 import { Service } from '@/types/Service';
+import Loading from '../app/(root)/loading';
 
-export default function ThreedServicesCarousel() {
+export default function SoftwareServicesCarousel() {
   const services: Service[] = serviceData.servicesList.threed;
   const CARD_COUNT = services.length;
   const MIDDLE_INDEX = CARD_COUNT + 1;
@@ -19,23 +20,52 @@ export default function ThreedServicesCarousel() {
   const [selectedService, setSelectedService] = useState<Service | null>(null);
   const [isCooldown, setIsCooldown] = useState(false);
   const [initialX, setInitialX] = useState<number | null>(null);
+  const [isPageLoaded, setIsPageLoaded] = useState(false);
 
   const controls = useAnimation();
 
   // Clone items for infinite scroll illusion
-  const allCards: Service[] = [
+  const allCards: Service[] = React.useMemo(() => [
     services[services.length - 3],
     services[services.length - 2],
     services[services.length - 1],
     ...services,
     ...services,
     ...services,
-    ...services,
-    ...services,
     services[0],
     services[1],
     services[2],
-  ];
+  ], [services]);
+
+  // Preload all images (icons + background images)
+  useEffect(() => {
+    const imageUrls = [
+      ...allCards.map((s) => s.icon),
+      ...allCards.map((s) => s.background),
+      '/svg/arrow-left.svg',
+      '/svg/arrow-right.svg'
+    ];
+
+    let loadedCount = 0;
+
+    const handleLoad = () => {
+      loadedCount++;
+      if (loadedCount === imageUrls.length) {
+        setIsPageLoaded(true);
+      }
+    };
+
+    imageUrls.forEach((src) => {
+      const img = new window.Image();
+      img.src = src;
+      if (img.complete) {
+        handleLoad();
+      } else {
+        img.onload = handleLoad;
+        img.onerror = handleLoad;
+      }
+    });
+  }, [allCards]);
 
   useEffect(() => {
     if (typeof window !== 'undefined') {
@@ -107,7 +137,7 @@ export default function ThreedServicesCarousel() {
     return () => controls.stop();
   }, [currentIndex, controls, CARD_COUNT, initialX, MIDDLE_INDEX]);
 
-  if (initialX === null) return null; // Prevent SSR hydration mismatch
+  if (!isPageLoaded || initialX === null) return <Loading />;
 
   return (
     <div className="relative w-full py-20 flex items-center justify-center">
@@ -118,7 +148,7 @@ export default function ThreedServicesCarousel() {
       >
         <button
           onClick={handlePrev}
-          className="hidden md:flex z-20 p-2 h-[300px] w-[50px] items-center justify-center rounded-l-2xl hover:bg-red-700 bg-[#030303] transition-all duration-300"
+          className="hidden md:flex z-20 p-2 h-[300px] w-[50px] items-center justify-center hover:bg-red-700 bg-[#030303] rounded-l-md border border-[#F2F2F2]/20 transition-all duration-300"
           aria-label="Previous"
           disabled={isCooldown}
         >
@@ -159,22 +189,24 @@ export default function ThreedServicesCarousel() {
                   }}
                 >
                   <div
-                    className="w-full h-full bg-white/10 backdrop-blur-2xl shadow-2xl shadow-[#030303]/30 text-white rounded-xl text-sm transition-all duration-300 relative"
+                    className="w-full h-full bg-[#070707]/30 border border-[#F2F2F2]/30 rounded-md backdrop-blur-2xl shadow-2xl shadow-[#030303]/30 text-white text-sm transition-all duration-300 relative"
                     style={
                       isHovered
-                        ? {
-                            backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(${service.background})`,
-                            backgroundSize: 'cover',
-                            backgroundPosition: 'center',
-                            backgroundRepeat: 'no-repeat',
-                            backdropFilter: 'blur(10px)',
-                          }
+                        ? window.innerWidth >= 1024
+                          ? {
+                              backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(${service.background})`,
+                              backgroundSize: 'cover',
+                              backgroundPosition: 'center',
+                              backgroundRepeat: 'no-repeat',
+                              backdropFilter: 'blur(10px)',
+                            }
+                          : {}
                         : {}
                     }
                   >
-                    <div className="flex flex-col justify-start w-full h-full px-5">
+                    <div className="flex flex-col justify-start w-full h-full lg:px-5 px-2 bg-black/30">
                       <div
-                        className="rounded-full bg-white/20 w-17 h-17 flex justify-center items-center p-2 mb-2 relative top-5 left-5"
+                        className="rounded-full bg-white/10 border border-[#F2F2F2]/30 w-17 h-17 flex justify-center items-center lg:p-2 p-1 lg:mb-2 relative lg:top-5 top-2 lg:left-5 left-2"
                         style={
                           isHovered
                             ? {
@@ -189,20 +221,20 @@ export default function ThreedServicesCarousel() {
                           alt={service.title}
                           width={50}
                           height={50}
-                          className="m-auto mb-2 h-12 w-12 object-contain"
+                          className="m-auto h-12 w-12 object-contain p-1"
                         />
                       </div>
-                      <div className="text-left relative m-5 top-5 transition-all duration-300">
+                      <div className="text-left relative lg:m-5 m-2 top-5 transition-all duration-300">
                         <h1
-                          className={`transition-all duration-500 text-2xl font-poppins font-semibold ${
-                            isHovered ? 'text-[#A50424]' : 'text-white'
+                          className={`transition-all duration-500 lg:text-2xl text-lg font-poppins font-semibold ${
+                            isHovered ? 'text-[#ff0033]' : 'text-white'
                           }`}
                         >
                           {service.title}
                         </h1>
                         <p
                           className={`transition-all duration-800 font-poppins font-light ${
-                            isHovered ? 'text-lg md:font-semibold' : 'text-md'
+                            isHovered ? 'lg:text-lg text-sm' : 'text-md'
                           }`}
                         >
                           {service.desc}
@@ -218,7 +250,7 @@ export default function ThreedServicesCarousel() {
 
         <button
           onClick={handleNext}
-          className="hidden md:flex z-20 p-2 h-[300px] w-[50px] items-center justify-center rounded-r-2xl hover:bg-red-700 bg-[#030303] transition-all duration-300"
+          className="hidden md:flex z-20 p-2 h-[300px] w-[50px] items-center justify-center  hover:bg-red-700 bg-[#030303] rounded-r-md border border-[#F2F2F2]/20 transition-all duration-300"
           aria-label="Next"
           disabled={isCooldown}
         >

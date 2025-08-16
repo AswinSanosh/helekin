@@ -4,6 +4,7 @@
 import Link from 'next/link'
 import { useEffect, useState } from 'react'
 import { useRouter } from 'next/navigation'
+import Script from 'next/script'
 
 export default function ProductPage() {
     const router = useRouter()
