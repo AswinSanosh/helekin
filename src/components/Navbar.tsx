@@ -4,11 +4,17 @@ import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import { useEffect, useState, useRef } from 'react'
 import Image from 'next/image'
+import {
+  Home,
+  Users,
+  Settings,
+  Box,
+  Headphones,
+} from 'lucide-react' // icons package
 
 export default function Navbar() {
   const pathname = usePathname()
   const [hidden, setHidden] = useState(false)
-  const [isSidebarOpen, setIsSidebarOpen] = useState(false)
 
   const lastY = useRef(0)
 
@@ -28,17 +34,17 @@ export default function Navbar() {
   }, [])
 
   const navLinks = [
-    { href: '/', label: 'Home' },
-    { href: '/about', label: 'About Us' },
-    { href: '/services', label: 'Services' },
-    { href: '/products', label: 'Products' },
-    { href: '/contact', label: 'Contact Us' },
+    { href: '/', icon: Home, label: 'Home' },
+    { href: '/about', icon: Users, label: 'About Us' },
+    { href: '/services', icon: Settings, label: 'Services' },
+    { href: '/products', icon: Box, label: 'Products' },
+    { href: '/contact', icon: Headphones, label: 'Contact Us' },
   ]
 
   return (
     <>
-      {/* Mobile Top Bar */}
-      <div className="xl:hidden fixed top-0 left-0 w-full h-[50px] z-50 bg-[#070707] border-b border-[#F2F2F2]/20 backdrop-blur-md flex items-center justify-between px-2 py-4 shadow-md">
+      {/* Mobile Top Logo */}
+      <div className="xl:hidden absolute top-0 left-0 w-full h-[50px] z-50 flex items-center justify-start px-4">
         <Link href="/" className="flex items-center gap-2">
           <Image
             src="/svg/logowithname.svg"
@@ -46,23 +52,24 @@ export default function Navbar() {
             width={110}
             height={40}
             priority
-            className="h-7 w-22"
+            className="md:h-7 w-auto h-5"
           />
         </Link>
-        <button
-          onClick={() => setIsSidebarOpen(true)}
-          aria-label="Open menu"
-          className="p-2 rounded-md hover:bg-white/10 transition duration-300 hover:cursor-pointer "
-        >
-          <Image
-            src="/svg/burger.svg"
-            alt="menu"
-            width={28}
-            height={28}
-            priority
-            className="w-6 h-6"
-          />
-        </button>
+      </div>
+
+      {/* Mobile Bottom Navbar */}
+      <div className="xl:hidden fixed bottom-2 left-1/2 -translate-x-1/2 w-[97vw] h-[55px] z-50 bg-[#070707]/70 border border-[#F2F2F2]/10 backdrop-blur-md flex items-center justify-around px-4 shadow-md rounded-md">
+        {navLinks.map(({ href, icon: Icon, label }) => (
+          <Link
+            key={href}
+            href={href}
+            className={`flex flex-col items-center justify-center transition ${
+              pathname === href ? 'text-red-500' : 'text-white hover:text-red-400'
+            }`}
+          >
+            <Icon size={27} strokeWidth={1.8} />
+          </Link>
+        ))}
       </div>
 
       {/* Desktop Nav (unchanged) */}
@@ -105,46 +112,6 @@ export default function Navbar() {
             ))}
           </div>
         </nav>
-      </div>
-
-      {/* Mobile Sidebar */}
-      <div
-        className={`fixed xl:hidden top-0 right-0 h-full w-72 max-w-[85%] bg-[#030303]/95 backdrop-blur-xl shadow-lg z-50 transform transition-transform duration-300 ease-in-out
-          ${isSidebarOpen ? 'translate-x-0' : 'translate-x-full'}
-        `}
-      >
-        {/* Close Button */}
-        <div className="flex justify-end p-4">
-          <button
-            onClick={() => setIsSidebarOpen(false)}
-            aria-label="Close menu"
-            className="p-2 rounded-md hover:bg-white/10 transition"
-          >
-            <Image
-              src="/svg/close.svg"
-              alt="close"
-              width={24}
-              height={24}
-              priority
-            />
-          </button>
-        </div>
-
-        {/* Links */}
-        <div className="mt-4 flex flex-col gap-6 px-6 text-white font-poppins font-medium text-lg overflow-y-auto">
-          {navLinks.map(({ href, label }) => (
-            <Link
-              key={href}
-              href={href}
-              onClick={() => setIsSidebarOpen(false)}
-              className={`transition ${
-                pathname === href ? 'text-red-500' : 'hover:text-red-400'
-              }`}
-            >
-              {label}
-            </Link>
-          ))}
-        </div>
       </div>
     </>
   )

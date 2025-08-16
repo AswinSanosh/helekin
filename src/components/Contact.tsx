@@ -42,7 +42,7 @@ export default function Contact() {
     }
 
     return (
-        <div className="fixed sm:bottom-10 sm:right-10 bottom-3 right-3 z-50">
+        <div className="fixed sm:bottom-10 sm:right-10 bottom-3 right-3 z-50 hidden xl:block">
             <div className="flex flex-col items-end">
                 {/* Contact Icon (Trigger Hover) */}
                 <div
