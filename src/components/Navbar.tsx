@@ -50,7 +50,7 @@ export default function Navbar() {
       >
         <Link href="/" className="flex items-center gap-2">
           <Image
-            src="/svg/logowithname.svg"
+            src="/images/logowithname.png"
             alt="logo"
             width={110}
             height={40}
@@ -76,8 +76,8 @@ export default function Navbar() {
             key={href}
             href={href}
             className={`flex flex-col items-center justify-center transition ${pathname === href
-                ? 'text-red-500'
-                : 'text-white hover:text-red-400'
+              ? 'text-red-500'
+              : 'text-white hover:text-red-400'
               }`}
           >
             <Icon size={25} strokeWidth={1.8} />
@@ -90,11 +90,12 @@ export default function Navbar() {
         <div className="max-w-[300px] w-full h-auto absolute md:top-10 md:left-10 top-8 left-3 xl:flex hidden">
           <Link href="/" className="flex items-center gap-1 md:gap-3">
             <Image
-              src="/images/logowrite.png"
+              src="/images/logowithname.png"
               alt="logo"
-              width={100}
-              height={100}
-              className="lg:h-9 w-auto h-6"
+              width={110}
+              height={40}
+              priority
+              className="md:h-7 w-auto h-5"
             />
           </Link>
         </div>
@@ -117,8 +118,8 @@ export default function Navbar() {
                 key={href}
                 href={href}
                 className={`no-underline transition hover:text-white/60 ${pathname === href
-                    ? 'text-red-500 font-medium'
-                    : 'text-white'
+                  ? 'text-red-500 font-medium'
+                  : 'text-white'
                   }`}
               >
                 {label}
