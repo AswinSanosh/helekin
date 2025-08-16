@@ -55,7 +55,7 @@ export default function ServiceModal({ isOpen, onClose, service }: Props) {
 
             {/* Modal */}
             <div className="fixed inset-0 flex items-center justify-center p-4 m-auto h-full w-full">
-                <Dialog.Panel className="ms:w-[50vw] w-[50vw] md:h-[50vh] h-[75vh] rounded-md border border-[#F2F2F2]/20 bg-[#030303] text-white shadow-xl overflow-hidden relative">
+                <Dialog.Panel className="ms:w-[50vw] w-[50vw] md:h-[75vh] h-[50vh] rounded-md border border-[#F2F2F2]/20 bg-[#030303] text-white shadow-xl overflow-hidden relative">
                     {/* Image Background */}
                     <div className="relative w-full md:h-2/4 h-1/4">
                         {/* Background Image */}
