@@ -55,9 +55,9 @@ export default function ServiceModal({ isOpen, onClose, service }: Props) {
 
             {/* Modal */}
             <div className="fixed inset-0 flex items-center justify-center p-4 m-auto h-full w-full">
-                <Dialog.Panel className="ms:w-[50vw] w-[50vw] md:h-[75vh] h-[75vh] rounded-xl bg-[#030303] text-white shadow-xl overflow-hidden relative">
+                <Dialog.Panel className="ms:w-[50vw] w-[50vw] md:h-[50vh] h-[75vh] rounded-md border border-[#F2F2F2]/20 bg-[#030303] text-white shadow-xl overflow-hidden relative">
                     {/* Image Background */}
-                    <div className="relative w-full h-2/4">
+                    <div className="relative w-full md:h-2/4 h-1/4">
                         {/* Background Image */}
                         <Image
                             src={background}
@@ -70,14 +70,14 @@ export default function ServiceModal({ isOpen, onClose, service }: Props) {
                         <div className="absolute inset-0 bg-gradient-to-b from-[#030303]/30 to-[#030303] z-10" />
 
                         {/* Icon on top */}
-                        <div className="absolute top-4 left-4 bg-[#080808] p-2 rounded-full z-20">
-                            <Image src={icon} width={36} height={36} alt={`${title} Icon`} />
+                        <div className="absolute top-4 left-4 bg-[#a00000] p-3 rounded-full z-20 m-auto border-white/20 border">
+                            <Image src={icon} width={36} height={36} alt={`${title} Icon`} className='h-8 w-8 '/>
                         </div>
                     </div>
 
                     {/* Text Content */}
                     <div className="p-6 space-y-3 m-6 h-2/4">
-                        <Dialog.Title className="text-red-700 title-bold mb-8 ">{title}</Dialog.Title>
+                        <Dialog.Title className="text-red-700 text-sm md:text-3xl font-bold mb-8 ">{title}</Dialog.Title>
                         <p className="text-gray-300 para-base">{desc}</p>
 
                         <div className="flex justify-between items-center pt-4">
