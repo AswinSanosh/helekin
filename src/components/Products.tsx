@@ -10,9 +10,9 @@ export default function Products() {
 
   useEffect(() => {
     const imageUrls = [
-      "/images/product2.png",
-      "/images/product1.png",
-      "/images/product4.png",
+      "/images-webp/product2.webp",
+      "/images-webp/product1.webp",
+      "/images-webp/product4.webp",
     ];
 
     let loadedCount = 0;
@@ -93,21 +93,25 @@ export default function Products() {
             visible: {
               opacity: 1,
               y: 0,
-              transition: { staggerChildren: 0.2, duration: 1, ease: "easeOut" }
-            }
+              transition: {
+                staggerChildren: 0.2,
+                duration: 1,
+                ease: "easeOut",
+              },
+            },
           }}
           className="mt-20 flex flex-row items-center justify-center gap-6"
         >
           {[
-            "bg-[url('/images/product2.png')] md:h-[400px] h-[150px] md:w-[400px] w-[100px] relative md:-right-20 -right-10 z-0",
-            "bg-[url('/images/product1.png')] md:h-[500px] h-[200px] md:w-[500px] w-[200px] relative z-20",
-            "bg-[url('/images/product4.png')] md:h-[400px] h-[150px] md:w-[400px] w-[100px] relative md:-left-20 -left-10 z-0",
+            "bg-[url('/images-webp/product2.webp')] md:h-[400px] h-[150px] md:w-[400px] w-[100px] relative md:-right-20 -right-10 z-0",
+            "bg-[url('/images-webp/product1.webp')] md:h-[500px] h-[200px] md:w-[500px] w-[200px] relative z-20",
+            "bg-[url('/images-webp/product4.webp')] md:h-[400px] h-[150px] md:w-[400px] w-[100px] relative md:-left-20 -left-10 z-0",
           ].map((classes, i) => (
             <motion.div
               key={i}
               variants={{
                 hidden: { opacity: 0, y: 40 },
-                visible: { opacity: 1, y: 0 }
+                visible: { opacity: 1, y: 0 },
               }}
               whileHover={{ scale: 1.02 }}
               transition={{ type: "spring", stiffness: 200, damping: 15 }}
@@ -115,7 +119,6 @@ export default function Products() {
             />
           ))}
         </motion.div>
-
       </div>
     </div>
   );
