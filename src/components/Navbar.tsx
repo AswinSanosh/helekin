@@ -58,7 +58,7 @@ export default function Navbar() {
       </div>
 
       {/* Mobile Bottom Navbar */}
-      <div className="xl:hidden fixed bottom-2 left-1/2 -translate-x-1/2 w-[97vw] h-[55px] z-50 bg-[#070707]/70 border border-[#F2F2F2]/10 backdrop-blur-md flex items-center justify-around px-4 shadow-md rounded-md">
+      <div className="xl:hidden fixed bottom-2 left-1/2 -translate-x-1/2 w-[97vw] h-[55px] z-50 bg-[#070707]/70 border border-[#F2F2F2]/30 backdrop-blur-md flex items-center justify-around px-4 shadow-md rounded-md">
         {navLinks.map(({ href, icon: Icon, label }) => (
           <Link
             key={href}
