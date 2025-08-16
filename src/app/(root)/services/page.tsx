@@ -164,7 +164,7 @@ export default function Services() {
   return (
     <div>
       {/* Hero */}
-      <div className="relative h-[90vh] w-full bg-[url('/images/hero.png')] bg-cover bg-center bg-no-repeat z-20 flex items-center">
+      <div className="relative h-[90vh] w-full bg-[url('/images-webp/hero.webp')] bg-cover bg-center bg-no-repeat z-20 flex items-center">
         <div className="absolute inset-0 bg-black/70 backdrop-blur-sm z-0 " />
         <div className="relative z-10 text-white w-full px-10 max-w-4xl max-sm:px-4">
           <motion.div
@@ -209,7 +209,7 @@ export default function Services() {
       </div>
 
       {/* Services Section */}
-      <div className="relative z-0 w-full flex flex-col bg-[url('/images/fafa.png')] bg-cover bg-center bg-no-repeat px-6 pb-30 max-sm:px-4">
+      <div className="relative z-0 w-full flex flex-col bg-[url('/images-webp/fafa.webp')] bg-cover bg-center bg-no-repeat px-6 pb-30 max-sm:px-4">
         <div className="absolute inset-0 bg-[#030303]/95 backdrop-blur-sm z-0 h-full w-full" />
 
         {/* Heading + Search */}
