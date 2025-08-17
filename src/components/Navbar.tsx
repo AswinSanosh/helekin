@@ -48,7 +48,7 @@ export default function Navbar() {
     <>
       {/* Mobile Top Logo */}
       <div
-        className={`xl:hidden fixed top-0 left-0 w-full h-[50px] z-50 flex items-center justify-start px-4 bg-[#070707]/70 border border-[#F2F2F2]/5 backdrop-blur-sm  transition-transform duration-300 ${hidden ? '-translate-y-full' : 'translate-y-0'
+        className={`xl:hidden fixed top-0 left-0 w-full h-[40px] z-50 flex items-center justify-start px-4 bg-[#070707]/50 border-b border-[#F2F2F2]/10 backdrop-blur-sm  transition-transform duration-300 ${hidden ? '-translate-y-full' : 'translate-y-0'
           }`}
       >
         <Link href="/" className="flex items-center gap-2">
@@ -73,7 +73,7 @@ export default function Navbar() {
 
       {/* Mobile Bottom Navbar */}
       <div
-        className={`xl:hidden fixed left-1/2 -translate-x-1/2 w-full h-[55px] z-40 bg-[#070707]/70 border-b border-[#F2F2F2]/20 backdrop-blur-sm flex items-center justify-around px-4 shadow-md transition-all duration-300 ${hidden ? 'top-0 rounded-b-md' : 'top-[50px] rounded-none'
+        className={`xl:hidden fixed left-1/2 -translate-x-1/2 w-full h-[40px] z-40 bg-[#070707]/50 border-b border-[#F2F2F2]/20 backdrop-blur-sm flex items-center justify-around px-4 shadow-md transition-all duration-300 ${hidden ? 'top-0 rounded-b-md' : 'top-[40px] rounded-none'
           }`}
       >
         {navLinks.map(({ href, icon: Icon }) => (
@@ -82,10 +82,10 @@ export default function Navbar() {
             href={href}
             className={`flex flex-col items-center justify-center transition ${pathname === href
               ? 'text-red-500'
-              : 'text-white hover:text-red-400'
+              : 'text-white'
               }`}
           >
-            <Icon size={25} strokeWidth={1.8} />
+            <Icon size={20} strokeWidth={1.8} />
           </Link>
         ))}
       </div>

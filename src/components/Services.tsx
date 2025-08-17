@@ -98,9 +98,9 @@ export default function Services() {
           transition={{ duration: 0.6, ease: "easeOut", delay: 0.1 }}
           viewport={{ once: false }}
         >
-            <div className="flex justify-left ">
-            <Laptop className="w-7 h-7 text-white mr-2" />
-            <h1 className="font-poppins sm:text-2xl text-xl text-white">
+            <div className="flex justify-left items-center">
+            <Laptop className="sm:w-7 w-5 h-5 sm:h-7 text-white mr-2" />
+            <h1 className="font-poppins sm:text-2xl text-lg text-white">
               Software Services
             </h1>
             </div>
@@ -115,9 +115,9 @@ export default function Services() {
           transition={{ duration: 0.6, ease: "easeOut", delay: 0.1 }}
           viewport={{ once: false }}
         >
-          <div className="flex justify-left">
-            <Cpu className="w-7 h-7 text-white mr-2" />
-            <h1 className="font-poppins sm:text-2xl text-xl text-white">
+          <div className="flex justify-left items-center">
+            <Cpu className="sm:w-7 w-5 h-5 sm:h-7 text-white mr-2" />
+            <h1 className="font-poppins sm:text-2xl text-lg text-white">
               Electronics and Hardware Services
             </h1>
           </div>
@@ -132,9 +132,9 @@ export default function Services() {
           transition={{ duration: 0.6, ease: "easeOut", delay: 0.1 }}
           viewport={{ once: false }}
         >
-          <div className="flex justify-left">
-            <Box className="w-7 h-7 text-white mr-2" />
-            <h1 className="font-poppins sm:text-2xl text-xl text-white">
+          <div className="flex justify-left items-center">
+            <Box className="sm:w-7 w-5 h-5 sm:h-7 text-white mr-2" />
+            <h1 className="font-poppins sm:text-2xl text-lg text-white">
               3D Services
             </h1>
           </div>

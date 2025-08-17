@@ -145,12 +145,14 @@ export default function SoftwareServicesCarousel() {
 
   if (!isPageLoaded || initialX === null) return <Loading />;
 
+  const isMobile = typeof window !== 'undefined' && window.innerWidth < 768;
+
   return (
     <div className="relative sm:w-full py-2 sm:py-20 flex items-center justify-center">
       <div
         className="relative flex items-center max-w-[90vw] w-full"
-        onMouseEnter={() => setHovering(true)}
-        onMouseLeave={() => setHovering(false)}
+        onMouseEnter={() => !isMobile && setHovering(true)}
+        onMouseLeave={() => !isMobile && setHovering(false)}
       >
         {/* Prev button */}
         <button
@@ -166,7 +168,7 @@ export default function SoftwareServicesCarousel() {
             height={16}
             unoptimized
             loading="lazy"
-            className="hover:scale-[1.2] transition-all duration-300"
+            className="w-4 h-4 sm:w-6 sm:h-6 hover:scale-[1.2] transition-all duration-300"
           />
         </button>
 
@@ -178,19 +180,21 @@ export default function SoftwareServicesCarousel() {
             initial={{ x: initialX }}
             style={{
               minWidth: 'max-content',
-              gap: typeof window !== 'undefined' && window.innerWidth < 768 ? '10px' : '40px',
+              gap:
+                typeof window !== 'undefined' && window.innerWidth < 768
+                  ? '10px'
+                  : '40px',
             }}
           >
             {allCards.map((service, idx) => {
-              const isHovered = hoveredIndex === idx;
-              const isMobile = typeof window !== 'undefined' && window.innerWidth < 768;
+              const isHovered = !isMobile && hoveredIndex === idx;
               return (
                 <div
                   key={idx}
                   className="cursor-pointer flex-shrink-0"
                   onClick={() => handleCardClick(service)}
-                  onMouseEnter={() => setHoveredIndex(idx)}
-                  onMouseLeave={() => setHoveredIndex(null)}
+                  onMouseEnter={() => !isMobile && setHoveredIndex(idx)}
+                  onMouseLeave={() => !isMobile && setHoveredIndex(null)}
                   style={{
                     width: isMobile ? '45vw' : '25vw',
                     minWidth: isMobile ? '45vw' : '25vw',
@@ -234,16 +238,18 @@ export default function SoftwareServicesCarousel() {
                       <div className="text-left relative m-2 sm:m-5 top-2 sm:top-5 transition-all duration-300">
                         <h1
                           className={`transition-all duration-500 font-poppins font-semibold ${
-                            isMobile
-                              ? 'text-sm'
-                              : 'text-lg sm:text-2xl'
-                          } ${isHovered ? 'text-[#ff0033]' : 'text-white'}`}
+                            isMobile ? 'text-sm' : 'text-lg sm:text-2xl'
+                          } ${
+                            isHovered ? 'text-[#ff0033]' : 'text-white'
+                          }`}
                         >
                           {service.title}
                         </h1>
                         <p
                           className={`transition-all duration-800 font-poppins font-light ${
-                            isHovered ? 'text-[0.7rem] md:text-lg' : 'md:text-[0.9rem] text-[0.5rem]'
+                            isHovered
+                              ? 'text-[0.7rem] md:text-lg'
+                              : 'md:text-[0.9rem] text-[0.5rem]'
                           }`}
                         >
                           {service.desc}
@@ -271,7 +277,7 @@ export default function SoftwareServicesCarousel() {
             height={16}
             unoptimized
             loading="lazy"
-            className="hover:scale-[1.2] transition-all duration-300"
+            className="w-4 h-4 sm:w-6 sm:h-6 hover:scale-[1.2] transition-all duration-300"
           />
         </button>
       </div>
