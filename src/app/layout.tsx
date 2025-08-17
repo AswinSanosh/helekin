@@ -3,14 +3,14 @@ import "../utils/styles/globals.css";
 import Navbar from "../components/Navbar";
 
 export const metadata: Metadata = {
-  title: 'Helekin',
-  description: 'Grow your business with Helekin',
+  title: "Helekin",
+  description: "Grow your business with Helekin",
   icons: {
-    icon: '/images/logo.png',
-    shortcut: '/images/logo.png',
-    apple: '/images/logo.png',
+    icon: "/images/logo.png",
+    shortcut: "/images/logo.png",
+    apple: "/images/logo.png",
   },
-}
+};
 
 export default function RootLayout({
   children,
