@@ -56,8 +56,8 @@ export default function Aboutbanner() {
     <div
       className="
         w-full bg-[#030303] flex flex-col md:flex-row
-        items-center justify-center gap-20
-        py-10 md:py-20 px-4 md:px-10
+        items-center sm:justify-center justify-left gap-20
+        py-10 md:py-20 px-3 md:px-10
         transition-all duration-500 ease-in-out border-b-1 border-[#F2F2F2]/20 border-t-1
       "
     >
@@ -77,9 +77,9 @@ export default function Aboutbanner() {
           src="/images/logos/logo.webp"
           alt="Helekin Logo"
           className="
-            xl:h-80 h-60 w-auto md:h-48 md:mt-0 mt-10
+            xl:h-80 h-40 w-auto md:h-48 md:mt-0 mt-10
             transition-all duration-200 ease-in-out
-            mx-auto
+            sm:mx-auto
           "
         />
       </motion.div>
@@ -96,11 +96,11 @@ export default function Aboutbanner() {
           About Us
         </h2>
 
-        <h1 className="text-white text-2xl md:text-4xl font-poppins font-semibold leading-tight">
+        <h1 className="text-white text-xl md:text-3xl font-poppins font-medium leading-tight">
           Empowering Global Growth Through Smart Digital Solutions
         </h1>
 
-        <p className="text-white/80 specialpara-base">
+        <p className="text-white/80 md:text-lg text-md font-regular font-poppins">
           At Helekin, we&#39;re passionate about helping businesses thrive in
           the digital age. As a startup driven by innovation and agility, we
           craft tailored digital solutions that solve real problems and unlock
@@ -114,7 +114,7 @@ export default function Aboutbanner() {
           href="/about"
           className="
             inline-block bg-[#070707]/10 border border-[#F2F2F2]/30 rounded-md
-            md:px-6 md:py-3 px-3 py-2 text-base md:text-lg font-poppins
+            md:px-6 md:py-3 sm:px-3 px-2 sm:py-2 py-2 text-md md:text-lg font-poppins
             hover:bg-white hover:text-red-700
             transition-colors duration-300 ease-in-out
           "
