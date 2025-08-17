@@ -8,7 +8,7 @@ import ServiceModal from './Modal';
 import { Service } from '@/types/Service';
 import Loading from '../app/(root)/loading';
 
-export default function SoftwareServicesCarousel() {
+export default function SoftwareSoftwareServicesCarousel() {
   const services: Service[] = serviceData.servicesList.software;
   const CARD_COUNT = services.length;
   const MIDDLE_INDEX = CARD_COUNT + 1;
