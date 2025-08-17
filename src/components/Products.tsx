@@ -40,15 +40,15 @@ export default function Products() {
   }
 
   return (
-    <div className=" h-full w-full flex flex-col bg-gradient-to-b from-[#070707] to-black px-6 pb-30">
-      <div className="relative z-10 w-full max-w-screen px-6 mx-auto pt-20">
+    <div className=" h-full w-full flex flex-col bg-gradient-to-b from-[#070707] to-black md:px-6 px-3 pb-30">
+      <div className="relative z-10 w-full max-w-screen md:px-6 px-3 mx-auto pt-20">
         {/* Title */}
         <motion.h1
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, ease: "easeOut" }}
           viewport={{ once: false }}
-          className="text-3xl font-poppins font-semibold text-red-700 mb-2"
+          className="sm:text-3xl text-2xl font-poppins font-semibold text-red-700 mb-2"
         >
           Products
         </motion.h1>
@@ -62,7 +62,7 @@ export default function Products() {
           className="flex flex-col md:flex-row items-start md:items-center justify-between mt-2 gap-4"
         >
           <div className="flex flex-col items-start md:w-1/2">
-            <p className="text-lg font-extralight font-poppins text-white/80">
+            <p className="sm:text-lg text-md font-extralight font-poppins text-white/80">
               Browse our collection of high-quality, custom-built tech solutions
               designed for everyday use and professional applications. From
               software applications to hardware devices, we offer a range of
@@ -71,13 +71,11 @@ export default function Products() {
           </div>
           <Link
             href="/products"
-            className="
-              inline-block bg-[#070707]/10 border border-[#F2F2F2]/30 rounded-md
-              md:px-6 md:py-3 px-3 py-2 text-base md:text-lg font-poppins
+            className="bg-[#070707]/10 border border-[#F2F2F2]/30 rounded-md
+              sm:px-6 px-3 sm:py-3 py-2 sm:text-lg text-sm font-poppins
               hover:bg-white hover:text-red-700
               transition-colors duration-300 ease-in-out text-white
-              cursor-pointer
-            "
+              cursor-pointer relative items-end ml-auto"
           >
             View All
           </Link>
