@@ -40,7 +40,7 @@ export default function SoftwareSoftwareServicesCarousel() {
     [services]
   );
 
-  // Preload all images (icons + background images)
+  // Preload all images
   useEffect(() => {
     const imageUrls = [
       ...allCards.map((s) => s.icon),
@@ -72,10 +72,9 @@ export default function SoftwareSoftwareServicesCarousel() {
 
   useEffect(() => {
     if (typeof window !== 'undefined') {
-      // Desktop = 25% width | Mobile = 45% width (2 cards visible)
       const vwPercent = window.innerWidth < 768 ? 0.45 : 0.25;
       const vwWidth = window.innerWidth * vwPercent;
-      const gap = window.innerWidth < 768 ? 20 : 40; // reduced gap for mobile
+      const gap = window.innerWidth < 768 ? 20 : 40;
       const cardWidthWithGap = vwWidth + gap;
       const calculatedX = -MIDDLE_INDEX * cardWidthWithGap + 50;
       setInitialX(calculatedX);
@@ -88,7 +87,7 @@ export default function SoftwareSoftwareServicesCarousel() {
       if (!isCooldown) {
         setCurrentIndex((prev) => prev + 1);
       }
-    }, 2500); // slower for smoother mobile experience
+    }, 2500);
     return () => clearInterval(interval);
   }, [hovering, isCooldown]);
 
@@ -121,7 +120,7 @@ export default function SoftwareSoftwareServicesCarousel() {
 
     const vwPercent = window.innerWidth < 768 ? 0.45 : 0.25;
     const vwWidth = window.innerWidth * vwPercent;
-    const gap = window.innerWidth < 768 ? 10 : 40; // reduced gap for mobile
+    const gap = window.innerWidth < 768 ? 10 : 40;
     const cardWidthWithGap = vwWidth + gap;
     const targetX = -currentIndex * cardWidthWithGap + 50;
 
@@ -150,14 +149,16 @@ export default function SoftwareSoftwareServicesCarousel() {
   return (
     <div className="relative sm:w-full py-2 sm:py-20 flex items-center justify-center">
       <div
-        className="relative flex items-center max-w-[90vw] w-full"
+        className="relative flex items-stretch max-w-[90vw] w-full"
         onMouseEnter={() => !isMobile && setHovering(true)}
         onMouseLeave={() => !isMobile && setHovering(false)}
       >
         {/* Prev button */}
         <button
           onClick={handlePrev}
-          className="z-20 p-2 h-[170px] sm:h-[300px] w-[35px] sm:w-[50px] flex items-center justify-center hover:bg-red-700 bg-[#030303] rounded-l-md border border-[#F2F2F2]/20 transition-all duration-300"
+          className="z-20 absolute -left-2 top-1/2 -translate-y-1/2 w-8 sm:w-12 h-[170px] sm:h-[300px] flex items-center justify-center 
+                     hover:bg-red-700 bg-[#030303]/50 backdrop-blur-md rounded-l-md border border-[#F2F2F2]/20 
+                     transition-all duration-300"
           aria-label="Previous"
           disabled={isCooldown}
         >
@@ -191,14 +192,13 @@ export default function SoftwareSoftwareServicesCarousel() {
               return (
                 <div
                   key={idx}
-                  className="cursor-pointer flex-shrink-0"
+                  className="cursor-pointer flex-shrink-0 h-[170px] sm:h-[300px]"
                   onClick={() => handleCardClick(service)}
                   onMouseEnter={() => !isMobile && setHoveredIndex(idx)}
                   onMouseLeave={() => !isMobile && setHoveredIndex(null)}
                   style={{
                     width: isMobile ? '45vw' : '25vw',
                     minWidth: isMobile ? '45vw' : '25vw',
-                    height: isMobile ? '170px' : '300px',
                   }}
                 >
                   <div
@@ -266,7 +266,9 @@ export default function SoftwareSoftwareServicesCarousel() {
         {/* Next button */}
         <button
           onClick={handleNext}
-          className="z-20 p-2 h-[170px] sm:h-[300px] w-[35px] sm:w-[50px] flex items-center justify-center hover:bg-red-700 bg-[#030303] rounded-r-md border border-[#F2F2F2]/20 transition-all duration-300"
+          className="z-20 absolute -right-2 top-1/2 -translate-y-1/2 w-8 h-[170px] sm:h-[300px] sm:w-12 flex items-center justify-center 
+                     hover:bg-red-700 bg-[#030303]/50 backdrop-blur-md rounded-r-md border border-[#F2F2F2]/20 
+                     transition-all duration-300"
           aria-label="Next"
           disabled={isCooldown}
         >
