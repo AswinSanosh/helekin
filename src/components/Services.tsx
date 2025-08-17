@@ -7,6 +7,8 @@ import ThreedServicesCarousel from "./ThreedCar";
 import { motion } from "framer-motion";
 import Loading from "../app/(root)/loading";
 import { useState, useEffect } from "react";
+import { Box, Computer, Laptop } from "lucide-react";
+import { Cpu } from "lucide-react";
 
 export default function Services() {
   const [isLoading, setIsLoading] = useState(true);
@@ -60,7 +62,7 @@ export default function Services() {
           transition={{ duration: 0.6, ease: "easeOut" }}
           viewport={{ once: false }}
         >
-          <h1 className="text-3xl font-poppins font-semibold text-red-700 mb-2">
+          <h1 className="sm:text-3xl text-2xl font-poppins font-semibold text-red-700 mb-2">
             Explore What We Do Best
           </h1>
 
@@ -96,11 +98,12 @@ export default function Services() {
           transition={{ duration: 0.6, ease: "easeOut", delay: 0.1 }}
           viewport={{ once: false }}
         >
-          <div className="flex justify-between">
+            <div className="flex justify-left ">
+            <Laptop className="w-7 h-7 text-white mr-2" />
             <h1 className="font-poppins sm:text-2xl text-xl text-white">
               Software Services
             </h1>
-          </div>
+            </div>
           <SoftwareServicesCarousel />
         </motion.div>
 
@@ -112,7 +115,8 @@ export default function Services() {
           transition={{ duration: 0.6, ease: "easeOut", delay: 0.1 }}
           viewport={{ once: false }}
         >
-          <div className="flex justify-between">
+          <div className="flex justify-left">
+            <Cpu className="w-7 h-7 text-white mr-2" />
             <h1 className="font-poppins sm:text-2xl text-xl text-white">
               Electronics and Hardware Services
             </h1>
@@ -128,7 +132,8 @@ export default function Services() {
           transition={{ duration: 0.6, ease: "easeOut", delay: 0.1 }}
           viewport={{ once: false }}
         >
-          <div className="flex justify-between">
+          <div className="flex justify-left">
+            <Box className="w-7 h-7 text-white mr-2" />
             <h1 className="font-poppins sm:text-2xl text-xl text-white">
               3D Services
             </h1>
