@@ -25,23 +25,26 @@ export default function SoftwareServicesCarousel() {
   const controls = useAnimation();
 
   // Clone items for infinite scroll illusion
-  const allCards: Service[] = React.useMemo(() => [
-    services[services.length - 5],
-    services[services.length - 4],
-    services[services.length - 3],
-    services[services.length - 2],
-    services[services.length - 1],
-    ...services,
-    ...services,
-    ...services,
-    ...services,
-    ...services,
-    services[0],
-    services[1],
-    services[2],
-    services[3],
-    services[4],
-  ], [services]);
+  const allCards: Service[] = React.useMemo(
+    () => [
+      services[services.length - 5],
+      services[services.length - 4],
+      services[services.length - 3],
+      services[services.length - 2],
+      services[services.length - 1],
+      ...services,
+      ...services,
+      ...services,
+      ...services,
+      ...services,
+      services[0],
+      services[1],
+      services[2],
+      services[3],
+      services[4],
+    ],
+    [services]
+  );
 
   // Preload all images (icons + background images)
   useEffect(() => {
@@ -49,7 +52,7 @@ export default function SoftwareServicesCarousel() {
       ...allCards.map((s) => s.icon),
       ...allCards.map((s) => s.background),
       '/svg/arrow-left.svg',
-      '/svg/arrow-right.svg'
+      '/svg/arrow-right.svg',
     ];
 
     let loadedCount = 0;
@@ -75,21 +78,23 @@ export default function SoftwareServicesCarousel() {
 
   useEffect(() => {
     if (typeof window !== 'undefined') {
-      const vw25 = window.innerWidth * 0.25;
-      const gap = 40;
-      const cardWidthWithGap = vw25 + gap;
+      // Desktop = 25% width | Mobile = 45% width (2 cards visible)
+      const vwPercent = window.innerWidth < 768 ? 0.45 : 0.25;
+      const vwWidth = window.innerWidth * vwPercent;
+      const gap = window.innerWidth < 768 ? 20 : 40; // reduced gap for mobile
+      const cardWidthWithGap = vwWidth + gap;
       const calculatedX = -MIDDLE_INDEX * cardWidthWithGap + 50;
       setInitialX(calculatedX);
     }
   }, []);
 
   useEffect(() => {
-    if (hovering || typeof window === 'undefined' || window.innerWidth < 768) return;
+    if (hovering) return;
     const interval = setInterval(() => {
       if (!isCooldown) {
         setCurrentIndex((prev) => prev + 1);
       }
-    }, 2000);
+    }, 2500); // slower for smoother mobile experience
     return () => clearInterval(interval);
   }, [hovering, isCooldown]);
 
@@ -120,9 +125,10 @@ export default function SoftwareServicesCarousel() {
   useEffect(() => {
     if (initialX === null || typeof window === 'undefined') return;
 
-    const vw25 = window.innerWidth * 0.25;
-    const gap = 40;
-    const cardWidthWithGap = vw25 + gap;
+    const vwPercent = window.innerWidth < 768 ? 0.45 : 0.25;
+    const vwWidth = window.innerWidth * vwPercent;
+    const gap = window.innerWidth < 768 ? 10 : 40; // reduced gap for mobile
+    const cardWidthWithGap = vwWidth + gap;
     const targetX = -currentIndex * cardWidthWithGap + 50;
 
     controls
@@ -146,15 +152,16 @@ export default function SoftwareServicesCarousel() {
   if (!isPageLoaded || initialX === null) return <Loading />;
 
   return (
-    <div className="relative w-full py-20 flex items-center justify-center">
+    <div className="relative sm:w-full py-2 sm:py-20 flex items-center justify-center">
       <div
         className="relative flex items-center max-w-[90vw] w-full"
         onMouseEnter={() => setHovering(true)}
         onMouseLeave={() => setHovering(false)}
       >
+        {/* Prev button */}
         <button
           onClick={handlePrev}
-          className="hidden md:flex z-20 p-2 h-[300px] w-[50px] items-center justify-center hover:bg-red-700 bg-[#030303] rounded-l-md border border-[#F2F2F2]/20 transition-all duration-300"
+          className="z-20 p-2 h-[170px] sm:h-[300px] w-[35px] sm:w-[50px] flex items-center justify-center hover:bg-red-700 bg-[#030303] rounded-l-md border border-[#F2F2F2]/20 transition-all duration-300"
           aria-label="Previous"
           disabled={isCooldown}
         >
@@ -169,6 +176,7 @@ export default function SoftwareServicesCarousel() {
           />
         </button>
 
+        {/* Carousel track */}
         <div className="flex-1 overflow-hidden">
           <motion.div
             className="flex relative"
@@ -176,11 +184,12 @@ export default function SoftwareServicesCarousel() {
             initial={{ x: initialX }}
             style={{
               minWidth: 'max-content',
-              gap: '40px',
+              gap: typeof window !== 'undefined' && window.innerWidth < 768 ? '10px' : '40px',
             }}
           >
             {allCards.map((service, idx) => {
               const isHovered = hoveredIndex === idx;
+              const isMobile = typeof window !== 'undefined' && window.innerWidth < 768;
               return (
                 <div
                   key={idx}
@@ -189,30 +198,28 @@ export default function SoftwareServicesCarousel() {
                   onMouseEnter={() => setHoveredIndex(idx)}
                   onMouseLeave={() => setHoveredIndex(null)}
                   style={{
-                    width: '25vw',
-                    minWidth: '25vw',
-                    height: '300px',
+                    width: isMobile ? '45vw' : '25vw',
+                    minWidth: isMobile ? '45vw' : '25vw',
+                    height: isMobile ? '170px' : '300px',
                   }}
                 >
                   <div
                     className="w-full h-full bg-[#070707]/30 border border-[#F2F2F2]/30 rounded-md backdrop-blur-2xl shadow-2xl shadow-[#030303]/30 text-white text-sm transition-all duration-300 relative"
                     style={
                       isHovered
-                        ? window.innerWidth >= 1024
-                          ? {
-                              backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(${service.background})`,
-                              backgroundSize: 'cover',
-                              backgroundPosition: 'center',
-                              backgroundRepeat: 'no-repeat',
-                              backdropFilter: 'blur(10px)',
-                            }
-                          : {}
+                        ? {
+                            backgroundImage: `linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(${service.background})`,
+                            backgroundSize: 'cover',
+                            backgroundPosition: 'center',
+                            backgroundRepeat: 'no-repeat',
+                            backdropFilter: 'blur(10px)',
+                          }
                         : {}
                     }
                   >
-                    <div className="flex flex-col justify-start w-full h-full lg:px-5 px-2 bg-black/30">
+                    <div className="flex flex-col justify-start w-full h-full px-2 sm:px-5 bg-black/30">
                       <div
-                        className="rounded-full bg-white/10 border border-[#F2F2F2]/30 w-17 h-17 flex justify-center items-center lg:p-2 p-1 lg:mb-2 relative lg:top-5 top-2 lg:left-5 left-2"
+                        className="rounded-full bg-white/10 border border-[#F2F2F2]/30 w-10 h-10 sm:w-17 sm:h-17 flex justify-center items-center p-1 sm:p-2 mb-2 relative top-2 sm:top-5 left-2 sm:left-5"
                         style={
                           isHovered
                             ? {
@@ -225,22 +232,24 @@ export default function SoftwareServicesCarousel() {
                         <Image
                           src={service.icon}
                           alt={service.title}
-                          width={50}
-                          height={50}
-                          className="m-auto h-12 w-12 object-contain p-1"
+                          width={40}
+                          height={40}
+                          className="m-auto h-8 w-8 sm:h-12 sm:w-12 object-contain p-1"
                         />
                       </div>
-                      <div className="text-left relative lg:m-5 m-2 top-5 transition-all duration-300">
+                      <div className="text-left relative m-2 sm:m-5 top-2 sm:top-5 transition-all duration-300">
                         <h1
-                          className={`transition-all duration-500 lg:text-2xl text-lg font-poppins font-semibold ${
-                            isHovered ? 'text-[#ff0033]' : 'text-white'
-                          }`}
+                          className={`transition-all duration-500 font-poppins font-semibold ${
+                            isMobile
+                              ? 'text-sm'
+                              : 'text-lg sm:text-2xl'
+                          } ${isHovered ? 'text-[#ff0033]' : 'text-white'}`}
                         >
                           {service.title}
                         </h1>
                         <p
                           className={`transition-all duration-800 font-poppins font-light ${
-                            isHovered ? 'lg:text-lg text-sm' : 'text-md'
+                            isHovered ? 'text-[0.7rem] md:text-lg' : 'md:text-[0.9rem] text-[0.5rem]'
                           }`}
                         >
                           {service.desc}
@@ -254,9 +263,10 @@ export default function SoftwareServicesCarousel() {
           </motion.div>
         </div>
 
+        {/* Next button */}
         <button
           onClick={handleNext}
-          className="hidden md:flex z-20 p-2 h-[300px] w-[50px] items-center justify-center  hover:bg-red-700 bg-[#030303] rounded-r-md border border-[#F2F2F2]/20 transition-all duration-300"
+          className="z-20 p-2 h-[170px] sm:h-[300px] w-[35px] sm:w-[50px] flex items-center justify-center hover:bg-red-700 bg-[#030303] rounded-r-md border border-[#F2F2F2]/20 transition-all duration-300"
           aria-label="Next"
           disabled={isCooldown}
         >
