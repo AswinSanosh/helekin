@@ -8,7 +8,7 @@ export async function POST(request: Request) {
     service: 'gmail',
     auth: {
       user: 'helekintech@gmail.com', // 👈 Hardcoded Gmail address
-      pass: 'ajrr xjim xpda onmz',   // 👈 App password from Google
+      pass: 'kikv pksy dwsy gngl',   // 👈 App password from Google
     },
   });
 
@@ -16,7 +16,7 @@ export async function POST(request: Request) {
     from: 'helekintech@gmail.com',
     to: 'helekintech@gmail.com', // 👈 Receiver email
     subject: 'New Contact Form Submission',
-    html: `
+    html: ` 
       <p><strong>Name:</strong> ${name}</p>
       <p><strong>Phone:</strong> ${phone}</p>
       <p><strong>Services:</strong> ${services}</p>
