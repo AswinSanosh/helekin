@@ -16,7 +16,7 @@ export async function POST(request: Request) {
     from: 'helekintech@gmail.com',
     to: 'helekintech@gmail.com', // 👈 Receiver email
     subject: 'New Contact Form Submission',
-    html: `
+    html: ` 
       <p><strong>Name:</strong> ${name}</p>
       <p><strong>Phone:</strong> ${phone}</p>
       <p><strong>Services:</strong> ${services}</p>
