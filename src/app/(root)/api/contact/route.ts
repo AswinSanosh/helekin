@@ -8,7 +8,7 @@ export async function POST(request: Request) {
     service: 'gmail',
     auth: {
       user: 'helekintech@gmail.com', // 👈 Hardcoded Gmail address
-      pass: 'ajrr xjim xpda onmz',   // 👈 App password from Google
+      pass: 'kikv pksy dwsy gngl',   // 👈 App password from Google
     },
   });
 
