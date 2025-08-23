@@ -2,8 +2,8 @@
 
 import { Canvas, useLoader } from "@react-three/fiber";
 import { OrbitControls, useGLTF, Bounds, Center } from "@react-three/drei";
-import { OBJLoader } from "three/examples/jsm/loaders/OBJLoader";
-import { STLLoader } from "three/examples/jsm/loaders/STLLoader";
+import { OBJLoader } from "three/examples/jsm/loaders/OBJLoader.js";
+import { STLLoader } from "three/examples/jsm/loaders/STLLoader.js";
 import { useEffect, useState, Suspense } from "react";
 import Loading from "./loading";
 
@@ -34,7 +34,7 @@ export default function ModelViewer({ file }: { file: File | null }) {
           <directionalLight position={[10, 10, 10]} intensity={1} />
           <OrbitControls makeDefault />
 
-          {/* Auto-center, fit, and scale the model with padding */}
+          {/* Auto-center, fit, and scale the model */}
           <Bounds fit clip observe margin={1.2}>
             <Center>
               {file.name.endsWith(".gltf") || file.name.endsWith(".glb") ? (
@@ -57,8 +57,10 @@ function GltfModel({ url }: { url: string }) {
   return <primitive object={scene} />;
 }
 
+import * as THREE from "three";
+
 function StlModel({ url }: { url: string }) {
-  const geometry = useLoader(STLLoader, url);
+  const geometry = useLoader(STLLoader, url) as THREE.BufferGeometry;
   return (
     <mesh geometry={geometry}>
       <meshStandardMaterial color="gray" metalness={0.2} roughness={0.6} />
@@ -68,8 +70,8 @@ function StlModel({ url }: { url: string }) {
 
 function ObjModel({ url }: { url: string }) {
   const obj = useLoader(OBJLoader, url);
-  return <primitive object={obj} />;
+  return <primitive object={obj as object} />;
 }
 
-// Preload GLTF loader so Next.js doesn’t complain
+// ✅ Preload GLTF loader so Next.js doesn’t complain
 useGLTF.preload("/dummy.gltf");
