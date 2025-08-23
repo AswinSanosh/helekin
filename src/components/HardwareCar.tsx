@@ -1,12 +1,12 @@
-'use client';
+"use client";
 
-import React, { useEffect, useState } from 'react';
-import { motion, useAnimation } from 'framer-motion';
-import Image from 'next/image';
-import serviceData from './ServiceList.json';
-import ServiceModal from './Modal';
-import { Service } from '@/types/Service';
-import Loading from '../app/(root)/loading';
+import React, { useEffect, useState } from "react";
+import { motion, useAnimation } from "framer-motion";
+import Image from "next/image";
+import serviceData from "./ServiceList.json";
+import ServiceModal from "./Modal";
+import { Service } from "@/types/Service";
+import Loading from "../app/(root)/loading";
 
 export default function HardwareSoftwareServicesCarousel() {
   const services: Service[] = serviceData.servicesList.electronics_and_hardware;
@@ -45,8 +45,8 @@ export default function HardwareSoftwareServicesCarousel() {
     const imageUrls = [
       ...allCards.map((s) => s.icon),
       ...allCards.map((s) => s.background),
-      '/svg/arrow-left.svg',
-      '/svg/arrow-right.svg',
+      "/svg/arrow-left.svg",
+      "/svg/arrow-right.svg",
     ];
 
     let loadedCount = 0;
@@ -71,7 +71,7 @@ export default function HardwareSoftwareServicesCarousel() {
   }, [allCards]);
 
   useEffect(() => {
-    if (typeof window !== 'undefined') {
+    if (typeof window !== "undefined") {
       const vwPercent = window.innerWidth < 768 ? 0.45 : 0.25;
       const vwWidth = window.innerWidth * vwPercent;
       const gap = window.innerWidth < 768 ? 20 : 40;
@@ -116,7 +116,7 @@ export default function HardwareSoftwareServicesCarousel() {
   };
 
   useEffect(() => {
-    if (initialX === null || typeof window === 'undefined') return;
+    if (initialX === null || typeof window === "undefined") return;
 
     const vwPercent = window.innerWidth < 768 ? 0.45 : 0.25;
     const vwWidth = window.innerWidth * vwPercent;
@@ -127,7 +127,7 @@ export default function HardwareSoftwareServicesCarousel() {
     controls
       .start({
         x: targetX,
-        transition: { duration: 0.6, ease: 'easeInOut' },
+        transition: { duration: 0.6, ease: "easeInOut" },
       })
       .then(() => {
         if (currentIndex >= CARD_COUNT * 2 + 1) {
@@ -144,7 +144,7 @@ export default function HardwareSoftwareServicesCarousel() {
 
   if (!isPageLoaded || initialX === null) return <Loading />;
 
-  const isMobile = typeof window !== 'undefined' && window.innerWidth < 768;
+  const isMobile = typeof window !== "undefined" && window.innerWidth < 768;
 
   return (
     <div className="relative sm:w-full py-2 sm:py-20 flex items-center justify-center">
@@ -156,8 +156,8 @@ export default function HardwareSoftwareServicesCarousel() {
         {/* Prev button */}
         <button
           onClick={handlePrev}
-          className="z-20 absolute -left-2 top-1/2 -translate-y-1/2 w-8 sm:w-12 h-[170px] sm:h-[300px] flex items-center justify-center 
-                     hover:bg-red-700 bg-[#030303]/50 backdrop-blur-md rounded-l-md border border-[#F2F2F2]/20 
+          className="z-20 absolute -left-2 top-1/2 -translate-y-1/2 w-8 sm:w-12 h-[170px] sm:h-[300px] flex items-center justify-center
+                     hover:bg-red-700 bg-[#030303]/50 backdrop-blur-md rounded-l-md border border-[#F2F2F2]/20
                      transition-all duration-300"
           aria-label="Previous"
           disabled={isCooldown}
@@ -180,11 +180,11 @@ export default function HardwareSoftwareServicesCarousel() {
             animate={controls}
             initial={{ x: initialX }}
             style={{
-              minWidth: 'max-content',
+              minWidth: "max-content",
               gap:
-                typeof window !== 'undefined' && window.innerWidth < 768
-                  ? '10px'
-                  : '40px',
+                typeof window !== "undefined" && window.innerWidth < 768
+                  ? "10px"
+                  : "40px",
             }}
           >
             {allCards.map((service, idx) => {
@@ -197,8 +197,8 @@ export default function HardwareSoftwareServicesCarousel() {
                   onMouseEnter={() => !isMobile && setHoveredIndex(idx)}
                   onMouseLeave={() => !isMobile && setHoveredIndex(null)}
                   style={{
-                    width: isMobile ? '45vw' : '25vw',
-                    minWidth: isMobile ? '45vw' : '25vw',
+                    width: isMobile ? "45vw" : "25vw",
+                    minWidth: isMobile ? "45vw" : "25vw",
                   }}
                 >
                   <div
@@ -207,10 +207,10 @@ export default function HardwareSoftwareServicesCarousel() {
                       isHovered
                         ? {
                             backgroundImage: `linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(${service.background})`,
-                            backgroundSize: 'cover',
-                            backgroundPosition: 'center',
-                            backgroundRepeat: 'no-repeat',
-                            backdropFilter: 'blur(10px)',
+                            backgroundSize: "cover",
+                            backgroundPosition: "center",
+                            backgroundRepeat: "no-repeat",
+                            backdropFilter: "blur(10px)",
                           }
                         : {}
                     }
@@ -221,8 +221,8 @@ export default function HardwareSoftwareServicesCarousel() {
                         style={
                           isHovered
                             ? {
-                                backgroundColor: '#A50424',
-                                backdropFilter: 'blur(10px)',
+                                backgroundColor: "#A50424",
+                                backdropFilter: "blur(10px)",
                               }
                             : {}
                         }
@@ -238,18 +238,16 @@ export default function HardwareSoftwareServicesCarousel() {
                       <div className="text-left relative m-2 sm:m-5 top-2 sm:top-5 transition-all duration-300">
                         <h1
                           className={`transition-all duration-500 font-poppins font-semibold ${
-                            isMobile ? 'text-sm' : 'text-lg sm:text-2xl'
-                          } ${
-                            isHovered ? 'text-[#ff0033]' : 'text-white'
-                          }`}
+                            isMobile ? "text-sm" : "text-lg sm:text-2xl"
+                          } ${isHovered ? "text-[#ff0033]" : "text-white"}`}
                         >
                           {service.title}
                         </h1>
                         <p
                           className={`transition-all duration-800 font-poppins font-light ${
                             isHovered
-                              ? 'text-[0.7rem] md:text-lg'
-                              : 'md:text-[0.9rem] text-[0.5rem]'
+                              ? "text-[0.7rem] md:text-lg"
+                              : "md:text-[0.9rem] text-[0.5rem]"
                           }`}
                         >
                           {service.desc}
@@ -266,9 +264,7 @@ export default function HardwareSoftwareServicesCarousel() {
         {/* Next button */}
         <button
           onClick={handleNext}
-          className="z-20 absolute -right-2 top-1/2 -translate-y-1/2 w-8 h-[170px] sm:h-[300px] sm:w-12 flex items-center justify-center 
-                     hover:bg-red-700 bg-[#030303]/50 backdrop-blur-md rounded-r-md border border-[#F2F2F2]/20 
-                     transition-all duration-300"
+          className="z-20 absolute -right-2 top-1/2 -translate-y-1/2 w-8 h-[170px] sm:h-[300px] sm:w-12 flex items-center justify-center hover:bg-red-700 bg-[#030303]/50 backdrop-blur-md rounded-r-md border border-[#F2F2F2]/20 transition-all duration-300"
           aria-label="Next"
           disabled={isCooldown}
         >
