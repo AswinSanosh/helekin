@@ -7,14 +7,14 @@ import ThreedServicesCarousel from "./ThreedCar";
 import { motion } from "framer-motion";
 import Loading from "../app/(root)/loading";
 import { useState, useEffect } from "react";
-import { Box, Computer, Laptop } from "lucide-react";
+import { Box, Laptop } from "lucide-react";
 import { Cpu } from "lucide-react";
 
 export default function Services() {
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
-    // Collect static background + all carousel images
+    // Array of image URLs
     const imageUrls: string[] = [
       "/images-webp/fafa.webp",
     ];
