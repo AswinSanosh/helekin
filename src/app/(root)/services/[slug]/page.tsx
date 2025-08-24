@@ -3,6 +3,7 @@ import { getAllServices, getServiceBySlug } from "@/lib/getServiceData";
 import type { Metadata } from "next";
 import MotionServicePage from "../../../../components/MotionServicePage"; // ✅ client component
 
+// ✅ Correct props type for Next.js App Router
 type Props = {
   params: { slug: string };
 };
@@ -20,7 +21,7 @@ export async function generateStaticParams() {
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
-  const { slug } = params; // ✅ no need for await
+  const { slug } = params; // ✅ synchronous, no await
   const service = await getServiceBySlug(slug);
 
   if (!service) {
@@ -36,12 +37,11 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 }
 
 export default async function ServicePage({ params }: Props) {
-  const { slug } = params; // ✅ no need for await
+  const { slug } = params; // ✅ synchronous
   const service = await getServiceBySlug(slug);
 
   if (!service) return notFound();
 
-  // ✅ Pass service data to client component
   return (
     <div>
       <MotionServicePage service={service} />
