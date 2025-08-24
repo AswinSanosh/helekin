@@ -55,16 +55,16 @@ export default function Hero() {
       <div className="text-left p-10 pb-20 lg:pb-10 px-5 md:px-10 text-white flex flex-col justify-end items-start w-full md:w-2/3 sm:pl-5 h-full">
         <div>
           {/* Main Heading */}
-          <h1 className="text-white font-regular leading-tight text-[clamp(4rem,4vw,3rem)]">
+          <h1 className="text-white font-regular leading-tight text-[clamp(2rem,3.5vw,4rem)]">
             Digital acceleration services
           </h1>
 
           {/* Animated Subheading */}
-          <div className="flex sm:flex-nowrap max-w-[90vw] sm:max-w-[50vw] max-h-[50vh]">
-            <h1 className="text-white font-regular text-[clamp(4rem,3.5vw,2.5rem)] mb-4 flex-shrink-0">
+          <div className="flex flex-wrap max-w-[90vw] sm:max-w-[50vw]">
+            <h1 className="text-white font-regular text-[clamp(2rem,3.5vw,4rem)] mb-4">
               for&nbsp;
             </h1>
-            <h1 className="text-red-700 font-regular text-[clamp(4rem,3.5vw,2.5rem)] mb-4 flex-shrink-0">
+            <h1 className="text-red-700 font-regular text-[clamp(2rem,3.5vw,4rem)] mb-4">
               {displayedText}
             </h1>
           </div>
