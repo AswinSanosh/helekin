@@ -14,7 +14,7 @@ export async function generateStaticParams() {
   return services.map((service) => {
     const slug = service.link?.split('/').pop();
     return {
-      slug: slug || '',
+      slug: slug || '3d-printing-polishing',
     };
   });
 }
