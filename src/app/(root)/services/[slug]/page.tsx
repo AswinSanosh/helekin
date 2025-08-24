@@ -2,8 +2,6 @@ import { notFound } from 'next/navigation';
 import { getAllServices, getServiceBySlug } from '@/lib/getServiceData';
 import type { Metadata } from 'next';
 import MotionServicePage from '../../../../components/MotionServicePage'; // ✅ client component
-import Script from 'next/script';
-import Loading from './loading';
 
 type Props = {
   params: Promise<{ slug: string }>;
