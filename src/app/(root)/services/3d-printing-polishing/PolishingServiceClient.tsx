@@ -4,9 +4,9 @@ import Link from "next/link";
 import Accordion from "@/components/GenericAccordion";
 import { motion } from "framer-motion";
 import Loading from "@/app/(root)/loading";
-import { useEffect, useState, Suspense } from "react";
+import { useEffect, useState } from "react";
 import { FileRejection, useDropzone, DropzoneOptions } from "react-dropzone";
-import ModelViewer from "@/app/(root)/services/3d-printing-polishing/ModelViewer/ModelViewer";
+import ModelViewer from "@/app/(root)/services/3d-printing-polishing/ModelViewer";
 
 // Define types
 type FAQItem = {
@@ -31,6 +31,15 @@ type ServiceData = {
   link: string;
 };
 
+interface UploadResult {
+  gcode_url: string;
+  gcode_filename: string;
+  estimated_time: string;
+  filament_used_mm: string;
+  filament_used_g: string;
+  error?: string;
+}
+
 export default function PolishingServiceClient({
   service,
 }: {
@@ -39,6 +48,11 @@ export default function PolishingServiceClient({
   const [isLoading, setIsLoading] = useState(true);
   const [uploadedFile, setUploadedFile] = useState<File | null>(null);
   const [uploadError, setUploadError] = useState<string | null>(null);
+
+  // New states for slicing results
+  const [loading, setLoading] = useState<boolean>(false);
+  const [result, setResult] = useState<UploadResult | null>(null);
+  const [error, setError] = useState<string | null>(null);
 
   // Preload images
   useEffect(() => {
@@ -74,6 +88,7 @@ export default function PolishingServiceClient({
     });
   }, [service]);
 
+  // Dropzone options
   const dropzoneOptions: DropzoneOptions = {
     accept: {
       "model/stl": [".stl"],
@@ -84,9 +99,12 @@ export default function PolishingServiceClient({
     maxSize: 100 * 1024 * 1024, // 100MB
     onDrop: (acceptedFiles: File[], rejectedFiles: FileRejection[]) => {
       setUploadError(null);
+      setResult(null);
+      setError(null);
+
       if (rejectedFiles.length > 0) {
         setUploadError(
-          "File too large or unsupported type. Max 100MB, .stl/.obj only."
+          "File too large or unsupported type. Max 100MB, .stl/.obj/.gltf/.glb only."
         );
       }
       if (acceptedFiles.length > 0) {
@@ -97,6 +115,60 @@ export default function PolishingServiceClient({
 
   const { getRootProps, getInputProps, isDragActive } =
     useDropzone(dropzoneOptions);
+
+  // Handle Upload to backend
+  const handleUpload = async () => {
+    if (!uploadedFile) {
+      console.warn("No file selected before upload");
+      return;
+    }
+
+    setLoading(true);
+    setError(null);
+    setResult(null);
+
+    const formData = new FormData();
+    formData.append("file", uploadedFile);
+
+    try {
+      const res = await fetch("https://77eaa56ef0ae.ngrok-free.app/upload-model/", {
+        method: "POST",
+        body: formData,
+      });
+
+      let data: UploadResult | null = null;
+      try {
+        data = await res.json();
+      } catch (jsonErr) {
+        console.error("Failed to parse JSON:", jsonErr);
+        const text = await res.text();
+        console.log("Raw response text:", text);
+      }
+
+      if (!res.ok) {
+        setError(data?.error || `Upload failed (status ${res.status})`);
+      } else if (data) {
+        setResult(data);
+      }
+    } catch (err) {
+      console.error("Fetch error:", err);
+      setError("Upload failed. Try again.");
+    } finally {
+      setLoading(false);
+    }
+  };
+
+  // Handle G-code download
+  const handleDownload = () => {
+    if (!result?.gcode_url) {
+      console.warn("Download attempted without gcode_url");
+      return;
+    }
+    const link = document.createElement("a");
+    link.href = result.gcode_url;
+    link.download = result.gcode_filename;
+    link.click();
+  };
 
   if (isLoading) {
     return <Loading />;
@@ -171,8 +243,9 @@ export default function PolishingServiceClient({
                     "Drop the 3D file here..."
                   ) : (
                     <>
-                      Drag & drop your <strong>.STL</strong> or{" "}
-                      <strong>.OBJ</strong> file here, or click to browse
+                      Drag & drop your <strong>.STL</strong>,{" "}
+                      <strong>.OBJ</strong> or <strong>.GLTF</strong> file here,
+                      or click to browse
                     </>
                   )}
                 </p>
@@ -180,15 +253,62 @@ export default function PolishingServiceClient({
               </div>
 
               {uploadError && (
-                <p className="text-red-400 text-sm mt-3 text-center">
+                <p className="text-red-400 justifiy-center mt-3 text-center text-base sm:text-lg font-light font-poppins">
                   {uploadError}
                 </p>
               )}
 
-              {/* 3D Model Preview with Suspense */}
-              <div className="mt-6 h-full w-full">
+              {/* 3D Model Preview */}
+              {uploadedFile && (
+                <div className="mt-6 h-full w-full justify-ended items-end flex flex-col z-50">
                   <ModelViewer file={uploadedFile} />
-              </div>
+                  <button
+                    onClick={handleUpload}
+                    className="mt-4 bg-red-900 text-white px-6 py-3 rounded-lg hover:bg-white hover:text-red-900 transition-colors w-full text-base sm:text-lg font-light font-poppins"
+                    disabled={loading}
+                  >
+                    {loading ? "Slicing..." : "Slice"}
+                  </button>
+                  {/* Results */}
+                  {error && (
+                    <p className="text-red-500 mt-4 text-center">{error}</p>
+                  )}
+
+                  {result && !result.error && (
+                    <motion.div
+                      initial="hidden"
+                      whileInView="visible"
+                      transition={{ duration: 0.8 }}
+                      variants={fadeInUp}
+                      className="border border-white/20 rounded-lg bg-black/30 w-full my-10 p-5"
+                    >
+                      <p>
+                        <strong>Estimated Time:</strong> {result.estimated_time}
+                      </p>
+                      <p>
+                        <strong>Filament Used (mm):</strong>{" "}
+                        {result.filament_used_mm}
+                      </p>
+                      <p>
+                        <strong>Filament Used (g):</strong>{" "}
+                        {result.filament_used_g}
+                      </p>
+                      <button
+                        onClick={handleDownload}
+                        className="mt-4 bg-red-900 text-white px-4 py-2 rounded hover:bg-green-500 transition-colors"
+                      >
+                        Download G-code
+                      </button>
+                    </motion.div>
+                  )}
+
+                  {result?.error && (
+                    <p className="text-red-500 mt-4 text-center">
+                      {result.error}
+                    </p>
+                  )}
+                </div>
+              )}
             </motion.div>
           </div>
         </div>
