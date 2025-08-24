@@ -180,22 +180,22 @@ export default function PolishingServiceClient({
   };
 
   return (
-    <div className="flex flex-col">
+    <div className="flex flex-col ">
       {/* Hero Section */}
       <div
-        className="background relative min-h-[90vh] sm:min-h-180 w-full bg-cover bg-center bg-no-repeat z-20 flex items-center py-10"
+        className="background relative min-h-[90vh] sm:min-h-180 w-full bg-cover bg-center bg-no-repeat z-20 flex flex-col items-center py-10 pt-30 sm:pt-10"
         style={{ backgroundImage: `url(${service.background})` }}
       >
         <div className="absolute inset-0 bg-black/70 backdrop-blur-sm z-0" />
-        <div className="relative z-10 text-white w-full px-6 sm:px-10 flex justify-between items-center">
-          <div className="flex flex-col items-center sm:items-start mt-8 sm:mt-10 gap-4 w-full ">
+        <div className="relative z-10 text-white w-full px-3 sm:px-10 flex flex-col sm:flex-row justify-between items-center m-auto">
+          <div className="flex flex-col items-start mt-8 sm:mt-10 gap-4 w-full ">
             <motion.div
               initial="hidden"
               whileInView="visible"
               viewport={{ once: false }}
               transition={{ duration: 0.8 }}
               variants={fadeInUp}
-              className="title mb-4 flex flex-nowrap sm:flex-row gap-3 w-1/3"
+              className="title mb-4 flex flex-col sm:flex-row gap-3 w-1/3"
             >
               <h1 className="text-4xl sm:text-6xl font-light font-poppins">
                 {service.title.split(" ")[0]}
