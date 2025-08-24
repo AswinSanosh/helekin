@@ -6,7 +6,7 @@ import { motion } from "framer-motion";
 import Loading from "@/app/(root)/loading";
 import { useEffect, useState } from "react";
 import { FileRejection, useDropzone, DropzoneOptions } from "react-dropzone";
-import ModelViewer from "@/app/(root)/services/3d-printing-polishing/ModelViewer";
+import ModelViewer from "./ModelViewer";
 
 // Define types
 type FAQItem = {

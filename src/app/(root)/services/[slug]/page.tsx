@@ -1,7 +1,7 @@
-import { notFound } from 'next/navigation';
-import { getAllServices, getServiceBySlug } from '@/lib/getServiceData';
-import type { Metadata } from 'next';
-import MotionServicePage from '../../../../components/MotionServicePage'; // ✅ client component
+import { notFound, redirect } from "next/navigation";
+import { getAllServices, getServiceBySlug } from "@/lib/getServiceData";
+import type { Metadata } from "next";
+import MotionServicePage from "../../../../components/MotionServicePage"; // ✅ client component
 
 type Props = {
   params: Promise<{ slug: string }>;
@@ -12,9 +12,9 @@ export const dynamicParams = true;
 export async function generateStaticParams() {
   const services = getAllServices();
   return services.map((service) => {
-    const slug = service.link?.split('/').pop();
+    const slug = service.link?.split("/").pop();
     return {
-      slug: slug || '',
+      slug: slug || "",
     };
   });
 }
@@ -25,19 +25,23 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
   if (!service) {
     return {
-      title: 'Service Not Found | Helekin',
+      title: "Service Not Found | Helekin",
     };
   }
 
   return {
     title: `${service.title} | Helekin`,
-    description: service['about-desc'],
+    description: service["about-desc"],
   };
 }
 
 export default async function ServicePage({ params }: Props) {
   const { slug } = await params;
   const service = await getServiceBySlug(slug);
+
+  if (slug === "3d-printing-polishing") {
+    redirect("/services/3d-printing-polishing-static");
+  }
 
   if (!service) return notFound();
 
