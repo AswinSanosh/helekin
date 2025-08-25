@@ -4,11 +4,10 @@ import Link from "next/link";
 import Accordion from "@/components/GenericAccordion";
 import { motion } from "framer-motion";
 import Loading from "@/app/(root)/loading";
-import { useEffect, useState } from "react";
+import { useEffect, useState, ChangeEvent, FormEvent } from "react";
 import { FileRejection, useDropzone, DropzoneOptions } from "react-dropzone";
 import ModelViewer from "./ModelViewer";
 
-// Define types
 type FAQItem = {
   question: string;
   answer: string;
@@ -38,6 +37,7 @@ interface UploadResult {
   filament_used_mm: string;
   filament_used_g: string;
   error?: string;
+  logs?: string[];
 }
 
 export default function PolishingServiceClient({
@@ -47,12 +47,13 @@ export default function PolishingServiceClient({
 }) {
   const [isLoading, setIsLoading] = useState(true);
   const [uploadedFile, setUploadedFile] = useState<File | null>(null);
-  const [uploadError, setUploadError] = useState<string | null>(null);
 
-  // New states for slicing results
+  // slicing states
   const [loading, setLoading] = useState<boolean>(false);
   const [result, setResult] = useState<UploadResult | null>(null);
   const [error, setError] = useState<string | null>(null);
+  const [uploadProgress, setUploadProgress] = useState<number>(0);
+  const [isProcessing, setIsProcessing] = useState<boolean>(false);
 
   // Preload images
   useEffect(() => {
@@ -61,29 +62,17 @@ export default function PolishingServiceClient({
       ...(service["whatweoffer-images"] || []),
       ...(service["featured-projects-images"] || []),
     ];
-
     let loadedCount = 0;
-    const totalImages = imageUrls.length;
-
-    if (totalImages === 0) {
+    if (imageUrls.length === 0) {
       setIsLoading(false);
       return;
     }
-
     imageUrls.forEach((src) => {
       const img = new Image();
       img.src = src;
-      img.onload = () => {
+      img.onload = img.onerror = () => {
         loadedCount++;
-        if (loadedCount === totalImages) {
-          setIsLoading(false);
-        }
-      };
-      img.onerror = () => {
-        loadedCount++;
-        if (loadedCount === totalImages) {
-          setIsLoading(false);
-        }
+        if (loadedCount === imageUrls.length) setIsLoading(false);
       };
     });
   }, [service]);
@@ -92,76 +81,97 @@ export default function PolishingServiceClient({
   const dropzoneOptions: DropzoneOptions = {
     accept: {
       "model/stl": [".stl"],
-      "model/obj": [".obj"],
-      "model/gltf": [".gltf", ".glb"],
+      "model/3mf": [".3mf"],
     },
     maxFiles: 1,
-    maxSize: 100 * 1024 * 1024, // 100MB
+    maxSize: 50 * 1024 * 1024,
     onDrop: (acceptedFiles: File[], rejectedFiles: FileRejection[]) => {
-      setUploadError(null);
       setResult(null);
       setError(null);
-
       if (rejectedFiles.length > 0) {
-        setUploadError(
-          "File too large or unsupported type. Max 100MB, .stl/.obj/.gltf/.glb only."
-        );
+        setError("File too large or unsupported. Max 50MB, .stl/.3mf only.");
       }
       if (acceptedFiles.length > 0) {
         setUploadedFile(acceptedFiles[0]);
       }
     },
   };
-
   const { getRootProps, getInputProps, isDragActive } =
     useDropzone(dropzoneOptions);
 
-  // Handle Upload to backend
-  const handleUpload = async () => {
+  // Upload with progress
+  const handleUpload = async (e: FormEvent) => {
+    e.preventDefault();
     if (!uploadedFile) {
-      console.warn("No file selected before upload");
+      setError("Please select a file first");
       return;
     }
 
     setLoading(true);
     setError(null);
     setResult(null);
-
-    const formData = new FormData();
-    formData.append("file", uploadedFile);
+    setUploadProgress(0);
+    setIsProcessing(false);
 
     try {
-      const res = await fetch("https://77eaa56ef0ae.ngrok-free.app/upload-model/", {
-        method: "POST",
-        body: formData,
+      const formData = new FormData();
+      const cleanFilename = uploadedFile.name.replace(/[^a-zA-Z0-9.-]/g, "_");
+      formData.append("file", uploadedFile, cleanFilename);
+
+      const xhr = new XMLHttpRequest();
+      const uploadPromise = new Promise<UploadResult>((resolve, reject) => {
+        xhr.upload.addEventListener("progress", (event) => {
+          if (event.lengthComputable) {
+            const progress = Math.round((event.loaded / event.total) * 100);
+            setUploadProgress(progress);
+            if (progress === 100) {
+              setIsProcessing(true);
+            }
+          }
+        });
+
+        xhr.addEventListener("load", () => {
+          try {
+            const data = JSON.parse(xhr.responseText);
+            if (xhr.status >= 200 && xhr.status < 300) {
+              resolve(data);
+            } else {
+              reject(
+                new Error(data.error || `Upload failed (status ${xhr.status})`)
+              );
+            }
+          } catch {
+            reject(new Error("Invalid response from server"));
+          }
+        });
+
+        xhr.addEventListener("error", () => {
+          reject(new Error("Network error. Check connection."));
+        });
+        xhr.addEventListener("timeout", () => {
+          reject(new Error("Upload timeout. Try again."));
+        });
+
+        xhr.open("POST", "http://15.206.69.185/upload-model/");
+        xhr.timeout = 300000;
+        xhr.send(formData);
       });
 
-      let data: UploadResult | null = null;
-      try {
-        data = await res.json();
-      } catch (jsonErr) {
-        console.error("Failed to parse JSON:", jsonErr);
-        const text = await res.text();
-        console.log("Raw response text:", text);
-      }
-
-      if (!res.ok) {
-        setError(data?.error || `Upload failed (status ${res.status})`);
-      } else if (data) {
-        setResult(data);
-      }
-    } catch (err) {
-      console.error("Fetch error:", err);
-      setError("Upload failed. Try again.");
+      const data = await uploadPromise;
+      if (data.error) setError(data.error);
+      else setResult(data);
+    } catch (err: any) {
+      setError(err.message || "Upload failed. Try again.");
     } finally {
       setLoading(false);
+      setUploadProgress(0);
+      setIsProcessing(false);
     }
   };
 
-  // Handle G-code download
   const handleDownload = () => {
     if (!result?.gcode_url) {
-      console.warn("Download attempted without gcode_url");
+      setError("No G-code file available for download");
       return;
     }
     const link = document.createElement("a");
@@ -170,9 +180,13 @@ export default function PolishingServiceClient({
     link.click();
   };
 
-  if (isLoading) {
-    return <Loading />;
-  }
+  const getLoadingText = () => {
+    if (isProcessing) return "Processing model...";
+    if (uploadProgress > 0) return `Uploading... ${uploadProgress}%`;
+    return "Initializing...";
+  };
+
+  if (isLoading) return <Loading />;
 
   const fadeInUp = {
     hidden: { opacity: 0, y: 30 },
@@ -192,7 +206,6 @@ export default function PolishingServiceClient({
             <motion.div
               initial="hidden"
               whileInView="visible"
-              viewport={{ once: false }}
               transition={{ duration: 0.8 }}
               variants={fadeInUp}
               className="title mb-4 flex flex-col sm:flex-row gap-3 w-1/3"
@@ -200,14 +213,13 @@ export default function PolishingServiceClient({
               <h1 className="text-4xl sm:text-6xl font-light font-poppins">
                 {service.title.split(" ")[0]}
               </h1>
-              <h1 className="text-4xl sm:text-6xl text-red-700 font-light font-poppins text-nowrap">
+              <h1 className="text-4xl sm:text-6xl text-red-900 font-light font-poppins text-nowrap">
                 {service.title.split(" ").slice(1).join(" ")}
               </h1>
             </motion.div>
             <motion.div
               initial="hidden"
               whileInView="visible"
-              viewport={{ once: false }}
               transition={{ duration: 0.8, delay: 0.1 }}
               variants={fadeInUp}
               className="desc w-full sm:w-3/4"
@@ -217,100 +229,104 @@ export default function PolishingServiceClient({
               </p>
             </motion.div>
           </div>
-          <div className="flex flex-col sm:flex-row gap-6 sm:gap-10 mt-8 sm:mt-10 w-full m-auto">
-            {/* 3D File Upload & Preview */}
-            <motion.div
-              initial="hidden"
-              whileInView="visible"
-              viewport={{ once: false }}
-              transition={{ duration: 0.8, delay: 0.2 }}
-              variants={fadeInUp}
-              className="mt-8 sm:mt-10"
-            >
+
+          {/* Upload + Slice Box */}
+          <motion.div
+            initial="hidden"
+            whileInView="visible"
+            transition={{ duration: 0.8, delay: 0.2 }}
+            variants={fadeInUp}
+            className="mt-8 sm:mt-10 w-full max-w-md bg-black/60 p-6 rounded-lg"
+          >
+            <form onSubmit={handleUpload} className="space-y-4">
               <div
                 {...getRootProps()}
-                className={`p-20 border-2 border-dashed rounded-lg text-center cursor-pointer transition-colors w-full
-                ${
+                className={`p-10 border-2 border-dashed rounded-lg text-center cursor-pointer transition-colors ${
                   isDragActive
-                    ? "border-red-500 bg-red-500/10"
+                    ? "border-red-900 bg-red-900/20"
                     : "border-white/50 hover:border-white/70"
-                }
-              `}
+                }`}
               >
                 <input {...getInputProps()} />
-                <p className="text-white/90 text-sm sm:text-base">
-                  {isDragActive ? (
-                    "Drop the 3D file here..."
-                  ) : (
-                    <>
-                      Drag & drop your <strong>.STL</strong>,{" "}
-                      <strong>.OBJ</strong> or <strong>.GLTF</strong> file here,
-                      or click to browse
-                    </>
-                  )}
+                <p className="text-white/90 text-sm">
+                  {isDragActive
+                    ? "Drop the file here..."
+                    : "Drag & drop .STL or .3MF, or click"}
                 </p>
-                <p className="text-white/60 text-xs mt-2">Max 100MB</p>
+                <p className="text-white/60 text-xs mt-2">Max 50MB</p>
               </div>
 
-              {uploadError && (
-                <p className="text-red-400 justifiy-center mt-3 text-center text-base sm:text-lg font-light font-poppins">
-                  {uploadError}
+              {uploadedFile && (
+                <p className="text-white/80 text-sm mt-2">
+                  Selected: {uploadedFile.name} (
+                  {Math.round((uploadedFile.size / 1024 / 1024) * 100) / 100}{" "}
+                  MB)
                 </p>
               )}
 
-              {/* 3D Model Preview */}
-              {uploadedFile && (
-                <div className="mt-6 h-full w-full justify-ended items-end flex flex-col z-50">
-                  <ModelViewer file={uploadedFile} />
-                  <button
-                    onClick={handleUpload}
-                    className="mt-4 bg-red-900 text-white px-6 py-3 rounded-lg hover:bg-white hover:text-red-900 transition-colors w-full text-base sm:text-lg font-light font-poppins"
-                    disabled={loading}
-                  >
-                    {loading ? "Slicing..." : "Slice"}
-                  </button>
-                  {/* Results */}
-                  {error && (
-                    <p className="text-red-500 mt-4 text-center">{error}</p>
-                  )}
-
-                  {result && !result.error && (
-                    <motion.div
-                      initial="hidden"
-                      whileInView="visible"
-                      transition={{ duration: 0.8 }}
-                      variants={fadeInUp}
-                      className="border border-white/20 rounded-lg bg-black/30 w-full my-10 p-5"
-                    >
-                      <p>
-                        <strong>Estimated Time:</strong> {result.estimated_time}
-                      </p>
-                      <p>
-                        <strong>Filament Used (mm):</strong>{" "}
-                        {result.filament_used_mm}
-                      </p>
-                      <p>
-                        <strong>Filament Used (g):</strong>{" "}
-                        {result.filament_used_g}
-                      </p>
-                      <button
-                        onClick={handleDownload}
-                        className="mt-4 bg-red-900 text-white px-4 py-2 rounded hover:bg-green-500 transition-colors"
-                      >
-                        Download G-code
-                      </button>
-                    </motion.div>
-                  )}
-
-                  {result?.error && (
-                    <p className="text-red-500 mt-4 text-center">
-                      {result.error}
-                    </p>
-                  )}
+              <button
+                type="submit"
+                disabled={loading || !uploadedFile}
+                className={`w-full py-3 px-4 rounded-lg text-white font-medium transition-colors ${
+                  loading
+                    ? "bg-gray-500 cursor-not-allowed"
+                    : "bg-red-900 hover:bg-white hover:text-red-900"
+                }`}
+              >
+                {loading ? getLoadingText() : "Upload & Slice"}
+              </button>
+            </form>
+            <div className="mt-6">
+              <ModelViewer file={uploadedFile} />
+            </div>
+            {/* Progress */}
+            {loading && (
+              <div className="mt-4">
+                <div className="flex justify-between text-sm text-white/80 mb-1">
+                  <span>
+                    {isProcessing ? "Server Processing" : "Upload Progress"}
+                  </span>
+                  <span>
+                    {isProcessing ? "Please wait..." : `${uploadProgress}%`}
+                  </span>
                 </div>
-              )}
-            </motion.div>
-          </div>
+                <div className="w-full bg-gray-700 rounded-full h-2">
+                  <div
+                    className={`h-2 rounded-full transition-all duration-300 ${
+                      isProcessing ? "bg-red-900 animate-pulse" : "bg-red-900"
+                    }`}
+                    style={{
+                      width: isProcessing ? "100%" : `${uploadProgress}%`,
+                    }}
+                  />
+                </div>
+              </div>
+            )}
+
+            {/* Error */}
+            {error && (
+              <p className="text-red-500 mt-4 text-sm text-center">{error}</p>
+            )}
+
+            {/* Success */}
+            {result && !result.error && (
+              <div className="mt-6 p-4 bg-black/70 border border-red-900 rounded-lg">
+                <h3 className="text-lg font-semibold text-red-900 mb-3">
+                  Slicing Complete!
+                </h3>
+                <p>Estimated Time: {result.estimated_time}</p>
+                <p>Filament Length: {result.filament_used_mm}</p>
+                <p>Filament Weight: {result.filament_used_g}</p>
+
+                <button
+                  onClick={handleDownload}
+                  className="mt-4 w-full bg-red-900 text-white py-2 px-4 rounded hover:bg-white hover:text-red-900 transition-colors"
+                >
+                  Download G-code
+                </button>
+              </div>
+            )}
+          </motion.div>
         </div>
       </div>
 
