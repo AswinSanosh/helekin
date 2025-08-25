@@ -152,7 +152,7 @@ export default function PolishingServiceClient({
           reject(new Error("Upload timeout. Try again."));
         });
 
-        xhr.open("POST", "http://15.206.69.185/upload-model/");
+        xhr.open("POST", "http://3.6.238.100/upload-model/");
         xhr.timeout = 300000;
         xhr.send(formData);
       });
@@ -272,6 +272,8 @@ export default function PolishingServiceClient({
                 type="submit"
                 disabled={loading || !uploadedFile}
                 className={`w-full py-3 px-4 rounded-lg text-white font-medium transition-colors ${
+                  uploadedFile ? "block" : "hidden"
+                } ${
                   loading
                     ? "bg-gray-500 cursor-not-allowed"
                     : "bg-red-900 hover:bg-white hover:text-red-900"
