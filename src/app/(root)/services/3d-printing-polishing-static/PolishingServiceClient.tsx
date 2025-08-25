@@ -206,13 +206,13 @@ export default function PolishingServiceClient({
       >
         <div className="absolute inset-0 bg-black/70 backdrop-blur-sm z-0" />
         <div className="relative z-10 text-white w-full px-3 sm:px-10 flex flex-col sm:flex-row justify-between items-center m-auto">
-          <div className="flex flex-col items-start mt-8 sm:mt-10 gap-4 w-full ">
+          <div className="flex flex-col items-start mt-8 sm:mt-10 gap-4 w-1/2 ">
             <motion.div
               initial="hidden"
               whileInView="visible"
               transition={{ duration: 0.8 }}
               variants={fadeInUp}
-              className="title mb-4 flex flex-col sm:flex-row gap-3 w-1/3"
+              className="title mb-4 flex flex-col sm:flex-row gap-3 w-1/2"
             >
               <h1 className="text-4xl sm:text-6xl font-light font-poppins">
                 {service.title.split(" ")[0]}
@@ -240,7 +240,7 @@ export default function PolishingServiceClient({
             whileInView="visible"
             transition={{ duration: 0.8, delay: 0.2 }}
             variants={fadeInUp}
-            className="mt-8 sm:mt-10 w-full max-w-md bg-black/60 p-6 rounded-lg"
+            className="mt-8 sm:mt-10 w-1/2 bg-black/60 p-6 rounded-lg"
           >
             <form onSubmit={handleUpload} className="space-y-4">
               <div
