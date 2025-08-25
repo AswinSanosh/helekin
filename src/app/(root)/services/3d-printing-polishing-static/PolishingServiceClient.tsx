@@ -152,7 +152,7 @@ export default function PolishingServiceClient({
           reject(new Error("Upload timeout. Try again."));
         });
 
-        xhr.open("POST", "http://3.6.238.100/upload-model/");
+        xhr.open("POST", "https://q-bit.in/upload-model/");
         xhr.timeout = 300000;
         xhr.send(formData);
       });
