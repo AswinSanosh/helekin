@@ -160,8 +160,12 @@ export default function PolishingServiceClient({
       const data = await uploadPromise;
       if (data.error) setError(data.error);
       else setResult(data);
-    } catch (err: any) {
-      setError(err.message || "Upload failed. Try again.");
+    } catch (err: unknown) {
+      if (err instanceof Error) {
+        setError(err.message || "Upload failed. Try again.");
+      } else {
+        setError("Upload failed. Try again.");
+      }
     } finally {
       setLoading(false);
       setUploadProgress(0);
