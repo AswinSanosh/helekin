@@ -162,7 +162,7 @@ export default function PolishingServiceClient({
       else setResult(data);
     } catch (err: unknown) {
       if (err instanceof Error) {
-        setError(err.message || "Upload failed. Try again.");
+        setError(err.message || "Upload failed, Try again.");
       } else {
         setError("Upload failed. Try again.");
       }
