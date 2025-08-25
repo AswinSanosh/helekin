@@ -255,7 +255,7 @@ export default function PolishingServiceClient({
                 <p className="text-white/90 text-sm">
                   {isDragActive
                     ? "Drop the file here..."
-                    : "Drag & drop .STL or .3MF, or click"}
+                    : "Drag & drop .STL or .obj, or click"}
                 </p>
                 <p className="text-white/60 text-xs mt-2">Max 50MB</p>
               </div>
