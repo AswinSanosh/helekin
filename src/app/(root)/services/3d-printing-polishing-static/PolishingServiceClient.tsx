@@ -152,7 +152,7 @@ export default function PolishingServiceClient({
           reject(new Error("Upload timeout. Try again."));
         });
 
-        xhr.open("POST", "http://3.6.238.100/upload-model/");
+        xhr.open("POST", "https://q-bit.in/upload-model/");
         xhr.timeout = 300000;
         xhr.send(formData);
       });
@@ -206,7 +206,7 @@ export default function PolishingServiceClient({
       >
         <div className="absolute inset-0 bg-black/70 backdrop-blur-sm z-0" />
         <div className="relative z-10 text-white w-full px-3 sm:px-10 flex flex-col sm:flex-row justify-between items-center m-auto">
-          <div className="flex flex-col items-start mt-8 sm:mt-10 gap-4 w-1/2 ">
+          <div className="flex flex-col items-start mt-8 sm:mt-10 w-1/2 ">
             <motion.div
               initial="hidden"
               whileInView="visible"
@@ -228,7 +228,7 @@ export default function PolishingServiceClient({
               variants={fadeInUp}
               className="desc w-full sm:w-3/4"
             >
-              <p className="text-white/80 text-base sm:text-lg font-light font-poppins mt-4 sm:mt-6">
+              <p className="text-white/80 text-base sm:text-lg font-light font-poppins mt-2">
                 {service.desc}
               </p>
             </motion.div>
@@ -240,12 +240,12 @@ export default function PolishingServiceClient({
             whileInView="visible"
             transition={{ duration: 0.8, delay: 0.2 }}
             variants={fadeInUp}
-            className="mt-8 sm:mt-10 w-1/2 bg-black/60 p-6 rounded-lg"
+            className="mt-8 sm:mt-10 w-1/2 bg-black/60 p-6 rounded-md"
           >
             <form onSubmit={handleUpload} className="space-y-4">
               <div
                 {...getRootProps()}
-                className={`p-10 border-2 border-dashed rounded-lg text-center cursor-pointer transition-colors ${
+                className={`p-10 py-20 border-2 border-dashed rounded-md text-center cursor-pointer transition-colors ${
                   isDragActive
                     ? "border-red-900 bg-red-900/20"
                     : "border-white/50 hover:border-white/70"
@@ -271,7 +271,7 @@ export default function PolishingServiceClient({
               <button
                 type="submit"
                 disabled={loading || !uploadedFile}
-                className={`w-full py-3 px-4 rounded-lg text-white font-medium transition-colors ${
+                className={`w-full py-3 px-4 rounded-md text-white font-medium transition-colors ${
                   uploadedFile ? "block" : "hidden"
                 } ${
                   loading
@@ -316,7 +316,7 @@ export default function PolishingServiceClient({
 
             {/* Success */}
             {result && !result.error && (
-              <div className="mt-6 p-4 bg-black/70 border border-red-900 rounded-lg">
+              <div className="mt-6 p-4 bg-black/70 border border-red-900 rounded-md">
                 <h3 className="text-lg font-semibold text-red-900 mb-3">
                   Slicing Complete!
                 </h3>
@@ -436,7 +436,7 @@ export default function PolishingServiceClient({
             viewport={{ once: false }}
             transition={{ duration: 0.8, delay: 0.2 }}
             variants={fadeInUp}
-            className="bg-red-900 text-white font-semibold py-3 px-6 sm:px-8 rounded-lg hover:bg-white hover:text-red-900 transition-colors duration-300 text-base sm:text-lg cursor-pointer"
+            className="bg-red-900 text-white font-semibold py-3 px-6 sm:px-8 rounded-md hover:bg-white hover:text-red-900 transition-colors duration-300 text-base sm:text-lg cursor-pointer"
           >
             Schedule a Consultation
           </motion.button>
